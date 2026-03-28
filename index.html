@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offroad Bumpis – Bumperball i Skåne för barnkalas, skola & förening</title>
+  <meta
+    name="description"
+    content="Hyr bumperballs i Skåne till barnkalas, skolor, fritids och föreningar. Enkel bokning, tydliga priser, leveranszoner och turneringskit."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5fff1;
+      --bg-2:#ecffe4;
+      --card:#ffffff;
+      --text:#16311d;
+      --muted:#4d6454;
+      --line:rgba(18, 64, 29, 0.10);
+      --green:#74d64c;
+      --green-dark:#2f7f25;
+      --green-soft:#dff8d1;
+      --yellow:#ffd84d;
+      --orange:#ff9c3a;
+      --dark:#102217;
+      --shadow:0 18px 55px rgba(14, 53, 22, 0.10);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Inter",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, #fdffe7 0, transparent 22%),
+        radial-gradient(circle at top right, #e9ffd8 0, transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, #effbea 100%);
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(12px);
+      background:rgba(245,255,241,0.84);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:-0.02em;
+    }
+
+    .brand-badge{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--green), var(--orange));
+      color:#0d220f;
+      font-family:"Baloo 2", sans-serif;
+      font-size:22px;
+      font-weight:800;
+      box-shadow:var(--shadow);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      color:#35523c;
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      background:var(--dark);
+      color:#fff;
+      font-weight:800;
+      box-shadow:var(--shadow);
+    }
+
+    .hero{
+      padding:52px 0 26px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr 0.92fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      color:#42634a;
+      box-shadow:0 10px 24px rgba(0,0,0,0.04);
+    }
+
+    h1, h2, h3{
+      font-family:"Baloo 2", sans-serif;
+      letter-spacing:-0.03em;
+      margin:0;
+      line-height:0.95;
+    }
+
+    .hero h1{
+      margin:14px 0 14px;
+      font-size:clamp(3rem, 8vw, 5.6rem);
+      color:#14361b;
+    }
+
+    .hero p{
+      margin:0;
+      font-size:18px;
+      line-height:1.75;
+      color:#3f5c46;
+      max-width:640px;
+    }
+
+    .hero-points{
+      display:grid;
+      gap:10px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+      color:#2c4632;
+      font-weight:600;
+    }
+
+    .hero-points li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .check{
+      flex:0 0 auto;
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green-dark);
+      color:#fff;
+      font-size:13px;
+      font-weight:800;
+      margin-top:1px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:999px;
+      font-weight:800;
+      transition:.2s ease;
+      border:none;
+      cursor:pointer;
+      font:inherit;
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .btn-primary{
+      background:var(--dark);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--text);
+      border:1px solid var(--line);
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg, #15321c 0%, #0d2113 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:22px;
+      box-shadow:0 28px 80px rgba(8, 34, 16, 0.24);
+      overflow:hidden;
+      position:relative;
+      min-height:560px;
+    }
+
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
+    }
+
+    .mockup-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:16px;
+      color:#d7ead8;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .dots{
+      display:flex;
+      gap:6px;
+    }
+
+    .dots span{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#6aa85b;
+    }
+
+    .mockup-image{
+      border-radius:22px;
+      overflow:hidden;
+      margin-bottom:16px;
+      aspect-ratio:4/5;
+      background:#1f3826;
+    }
+
+    .mockup-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .mockup-panel{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+
+    .mini-card{
+      background:rgba(255,255,255,0.09);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:12px;
+    }
+
+    .mini-card strong{
+      display:block;
+      font-size:13px;
+      margin-bottom:6px;
+    }
+
+    .mini-card span{
+      font-size:12px;
+      line-height:1.5;
+      color:#dbe8db;
+    }
+
+    .section{
+      padding:42px 0;
+    }
+
+    .section-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin-bottom:20px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.2rem, 4vw, 3.4rem);
+    }
+
+    .section-title p{
+      margin:0;
+      max-width:580px;
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.9);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .price-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .price-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .price-card.featured{
+      background:linear-gradient(180deg, #14371b 0%, #102817 100%);
+      color:#fff;
+      transform:translateY(-8px);
+    }
+
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(18,49,29,0.08);
+    }
+
+    .featured .tag{
+      background:rgba(255,255,255,0.12);
+      color:#e9ffe8;
+    }
+
+    .price-card h3{
+      margin:16px 0 8px;
+      font-size:30px;
+    }
+
+    .price{
+      font-size:48px;
+      font-weight:900;
+      letter-spacing:-0.06em;
+      line-height:1;
+      margin:0 0 10px;
+      font-family:"Baloo 2", sans-serif;
+    }
+
+    .price-note{
+      margin-bottom:16px;
+      color:#627066;
+      font-weight:600;
+      line-height:1.6;
+    }
+
+    .featured .price-note{
+      color:#d7e8d7;
+    }
+
+    .feature-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .feature-list li{
+      display:flex;
+      gap:10px;
+      color:#425646;
+      line-height:1.6;
+    }
+
+    .featured .feature-list li{
+      color:#eef6ee;
+    }
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:700;
+      color:#35523d;
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    .zone-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .zone-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+
+    .zone-card strong{
+      display:block;
+      font-size:24px;
+      font-family:"Baloo 2", sans-serif;
+      margin-bottom:6px;
+    }
+
+    .zone-card .zone-price{
+      font-weight:900;
+      font-size:22px;
+      color:#1d4e26;
+      margin-bottom:8px;
+    }
+
+    .zone-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:14px;
+    }
+
+    .showcase{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .showcase .card{
+      padding:0;
+      overflow:hidden;
+    }
+
+    .showcase-content{
+      padding:26px;
+    }
+
+    .showcase img{
+      width:100%;
+      aspect-ratio:16/10;
+      object-fit:cover;
+    }
+
+    .steps{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:46px 1fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    .step-number{
+      width:46px;
+      height:46px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--green), var(--yellow));
+      color:#14311b;
+      font-weight:900;
+      font-size:20px;
+      font-family:"Baloo 2", sans-serif;
+    }
+
+    .step h4{
+      margin:0 0 6px;
+      font-size:21px;
+      font-family:"Baloo 2", sans-serif;
+      line-height:1;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .games{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .game-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .game-card h3{
+      font-size:24px;
+      margin-bottom:8px;
+      line-height:1;
+    }
+
+    .game-card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .game-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .game-tags span{
+      padding:8px 10px;
+      border-radius:999px;
+      background:var(--green-soft);
+      color:#24542f;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .cta{
+      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
+      color:#fff;
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    .cta h2{
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      margin-bottom:10px;
+    }
+
+    .cta p{
+      margin:0 0 18px;
+      color:#d7e8d8;
+      line-height:1.75;
+      max-width:620px;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:24px;
+      padding:22px;
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-box strong{
+      display:block;
+      margin-bottom:2px;
+      font-size:20px;
+    }
+
+    .contact-box small{
+      color:rgba(255,255,255,0.76);
+      line-height:1.6;
+    }
+
+    .contact-box a{
+      display:block;
+      margin-top:8px;
+      color:#fff;
+      font-weight:700;
+    }
+
+    .faq{
+      display:grid;
+      gap:12px;
+    }
+
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:16px 18px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.75;
+    }
+
+    footer{
+      padding:36px 0 60px;
+      color:#5b6e60;
+      font-size:14px;
+    }
+
+    .footer-line{
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 1120px){
+      .zone-grid,
+      .games{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 1024px){
+      .hero-grid,
+      .showcase,
+      .cta{
+        grid-template-columns:1fr;
+      }
+
+      .grid-3,
+      .price-grid{
+        grid-template-columns:1fr;
+      }
+
+      .grid-2{
+        grid-template-columns:1fr;
+      }
+
+      .price-card.featured{
+        transform:none;
+      }
+    }
+
+    @media (max-width: 720px){
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding-top:34px;
+      }
+
+      .hero h1{
+        line-height:1;
+      }
+
+      .hero-card{
+        min-height:auto;
+      }
+
+      .mockup-panel{
+        grid-template-columns:1fr;
+      }
+
+      .section{
+        padding:30px 0;
+      }
+
+      .section-title{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .zone-grid,
+      .games{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Offroad Bumpis startsida">
+        <span class="brand-badge">O</span>
+        <span>Offroad Bumpis</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#paket">Paket</a>
+        <a href="#transport">Transport</a>
+        <a href="#zoner">Zoner</a>
+        <a href="#spel">Spelidéer</a>
+        <a href="#faq">Frågor</a>
+      </nav>
+
+      <a href="https://tidycal.com/boka-bumperballs" class="nav-cta" target="_blank" rel="noopener noreferrer">
+        Boka
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Skåne · barnaktivitet med låg admin och hög energi</span>
+          <h1>Bumperball i Skåne för barnkalas, skola & förening</h1>
+          <p>
+            Hyr bumperballs i barnstorlek till kalas, fritids, skolor och föreningar. Ni hyr utrustningen,
+            barnen spelar själva, och allt är upplagt för att vara enkelt att boka och enkelt att förstå.
+          </p>
+
+          <ul class="hero-points">
+            <li><span class="check">✓</span><span>10-pack från 2 000 kr eller 2-pack från 600 kr</span></li>
+            <li><span class="check">✓</span><span>Funkar på gräs, konstgräs, sporthall, sand och mjuk snö</span></li>
+            <li><span class="check">✓</span><span>För barn cirka 7–12 år, max 60 kg</span></li>
+            <li><span class="check">✓</span><span>Helg fre 08–sön 20 räknas som en hyresdag</span></li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+            <a href="#paket" class="btn btn-secondary">Se paket</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mockup-header">
+            <span>Barnaktivitet som syns direkt</span>
+            <div class="dots"><span></span><span></span><span></span></div>
+          </div>
+
+          <div class="mockup-image">
+            <img
+              src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80"
+              alt="Barnaktivitet utomhus"
+            >
+          </div>
+
+          <div class="mockup-panel">
+            <div class="mini-card">
+              <strong>Snabb setup</strong>
+              <span>Blås upp, dela in lag och kör igång utan instruktör.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Tydliga priser</strong>
+              <span>Besökaren fattar direkt vad som ingår och vad det kostar.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Bokning online</strong>
+              <span>Bokningslänk direkt i sidan. Mindre friktion, snabbare ja.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="paket">
+      <div class="container">
+        <div class="section-title">
+          <h2>Välj paket</h2>
+          <p>
+            Samma princip hela vägen: tydligt, enkelt och utan fluff. Här ser kunden direkt vilket upplägg som passar bäst.
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <span class="tag">Mini</span>
+            <h3>2-pack</h3>
+            <p class="price">600 kr</p>
+            <div class="price-note">Perfekt för mindre kalas, kompisdueller och lek hemma.</div>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>2 bumperballs</span></li>
+              <li><span class="check">✓</span><span>1 batteridriven pump</span></li>
+              <li><span class="check">✓</span><span>1 batteri</span></li>
+              <li><span class="check">✓</span><span>Hela hyresperioden enligt bokningsflödet</span></li>
+            </ul>
+          </article>
+
+          <article class="price-card featured">
+            <span class="tag">Populärast</span>
+            <h3>10-pack</h3>
+            <p class="price">2 000 kr</p>
+            <div class="price-note">Bra för barnkalas, skolor och större grupper där fler ska kunna spela och turas om.</div>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>10 bumperballs</span></li>
+              <li><span class="check">✓</span><span>2 batteridrivna pumpar</span></li>
+              <li><span class="check">✓</span><span>Laddare och transportplatta</span></li>
+              <li><span class="check">✓</span><span>Vardag 08–20 eller helg fre–sön</span></li>
+            </ul>
+          </article>
+
+          <article class="price-card">
+            <span class="tag">Tillval</span>
+            <h3>Turneringskit</h3>
+            <p class="price">1 000 kr</p>
+            <div class="price-note">För kalas, skolor, fritids och föreningar som vill få upp tempo, struktur och finalkänsla.</div>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Lagvästar, koner och markörer</span></li>
+              <li><span class="check">✓</span><span>Matchboll och enkel poängstruktur</span></li>
+              <li><span class="check">✓</span><span>Digitala diplom</span></li>
+              <li><span class="check">✓</span><span>Visselpipa, pokal och reflexer</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Underlag som funkar</h2>
+          <p>
+            Det här är också sälj. När det är tydligt vad som funkar och inte funkar slipper du konstiga följdfrågor.
+          </p>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">Gräs</span>
+          <span class="pill">Konstgräs</span>
+          <span class="pill">Sporthall</span>
+          <span class="pill">Fin sand</span>
+          <span class="pill">Mjuk snö</span>
+          <span class="pill">Inte asfalt</span>
+          <span class="pill">Inte grus</span>
+          <span class="pill">Inte betong eller is</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="transport">
+      <div class="container grid-2">
+        <article class="card">
+          <h3>Transporttillval</h3>
+          <p>
+            För den som vill hämta själv men saknar rätt transport finns två enkla tillval. 10-pack kräver minst kombibil.
+          </p>
+          <ul class="feature-list" style="margin-top:16px;">
+            <li><span class="check">✓</span><span><strong>Kombibil:</strong> 500 kr per dygn vid hyra av 10 bollar</span></li>
+            <li><span class="check">✓</span><span><strong>Ellådcykel:</strong> 350 kr per dygn vid hyra av 2 bollar inom Malmö</span></li>
+            <li><span class="check">✓</span><span>Transporttillval säljs tillsammans med bokning, inte separat</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Trygg bokning</h3>
+          <p>
+            Betalning ska vara klar senast 3 dagar före hyresdatum. Avbokning senast 3 dagar före ger full återbetalning.
+            Senare avbokning debiteras fullt men kan krediteras i 6 månader.
+          </p>
+          <ul class="feature-list" style="margin-top:16px;">
+            <li><span class="check">✓</span><span>Normalt slitage ingår i hyran</span></li>
+            <li><span class="check">✓</span><span>Små hål markeras och lagas i efterhand</span></li>
+            <li><span class="check">✓</span><span>Tydliga debiteringar bara vid undvikbara skador eller utebliven retur</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="zoner">
+      <div class="container">
+        <div class="section-title">
+          <h2>Leveranszoner i Skåne</h2>
+          <p>
+            Pris för leverans visas zonvis. Upphämtning i Malmö kostar 0 kr. Här är zonerna i komprimerad version direkt på sidan.
+          </p>
+        </div>
+
+        <div class="zone-grid">
+          <article class="zone-card">
+            <strong>Z1</strong>
+            <div class="zone-price">500 kr</div>
+            <p>Malmö</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z2</strong>
+            <div class="zone-price">600 kr</div>
+            <p>Burlöv, Lomma, Staffanstorp</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z3</strong>
+            <div class="zone-price">700 kr</div>
+            <p>Lund, Svedala, Vellinge</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z4</strong>
+            <div class="zone-price">800 kr</div>
+            <p>Eslöv, Kävlinge, Trelleborg</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z5</strong>
+            <div class="zone-price">900 kr</div>
+            <p>Höör, Hörby, Skurup</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z6</strong>
+            <div class="zone-price">1 000 kr</div>
+            <p>Landskrona, Ystad, Sjöbo</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z7</strong>
+            <div class="zone-price">1 100 kr</div>
+            <p>Helsingborg, Ängelholm, Bjuv, Åstorp, Höganäs, Svalöv, Klippan, Perstorp, Båstad</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z8</strong>
+            <div class="zone-price">1 200 kr</div>
+            <p>Kristianstad, Hässleholm, Osby, Bromölla, Östra Göinge, Simrishamn, Tomelilla, Örkelljunga</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container showcase">
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80"
+            alt="Lagaktivitet på plan"
+          >
+          <div class="showcase-content">
+            <h2 style="font-size:40px; margin-bottom:10px;">Så funkar det</h2>
+            <p style="margin:0; color:var(--muted); line-height:1.75;">
+              Tanken är enkel: välj paket, boka, hämta eller få leverans, spela själva. Det är därför sidan ska vara tydlig.
+            </p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <h4>Välj paket</h4>
+                  <p>2-pack, 10-pack eller 10-pack med turneringskit beroende på grupp och upplägg.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <h4>Boka online</h4>
+                  <p>Besökaren går direkt vidare till bokningslänken utan onödiga mellanled.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <h4>Spela själva</h4>
+                  <p>Ingen instruktör krävs. En vuxen håller koll, barnen kör showen.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="showcase-content">
+            <h2 style="font-size:40px; margin-bottom:10px;">Turneringskit = mindre kaos</h2>
+            <p style="margin:0; color:var(--muted); line-height:1.75;">
+              För grupper där du vill få mer struktur och bättre flöde är turneringskitet en stark upsell.
+            </p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">A</div>
+                <div>
+                  <h4>Dela in lag snabbt</h4>
+                  <p>Lagvästar, markörer och matchboll gör att du kommer igång utan att stå och improvisera.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">B</div>
+                <div>
+                  <h4>Korta matcher</h4>
+                  <p>3–5 minuter per match håller tempot uppe och gör att fler hinner spela.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">C</div>
+                <div>
+                  <h4>Final + diplom</h4>
+                  <p>Det blir tydligare, roligare och mer minnesvärt när dagen får ett avslut som känns på riktigt.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="spel">
+      <div class="container">
+        <div class="section-title">
+          <h2>Spelidéer som säljer in aktiviteten</h2>
+          <p>
+            Du behöver inte visa allt. Bara tillräckligt många exempel för att folk direkt ska förstå känslan.
+          </p>
+        </div>
+
+        <div class="games">
+          <article class="game-card">
+            <h3>Bumper Tag</h3>
+            <p>Två jagare startar. Blir du nuddad eller lätt krockad byter du roll. Kort, snabbt och lätt att förstå.</p>
+            <div class="game-tags"><span>Puls</span><span>Snabb</span><span>3 min</span></div>
+          </article>
+
+          <article class="game-card">
+            <h3>Kungen av ringen</h3>
+            <p>Markera en cirkel. Målet är att hålla sig kvar längst. Åker du ut vilar du och kommer in igen.</p>
+            <div class="game-tags"><span>Lag/fritt</span><span>Puls</span><span>5 min</span></div>
+          </article>
+
+          <article class="game-card">
+            <h3>Rushmatch 5v5</h3>
+            <p>Korta matcher med hög energi. Perfekt för skola, fritids eller grupper där många ska hinna spela.</p>
+            <div class="game-tags"><span>Lag</span><span>Snabb</span><span>3 min</span></div>
+          </article>
+
+          <article class="game-card">
+            <h3>Sköldpaddan</h3>
+            <p>På signal ska alla försiktigt välta och ta sig upp igen. En favorit när du vill bryta av med något enkelt.</p>
+            <div class="game-tags"><span>Puls</span><span>Snabb</span><span>2 min</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Vanliga frågor</h2>
+          <p>
+            Bra FAQ sparar tid. Här ska svaren vara raka, inte hålla TED Talk.
+          </p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Vilken ålder passar bumperballs för?</summary>
+            <p>Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg. En person per boll gäller.</p>
+          </details>
+
+          <details>
+            <summary>Behöver vi instruktör?</summary>
+            <p>Nej. Ni hyr utrustningen och barnen spelar själva. En ansvarig vuxen ska ha tillsyn under hela aktiviteten.</p>
+          </details>
+
+          <details>
+            <summary>Vilka underlag är okej?</summary>
+            <p>Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna.</p>
+          </details>
+
+          <details>
+            <summary>Vad gäller vid avbokning?</summary>
+            <p>Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.</p>
+          </details>
+
+          <details>
+            <summary>Vad händer om något går sönder?</summary>
+            <p>Normalt slitage ingår. Små hål ska markeras och meddelas vid retur. Debitering sker vid saknade delar, tydligt undvikbara skador eller utebliven retur.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Klar att boka?</h2>
+            <p>
+              Här ska det vara enkelt att ta nästa steg. Ingen ska behöva fundera över vart man klickar, vad det kostar eller om upplägget är krångligt.
+            </p>
+            <div class="hero-actions" style="margin-top:18px;">
+              <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <strong>Kontakt</strong>
+            <small>Lokalt i Skåne · Barnaktivitet för kalas, skolor, fritids och föreningar.</small>
+            <a href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+            <a href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
+            <a href="#zoner">Se leveranszoner</a>
+            <a href="#paket">Se paket och priser</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-line">
+      <span>© 2026 Offroad Bumpis</span>
+      <span>Försäkrat · Trygg uthyrning · Skåne</span>
+    </div>
+  </footer>
+</body>
+</html>
