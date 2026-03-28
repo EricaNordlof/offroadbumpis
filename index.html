@@ -289,18 +289,13 @@
       border:1px solid rgba(255,255,255,0.08);
       border-radius:18px;
       padding:12px;
+      min-height:86px;
     }
 
     .mini-card strong{
       display:block;
       font-size:13px;
-      margin-bottom:6px;
-    }
-
-    .mini-card span{
-      font-size:12px;
-      line-height:1.5;
-      color:#dbe8db;
+      line-height:1.45;
     }
 
     .section{
@@ -324,12 +319,6 @@
       max-width:580px;
       line-height:1.7;
       color:var(--muted);
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
     }
 
     .grid-2{
@@ -594,57 +583,6 @@
       font-weight:800;
     }
 
-    .cta{
-      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
-      color:#fff;
-      border-radius:34px;
-      padding:34px;
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:20px;
-      align-items:start;
-    }
-
-    .cta h2{
-      font-size:clamp(2rem, 4vw, 3.2rem);
-      margin-bottom:10px;
-    }
-
-    .cta p{
-      margin:0 0 18px;
-      color:#d7e8d8;
-      line-height:1.75;
-      max-width:620px;
-    }
-
-    .contact-box{
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:24px;
-      padding:22px;
-      display:grid;
-      gap:12px;
-    }
-
-    .contact-box strong{
-      display:block;
-      margin-bottom:2px;
-      font-size:20px;
-    }
-
-    .contact-box small{
-      color:rgba(255,255,255,0.76);
-      line-height:1.6;
-    }
-
-    .contact-box a{
-      display:block;
-      margin-top:8px;
-      color:#fff;
-      font-weight:700;
-    }
-
     .faq{
       display:grid;
       gap:12px;
@@ -672,6 +610,83 @@
       margin:12px 0 0;
       color:var(--muted);
       line-height:1.75;
+    }
+
+    .cta{
+      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
+      color:#fff;
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    .cta-copy h2{
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      margin-bottom:10px;
+    }
+
+    .cta-copy p{
+      margin:0 0 18px;
+      color:#d7e8d8;
+      line-height:1.75;
+      max-width:620px;
+    }
+
+    .cta-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:24px;
+      padding:22px;
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-box strong{
+      display:block;
+      margin-bottom:2px;
+      font-size:20px;
+      color:#fff;
+    }
+
+    .contact-box small{
+      color:rgba(255,255,255,0.78);
+      line-height:1.6;
+    }
+
+    .contact-links{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .contact-link{
+      display:flex;
+      align-items:center;
+      min-height:48px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.10);
+      color:#fff;
+      font-weight:700;
+      line-height:1.4;
+      transition:.2s ease;
+    }
+
+    .contact-link:hover{
+      background:rgba(255,255,255,0.14);
+      transform:translateY(-1px);
     }
 
     footer{
@@ -703,11 +718,7 @@
         grid-template-columns:1fr;
       }
 
-      .grid-3,
-      .price-grid{
-        grid-template-columns:1fr;
-      }
-
+      .price-grid,
       .grid-2{
         grid-template-columns:1fr;
       }
@@ -751,6 +762,15 @@
       .games{
         grid-template-columns:1fr;
       }
+
+      .cta-buttons{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .cta-buttons .btn{
+        width:100%;
+      }
     }
   </style>
 </head>
@@ -789,7 +809,7 @@
 
           <ul class="hero-points">
             <li><span class="check">✓</span><span>10-pack från 2 000 kr eller 2-pack från 600 kr</span></li>
-            <li><span class="check">✓</span><span>Funkar på gräs, konstgräs, sporthall, sand och mjuk snö</span></li>
+            <li><span class="check">✓</span><span>Funkar på gräs, konstgräs, sporthall, fin sand och mjuk snö</span></li>
             <li><span class="check">✓</span><span>För barn cirka 7–12 år, max 60 kg</span></li>
             <li><span class="check">✓</span><span>Helg fre 08–sön 20 räknas som en hyresdag</span></li>
           </ul>
@@ -815,13 +835,13 @@
 
           <div class="mockup-panel">
             <div class="mini-card">
-              <strong>Snabb setup med 2minuter per boll)</strong>
+              <strong>Snabb setup med cirka 2 minuter per boll</strong>
             </div>
             <div class="mini-card">
-              <strong>Fasta priser gäller per dag eller hel helg</strong>
+              <strong>Fasta priser för heldag eller hel helg</strong>
             </div>
             <div class="mini-card">
-              <strong>Boka ditt datum med bumperballs och eventuella tillval</strong>
+              <strong>Boka datum, bumperballs och eventuella tillval</strong>
             </div>
           </div>
         </div>
@@ -831,8 +851,7 @@
     <section class="section" id="paket">
       <div class="container">
         <div class="section-title">
-          <h2>Välj paket - gäller heldag eller helg</h2>
-        
+          <h2>Välj paket – gäller heldag eller helg</h2>
         </div>
 
         <div class="price-grid">
@@ -869,7 +888,7 @@
               <li><span class="check">✓</span><span>Lagvästar, koner och markörer</span></li>
               <li><span class="check">✓</span><span>Matchboll och enkel poängstruktur</span></li>
               <li><span class="check">✓</span><span>Digitala diplom</span></li>
-              <li><span class="check">✓</span><span>Souvenirer - pokal, visselpipa och reflexer</span></li>
+              <li><span class="check">✓</span><span>Pokal, visselpipa och reflexer</span></li>
             </ul>
           </article>
         </div>
@@ -928,9 +947,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Leveranszoner i Skåne</h2>
-          <p>
-            Pris för enkel väg visas zonvis. Upphämtning i Malmö kostar 0 kr.
-          </p>
+          <p>Pris för enkel väg visas zonvis. Upphämtning i Malmö kostar 0 kr.</p>
         </div>
 
         <div class="zone-grid">
@@ -1001,23 +1018,17 @@
             <div class="steps">
               <div class="step">
                 <div class="step-number">1</div>
-                <div>
-                  <h4>Välj paket</h4>
-                </div>
+                <div><h4>Välj paket</h4></div>
               </div>
 
               <div class="step">
                 <div class="step-number">2</div>
-                <div>
-                  <h4>Boka online</h4>
-                </div>
+                <div><h4>Boka online</h4></div>
               </div>
 
               <div class="step">
                 <div class="step-number">3</div>
-                <div>
-                  <h4>Spela</h4>
-                </div>
+                <div><h4>Spela</h4></div>
               </div>
             </div>
           </div>
@@ -1031,7 +1042,7 @@
               <div class="step">
                 <div class="step-number">A</div>
                 <div>
-                  <h4>Dela in lag </h4>
+                  <h4>Dela in lag</h4>
                   <p>Lagvästar, koner, markörer och matchboll gör att du kommer igång utan att stå och improvisera.</p>
                 </div>
               </div>
@@ -1040,7 +1051,7 @@
                 <div class="step-number">B</div>
                 <div>
                   <h4>Korta matcher</h4>
-                   <p>3–5 minuter per match håller tempot uppe och gör att fler hinner spela.</p>
+                  <p>3–5 minuter per match håller tempot uppe och gör att fler hinner spela.</p>
                 </div>
               </div>
 
@@ -1129,22 +1140,31 @@
     <section class="section" id="kontakt">
       <div class="container">
         <div class="cta">
-         <div class="hero-actions" style="margin-top:18px;">
-  <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
-  <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
-  <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
-</div>
+          <div class="cta-copy">
+            <h2>Klar att boka?</h2>
+            <p>
+              Boka direkt, skicka mejl eller öppna Google-länken om du vill se adressen eller lämna en recension.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
+              <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
+            </div>
           </div>
 
           <div class="contact-box">
-  <strong>Kontakt</strong>
-  <small>Lokalt i Skåne · Barnaktivitet för kalas, skolor, fritids och föreningar.</small>
-  <a href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
-  <a href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
-  <a href="#zoner">Se leveranszoner</a>
-  <a href="#paket">Se paket och priser</a>
-  <a href="https://share.google/CPWOmh6wdR5rE35L2" target="_blank" rel="noopener noreferrer">Se adress eller lämna recension på Google</a>
-</div>
+            <strong>Kontakt</strong>
+            <small>Lokalt i Skåne · Barnaktivitet för kalas, skolor, fritids och föreningar.</small>
+
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+              <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
+              <a class="contact-link" href="#zoner">Se leveranszoner</a>
+              <a class="contact-link" href="#paket">Se paket och priser</a>
+              <a class="contact-link" href="https://share.google/CPWOmh6wdR5rE35L2" target="_blank" rel="noopener noreferrer">Se adress eller lämna recension på Google</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
