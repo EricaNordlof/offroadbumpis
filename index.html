@@ -25,6 +25,7 @@
       --yellow:#ffd84d;
       --orange:#ff9c3a;
       --dark:#102217;
+      --dark-2:#14361b;
       --shadow:0 18px 55px rgba(14, 53, 22, 0.10);
       --radius:24px;
       --max:1180px;
@@ -76,12 +77,12 @@
     }
 
     .brand-logo{
-  width:42px;
-  height:42px;
-  object-fit:contain;
-  border-radius:12px;
-  box-shadow:var(--shadow);
-}
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+    }
 
     .nav-links{
       display:flex;
@@ -109,7 +110,7 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.08fr 0.92fr;
+      grid-template-columns:1.02fr 0.98fr;
       gap:28px;
       align-items:center;
     }
@@ -147,6 +148,14 @@
       line-height:1.75;
       color:#3f5c46;
       max-width:640px;
+    }
+
+    .hero-trust{
+      margin-top:14px;
+      color:#36553d;
+      font-size:15px;
+      line-height:1.7;
+      font-weight:600;
     }
 
     .hero-points{
@@ -215,14 +224,13 @@
     }
 
     .hero-card{
-      background:linear-gradient(180deg, #15321c 0%, #0d2113 100%);
+      background:linear-gradient(180deg, #14361b 0%, #102717 100%);
       color:#fff;
       border-radius:30px;
-      padding:22px;
-      box-shadow:0 28px 80px rgba(8, 34, 16, 0.24);
+      padding:18px;
+      box-shadow:0 28px 80px rgba(8, 34, 16, 0.18);
       overflow:hidden;
       position:relative;
-      min-height:560px;
     }
 
     .hero-card::after{
@@ -240,7 +248,7 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      margin-bottom:16px;
+      margin-bottom:14px;
       color:#d7ead8;
       font-size:14px;
       font-weight:700;
@@ -259,9 +267,9 @@
     }
 
     .mockup-image{
-      border-radius:22px;
+      border-radius:24px;
       overflow:hidden;
-      margin-bottom:16px;
+      margin-bottom:14px;
       aspect-ratio:4/5;
       background:#1f3826;
     }
@@ -283,13 +291,14 @@
       border:1px solid rgba(255,255,255,0.08);
       border-radius:18px;
       padding:12px;
-      min-height:86px;
+      min-height:88px;
     }
 
     .mini-card strong{
       display:block;
       font-size:13px;
       line-height:1.45;
+      color:#f2faf2;
     }
 
     .section{
@@ -322,7 +331,7 @@
     }
 
     .card{
-      background:rgba(255,255,255,0.9);
+      background:rgba(255,255,255,0.92);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:22px;
@@ -606,6 +615,34 @@
       line-height:1.75;
     }
 
+    .trust-card{
+      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .trust-card h2{
+      font-size:clamp(2rem, 4vw, 3rem);
+      margin-bottom:12px;
+      color:#fff;
+    }
+
+    .trust-card p{
+      margin:0;
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:820px;
+    }
+
+    .trust-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
     .cta{
       background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
       color:#fff;
@@ -735,10 +772,6 @@
         line-height:1;
       }
 
-      .hero-card{
-        min-height:auto;
-      }
-
       .mockup-panel{
         grid-template-columns:1fr;
       }
@@ -757,12 +790,14 @@
         grid-template-columns:1fr;
       }
 
-      .cta-buttons{
+      .cta-buttons,
+      .trust-actions{
         flex-direction:column;
         align-items:stretch;
       }
 
-      .cta-buttons .btn{
+      .cta-buttons .btn,
+      .trust-actions .btn{
         width:100%;
       }
     }
@@ -772,9 +807,9 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#" class="brand" aria-label="Offroad Bumpis startsida">
-  <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
-  <span>Offroad Bumpis</span>
-</a>
+        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
+        <span>Offroad Bumpis</span>
+      </a>
 
       <nav class="nav-links">
         <a href="#paket">Paket</a>
@@ -797,9 +832,11 @@
           <span class="eyebrow">Skåne · barnaktivitet med låg admin och hög energi</span>
           <h1>Bumperball i Skåne för barnkalas, skola & förening</h1>
           <p>
-  Hyr bumperballs i barnstorlek till kalas, fritids, skolor och föreningar. Ni hyr utrustningen,
-  barnen spelar själva, och allt är upplagt för att vara enkelt att boka och enkelt att förstå.
-  Viktigt: kontrollera alltid att den du hyr av är en riktig och verifierad person, så att du inte blir scammad.
+            Hyr bumperballs i barnstorlek till kalas, fritids, skolor och föreningar. Ni hyr utrustningen,
+            barnen spelar själva, och allt är upplagt för att vara enkelt att boka och enkelt att förstå.
+          </p>
+          <p class="hero-trust">
+            Viktigt: kontrollera alltid att den du hyr av är en riktig och verifierad person, så att du inte blir scammad.
           </p>
 
           <ul class="hero-points">
@@ -823,9 +860,9 @@
 
           <div class="mockup-image">
             <img
-  src="Bumperball på fotbollsplan i Veberöd.png"
-  alt="Barn spelar bumperball på fotbollsplan i Veberöd"
->
+              src="Bumperball på fotbollsplan i Veberöd.png"
+              alt="Barn spelar bumperball på fotbollsplan i Veberöd"
+            >
           </div>
 
           <div class="mockup-panel">
@@ -1001,9 +1038,9 @@
       <div class="container showcase">
         <article class="card">
           <img
-  src="Fotbollslag spelar bumperball i Veberöd.png"
-  alt="Barn spelar bumperball tillsammans i Veberöd"
->
+            src="Fotbollslag spelar bumperball i Veberöd.png"
+            alt="Barn spelar bumperball tillsammans i Veberöd"
+          >
           <div class="showcase-content">
             <h2 style="font-size:40px; margin-bottom:10px;">Så funkar det</h2>
             <p style="margin:0; color:var(--muted); line-height:1.75;">
@@ -1132,22 +1169,54 @@
       </div>
     </section>
 
-  <section class="section">
-  <div class="container">
-    <div class="card" style="background:linear-gradient(135deg, #14361b 0%, #0d2113 100%); color:#fff;">
-      <h2 style="font-size:42px; margin-bottom:12px; color:#fff;">Tryggare att hyra när du vet vem du hyr av</h2>
-      <p style="color:#d7e8d8; line-height:1.8; margin:0 0 18px;">
-        Kontrollera alltid att den du hyr från är en riktig och verifierad person, så att du inte blir scammad.
-        Offroad Bumpis drivs av Erica Nordlöf, som är verifierad på LinkedIn.
-        På LinkedIn-profilen länkas det också tillbaka till den här sidan.
-      </p>
-      <div class="hero-actions" style="margin-top:0;">
-        <a href="https://www.linkedin.com/in/erica-nordlöf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Se verifierad LinkedIn-profil</a>
-        <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
+    <section class="section">
+      <div class="container">
+        <div class="trust-card">
+          <h2>Tryggare att hyra när du vet vem du hyr av</h2>
+          <p>
+            Kontrollera alltid att den du hyr från är en riktig och verifierad person, så att du inte blir scammad.
+            Offroad Bumpis drivs av Erica Nordlöf, som är verifierad på LinkedIn. På LinkedIn-profilen länkas det också tillbaka till den här sidan.
+          </p>
+          <div class="trust-actions">
+            <a href="https://www.linkedin.com/in/erica-nordlöf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Se verifierad LinkedIn-profil</a>
+            <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-copy">
+            <h2>Klar att boka?</h2>
+            <p>
+              Boka direkt, skicka mejl eller öppna Google-länken om du vill se adressen eller lämna en recension.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
+              <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <strong>Kontakt</strong>
+            <small>Lokalt i Skåne · Barnaktivitet för kalas, skolor, fritids och föreningar.</small>
+
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+              <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
+              <a class="contact-link" href="https://www.linkedin.com/in/erica-nordlöf" target="_blank" rel="noopener noreferrer">Verifierad LinkedIn-profil</a>
+              <a class="contact-link" href="#zoner">Se leveranszoner</a>
+              <a class="contact-link" href="#paket">Se paket och priser</a>
+              <a class="contact-link" href="https://share.google/CPWOmh6wdR5rE35L2" target="_blank" rel="noopener noreferrer">Se adress eller lämna recension på Google</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
