@@ -4,38 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Offroad Bumpis – Bumperball i Skåne för barnkalas, skola, fritids och förening</title>
+  <title>Offroad Bumpis – Bumperball i Skåne för barnkalas, skola, fritids & förening</title>
   <meta
     name="description"
-    content="Hyr bumperballs i Skåne för barnkalas, skolaktiviteter, fritids och föreningar. Offroad Bumpis erbjuder roliga aktiviteter utomhus i Malmö, Lund, Helsingborg, Trelleborg och fler orter i Skåne."
+    content="Hyr bumperballs i Skåne till barnkalas, skolor, fritids och föreningar. Bumperball i Malmö, Lund, Helsingborg, Ystad, Kristianstad, Trelleborg, Hässleholm och Landskrona. Enkel bokning, tydliga priser och trygg uthyrning."
   />
   <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#111827" />
-  <link rel="canonical" href="https://offroadbumpis.se/" />
+  <link rel="canonical" href="https://ericanordlof.github.io/offroadbumpis/" />
 
-  <meta property="og:title" content="Offroad Bumpis – Bumperball i Skåne" />
-  <meta
-    property="og:description"
-    content="Bumperball i Skåne för barnkalas, skolor, fritids och föreningar. Kul aktivitet utomhus för barn och grupper."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://offroadbumpis.se/" />
-  <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+  <meta property="og:title" content="Offroad Bumpis – Bumperball i Skåne för barnkalas, skola, fritids & förening">
+  <meta property="og:description" content="Hyr bumperballs i Skåne till barnkalas, skolor, fritids och föreningar. Enkel bokning, tydliga priser och trygg uthyrning.">
+  <meta property="og:image" content="https://ericanordlof.github.io/offroadbumpis/Bumperball%20på%20fotbollsplan%20i%20Veber%C3%B6d.png">
+  <meta property="og:url" content="https://ericanordlof.github.io/offroadbumpis/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#14361b" />
 
-  <link rel="icon" type="image/png" href="/Offroad%20Bumpis%20logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b1220;
-      --bg2:#111827;
-      --card:rgba(255,255,255,.08);
-      --card-border:rgba(255,255,255,.14);
-      --text:#f8fafc;
-      --muted:#cbd5e1;
-      --green:#22c55e;
-      --green2:#16a34a;
-      --yellow:#facc15;
-      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --bg:#f5fff1;
+      --bg-2:#ecffe4;
+      --card:#ffffff;
+      --text:#16311d;
+      --muted:#4d6454;
+      --line:rgba(18, 64, 29, 0.10);
+      --green:#74d64c;
+      --green-dark:#2f7f25;
+      --green-soft:#dff8d1;
+      --yellow:#ffd84d;
+      --orange:#ff9c3a;
+      --dark:#102217;
+      --dark-2:#14361b;
+      --shadow:0 18px 55px rgba(14, 53, 22, 0.10);
       --radius:24px;
       --max:1180px;
     }
@@ -44,37 +47,36 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Arial,Helvetica,sans-serif;
+      font-family:"Inter",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(34,197,94,.20), transparent 30%),
-        radial-gradient(circle at top right, rgba(250,204,21,.14), transparent 26%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-      line-height:1.6;
+        radial-gradient(circle at top left, #fdffe7 0, transparent 22%),
+        radial-gradient(circle at top right, #e9ffd8 0, transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, #effbea 100%);
     }
 
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
 
-    .wrap{
-      width:min(100% - 32px, var(--max));
+    .container{
+      width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
     }
 
     .topbar{
       position:sticky;
       top:0;
-      z-index:50;
-      backdrop-filter:blur(14px);
-      background:rgba(11,18,32,.72);
-      border-bottom:1px solid rgba(255,255,255,.08);
+      z-index:20;
+      backdrop-filter:blur(12px);
+      background:rgba(245,255,241,0.84);
+      border-bottom:1px solid var(--line);
     }
 
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:20px;
+      gap:18px;
       padding:14px 0;
     }
 
@@ -83,97 +85,126 @@
       align-items:center;
       gap:12px;
       font-weight:800;
-      letter-spacing:.2px;
+      letter-spacing:-0.02em;
     }
 
-    .brand img{
-      width:44px;
-      height:44px;
+    .brand-logo{
+      width:42px;
+      height:42px;
       object-fit:contain;
       border-radius:12px;
-      background:rgba(255,255,255,.08);
-      padding:5px;
+      box-shadow:var(--shadow);
     }
 
-    .navlinks{
+    .nav-links{
       display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+      gap:22px;
+      color:#35523c;
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .nav-cta{
+      display:inline-flex;
       align-items:center;
-      justify-content:flex-end;
-    }
-
-    .navlinks a{
-      padding:10px 14px;
+      justify-content:center;
+      padding:12px 18px;
       border-radius:999px;
-      color:var(--muted);
-      font-size:.95rem;
-      transition:.2s ease;
-    }
-
-    .navlinks a:hover{
-      color:var(--text);
-      background:rgba(255,255,255,.06);
+      background:var(--dark);
+      color:#fff;
+      font-weight:800;
+      box-shadow:var(--shadow);
     }
 
     .hero{
-      padding:64px 0 28px;
+      padding:52px 0 26px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:24px;
-      align-items:stretch;
-    }
-
-    .hero-card,
-    .info-card,
-    .cluster-card,
-    .city-card,
-    .cta-card{
-      background:var(--card);
-      border:1px solid var(--card-border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(12px);
-    }
-
-    .hero-card{
-      padding:34px;
+      grid-template-columns:1.02fr 0.98fr;
+      gap:28px;
+      align-items:center;
     }
 
     .eyebrow{
       display:inline-flex;
       align-items:center;
-      gap:10px;
-      padding:8px 14px;
+      gap:8px;
+      padding:8px 12px;
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:999px;
-      background:rgba(34,197,94,.12);
-      border:1px solid rgba(34,197,94,.25);
-      color:#dcfce7;
-      font-weight:700;
-      font-size:.92rem;
-      margin-bottom:18px;
+      font-size:13px;
+      font-weight:800;
+      color:#42634a;
+      box-shadow:0 10px 24px rgba(0,0,0,0.04);
     }
 
-    h1,h2,h3{line-height:1.15;margin:0 0 14px}
-    h1{font-size:clamp(2.2rem, 5vw, 4.4rem)}
-    h2{font-size:clamp(1.6rem, 3vw, 2.4rem)}
-    h3{font-size:1.2rem}
+    h1, h2, h3{
+      font-family:"Baloo 2", sans-serif;
+      letter-spacing:-0.03em;
+      margin:0;
+      line-height:0.95;
+    }
 
-    .lead{
-      font-size:1.08rem;
-      color:var(--muted);
-      max-width:62ch;
-      margin:0 0 22px;
+    .hero h1{
+      margin:14px 0 14px;
+      font-size:clamp(3rem, 8vw, 5.6rem);
+      color:#14361b;
+    }
+
+    .hero p{
+      margin:0;
+      font-size:18px;
+      line-height:1.75;
+      color:#3f5c46;
+      max-width:640px;
+    }
+
+    .hero-trust{
+      margin-top:14px;
+      color:#36553d;
+      font-size:15px;
+      line-height:1.7;
+      font-weight:600;
+    }
+
+    .hero-points{
+      display:grid;
+      gap:10px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+      color:#2c4632;
+      font-weight:600;
+    }
+
+    .hero-points li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .check{
+      flex:0 0 auto;
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green-dark);
+      color:#fff;
+      font-size:13px;
+      font-weight:800;
+      margin-top:1px;
     }
 
     .hero-actions{
       display:flex;
+      gap:14px;
       flex-wrap:wrap;
-      gap:12px;
-      margin-top:24px;
+      margin-top:26px;
     }
 
     .btn{
@@ -181,421 +212,1200 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      min-height:50px;
-      padding:0 18px;
-      border-radius:16px;
+      padding:14px 20px;
+      border-radius:999px;
       font-weight:800;
       transition:.2s ease;
-      border:1px solid transparent;
+      border:none;
+      cursor:pointer;
+      font:inherit;
     }
+
+    .btn:hover{transform:translateY(-1px)}
 
     .btn-primary{
-      background:linear-gradient(135deg, var(--green), var(--green2));
-      color:#08130c;
+      background:var(--dark);
+      color:#fff;
+      box-shadow:var(--shadow);
     }
-
-    .btn-primary:hover{transform:translateY(-1px)}
 
     .btn-secondary{
-      background:rgba(255,255,255,.06);
-      border-color:rgba(255,255,255,.1);
+      background:#fff;
       color:var(--text);
+      border:1px solid var(--line);
     }
 
-    .btn-secondary:hover{
-      background:rgba(255,255,255,.10);
+    .hero-card{
+      background:linear-gradient(180deg, #1b4724 0%, #14361b 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:18px;
+      box-shadow:0 28px 80px rgba(8, 34, 16, 0.18);
+      overflow:hidden;
+      position:relative;
     }
 
-    .info-card{
-      padding:26px;
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
+    }
+
+    .mockup-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:14px;
+      color:#d7ead8;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .dots{
+      display:flex;
+      gap:6px;
+    }
+
+    .dots span{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#6aa85b;
+    }
+
+    .mockup-image{
+      border-radius:24px;
+      overflow:hidden;
+      margin-bottom:14px;
+      aspect-ratio:4/5;
+      background:#1f3826;
+    }
+
+    .mockup-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .mockup-panel{
       display:grid;
-      gap:14px;
-      align-content:start;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
     }
 
-    .mini{
-      padding:16px 18px;
+    .mini-card{
+      background:rgba(255,255,255,0.09);
+      border:1px solid rgba(255,255,255,0.08);
       border-radius:18px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
+      padding:12px;
+      min-height:88px;
     }
 
-    .mini strong{
+    .mini-card strong{
       display:block;
-      margin-bottom:6px;
-      font-size:1rem;
+      font-size:13px;
+      line-height:1.45;
+      color:#f2faf2;
     }
 
     .section{
-      padding:28px 0;
+      padding:42px 0;
     }
 
-    .section-head{
+    .section-title{
       display:flex;
-      align-items:end;
       justify-content:space-between;
-      gap:16px;
-      margin-bottom:18px;
+      align-items:end;
+      gap:18px;
+      margin-bottom:20px;
     }
 
-    .section-head p{
+    .section-title h2{
+      font-size:clamp(2.2rem, 4vw, 3.4rem);
+    }
+
+    .section-title p{
       margin:0;
+      max-width:580px;
+      line-height:1.7;
       color:var(--muted);
-      max-width:62ch;
     }
 
-    .grid-4{
+    .grid-2{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:18px;
     }
 
-    .grid-3{
+    .card{
+      background:rgba(255,255,255,0.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .price-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:18px;
     }
 
-    .cluster-card,
-    .city-card,
-    .cta-card{
-      padding:22px;
+    .price-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
 
-    .cluster-card p,
-    .city-card p,
-    .cta-card p{
-      color:var(--muted);
-      margin:0 0 18px;
+    .price-card.featured{
+      background:linear-gradient(180deg, #14371b 0%, #102817 100%);
+      color:#fff;
+      transform:translateY(-8px);
     }
 
     .tag{
       display:inline-block;
-      margin-bottom:10px;
-      padding:7px 11px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      padding:8px 10px;
       border-radius:999px;
-      background:rgba(250,204,21,.12);
-      border:1px solid rgba(250,204,21,.22);
-      color:#fef08a;
-      font-size:.88rem;
-      font-weight:700;
+      background:rgba(18,49,29,0.08);
     }
 
-    .links-list{
+    .featured .tag{
+      background:rgba(255,255,255,0.12);
+      color:#e9ffe8;
+    }
+
+    .price-card h3{
+      margin:16px 0 8px;
+      font-size:30px;
+    }
+
+    .price{
+      font-size:48px;
+      font-weight:900;
+      letter-spacing:-0.06em;
+      line-height:1;
+      margin:0 0 10px;
+      font-family:"Baloo 2", sans-serif;
+    }
+
+    .price-note{
+      margin-bottom:16px;
+      color:#627066;
+      font-weight:600;
+      line-height:1.6;
+    }
+
+    .featured .price-note{
+      color:#d7e8d7;
+    }
+
+    .feature-list{
+      list-style:none;
+      padding:0;
+      margin:0;
       display:grid;
       gap:10px;
-      margin-top:14px;
     }
 
-    .links-list a{
-      padding:12px 14px;
-      border-radius:14px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      color:var(--text);
-      font-weight:700;
-      transition:.2s ease;
+    .feature-list li{
+      display:flex;
+      gap:10px;
+      color:#425646;
+      line-height:1.6;
     }
 
-    .links-list a:hover{
-      background:rgba(255,255,255,.10);
-      transform:translateY(-1px);
+    .featured .feature-list li{
+      color:#eef6ee;
     }
 
-    .bullet-list{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-
-    .bullet-list li + li{margin-top:8px}
-
-    .cta{
-      padding:40px 0 72px;
-    }
-
-    .cta-card{
+    .pill-row{
       display:flex;
       flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .pill{
+      display:inline-flex;
       align-items:center;
-      justify-content:space-between;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:700;
+      color:#35523d;
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    .zone-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .zone-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+
+    .zone-card strong{
+      display:block;
+      font-size:24px;
+      font-family:"Baloo 2", sans-serif;
+      margin-bottom:6px;
+    }
+
+    .zone-card .zone-price{
+      font-weight:900;
+      font-size:22px;
+      color:#1d4e26;
+      margin-bottom:8px;
+    }
+
+    .zone-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:14px;
+    }
+
+    .showcase{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .showcase .card{
+      padding:0;
+      overflow:hidden;
+    }
+
+    .showcase-content{
+      padding:26px;
+    }
+
+    .showcase img{
+      width:100%;
+      aspect-ratio:16/10;
+      object-fit:cover;
+    }
+
+    .steps{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:46px 1fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    .step-number{
+      width:46px;
+      height:46px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--green), var(--yellow));
+      color:#14311b;
+      font-weight:900;
+      font-size:20px;
+      font-family:"Baloo 2", sans-serif;
+    }
+
+    .step h4{
+      margin:0 0 6px;
+      font-size:21px;
+      font-family:"Baloo 2", sans-serif;
+      line-height:1;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .games{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
 
-    footer{
-      padding:26px 0 40px;
-      color:#94a3b8;
-      font-size:.95rem;
+    .game-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:20px;
+      box-shadow:var(--shadow);
     }
 
-    .footer-box{
-      border-top:1px solid rgba(255,255,255,.08);
+    .game-card h3{
+      font-size:24px;
+      margin-bottom:8px;
+      line-height:1;
+    }
+
+    .game-card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .game-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .game-tags span{
+      padding:8px 10px;
+      border-radius:999px;
+      background:var(--green-soft);
+      color:#24542f;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .faq{
+      display:grid;
+      gap:12px;
+    }
+
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:16px 18px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.75;
+    }
+
+    .trust-card{
+      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .trust-card h2{
+      font-size:clamp(2rem, 4vw, 3rem);
+      margin-bottom:12px;
+      color:#fff;
+    }
+
+    .trust-card p{
+      margin:0;
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:820px;
+    }
+
+    .trust-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .areas-intro{
+      margin-top:14px;
+      max-width:980px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    .local-area-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:22px;
+    }
+
+    .local-area-card{
+      display:block;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.05);
+      transition:.2s ease;
+      min-height:170px;
+    }
+
+    .local-area-card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 34px rgba(0,0,0,0.08);
+    }
+
+    .local-area-card strong{
+      display:block;
+      font-size:22px;
+      font-family:"Baloo 2", sans-serif;
+      line-height:1;
+      margin-bottom:8px;
+      color:#14361b;
+    }
+
+    .local-area-card span{
+      display:block;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:14px;
+    }
+
+    .hub-links-wrap{
+      margin-top:22px;
+    }
+
+    .hub-links-title{
+      margin:0 0 12px;
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:#5c715f;
+    }
+
+    .hub-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .hub-link{
+      display:inline-flex;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.78);
+      border:1px solid var(--line);
+      color:#33523b;
+      font-size:14px;
+      font-weight:700;
+      box-shadow:0 8px 22px rgba(0,0,0,0.03);
+      transition:.2s ease;
+    }
+
+    .hub-link:hover{
+      transform:translateY(-1px);
+      background:#fff;
+    }
+
+    .micro-links{
+      margin-top:20px;
       padding-top:18px;
+      border-top:1px dashed rgba(18,64,29,0.14);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
     }
 
-    @media (max-width: 980px){
+    .micro-links a{
+      font-size:13px;
+      color:#5c715f;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .cta{
+      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
+      color:#fff;
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    .cta-copy h2{
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      margin-bottom:10px;
+    }
+
+    .cta-copy p{
+      margin:0 0 18px;
+      color:#d7e8d8;
+      line-height:1.75;
+      max-width:620px;
+    }
+
+    .cta-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:24px;
+      padding:22px;
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-box strong{
+      display:block;
+      margin-bottom:2px;
+      font-size:20px;
+      color:#fff;
+    }
+
+    .contact-box small{
+      color:rgba(255,255,255,0.78);
+      line-height:1.6;
+    }
+
+    .contact-links{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .contact-link{
+      display:flex;
+      align-items:center;
+      min-height:48px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.10);
+      color:#fff;
+      font-weight:700;
+      line-height:1.4;
+      transition:.2s ease;
+    }
+
+    .contact-link:hover{
+      background:rgba(255,255,255,0.14);
+      transform:translateY(-1px);
+    }
+
+    footer{
+      padding:36px 0 60px;
+      color:#5b6e60;
+      font-size:14px;
+    }
+
+    .footer-line{
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 1120px){
+      .zone-grid,
+      .games,
+      .local-area-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 1024px){
       .hero-grid,
-      .grid-4,
-      .grid-3{
-        grid-template-columns:1fr 1fr;
+      .showcase,
+      .cta{
+        grid-template-columns:1fr;
+      }
+
+      .price-grid,
+      .grid-2{
+        grid-template-columns:1fr;
+      }
+
+      .price-card.featured{
+        transform:none;
       }
     }
 
     @media (max-width: 720px){
-      .nav{
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .navlinks{
-        justify-content:flex-start;
+      .nav-links{
+        display:none;
       }
 
       .hero{
-        padding-top:36px;
+        padding-top:34px;
       }
 
-      .hero-card,
-      .info-card,
-      .cluster-card,
-      .city-card,
-      .cta-card{
-        padding:20px;
+      .hero h1{
+        line-height:1;
       }
 
-      .hero-grid,
-      .grid-4,
-      .grid-3{
+      .mockup-panel{
         grid-template-columns:1fr;
       }
 
-      .section-head{
-        align-items:flex-start;
-        flex-direction:column;
+      .section{
+        padding:30px 0;
       }
 
-      .hero-actions,
-      .cta-card{
+      .section-title{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .zone-grid,
+      .games,
+      .local-area-grid{
+        grid-template-columns:1fr;
+      }
+
+      .cta-buttons,
+      .trust-actions{
+        flex-direction:column;
         align-items:stretch;
       }
 
-      .btn{
+      .cta-buttons .btn,
+      .trust-actions .btn{
         width:100%;
       }
     }
   </style>
 </head>
 <body>
-
   <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="/">
-        <img src="/Offroad%20Bumpis%20logo.png" alt="Offroad Bumpis logotyp" />
+    <div class="container nav">
+      <a href="./" class="brand" aria-label="Offroad Bumpis startsida">
+        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
         <span>Offroad Bumpis</span>
       </a>
 
-      <nav class="navlinks" aria-label="Huvudmeny">
-        <a href="#aktiviteter">Aktiviteter</a>
-        <a href="#platser">Platser</a>
-        <a href="#om">Om</a>
-        <a href="/barnkalas/skane/">Barnkalas Skåne</a>
+      <nav class="nav-links">
+        <a href="#paket">Paket</a>
+        <a href="#transport">Transport</a>
+        <a href="#zoner">Zoner</a>
+        <a href="#omraden">Områden</a>
+        <a href="#faq">Frågor</a>
       </nav>
+
+      <a href="https://tidycal.com/boka-bumperballs" class="nav-cta" target="_blank" rel="noopener noreferrer">
+        Boka
+      </a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow">Bumperball i Skåne</div>
-          <h1>Rolig bumperball för barnkalas, skola, fritids och föreningar</h1>
-          <p class="lead">
-            Offroad Bumpis hyr ut bumperballs i Skåne för fartfyllda aktiviteter utomhus.
-            Perfekt för barnkalas, skolaktiviteter, fritidsgrupper och föreningar som vill ha
-            något roligare än ännu en klassisk korv-med-bröd-runda.
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Skåne · barnaktivitet med låg admin och hög energi</span>
+          <h1>Bumperball i Skåne för barnkalas, skola, fritids & förening</h1>
+          <p>
+            Hyr bumperballs i barnstorlek till barnkalas i Skåne, skolor, fritids och föreningar. Offroad Bumpis erbjuder bumperball i Malmö, Lund, Helsingborg, Trelleborg, Ystad, Kristianstad, Hässleholm, Landskrona och fler orter i Skåne för dig som vill boka en rolig barnaktivitet med rörelse, skratt och tydliga villkor.
+          </p>
+          <p class="hero-trust">
+            Viktigt: kontrollera alltid att den du hyr av är en riktig och verifierad person, så att du inte blir scammad.
           </p>
 
+          <ul class="hero-points">
+            <li><span class="check">✓</span><span>10-pack från 2 000 kr eller 2-pack från 600 kr</span></li>
+            <li><span class="check">✓</span><span>Funkar på gräs, konstgräs, sporthall, fin sand och mjuk snö</span></li>
+            <li><span class="check">✓</span><span>För barn cirka 7–12 år, max 60 kg</span></li>
+            <li><span class="check">✓</span><span>Helg fre 08–sön 20 räknas som en hyresdag</span></li>
+          </ul>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/barnkalas/skane/">Se barnkalas i Skåne</a>
-            <a class="btn btn-secondary" href="#aktiviteter">Utforska aktiviteter</a>
+            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+            <a href="#paket" class="btn btn-secondary">Se paket</a>
+          </div>
+
+          <div class="hub-links-wrap" aria-label="Viktiga sidor">
+            <p class="hub-links-title">Mer att utforska</p>
+            <div class="hub-links">
+              <a class="hub-link" href="./barnkalas/skane/">Barnkalas Skåne</a>
+              <a class="hub-link" href="./fritidsaktivitet/skane/">Fritidsaktivitet Skåne</a>
+              <a class="hub-link" href="./foreningsaktivitet/skane/">Föreningsaktivitet Skåne</a>
+              <a class="hub-link" href="./skolaktivitet/skane/">Skolaktivitet Skåne</a>
+              <a class="hub-link" href="./barnkalas-utomhus/skane/">Barnkalas utomhus Skåne</a>
+            </div>
           </div>
         </div>
 
-        <aside class="info-card" id="om">
-          <div class="mini">
-            <strong>Passar flera typer av grupper</strong>
-            Barnkalas, skolor, fritidshem och föreningar.
+        <div class="hero-card">
+          <div class="mockup-header">
+            <span>Barnaktivitet som syns direkt</span>
+            <div class="dots"><span></span><span></span><span></span></div>
           </div>
 
-          <div class="mini">
-            <strong>Utomhusaktivitet med energi</strong>
-            En enkel setup med hög skrattfaktor och mycket rörelse.
+          <div class="mockup-image">
+            <img
+              src="Bumperball på fotbollsplan i Veberöd.png"
+              alt="Barn spelar bumperball på fotbollsplan i Veberöd"
+            >
           </div>
 
-          <div class="mini">
-            <strong>Fokus på Skåne</strong>
-            Sidor finns för både Skåne brett och utvalda orter.
+          <div class="mockup-panel">
+            <div class="mini-card">
+              <strong>Snabb setup med cirka 2 minuter per boll</strong>
+            </div>
+            <div class="mini-card">
+              <strong>Fasta priser för heldag eller hel helg</strong>
+            </div>
+            <div class="mini-card">
+              <strong>Boka datum, bumperballs och eventuella tillval</strong>
+            </div>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="aktiviteter">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Våra viktigaste landningssidor</h2>
-            <p>
-              Här är klustersidorna som startsidan ska skicka kraft till. Det är motorvägen i internlänkningen.
-            </p>
-          </div>
+    <section class="section" id="paket">
+      <div class="container">
+        <div class="section-title">
+          <h2>Välj paket – gäller heldag eller helg</h2>
         </div>
 
-        <div class="grid-4">
-          <article class="cluster-card">
-            <span class="tag">Barnkalas</span>
-            <h3>Barnkalas i Skåne</h3>
-            <p>
-              För familjer som söker roliga barnkalas med aktivitet, rörelse och mycket skratt.
-            </p>
-            <a class="btn btn-primary" href="/barnkalas/skane/">Öppna sidan</a>
+        <div class="price-grid">
+          <article class="price-card">
+            <span class="tag">Mini</span>
+            <h3>2-pack</h3>
+            <p class="price">600 kr</p>
+            <div class="price-note">Perfekt för mindre kalas där man turas om, kompisdueller och lek hemma.</div>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>2 bumperballs</span></li>
+              <li><span class="check">✓</span><span>1 batteridriven pump</span></li>
+              <li><span class="check">✓</span><span>1 batteri</span></li>
+            </ul>
           </article>
 
-          <article class="cluster-card">
-            <span class="tag">Fritids</span>
-            <h3>Fritidsaktivitet i Skåne</h3>
-            <p>
-              För fritidshem och grupper som vill ha en kul aktivitet utomhus.
-            </p>
-            <a class="btn btn-primary" href="/fritidsaktivitet/skane/">Öppna sidan</a>
+          <article class="price-card featured">
+            <span class="tag">Populärast</span>
+            <h3>10-pack</h3>
+            <p class="price">2 000 kr</p>
+            <div class="price-note">Bra för barnkalas, skolor, större grupper, fritids och föreningar som vill ha en tydlig aktivitet.</div>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>10 bumperballs</span></li>
+              <li><span class="check">✓</span><span>2 batteridrivna pumpar</span></li>
+              <li><span class="check">✓</span><span>Laddare och transportplatta</span></li>
+            </ul>
           </article>
 
-          <article class="cluster-card">
-            <span class="tag">Förening</span>
-            <h3>Föreningsaktivitet i Skåne</h3>
-            <p>
-              För klubbar och föreningar som vill göra träffar, avslutningar eller event roligare.
-            </p>
-            <a class="btn btn-primary" href="/foreningsaktivitet/skane/">Öppna sidan</a>
-          </article>
-
-          <article class="cluster-card">
-            <span class="tag">Skola</span>
-            <h3>Skolaktivitet i Skåne</h3>
-            <p>
-              För skolor som söker en aktiv dag med tydlig wow-faktor.
-            </p>
-            <a class="btn btn-primary" href="/skolaktivitet/skane/">Öppna sidan</a>
+          <article class="price-card">
+            <span class="tag">Tillval</span>
+            <h3>Turneringskit</h3>
+            <p class="price">1 000 kr</p>
+            <div class="price-note">För kalas, skolor, fritids och föreningar som vill få upp tempo, struktur och finalkänsla.</div>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Lagvästar, koner och markörer</span></li>
+              <li><span class="check">✓</span><span>Matchboll och enkel poängstruktur</span></li>
+              <li><span class="check">✓</span><span>Digitala diplom</span></li>
+              <li><span class="check">✓</span><span>Pokal, visselpipa och reflexer</span></li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Fler viktiga sidor att länka till</h2>
-            <p>
-              Extra stödlänkar som hjälper både besökare och Google att fatta sajtkartan utan att få hjärnblödning.
-            </p>
-          </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Underlag som funkar</h2>
         </div>
 
-        <div class="grid-3">
-          <article class="cluster-card">
-            <span class="tag">Utomhus</span>
-            <h3>Barnkalas utomhus i Skåne</h3>
-            <p>
-              För sökningar där folk uttryckligen letar efter barnkalas utomhus.
-            </p>
-            <a class="btn btn-secondary" href="/barnkalas-utomhus/skane/">Öppna sidan</a>
+        <div class="pill-row">
+          <span class="pill">Gräs</span>
+          <span class="pill">Konstgräs</span>
+          <span class="pill">Sporthall</span>
+          <span class="pill">Fin sand</span>
+          <span class="pill">Mjuk snö</span>
+          <span class="pill">Inte asfalt</span>
+          <span class="pill">Inte grus</span>
+          <span class="pill">Inte betong eller is</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="transport">
+      <div class="container grid-2">
+        <article class="card">
+          <h3>Transporttillval</h3>
+          <p>
+            För den som vill hämta själv men saknar rätt transport finns två enkla tillval. 10-pack kräver minst kombibil. För mindre upplägg inom Malmö finns även ellådcykel för 2-pack.
+          </p>
+          <ul class="feature-list" style="margin-top:16px;">
+            <li><span class="check">✓</span><span><strong>Kombibil:</strong> 500 kr per dygn vid hyra av 10 bollar</span></li>
+            <li><span class="check">✓</span><span><strong>Ellådcykel:</strong> 350 kr per dygn vid hyra av 2 bollar inom Malmö</span></li>
+            <li><span class="check">✓</span><span>Transporttillval säljs tillsammans med bokning, inte separat</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Trygg bokning</h3>
+          <p>
+            Betalning ska vara klar senast 3 dagar före hyresdatum. Avbokning senast 3 dagar före ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.
+          </p>
+          <ul class="feature-list" style="margin-top:16px;">
+            <li><span class="check">✓</span><span>Normalt slitage ingår i hyran</span></li>
+            <li><span class="check">✓</span><span>Små hål markeras och lagas i efterhand</span></li>
+            <li><span class="check">✓</span><span>Tydliga debiteringar bara vid undvikbara skador eller utebliven retur</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="zoner">
+      <div class="container">
+        <div class="section-title">
+          <h2>Leveranszoner i Skåne</h2>
+          <p>
+            Pris för enkel väg visas zonvis. Upphämtning i Malmö kostar 0 kr. Det gör det lättare att se vad som gäller för barnkalas i Malmö, Lund, Helsingborg, Ystad, Kristianstad, Trelleborg, Hässleholm, Landskrona och andra delar av Skåne.
+          </p>
+        </div>
+
+        <div class="zone-grid">
+          <article class="zone-card">
+            <strong>Z1</strong>
+            <div class="zone-price">500 kr</div>
+            <p>Malmö</p>
           </article>
 
-          <article class="cluster-card">
-            <span class="tag">Översikt</span>
-            <h3>Varför bumperball?</h3>
-            <p>
-              En aktivitet som sticker ut, får igång gruppen och passar när man vill ha action utan krånglig logistik.
-            </p>
-            <ul class="bullet-list">
-              <li>Roligt för grupper</li>
-              <li>Utomhusvänligt upplägg</li>
-              <li>Passar flera typer av event</li>
-            </ul>
+          <article class="zone-card">
+            <strong>Z2</strong>
+            <div class="zone-price">600 kr</div>
+            <p>Burlöv, Lomma, Staffanstorp</p>
           </article>
 
-          <article class="cluster-card">
-            <span class="tag">Skåne</span>
-            <h3>Lokalt fokus</h3>
-            <p>
-              Startsidan länkar till huvudkluster och utvalda orter. Det räcker långt när strukturen sitter.
-            </p>
-            <ul class="bullet-list">
-              <li>Skåne-sidor för bred träffyta</li>
-              <li>Lokalsidor för specifika sökningar</li>
-              <li>Ren internlänkning utan länk-cirkus</li>
-            </ul>
+          <article class="zone-card">
+            <strong>Z3</strong>
+            <div class="zone-price">700 kr</div>
+            <p>Lund, Svedala, Vellinge</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z4</strong>
+            <div class="zone-price">800 kr</div>
+            <p>Eslöv, Kävlinge, Trelleborg</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z5</strong>
+            <div class="zone-price">900 kr</div>
+            <p>Höör, Hörby, Skurup</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z6</strong>
+            <div class="zone-price">1 000 kr</div>
+            <p>Landskrona, Ystad, Sjöbo</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z7</strong>
+            <div class="zone-price">1 100 kr</div>
+            <p>Helsingborg, Ängelholm, Bjuv, Åstorp, Höganäs, Svalöv, Klippan, Perstorp, Båstad</p>
+          </article>
+
+          <article class="zone-card">
+            <strong>Z8</strong>
+            <div class="zone-price">1 200 kr</div>
+            <p>Kristianstad, Hässleholm, Osby, Bromölla, Östra Göinge, Simrishamn, Tomelilla, Örkelljunga</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="platser">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Lokala barnkalassidor</h2>
-            <p>
-              Dessa länkar matchar mappstrukturen du faktiskt har. Det är den detaljen som skiljer ordning från digital tivoliolycka.
+    <section class="section">
+      <div class="container showcase">
+        <article class="card">
+          <img
+            src="Fotbollslag spelar bumperball i Veberöd.png"
+            alt="Barn spelar bumperball tillsammans i Veberöd"
+          >
+          <div class="showcase-content">
+            <h2 style="font-size:40px; margin-bottom:10px;">Så funkar det</h2>
+            <p style="margin:0; color:var(--muted); line-height:1.75;">
+              Tanken är enkel: välj paket, boka, hämta eller få leverans, spela själva.
             </p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div><h4>Välj paket</h4></div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div><h4>Boka online</h4></div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div><h4>Spela</h4></div>
+              </div>
+            </div>
           </div>
+        </article>
+
+        <article class="card">
+          <div class="showcase-content">
+            <h2 style="font-size:40px; margin-bottom:10px;">Turneringskit</h2>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">A</div>
+                <div>
+                  <h4>Dela in lag</h4>
+                  <p>Lagvästar, koner, markörer och matchboll gör att du kommer igång utan att stå och improvisera.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">B</div>
+                <div>
+                  <h4>Korta matcher</h4>
+                  <p>3–5 minuter per match håller tempot uppe och gör att fler hinner spela.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">C</div>
+                <div>
+                  <h4>Final + pokal + reflexer + diplom</h4>
+                  <p>Det blir tydligare, roligare och mer minnesvärt när dagen får ett avslut som känns på riktigt.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="spel">
+      <div class="container">
+        <div class="section-title">
+          <h2>Spelidéer</h2>
+          <p>
+            Perfekt för barnkalas, skola, fritids och föreningar som vill ha enkel aktivitet med hög energi och tydligt upplägg.
+          </p>
         </div>
 
-        <div class="grid-4">
-          <article class="city-card">
-            <h3>Malmö</h3>
-            <p>Bumperball och barnkalas i Malmö.</p>
-            <a class="btn btn-secondary" href="/barnkalas/malmo/">Barnkalas Malmö</a>
+        <div class="games">
+          <article class="game-card">
+            <h3>Bumper Tag</h3>
+            <p>Två jagare startar. Blir du nuddad eller lätt krockad byter du roll. Kort, snabbt och lätt att förstå.</p>
+            <div class="game-tags"><span>Puls</span><span>Snabb</span><span>3 min</span></div>
           </article>
 
-          <article class="city-card">
-            <h3>Lund</h3>
-            <p>Barnkalas med fart och aktivitet i Lund.</p>
-            <a class="btn btn-secondary" href="/barnkalas/lund/">Barnkalas Lund</a>
+          <article class="game-card">
+            <h3>Kungen av ringen</h3>
+            <p>Markera en cirkel. Målet är att hålla sig kvar längst. Åker du ut vilar du och kommer in igen.</p>
+            <div class="game-tags"><span>Lag/fritt</span><span>Puls</span><span>5 min</span></div>
           </article>
 
-          <article class="city-card">
-            <h3>Helsingborg</h3>
-            <p>Roliga barnkalas och gruppaktiviteter i Helsingborg.</p>
-            <a class="btn btn-secondary" href="/barnkalas/helsingborg/">Barnkalas Helsingborg</a>
+          <article class="game-card">
+            <h3>Rushmatch 5v5</h3>
+            <p>Korta matcher med hög energi. Perfekt för skola, fritids eller grupper där många ska hinna spela.</p>
+            <div class="game-tags"><span>Lag</span><span>Snabb</span><span>3 min</span></div>
           </article>
 
-          <article class="city-card">
-            <h3>Trelleborg</h3>
-            <p>Barnkalas utomhus och bumperball i Trelleborg.</p>
-            <a class="btn btn-secondary" href="/barnkalas/trelleborg/">Barnkalas Trelleborg</a>
+          <article class="game-card">
+            <h3>Sköldpaddan</h3>
+            <p>På signal ska alla försiktigt välta och ta sig upp igen. En favorit när du vill bryta av med något enkelt.</p>
+            <div class="game-tags"><span>Puls</span><span>Snabb</span><span>2 min</span></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="wrap">
-        <div class="cta-card">
-          <div>
-            <h2>Snabbaste vägen framåt</h2>
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Vanliga frågor</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Vilken ålder passar bumperballs för?</summary>
+            <p>Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg. En person per boll gäller.</p>
+          </details>
+
+          <details>
+            <summary>Behöver vi instruktör?</summary>
+            <p>Nej. Ni hyr utrustningen och barnen spelar själva. En ansvarig vuxen ska ha tillsyn under hela aktiviteten.</p>
+          </details>
+
+          <details>
+            <summary>Vilka underlag är okej?</summary>
+            <p>Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna.</p>
+          </details>
+
+          <details>
+            <summary>Vad gäller vid avbokning?</summary>
+            <p>Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.</p>
+          </details>
+
+          <details>
+            <summary>Vad händer om något går sönder?</summary>
+            <p>Normalt slitage ingår. Små hål ska markeras och meddelas vid retur. Debitering sker vid saknade delar, tydligt undvikbara skador eller utebliven retur.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="trust-card">
+          <h2>Tryggare att hyra när du vet vem du hyr av</h2>
+          <p>
+            Kontrollera alltid att den du hyr från är en riktig och verifierad person, så att du inte blir scammad. Offroad Bumpis drivs av Erica Nordlöf, som är verifierad på LinkedIn. På LinkedIn-profilen länkas det också tillbaka till den här sidan, vilket gör det lättare att se att du hyr från en verklig person.
+          </p>
+          <div class="trust-actions">
+            <a href="https://www.linkedin.com/in/erica-nordlöf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Se verifierad LinkedIn-profil</a>
+            <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="omraden">
+      <div class="container">
+        <div class="section-title">
+          <h2>Populära områden för barnkalas med bumperball i Skåne</h2>
+          <p>
+            Letar du efter barnkalas med aktivitet i din stad? Här hittar du lokala sidor för olika delar av Skåne med information om bumperball, priser, leverans och bokning. Det här gör det enklare att hitta rätt om du söker barnkalas i Malmö, Lund, Helsingborg, Ystad, Kristianstad, Trelleborg, Hässleholm eller Landskrona.
+          </p>
+        </div>
+
+        <p class="areas-intro">
+          Offroad Bumpis erbjuder bumperball i Skåne för barnkalas, fritids, skolor och föreningar. De lokala sidorna är byggda för att göra det lättare att hitta rätt om du söker barnaktivitet i Malmö, bumperball i Lund, kalasaktivitet i Helsingborg, barnkalas i Trelleborg, aktivitet för barnkalas i Ystad, bumperball i Kristianstad, barnkalas i Hässleholm eller barnaktivitet i Landskrona.
+        </p>
+
+        <div class="local-area-grid">
+          <a class="local-area-card" href="./barnkalas/malmo/">
+            <strong>Barnkalas Malmö</strong>
+            <span>Bumperball i Malmö för barnkalas, fritids, skola och förening. Perfekt för dig som söker barnkalas Malmö med aktivitet.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas/lund/">
+            <strong>Barnkalas Lund</strong>
+            <span>Rolig aktivitet för barnkalas i Lund med tydliga priser, bokning och lokal information om bumperball Lund.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas/helsingborg/">
+            <strong>Barnkalas Helsingborg</strong>
+            <span>Fartfylld barnaktivitet i Helsingborg med bumperballs för kalas, fritids och större grupper.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas-ystad.html">
+            <strong>Barnkalas Ystad</strong>
+            <span>Barnkalas i Ystad med aktivitet som sticker ut. För dig som söker bumperball Ystad eller barnaktivitet Ystad.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas-kristianstad.html">
+            <strong>Barnkalas Kristianstad</strong>
+            <span>Bumperball i Kristianstad för kalas, skola, fritids och föreningar. Lokal sida för barnkalas Kristianstad.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas/trelleborg/">
+            <strong>Barnkalas Trelleborg</strong>
+            <span>Rolig kalasaktivitet i Trelleborg med rörelse, skratt och tydlig bokning för barnkalas Trelleborg.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas-hassleholm.html">
+            <strong>Barnkalas Hässleholm</strong>
+            <span>Barnaktivitet i Hässleholm för kalas, skola och större grupper som söker bumperball Hässleholm.</span>
+          </a>
+
+          <a class="local-area-card" href="./barnkalas-landskrona.html">
+            <strong>Barnkalas Landskrona</strong>
+            <span>Bumperball i Landskrona för barnkalas med fart och energi. Perfekt för dig som söker barnkalas Landskrona.</span>
+          </a>
+        </div>
+
+        <div class="micro-links" aria-label="Internlänkar till fler sidor">
+          <a href="./barnkalas/skane/">Barnkalas Skåne</a>
+          <a href="./barnkalas-utomhus/skane/">Barnkalas utomhus Skåne</a>
+          <a href="./fritidsaktivitet/skane/">Fritidsaktivitet Skåne</a>
+          <a href="./foreningsaktivitet/skane/">Föreningsaktivitet Skåne</a>
+          <a href="./skolaktivitet/skane/">Skolaktivitet Skåne</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-copy">
+            <h2>Klar att boka?</h2>
             <p>
-              Låt startsidan länka till huvudkluster och några starka undersidor. Sen låter du varje klustersida länka vidare internt. Det är renare, starkare och mindre kaos.
+              Boka direkt, skicka mejl eller öppna Google-länken om du vill se adressen eller lämna en recension. Oavsett om du söker bumperball i Malmö, Lund, Helsingborg, Ystad, Kristianstad, Trelleborg, Hässleholm eller Landskrona är upplägget byggt för att vara enkelt att förstå.
             </p>
+
+            <div class="cta-buttons">
+              <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
+              <a href="https://share.google/CPWOmh6wdR5rE35L2" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
+            </div>
           </div>
 
-          <div class="links-list" style="min-width:min(100%,320px);">
-            <a href="/barnkalas/skane/">Barnkalas Skåne</a>
-            <a href="/barnkalas-utomhus/skane/">Barnkalas utomhus Skåne</a>
-            <a href="/fritidsaktivitet/skane/">Fritidsaktivitet Skåne</a>
-            <a href="/foreningsaktivitet/skane/">Föreningsaktivitet Skåne</a>
-            <a href="/skolaktivitet/skane/">Skolaktivitet Skåne</a>
+          <div class="contact-box">
+            <strong>Kontakt</strong>
+            <small>Lokalt i Skåne · Barnaktivitet för kalas, skolor, fritids och föreningar.</small>
+
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+              <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
+              <a class="contact-link" href="https://www.linkedin.com/in/erica-nordlöf" target="_blank" rel="noopener noreferrer">Verifierad LinkedIn-profil</a>
+              <a class="contact-link" href="#zoner">Se leveranszoner</a>
+              <a class="contact-link" href="#paket">Se paket och priser</a>
+              <a class="contact-link" href="https://share.google/CPWOmh6wdR5rE35L2" target="_blank" rel="noopener noreferrer">Se adress eller lämna recension på Google</a>
+            </div>
           </div>
         </div>
       </div>
@@ -603,8 +1413,19 @@
   </main>
 
   <footer>
-    <div class="wrap footer-box">
-      Offroad Bumpis i Skåne – bumperball för barnkalas, skola, fritids och förening.
+    <div class="container">
+      <div class="micro-links" aria-label="Fler sidor på sajten" style="margin-top:0; padding-top:0; border-top:none; margin-bottom:18px;">
+        <a href="./barnkalas/skane/">Barnkalas Skåne</a>
+        <a href="./fritidsaktivitet/skane/">Fritidsaktivitet Skåne</a>
+        <a href="./foreningsaktivitet/skane/">Föreningsaktivitet Skåne</a>
+        <a href="./skolaktivitet/skane/">Skolaktivitet Skåne</a>
+        <a href="./barnkalas-utomhus/skane/">Barnkalas utomhus Skåne</a>
+      </div>
+
+      <div class="footer-line">
+        <span>© 2026 Offroad Bumpis</span>
+        <span>Bumperball i Skåne · Barnkalas · Trygg uthyrning</span>
+      </div>
     </div>
   </footer>
 </body>
