@@ -40,8 +40,8 @@
       --shadow:0 18px 55px rgba(14, 53, 22, 0.10);
       --shadow-soft:0 10px 28px rgba(14, 53, 22, 0.06);
       --radius:24px;
-      --radius-sm:18px;
       --max:1180px;
+      --faq-max:980px;
     }
 
     *{box-sizing:border-box}
@@ -111,7 +111,6 @@
     .nav-links{
       display:flex;
       align-items:center;
-      flex-wrap:wrap;
       gap:18px;
       color:#35523c;
       font-size:14px;
@@ -143,14 +142,14 @@
     }
 
     .hero{
-      padding:52px 0 34px;
+      padding:54px 0 38px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);
-      gap:32px;
-      align-items:center;
+      grid-template-columns:minmax(0,1.02fr) minmax(420px,0.92fr);
+      gap:40px;
+      align-items:start;
     }
 
     .eyebrow{
@@ -177,9 +176,9 @@
 
     .hero h1{
       margin:14px 0 16px;
-      font-size:clamp(2.5rem, 5vw, 5.25rem);
+      font-size:clamp(3rem, 5vw, 5.2rem);
       color:#14361b;
-      max-width:10ch;
+      max-width:9.5ch;
     }
 
     .hero p{
@@ -187,7 +186,7 @@
       font-size:17px;
       line-height:1.78;
       color:#3f5c46;
-      max-width:660px;
+      max-width:650px;
     }
 
     .hero-trust{
@@ -253,9 +252,7 @@
       text-align:center;
     }
 
-    .btn:hover{
-      transform:translateY(-1px);
-    }
+    .btn:hover{transform:translateY(-1px)}
 
     .btn-primary{
       background:var(--dark);
@@ -279,6 +276,9 @@
       overflow:hidden;
       position:relative;
       min-width:0;
+      max-width:500px;
+      justify-self:end;
+      width:100%;
     }
 
     .hero-card::after{
@@ -353,26 +353,27 @@
     }
 
     .section{
-      padding:44px 0;
+      padding:46px 0;
       scroll-margin-top:88px;
     }
 
     .section-title{
-      display:flex;
-      justify-content:space-between;
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(260px, 520px);
+      gap:24px;
       align-items:end;
-      gap:18px;
       margin-bottom:22px;
     }
 
     .section-title h2{
-      font-size:clamp(2rem, 4vw, 3.25rem);
+      font-size:clamp(2.2rem, 4vw, 3.25rem);
       max-width:14ch;
     }
 
     .section-title p{
       margin:0;
-      max-width:590px;
+      max-width:520px;
+      justify-self:end;
       line-height:1.75;
       color:var(--muted);
       font-size:16px;
@@ -467,6 +468,7 @@
       font-weight:600;
       line-height:1.65;
       font-size:15px;
+      min-height:72px;
     }
 
     .featured .price-note{
@@ -661,6 +663,11 @@
       line-height:1;
     }
 
+    .faq-wrap{
+      max-width:var(--faq-max);
+      margin:0 auto;
+    }
+
     .faq{
       display:grid;
       gap:12px;
@@ -806,7 +813,7 @@
       padding:34px;
       box-shadow:var(--shadow);
       display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);
+      grid-template-columns:minmax(0,1.1fr) minmax(320px,0.9fr);
       gap:20px;
       align-items:start;
     }
@@ -902,8 +909,9 @@
         grid-template-columns:1fr;
       }
 
-      .hero h1{
-        max-width:12ch;
+      .hero-card{
+        justify-self:start;
+        max-width:560px;
       }
 
       .zone-grid,
@@ -912,8 +920,13 @@
         grid-template-columns:repeat(2, minmax(0, 1fr));
       }
 
-      .price-grid{
-        grid-template-columns:repeat(3, minmax(0, 1fr));
+      .section-title{
+        grid-template-columns:1fr;
+      }
+
+      .section-title p{
+        justify-self:start;
+        max-width:none;
       }
     }
 
@@ -935,16 +948,6 @@
         transform:none;
       }
 
-      .section-title{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .section-title h2,
-      .section-title p{
-        max-width:none;
-      }
-
       .trust-card h2,
       .cta-copy h2{
         max-width:none;
@@ -954,10 +957,6 @@
     @media (max-width: 720px){
       .container{
         width:min(var(--max), calc(100% - 24px));
-      }
-
-      .topbar{
-        position:sticky;
       }
 
       .nav{
@@ -1027,6 +1026,7 @@
       .hero-card{
         border-radius:24px;
         padding:14px;
+        max-width:none;
       }
 
       .mockup-image{
@@ -1072,6 +1072,10 @@
 
       .price{
         font-size:40px;
+      }
+
+      .price-note{
+        min-height:auto;
       }
 
       .pill-row{
@@ -1494,37 +1498,44 @@
     </section>
 
     <section class="section" id="faq">
-      <div class="faq">
-  <details>
-    <summary>Vilken ålder passar bumperballs för?</summary>
-    <p>Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg. En person per boll gäller.</p>
-  </details>
+      <div class="container">
+        <div class="faq-wrap">
+          <div class="section-title" style="grid-template-columns:1fr; margin-bottom:18px;">
+            <h2>Vanliga frågor</h2>
+          </div>
 
-  <details>
-    <summary>Behöver vi instruktör?</summary>
-    <p>Nej. Ni hyr utrustningen och barnen spelar själva. En ansvarig vuxen ska ha tillsyn under hela aktiviteten.</p>
-  </details>
+          <div class="faq">
+            <details>
+              <summary>Vilken ålder passar bumperballs för?</summary>
+              <p>Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg. En person per boll gäller.</p>
+            </details>
 
-  <details>
-    <summary>Hur lång tid tar det att pumpa upp bumperballs?</summary>
-    <p>Det tar cirka 2 minuter per boll att pumpa upp. Vid hyra av 10 bollar ingår 2 batteripumpar, så om ni är 2 personer tar det bara ungefär 10 minuter att pumpa upp alla 10 bollar.</p>
-  </details>
+            <details>
+              <summary>Behöver vi instruktör?</summary>
+              <p>Nej. Ni hyr utrustningen och barnen spelar själva. En ansvarig vuxen ska ha tillsyn under hela aktiviteten.</p>
+            </details>
 
-  <details>
-    <summary>Vilka underlag är okej?</summary>
-    <p>Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna.</p>
-  </details>
+            <details>
+              <summary>Hur lång tid tar det att pumpa upp bumperballs?</summary>
+              <p>Det tar cirka 2 minuter per boll att pumpa upp. Vid hyra av 10 bollar ingår 2 batteripumpar, så om ni är 2 personer tar det bara ungefär 10 minuter att pumpa upp alla 10 bollar.</p>
+            </details>
 
-  <details>
-    <summary>Vad gäller vid avbokning?</summary>
-    <p>Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.</p>
-  </details>
+            <details>
+              <summary>Vilka underlag är okej?</summary>
+              <p>Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna.</p>
+            </details>
 
-  <details>
-    <summary>Vad händer om något går sönder?</summary>
-    <p>Normalt slitage ingår. Små hål ska markeras och meddelas vid retur. Debitering sker vid saknade delar, tydligt undvikbara skador eller utebliven retur.</p>
-  </details>
-</div>
+            <details>
+              <summary>Vad gäller vid avbokning?</summary>
+              <p>Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.</p>
+            </details>
+
+            <details>
+              <summary>Vad händer om något går sönder?</summary>
+              <p>Normalt slitage ingår. Små hål ska markeras och meddelas vid retur. Debitering sker vid saknade delar, tydligt undvikbara skador eller utebliven retur.</p>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1643,8 +1654,7 @@
   </main>
 
   <footer>
-   
-
+    <div class="container">
       <div class="footer-line">
         <span>© 2026 Offroad Bumpis</span>
         <span>Bumperball i Skåne · Barnkalas · Trygg uthyrning</span>
