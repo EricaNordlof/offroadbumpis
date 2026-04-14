@@ -2,26 +2,60 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <title>Villkor | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Ladda ner exempel på avtal, villkor, överlämningsdokument och användarmanual för Offroad Bumpis. Enkel, tydlig och trygg dokumentation inför bokning."
+    content="Läs Offroad Bumpis villkor för uthyrning av bumperballs i Skåne. Tydlig info om användning, ansvar, bokning, avbokning, betalning, säkerhet och återlämning."
   />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://offroadbumpis/villkor.html" />
+  <meta name="author" content="Erica Nordlöf" />
+  <link rel="canonical" href="https://offroadbumpis.se/villkor.html" />
 
-  <meta property="og:title" content="Villkor | Offroad Bumpis">
-  <meta property="og:description" content="Exempel på avtal, villkor, överlämningsdokument och användarmanual för Offroad Bumpis.">
-  <meta property="og:image" content="https://offroadbumpis/Bumperball%20på%20fotbollsplan%20i%20Veber%C3%B6d.png">
-  <meta property="og:url" content="https://offroadbumpis/villkor.html">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Villkor | Offroad Bumpis" />
+  <meta property="og:description" content="Tydliga villkor för bokning, användning, säkerhet, betalning och återlämning av bumperballs." />
+  <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+  <meta property="og:url" content="https://offroadbumpis.se/villkor.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Villkor | Offroad Bumpis" />
+  <meta name="twitter:description" content="Tydliga villkor för bokning, användning, säkerhet, betalning och återlämning av bumperballs." />
+  <meta name="twitter:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+
   <meta name="theme-color" content="#14361b" />
+
+  <link rel="icon" type="image/png" href="Offroad Bumpis logo.png" />
+  <link rel="apple-touch-icon" href="Offroad Bumpis logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"Villkor | Offroad Bumpis",
+        "url":"https://offroadbumpis.se/villkor.html",
+        "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning."
+      },
+      {
+        "@type":"LocalBusiness",
+        "name":"Offroad Bumpis",
+        "url":"https://offroadbumpis.se/",
+        "image":"https://offroadbumpis.se/Offroad%20Bumpis%20logo.png",
+        "email":"mailto:kontakt@offroadbumpis.se",
+        "telephone":"+46793442520",
+        "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
+        "founder":{"@type":"Person","name":"Erica Nordlöf"}
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -41,10 +75,13 @@
       --shadow-soft:0 10px 28px rgba(14, 53, 22, 0.06);
       --radius:24px;
       --max:1180px;
+      --content-max:900px;
+      --tap:48px;
+      --header-offset:92px;
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
     body{
       margin:0;
       font-family:"Inter",sans-serif;
@@ -55,10 +92,12 @@
         linear-gradient(180deg, var(--bg) 0%, #effbea 100%);
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
+      overflow-x:hidden;
     }
 
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
+    :target{scroll-margin-top:var(--header-offset)}
 
     .container{
       width:min(var(--max), calc(100% - 32px));
@@ -70,6 +109,7 @@
       top:0;
       z-index:50;
       backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
       background:rgba(245,255,241,0.84);
       border-bottom:1px solid var(--line);
     }
@@ -101,9 +141,23 @@
       flex:0 0 auto;
     }
 
-    .brand span{
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:0;
+    }
+
+    .brand-title{
       font-size:15px;
       line-height:1.1;
+      white-space:nowrap;
+    }
+
+    .brand-sub{
+      font-size:12px;
+      color:#4f6954;
+      line-height:1.2;
       white-space:nowrap;
     }
 
@@ -121,9 +175,7 @@
       transition:.2s ease;
     }
 
-    .nav-links a:hover{
-      opacity:1;
-    }
+    .nav-links a:hover{opacity:1}
 
     .nav-cta{
       display:inline-flex;
@@ -141,14 +193,29 @@
     }
 
     .hero{
-      padding:52px 0 28px;
+      padding:54px 0 28px;
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.02fr) minmax(360px,0.9fr);
-      gap:32px;
-      align-items:start;
+    .hero-card{
+      background:linear-gradient(180deg, #1b4724 0%, #14361b 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:24px;
+      box-shadow:0 28px 80px rgba(8, 34, 16, 0.18);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
+      pointer-events:none;
     }
 
     .eyebrow{
@@ -156,36 +223,42 @@
       align-items:center;
       gap:8px;
       padding:8px 12px;
-      background:#fff;
-      border:1px solid var(--line);
+      background:rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.10);
       border-radius:999px;
       font-size:13px;
       font-weight:800;
-      color:#42634a;
-      box-shadow:0 10px 24px rgba(0,0,0,0.04);
+      color:#dff1df;
       max-width:100%;
+      line-height:1.4;
+      position:relative;
+      z-index:1;
     }
 
-    h1, h2, h3{
+    h1,h2,h3{
       font-family:"Baloo 2", sans-serif;
       letter-spacing:-0.03em;
       margin:0;
       line-height:0.96;
     }
 
-    .hero h1{
+    .hero-card h1{
       margin:14px 0 14px;
-      font-size:clamp(2.8rem, 5vw, 4.8rem);
-      color:#14361b;
-      max-width:8ch;
+      font-size:clamp(2.6rem, 5vw, 4.8rem);
+      color:#fff;
+      max-width:10ch;
+      position:relative;
+      z-index:1;
     }
 
-    .hero p{
+    .hero-card p{
       margin:0;
       font-size:17px;
-      line-height:1.78;
-      color:#3f5c46;
-      max-width:650px;
+      line-height:1.8;
+      color:#d7e8d8;
+      max-width:760px;
+      position:relative;
+      z-index:1;
     }
 
     .hero-points{
@@ -194,13 +267,14 @@
       margin:20px 0 0;
       padding:0;
       list-style:none;
-      color:#2c4632;
+      color:#eef6ee;
       font-weight:600;
-      max-width:640px;
+      max-width:760px;
+      position:relative;
+      z-index:1;
     }
 
-    .hero-points li,
-    .feature-list li{
+    .hero-points li{
       display:flex;
       gap:10px;
       align-items:flex-start;
@@ -213,18 +287,74 @@
       border-radius:50%;
       display:grid;
       place-items:center;
-      background:var(--green-dark);
-      color:#fff;
+      background:var(--green);
+      color:#14361b;
       font-size:12px;
-      font-weight:800;
+      font-weight:900;
       margin-top:2px;
     }
 
-    .hero-actions{
+    .section{
+      padding:24px 0 42px;
+    }
+
+    .content-wrap{
+      width:min(var(--content-max), 100%);
+      margin:0 auto;
+      display:grid;
+      gap:18px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.94);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h2{
+      font-size:32px;
+      margin-bottom:12px;
+      color:#14361b;
+    }
+
+    .card h3{
+      font-size:24px;
+      margin-bottom:10px;
+      color:#14361b;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    .card p:last-child{margin-bottom:0}
+
+    .bullet-list{
+      display:grid;
+      gap:10px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .bullet-list li{
       display:flex;
-      gap:12px;
+      gap:10px;
+      align-items:flex-start;
+      color:var(--muted);
+      line-height:1.75;
+    }
+
+    .link-row{
+      display:flex;
       flex-wrap:wrap;
-      margin-top:24px;
+      gap:12px;
+      margin-top:18px;
     }
 
     .btn{
@@ -258,254 +388,19 @@
       box-shadow:0 8px 22px rgba(0,0,0,0.03);
     }
 
-    .hero-card{
-      background:linear-gradient(180deg, #1b4724 0%, #14361b 100%);
-      color:#fff;
-      border-radius:30px;
-      padding:18px;
-      box-shadow:0 28px 80px rgba(8, 34, 16, 0.18);
-      overflow:hidden;
-      position:relative;
-      min-width:0;
-      max-width:500px;
-      justify-self:end;
-      width:100%;
-    }
-
-    .hero-card::after{
-      content:"";
-      position:absolute;
-      right:-90px;
-      bottom:-90px;
-      width:240px;
-      height:240px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
-      pointer-events:none;
-    }
-
-    .mockup-header{
+    .doc-links{
       display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      margin-bottom:14px;
-      color:#d7ead8;
-      font-size:14px;
-      font-weight:700;
-    }
-
-    .dots{
-      display:flex;
-      gap:6px;
-      flex:0 0 auto;
-    }
-
-    .dots span{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:#6aa85b;
-    }
-
-    .mockup-image{
-      border-radius:24px;
-      overflow:hidden;
-      margin-bottom:14px;
-      aspect-ratio:4 / 5;
-      background:#1f3826;
-    }
-
-    .mockup-image img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .mini-card{
-      background:rgba(255,255,255,0.09);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:18px;
-      padding:14px;
-    }
-
-    .mini-card strong{
-      display:block;
-      font-size:14px;
-      line-height:1.5;
-      color:#f2faf2;
-    }
-
-    .section{
-      padding:34px 0;
-      scroll-margin-top:88px;
-    }
-
-    .section-title{
-      display:grid;
-      grid-template-columns:minmax(0, 1fr) minmax(260px, 520px);
-      gap:24px;
-      align-items:end;
-      margin-bottom:18px;
-    }
-
-    .section-title h2{
-      font-size:clamp(2rem, 4vw, 3rem);
-      max-width:12ch;
-    }
-
-    .section-title p{
-      margin:0;
-      max-width:520px;
-      justify-self:end;
-      line-height:1.75;
-      color:var(--muted);
-      font-size:16px;
-    }
-
-    .doc-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:18px;
-    }
-
-    .doc-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:24px;
-      box-shadow:var(--shadow);
-      min-width:0;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-
-    .doc-type{
-      display:inline-block;
-      align-self:flex-start;
-      font-size:12px;
-      font-weight:800;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-      padding:8px 10px;
-      border-radius:999px;
-      background:rgba(18,49,29,0.08);
-      color:#23482b;
-    }
-
-    .doc-card h3{
-      font-size:30px;
-      margin:0;
-    }
-
-    .doc-card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
-      flex:1 1 auto;
-    }
-
-    .doc-actions{
-      display:flex;
-      gap:10px;
       flex-wrap:wrap;
-      margin-top:6px;
-    }
-
-    .info-card{
-      background:rgba(255,255,255,0.92);
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:22px;
-      box-shadow:var(--shadow);
-    }
-
-    .info-card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.8;
+      gap:10px 14px;
       font-size:15px;
-    }
-
-    .cta{
-      background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
-      color:#fff;
-      border-radius:34px;
-      padding:30px;
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(320px,0.9fr);
-      gap:20px;
-      align-items:start;
-    }
-
-    .cta-copy h2{
-      font-size:clamp(2rem, 4vw, 3rem);
-      margin-bottom:10px;
-      max-width:12ch;
-    }
-
-    .cta-copy p{
-      margin:0 0 18px;
-      color:#d7e8d8;
-      line-height:1.78;
-      max-width:620px;
-    }
-
-    .cta-buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
-    }
-
-    .contact-box{
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.10);
-      border-radius:24px;
-      padding:22px;
-      display:grid;
-      gap:12px;
-      min-width:0;
-    }
-
-    .contact-box strong{
-      display:block;
-      margin-bottom:2px;
-      font-size:20px;
-      color:#fff;
-    }
-
-    .contact-box small{
-      color:rgba(255,255,255,0.78);
       line-height:1.7;
     }
 
-    .contact-links{
-      display:grid;
-      gap:10px;
-      margin-top:10px;
-    }
-
-    .contact-link{
-      display:flex;
-      align-items:center;
-      min-height:50px;
-      padding:12px 14px;
-      border-radius:16px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.10);
-      color:#fff;
-      font-weight:700;
-      line-height:1.45;
-      transition:.2s ease;
-      word-break:break-word;
-    }
-
-    .contact-link:hover{
-      background:rgba(255,255,255,0.14);
-      transform:translateY(-1px);
+    .doc-links a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+      color:#27442e;
+      font-weight:600;
     }
 
     footer{
@@ -524,38 +419,18 @@
       line-height:1.6;
     }
 
-    @media (max-width: 1120px){
-      .hero-grid,
-      .cta{
-        grid-template-columns:1fr;
-      }
-
-      .hero-card{
-        justify-self:start;
-        max-width:560px;
-      }
-
-      .section-title{
-        grid-template-columns:1fr;
-      }
-
-      .section-title p{
-        justify-self:start;
-        max-width:none;
-      }
+    .footer-line a{
+      text-decoration:underline;
+      text-underline-offset:3px;
     }
 
-    @media (max-width: 980px){
-      .nav-links{
-        display:none;
-      }
-
-      .doc-grid{
-        grid-template-columns:1fr;
-      }
+    @media (max-width:980px){
+      .nav-links{display:none}
     }
 
-    @media (max-width: 720px){
+    @media (max-width:720px){
+      :root{--header-offset:84px}
+
       .container{
         width:min(var(--max), calc(100% - 24px));
       }
@@ -574,10 +449,14 @@
         height:38px;
       }
 
-      .brand span{
+      .brand-title{
         font-size:14px;
-        max-width:110px;
+        max-width:150px;
         white-space:normal;
+      }
+
+      .brand-sub{
+        display:none;
       }
 
       .nav-cta{
@@ -587,52 +466,48 @@
       }
 
       .hero{
-        padding:30px 0 20px;
+        padding:30px 0 18px;
       }
 
-      .hero-grid{
-        gap:22px;
+      .hero-card{
+        border-radius:24px;
+        padding:18px;
       }
 
-      .hero h1{
-        font-size:clamp(2.2rem, 11vw, 3.6rem);
-        line-height:0.98;
+      .hero-card h1{
+        font-size:clamp(2.1rem, 10vw, 3.2rem);
         max-width:none;
       }
 
-      .hero p{
+      .hero-card p{
         font-size:15.5px;
         line-height:1.72;
       }
 
-      .hero-card,
-      .doc-card,
-      .info-card,
-      .cta,
-      .contact-box{
+      .section{
+        padding:18px 0 30px;
+      }
+
+      .card{
+        padding:18px;
         border-radius:20px;
       }
 
-      .doc-card,
-      .info-card,
-      .contact-box{
-        padding:18px;
+      .card h2{
+        font-size:28px;
       }
 
-      .cta{
-        padding:22px;
+      .card h3{
+        font-size:22px;
       }
 
-      .hero-actions .btn,
-      .doc-actions .btn,
-      .cta-buttons .btn{
-        flex:1 1 100%;
-        width:100%;
-      }
-
-      .cta-buttons{
+      .link-row{
         flex-direction:column;
         align-items:stretch;
+      }
+
+      .link-row .btn{
+        width:100%;
       }
 
       .footer-line{
@@ -640,151 +515,226 @@
         align-items:flex-start;
       }
     }
+
+    @media (max-width:420px){
+      .eyebrow{
+        font-size:12px;
+        padding:7px 10px;
+      }
+
+      .card h2{
+        font-size:25px;
+      }
+
+      .card h3{
+        font-size:20px;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a href="./" class="brand" aria-label="Offroad Bumpis startsida">
+      <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
         <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
-        <span>Offroad Bumpis</span>
+        <span class="brand-text">
+          <span class="brand-title">Offroad Bumpis</span>
+          <span class="brand-sub">Villkor</span>
+        </span>
       </a>
 
       <nav class="nav-links" aria-label="Snabblänkar">
-        <a href="#dokument">Dokument</a>
+        <a href="#bokning">Bokning</a>
+        <a href="#anvandning">Användning</a>
+        <a href="#skador">Skador</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
 
-      <a href="https://tidycal.com/boka-bumperballs" class="nav-cta" target="_blank" rel="noopener noreferrer">
-        Boka
-      </a>
+      <a href="/" class="nav-cta">Till startsidan</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Villkor · exempeldokument · trygg uthyrning</span>
+      <div class="container">
+        <div class="hero-card">
+          <span class="eyebrow">Tydligt och enkelt</span>
           <h1>Villkor</h1>
-
           <p>
-            Här finns nedladdningsbara exempel på avtal, villkor, överlämningsdokument och användarmanual för Offroad Bumpis.
+            Här står vad som gäller när du bokar och hyr bumperballs från Offroad Bumpis.
+            Syftet är att allt ska vara tydligt före bokning, under uthyrning och vid återlämning.
           </p>
 
           <ul class="hero-points">
-            <li><span class="check">✓</span><span>Enkelt att se hur dokumentationen ser ut före bokning</span></li>
-            <li><span class="check">✓</span><span>Exempeldokument med samma upplägg som används vid uthyrning</span></li>
-            <li><span class="check">✓</span><span>Dokumenten är krypterade och kan verifieras via safestandard.se</span></li>
+            <li><span class="check">✓</span><span>10 bumperballs, 2 batteridrivna pumpar, 2 väskor och 1 transportplatta ingår i grundpaketet</span></li>
+            <li><span class="check">✓</span><span>Ingen deposition och ingen självrisk vid normal användning enligt villkoren</span></li>
+            <li><span class="check">✓</span><span>Vuxen tillsyn krävs hela tiden och utrustningen får bara användas på lämpligt underlag</span></li>
           </ul>
-
-          <div class="hero-actions">
-            <a href="#dokument" class="btn btn-primary">Se dokument</a>
-            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Boka direkt</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="mockup-header">
-            <span>Tydligt från start</span>
-            <div class="dots"><span></span><span></span><span></span></div>
-          </div>
-
-          <div class="mockup-image">
-            <img
-              src="Bumperball på fotbollsplan i Veberöd.png"
-              alt="Barn spelar bumperball på fotbollsplan"
-            >
-          </div>
-
-          <div class="mini-card">
-            <strong>Exempeldokument visas här. Vid bokning uppdateras de med aktuella uppgifter som namn, telefonnummer, mejladress, adress, datum och vad som hyrs ut.</strong>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="dokument">
+    <section class="section">
       <div class="container">
-        <div class="section-title">
-          <h2>Exempel att ladda ner</h2>
-          <p>
-            Dessa dokument visas som exempel. Vid bokning uppdateras de med aktuella uppgifter för den aktuella uthyrningen.
-          </p>
-        </div>
-
-        <div class="doc-grid">
-          <article class="doc-card">
-            <span class="doc-type">PDF</span>
-            <h3>Avtal</h3>
-            <p>Exempel på hur avtalet ser ut för en uthyrning med Offroad Bumpis.</p>
-            <div class="doc-actions">
-              <a href="Avtal-exempel.pdf" class="btn btn-primary" download>Ladda ner</a>
-            </div>
-          </article>
-
-          <article class="doc-card">
-            <span class="doc-type">PDF</span>
-            <h3>Villkor</h3>
-            <p>Exempel på villkor med regler, ansvar, avbokning och användning.</p>
-            <div class="doc-actions">
-              <a href="Villkor-exempel.pdf" class="btn btn-primary" download>Ladda ner</a>
-            </div>
-          </article>
-
-          <article class="doc-card">
-            <span class="doc-type">PDF</span>
-            <h3>Överlämningsdok</h3>
-            <p>Exempel på överlämningsdokument med kontrollpunkter vid utlämning.</p>
-            <div class="doc-actions">
-              <a href="Overlamning-exempel.pdf" class="btn btn-primary" download>Ladda ner</a>
-            </div>
-          </article>
-
-          <article class="doc-card">
-            <span class="doc-type">PDF</span>
-            <h3>Användarmanual</h3>
-            <p>Kort användarmanual med viktiga regler för säker användning.</p>
-            <div class="doc-actions">
-              <a href="Användarmanual.pdf" class="btn btn-primary" download>Ladda ner</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="info-card" style="margin-top:18px;">
-  <p>
-    Exempeldokument visas här. Vid bokning uppdateras de med aktuella uppgifter som namn, telefonnummer, mejladress, adress, datum och vad som hyrs ut. Dokumenten är krypterade och kan verifieras via <a href="https://safestandard.se" target="_blank" rel="noopener noreferrer" style="text-decoration:underline; text-underline-offset:3px;">safestandard.se</a>. Offroad Bumpis har ansvarsförsäkring och företagsförsäkring via Länsförsäkringar. Ingen deposition tas ut. Ingen självrisk gäller vid normal användning enligt villkor. Små hål och normalt slitage hanteras av Offroad Bumpis. Faktura skickas endast vid uppsåtlig skada, vårdslös hantering eller om utrustningen inte återlämnas.
-  </p>
-</div>
-      </div>
-    </section>
-
-    <section class="section" id="kontakt">
-      <div class="container">
-        <div class="cta">
-          <div class="cta-copy">
-            <h2>Klar att boka?</h2>
+        <div class="content-wrap">
+          <article class="card">
+            <h2>Det här gäller i korthet</h2>
             <p>
-              Vill du boka bumperballs eller har du någon fråga innan bokning, skicka mejl eller boka direkt online.
+              Offroad Bumpis hyr ut bumperballs för barnaktiviteter som barnkalas, skola, fritids,
+              föreningar och liknande. Kunden ansvarar för uppsättning, användning och tillsyn under aktiviteten.
+            </p>
+            <p>
+              Utrustningen får användas inomhus eller utomhus, men bara på plana och lämpliga underlag.
+              Hård, ojämn eller vass miljö är en dålig idé direkt ur driftsperspektiv.
+            </p>
+          </article>
+
+          <article class="card" id="bokning">
+            <h2>Bokning och betalning</h2>
+            <p>
+              Bokningen låses när den är bekräftad. Faktura ska vara betald senast 3 dagar före uthyrningsdatum.
+              Om fakturan inte betalas i tid släpps bokningen.
+            </p>
+            <p>
+              Grundpriset är 2000 kr inklusive moms per uthyrningsdag för 10 bumperballs.
+              Helgregeln är fredag kl. 08.00 till söndag kl. 20.00 som räknas som en uthyrningsdag.
+            </p>
+            <p>
+              Upphämtning i Malmö är gratis. Leverans kan väljas som tillval enligt aktuell leveranszon.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Det som ingår</h2>
+            <p>Följande ingår i grundpaketet och ska lämnas tillbaka:</p>
+
+            <ul class="bullet-list">
+              <li><span class="check">✓</span><span>10 bumperballs</span></li>
+              <li><span class="check">✓</span><span>2 batteridrivna luftpumpar</span></li>
+              <li><span class="check">✓</span><span>2 transportväskor</span></li>
+              <li><span class="check">✓</span><span>1 transportplatta</span></li>
+            </ul>
+          </article>
+
+          <article class="card" id="anvandning">
+            <h2>Vem får använda utrustningen</h2>
+            <p>
+              Bumperballs är avsedda för barn, ungefär 7–12 år, med maxvikt cirka 60 kg.
+              Det är 1 person per boll. Vuxna eller personer över viktgränsen får inte använda dem.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Tillåtna underlag</h2>
+            <p>Utrustningen får användas på mjuka och lämpliga underlag som:</p>
+
+            <ul class="bullet-list">
+              <li><span class="check">✓</span><span>Gräs</span></li>
+              <li><span class="check">✓</span><span>Konstgräs</span></li>
+              <li><span class="check">✓</span><span>Sporthallsgolv</span></li>
+              <li><span class="check">✓</span><span>Fin sand</span></li>
+              <li><span class="check">✓</span><span>Mjuk eller packad snö</span></li>
+            </ul>
+
+            <p>Utrustningen får inte användas på till exempel asfalt, grus, betong, is eller hårda, ojämna och steniga ytor.</p>
+          </article>
+
+          <article class="card">
+            <h2>Säker användning</h2>
+            <p>Följande regler gäller under hela användningen:</p>
+
+            <ul class="bullet-list">
+              <li><span class="check">✓</span><span>Ansvarig vuxen ska övervaka hela tiden</span></li>
+              <li><span class="check">✓</span><span>Inga tacklingar bakifrån</span></li>
+              <li><span class="check">✓</span><span>Ingen kontakt med spelare som ligger ner</span></li>
+              <li><span class="check">✓</span><span>Inga dobbar, cleats, smycken eller vassa föremål nära bollarna</span></li>
+              <li><span class="check">✓</span><span>Avbryt direkt om någon får ont, blir yr eller känner obehag</span></li>
+              <li><span class="check">✓</span><span>Ingen hopp från höjd eller annan risklek som hör hemma i kategorin dåliga beslut</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Pumpning och hantering</h2>
+            <p>
+              Pumpning ska bara göras av vuxen. Barn får inte använda pumpen.
+              Långt hår ska bindas upp och pumpen ska hållas manuellt över ventilöppningen enligt instruktionen.
+            </p>
+            <p>
+              Om luft pyser ut ska det justeras direkt. Felaktig hantering av pump eller ventil räknas inte som normal användning.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Överlämning och återlämning</h2>
+            <p>
+              Utrustningens skick dokumenteras vid överlämning och kan även dokumenteras vid återlämning.
+              Bilder eller video tas bara om det faktiskt finns avvikelser. Inga noterade avvikelser betyder i praktiken att inget avvikande har dokumenterats.
+            </p>
+            <p>
+              Utrustningen ska lämnas tillbaka i tid och i samma dokumenterade skick som vid utlämning,
+              bortsett från normalt slitage.
+            </p>
+          </article>
+
+          <article class="card" id="skador">
+            <h2>Skador, förlust och ansvar</h2>
+            <p>
+              Ingen deposition tas ut. Ingen självrisk gäller vid normal användning enligt villkoren.
+              Små hål och normalt slitage hanteras av Offroad Bumpis.
+            </p>
+            <p>
+              Skadefaktura kan bli aktuell vid grov oaktsamhet, uppsåtlig skada, felaktig användning,
+              förlorade delar, utebliven återlämning eller andra tydliga avvikelser som kan styrkas genom dokumentation.
+            </p>
+            <p>
+              Baslinjen vid en eventuell tvist är dokumenterat skick vid överlämning jämfört med dokumenterat skick vid återlämning.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Avbokning och utebliven hämtning</h2>
+            <ul class="bullet-list">
+              <li><span class="check">✓</span><span>Avbokning mer än 3 dagar före uthyrningsdatum: 100 % återbetalning</span></li>
+              <li><span class="check">✓</span><span>Avbokning mindre än 3 dagar före uthyrningsdatum: 100 % debitering, men beloppet kan krediteras mot ny bokning inom 6 månader</span></li>
+              <li><span class="check">✓</span><span>Utrustning som inte hämtas ut: 100 % debitering</span></li>
+              <li><span class="check">✓</span><span>Sen återlämning kan leda till extra avgifter eller förlängd hyrdebitering</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Kontakt och frågor</h2>
+            <p>
+              Har du frågor före bokning eller vill stämma av något praktiskt, mejla
+              <a href="mailto:kontakt@offroadbumpis.se" style="text-decoration:underline; text-underline-offset:3px;">kontakt@offroadbumpis.se</a>
+              eller ring 079-344 25 20.
             </p>
 
-            <div class="cta-buttons">
-              <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
-              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
+            <div class="link-row" id="kontakt">
+              <a class="btn btn-primary" href="/">Till startsidan</a>
+              <a class="btn btn-secondary" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+              <a class="btn btn-secondary" href="/integritet.html">Läs integritetspolicy</a>
             </div>
-          </div>
+          </article>
 
-          <div class="contact-box">
-            <strong>Kontakt</strong>
-            <small>Offroad Bumpis · Skåne · barnkalas, skola, fritids och förening.</small>
+          <article class="card">
+            <h2>Exempeldokument</h2>
+            <p>
+              Här kan du läsa exempel på samma typ av dokumentation som används i uthyrningsflödet.
+              Små länkar nere i maskinrummet, precis som du ville ha det.
+            </p>
 
-            <div class="contact-links">
-              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
-              <a class="contact-link" href="./">Till startsidan</a>
-              <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Öppna bokning</a>
-              <a class="contact-link" href="https://safestandard.se" target="_blank" rel="noopener noreferrer">Verifiering via Safe Standard</a>
+            <div class="doc-links">
+              <a href="Avtal-exempel.pdf" download>Avtal (PDF)</a>
+              <a href="Villkor-exempel.pdf" download>Villkor (PDF)</a>
+              <a href="Overlamning-exempel.pdf" download>Överlämningsdokument (PDF)</a>
+              <a href="Användarmanual.pdf" download>Användarmanual (PDF)</a>
             </div>
-          </div>
+          </article>
+
+          <article class="card">
+            <h2>Senast uppdaterad</h2>
+            <p>2026-04-14</p>
+          </article>
         </div>
       </div>
     </section>
@@ -794,7 +744,16 @@
     <div class="container">
       <div class="footer-line">
         <span>© 2026 Offroad Bumpis</span>
-        <span>Villkor · Exempeldokument · Trygg uthyrning</span>
+        <span>
+          <a href="/">Hem</a> ·
+          <a href="/affiliate.html">Affiliate</a> ·
+          <a href="/villkor.html">Villkor</a> ·
+          <a href="/integritet.html">Integritet</a> ·
+          <a href="Avtal-exempel.pdf" download>Avtal PDF</a> ·
+          <a href="Villkor-exempel.pdf" download>Villkor PDF</a> ·
+          <a href="Overlamning-exempel.pdf" download>Överlämning PDF</a> ·
+          <a href="Användarmanual.pdf" download>Manual PDF</a>
+        </span>
       </div>
     </div>
   </footer>
