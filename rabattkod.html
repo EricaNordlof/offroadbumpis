@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <title>Extra rabatt på Offroad Bumpis</title>
+  <title>10 % rabatt på Offroad Bumpis</title>
   <meta
     name="description"
-    content="Få 10 % rabatt på Offroad Bumpis. Kopiera koden, skicka din förfrågan och gå vidare till bokning."
+    content="Få 10 % rabatt på Offroad Bumpis. Kopiera koden, fyll i dina uppgifter och gå vidare till bokningen."
   />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="theme-color" content="#14361b" />
@@ -18,18 +18,18 @@
 
   <style>
     :root{
-      --bg:#f5fff1;
-      --bg-2:#effbea;
+      --bg:#f3fbeef5;
+      --bg-2:#edf7e7;
       --card:#ffffff;
       --text:#16311d;
-      --muted:#45604b;
+      --muted:#4a6550;
       --line:rgba(18,64,29,0.10);
       --dark:#102217;
       --dark-2:#14361b;
       --green:#2f7f25;
-      --green-soft:#e8f8e1;
-      --shadow:0 18px 55px rgba(14,53,22,0.10);
-      --shadow-soft:0 10px 28px rgba(14,53,22,0.06);
+      --green-soft:#e8f6e2;
+      --shadow:0 18px 55px rgba(14,53,22,0.08);
+      --shadow-soft:0 10px 28px rgba(14,53,22,0.05);
     }
 
     *{box-sizing:border-box}
@@ -58,7 +58,7 @@
       position:sticky;
       top:0;
       z-index:20;
-      background:rgba(245,255,241,0.88);
+      background:rgba(243,251,238,0.88);
       backdrop-filter:blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -237,7 +237,7 @@
       color:#fff;
       border-radius:26px;
       padding:22px;
-      box-shadow:0 24px 60px rgba(8,34,16,0.18);
+      box-shadow:0 24px 60px rgba(8,34,16,0.16);
     }
 
     .promo-label{
@@ -254,9 +254,10 @@
 
     .promo-title{
       font-family:"Baloo 2",sans-serif;
-      font-size:30px;
-      line-height:0.96;
+      font-size:42px;
+      line-height:0.95;
       margin-bottom:10px;
+      word-break:break-word;
     }
 
     .promo-text{
@@ -394,11 +395,6 @@
       border-radius:22px;
       padding:18px;
       box-shadow:0 8px 22px rgba(0,0,0,0.04);
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
     }
 
     .footer-card p{
@@ -455,11 +451,6 @@
         flex-direction:column;
         align-items:stretch;
       }
-
-      .footer-card{
-        align-items:flex-start;
-        flex-direction:column;
-      }
     }
   </style>
 </head>
@@ -473,7 +464,6 @@
 
       <div class="nav-actions">
         <a href="/" class="btn btn-secondary">Till startsidan</a>
-        <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka direkt</a>
       </div>
     </div>
   </header>
@@ -484,41 +474,35 @@
         <div class="hero-card">
           <div class="hero-inner">
             <div>
-              <span class="eyebrow">Bumperball i Skåne för barnkalas, skola, fritids och förening</span>
+              <span class="eyebrow">Bumperball i Skåne för barnkalas, skola och fritids</span>
               <h1>10 % rabatt på Offroad Bumpis</h1>
               <p>
-                Vill du boka en aktivitet som barn faktiskt kommer ihåg? Här får du rabatt direkt. Spara koden, skicka din förfrågan och gå vidare till bokningen.
+                Boka bumperball i Skåne till lägre pris. Kopiera koden, fyll i dina uppgifter och gå vidare till bokningen.
               </p>
 
               <ul class="hero-points">
                 <li><span class="check">✓</span><span>10 % rabatt med koden <strong>HJP-1026</strong></span></li>
-                <li><span class="check">✓</span><span>Heldag eller hela helgen till samma pris</span></li>
+                <li><span class="check">✓</span><span>Heldag eller hel helg till samma pris</span></li>
                 <li><span class="check">✓</span><span>Hämtning i Malmö eller leverans i Skåne</span></li>
               </ul>
 
               <div class="hero-actions">
-                <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka nu</a>
-                <a href="/" class="btn btn-secondary">Se hela Offroad Bumpis</a>
+                <button class="btn btn-primary" type="button" id="copyBtn">Kopiera kod och boka</button>
+                <div class="status" id="copyStatus"></div>
               </div>
             </div>
 
             <div class="promo-box">
               <div class="promo-label">Din rabattkod</div>
-              <div class="promo-title">Spara koden innan du bokar</div>
+              <div class="promo-title">HJP-1026</div>
               <div class="promo-text">
-                Kopiera koden nu så har du den redo när du går vidare till bokningen.
+                Använd koden när du bokar.
               </div>
 
               <div class="code-box">
-                <div class="code-label">Kod att använda vid bokning</div>
+                <div class="code-label">Kod vid bokning</div>
                 <div class="code" id="discountCode">HJP-1026</div>
               </div>
-
-              <div class="btn-row">
-                <button class="btn btn-primary" type="button" id="copyBtn">Kopiera kod och boka</button>
-              </div>
-
-              <div class="status" id="copyStatus"></div>
             </div>
           </div>
         </div>
@@ -528,9 +512,9 @@
     <section class="section">
       <div class="container grid">
         <article class="card">
-          <h2>Skicka bokningsförfrågan</h2>
+          <h2>Skicka dina uppgifter</h2>
           <p>
-            Fyll i dina uppgifter så går du sedan vidare till bokningen.
+            Fyll i namn, mejl och telefon så går du vidare till bokningen.
           </p>
 
           <form
@@ -554,7 +538,6 @@
 
             <div class="btn-row">
               <button class="btn btn-primary" type="submit" id="submitBtn">Skicka och gå vidare</button>
-              <a href="/" class="btn btn-secondary">Till startsidan</a>
             </div>
 
             <div class="status" id="formStatus"></div>
@@ -566,7 +549,7 @@
         <article class="card">
           <h2>Så funkar det</h2>
           <p>
-            Enkelt upplägg. Ingen konstig process.
+            Tre snabba steg.
           </p>
 
           <div class="mini-steps">
@@ -574,7 +557,7 @@
               <div class="mini-step-number">1</div>
               <div>
                 <strong>Kopiera koden</strong>
-                <p>Spara <strong>HJP-1026</strong> direkt så du inte tappar bort den.</p>
+                <p>Använd <strong>HJP-1026</strong> när du bokar.</p>
               </div>
             </div>
 
@@ -582,21 +565,21 @@
               <div class="mini-step-number">2</div>
               <div>
                 <strong>Skicka uppgifterna</strong>
-                <p>Fyll i namn, mejl och telefon så är du igång.</p>
+                <p>Fyll i formuläret så du kommer vidare.</p>
               </div>
             </div>
 
             <div class="mini-step">
               <div class="mini-step-number">3</div>
               <div>
-                <strong>Gå vidare till bokning</strong>
-                <p>Välj datum och använd rabattkoden när du bokar.</p>
+                <strong>Boka</strong>
+                <p>Välj datum och slutför bokningen.</p>
               </div>
             </div>
           </div>
 
           <p class="small-muted">
-            Offroad Bumpis passar för barnkalas, skola, fritids och föreningar i Skåne.
+            Passar barnkalas, skola, fritids och föreningar i Skåne.
           </p>
         </article>
       </div>
@@ -607,10 +590,6 @@
     <div class="container">
       <div class="footer-card">
         <p>© 2026 Offroad Bumpis · Bumperball i Skåne</p>
-        <div class="btn-row" style="margin-top:0;">
-          <a href="/" class="btn btn-secondary">Startsidan</a>
-          <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka</a>
-        </div>
       </div>
     </div>
   </footer>
