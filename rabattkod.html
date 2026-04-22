@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <title>Rabattkod för Offroad Bumpis</title>
+  <title>Extra rabatt på Offroad Bumpis</title>
   <meta name="description" content="Få rabatt på Offroad Bumpis. Spara koden, skicka din förfrågan och gå vidare till bokning." />
   <meta name="robots" content="noindex,nofollow" />
 
@@ -97,7 +97,7 @@
       box-shadow:var(--shadow-soft);
     }
 
-    input, select{
+    input{
       width:100%;
       box-sizing:border-box;
       margin-top:10px;
@@ -135,14 +135,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>Rabatt på Offroad Bumpis</h1>
+    <h1>Extra rabatt på Offroad Bumpis</h1>
     <p>
       Spara rabattkoden, skicka din förfrågan och gå sedan vidare till bokning.
     </p>
 
     <div class="card">
       <div>Din rabattkod</div>
-      <div class="code" id="discountCode">LADDAR...</div>
+      <div class="code" id="discountCode">HJP-1026</div>
       <button class="btn btn-primary" type="button" id="copyBtn">Kopiera kod</button>
       <div class="status" id="copyStatus"></div>
     </div>
@@ -152,13 +152,13 @@
 
       <form
         id="bumpisForm"
-        action="https://script.google.com/macros/s/AKfycbz88nvtPeD_-mkhI0O0uQYCfDso1t9DcQybqBrYg2OO72LPMdINVlsicyiqWAl81mod/exec"
+        action="https://script.google.com/macros/s/AKfycbwnPaoBJ-QXj3oGFf0x_dvgYQiyjjsJnh-NoxOOtd87-Xw-i0Aq1LZIO6GmGwjtwZcs/exec"
         method="GET"
         target="hidden_iframe"
       >
-        <input type="hidden" name="Ref" id="refField">
-        <input type="hidden" name="Kod" id="codeField">
-        <input type="hidden" name="Typ" id="typeField">
+        <input type="hidden" name="Ref" value="aktivitetsguiden">
+        <input type="hidden" name="Kod" value="HJP-1026">
+        <input type="hidden" name="Typ" value="privat">
 
         <label for="namn">Namn</label>
         <input id="namn" type="text" name="Namn" required>
@@ -179,28 +179,14 @@
 
   <script>
     (function () {
-      const params = new URLSearchParams(window.location.search);
-
-      const code = (params.get("code") || "KOMPASS-1026").toUpperCase();
-      const ref = (params.get("ref") || "direkt").toLowerCase();
-      const type = (params.get("type") || "privat").toLowerCase();
-
+      const code = "HJP-1026";
       const bookingUrl = "https://tidycal.com/boka-bumperballs";
 
-      const discountCodeEl = document.getElementById("discountCode");
       const copyBtn = document.getElementById("copyBtn");
       const copyStatus = document.getElementById("copyStatus");
       const form = document.getElementById("bumpisForm");
-      const refField = document.getElementById("refField");
-      const codeField = document.getElementById("codeField");
-      const typeField = document.getElementById("typeField");
       const formStatus = document.getElementById("formStatus");
       const submitBtn = document.getElementById("submitBtn");
-
-      discountCodeEl.textContent = code;
-      refField.value = ref;
-      codeField.value = code;
-      typeField.value = type;
 
       copyBtn.addEventListener("click", async function () {
         try {
