@@ -227,6 +227,13 @@
     .btn-secondary{
       background:#fff;
       color:var(--text);
+      border:1px solid rgba(255,255,255,0.18);
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    .btn-light{
+      background:#fff;
+      color:var(--text);
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,0.04);
     }
@@ -343,8 +350,15 @@
       margin-top:12px;
       font-size:14px;
       font-weight:700;
-      color:#214e2b;
       min-height:22px;
+    }
+
+    .status-dark{
+      color:#dfeee0;
+    }
+
+    .status-light{
+      color:#214e2b;
     }
 
     .mini-steps{
@@ -461,7 +475,7 @@
       </a>
 
       <div class="nav-actions">
-        <a href="/" class="btn btn-secondary">Till startsidan</a>
+        <a href="/" class="btn btn-light">Till startsidan</a>
       </div>
     </div>
   </header>
@@ -489,13 +503,19 @@
               <div class="promo-label">Din rabattkod</div>
               <div class="promo-title">HJP-1026</div>
               <div class="promo-text">
-                Använd koden när du kommer till bokningen efter formuläret.
+                Kopiera koden nu och använd den när du kommer till bokningen efter formuläret.
               </div>
 
               <div class="code-box">
                 <div class="code-label">Kod vid bokning</div>
                 <div class="code">HJP-1026</div>
               </div>
+
+              <div class="btn-row">
+                <button class="btn btn-secondary" type="button" id="copyBtn">Kopiera rabattkod</button>
+              </div>
+
+              <div class="status status-dark" id="copyStatus"></div>
             </div>
           </div>
         </div>
@@ -533,7 +553,7 @@
               <button class="btn btn-primary" type="submit" id="submitBtn">Skicka och gå vidare</button>
             </div>
 
-            <div class="status" id="formStatus"></div>
+            <div class="status status-light" id="formStatus"></div>
           </form>
 
           <iframe name="hidden_iframe" id="hidden_iframe"></iframe>
@@ -549,24 +569,24 @@
             <div class="mini-step">
               <div class="mini-step-number">1</div>
               <div>
-                <strong>Fyll i formuläret</strong>
-                <p>Det är här leaden sparas.</p>
+                <strong>Kopiera koden</strong>
+                <p>Spara <strong>HJP-1026</strong> så du har den redo.</p>
               </div>
             </div>
 
             <div class="mini-step">
               <div class="mini-step-number">2</div>
               <div>
-                <strong>Gå vidare till bokning</strong>
-                <p>Efter formuläret skickas du vidare automatiskt.</p>
+                <strong>Fyll i formuläret</strong>
+                <p>Det är här leaden sparas.</p>
               </div>
             </div>
 
             <div class="mini-step">
               <div class="mini-step-number">3</div>
               <div>
-                <strong>Använd koden</strong>
-                <p>Skriv in <strong>HJP-1026</strong> när du bokar.</p>
+                <strong>Slutför bokningen</strong>
+                <p>Efter formuläret skickas du vidare till bokningen.</p>
               </div>
             </div>
           </div>
@@ -589,10 +609,25 @@
 
   <script>
     (function () {
+      const code = "HJP-1026";
       const bookingUrl = "https://tidycal.com/boka-bumperballs";
+
+      const copyBtn = document.getElementById("copyBtn");
+      const copyStatus = document.getElementById("copyStatus");
       const form = document.getElementById("bumpisForm");
       const formStatus = document.getElementById("formStatus");
       const submitBtn = document.getElementById("submitBtn");
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", async function () {
+          try {
+            await navigator.clipboard.writeText(code);
+            copyStatus.textContent = "Rabattkoden är kopierad: " + code;
+          } catch (error) {
+            copyStatus.textContent = "Kunde inte kopiera automatiskt. Koden är: " + code;
+          }
+        });
+      }
 
       form.addEventListener("submit", function () {
         submitBtn.disabled = true;
