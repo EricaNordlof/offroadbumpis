@@ -5,25 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <title>Extra rabatt på Offroad Bumpis</title>
-  <meta name="description" content="Få rabatt på Offroad Bumpis. Spara koden, skicka din förfrågan och gå vidare till bokning." />
+  <meta
+    name="description"
+    content="Få 10 % rabatt på Offroad Bumpis. Kopiera koden, skicka din förfrågan och gå vidare till bokning."
+  />
   <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#14361b" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --bg:#f5fff1;
+      --bg-2:#effbea;
       --card:#ffffff;
       --text:#16311d;
-      --muted:#4d6454;
+      --muted:#45604b;
       --line:rgba(18,64,29,0.10);
-      --green-dark:#2f7f25;
       --dark:#102217;
+      --dark-2:#14361b;
+      --green:#2f7f25;
+      --green-soft:#e8f8e1;
       --shadow:0 18px 55px rgba(14,53,22,0.10);
       --shadow-soft:0 10px 28px rgba(14,53,22,0.06);
     }
 
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:"Inter",sans-serif;
@@ -31,50 +41,162 @@
       background:
         radial-gradient(circle at top left, #fdffe7 0, transparent 22%),
         radial-gradient(circle at top right, #e9ffd8 0, transparent 24%),
-        linear-gradient(180deg, #f5fff1 0%, #effbea 100%);
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
 
+    a{color:inherit;text-decoration:none}
+
     .container{
-      max-width:900px;
+      max-width:980px;
       margin:auto;
       padding:20px;
     }
 
-    h1,h2{
-      font-family:"Baloo 2",sans-serif;
-      line-height:1;
-      margin:0 0 12px;
-      letter-spacing:-0.03em;
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(245,255,241,0.88);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
     }
 
-    h1{font-size:42px}
-    h2{font-size:32px}
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      min-height:68px;
+    }
 
-    p{
-      font-size:17px;
-      line-height:1.7;
-      color:#3f5c46;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:-0.02em;
+    }
+
+    .brand-logo{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      border-radius:12px;
+      box-shadow:var(--shadow-soft);
+      background:#fff;
+    }
+
+    .brand span{
+      font-size:15px;
+      line-height:1.1;
+    }
+
+    .nav-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .hero{
+      padding:42px 0 20px;
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg, #ffffff 0%, #fbfffa 100%);
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(300px,0.92fr);
+      gap:24px;
+      padding:28px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      color:#42634a;
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+      margin-bottom:14px;
+    }
+
+    h1,h2,h3{
+      font-family:"Baloo 2",sans-serif;
+      letter-spacing:-0.03em;
+      line-height:0.98;
       margin:0;
     }
 
-    .card{
-      background:#fff;
-      padding:28px;
-      border-radius:22px;
-      margin-top:24px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    h1{
+      font-size:clamp(2.4rem, 6vw, 4.4rem);
+      margin-bottom:14px;
+      max-width:10ch;
+      color:var(--dark-2);
     }
 
-    .code{
-      font-family:"Baloo 2",sans-serif;
-      font-size:42px;
+    h2{
+      font-size:clamp(1.9rem, 4vw, 2.8rem);
+      margin-bottom:10px;
+    }
+
+    p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:16px;
+    }
+
+    .hero-points{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .hero-points li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:#294431;
+      font-weight:600;
+      line-height:1.6;
+    }
+
+    .check{
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green);
+      color:#fff;
+      font-size:12px;
       font-weight:800;
-      text-align:center;
-      background:#f7fff3;
-      padding:18px;
-      border-radius:16px;
-      margin:18px 0;
-      word-break:break-word;
+      flex:0 0 auto;
+      margin-top:2px;
+    }
+
+    .hero-actions,
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:22px;
     }
 
     .btn{
@@ -89,28 +211,132 @@
       cursor:pointer;
       text-decoration:none;
       font:inherit;
+      transition:.2s ease;
+      text-align:center;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
     }
 
     .btn-primary{
-      background:#102217;
+      background:var(--dark);
       color:#fff;
       box-shadow:var(--shadow-soft);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--text);
+      border:1px solid var(--line);
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    .promo-box{
+      background:linear-gradient(180deg, #14361b 0%, #102217 100%);
+      color:#fff;
+      border-radius:26px;
+      padding:22px;
+      box-shadow:0 24px 60px rgba(8,34,16,0.18);
+    }
+
+    .promo-label{
+      display:inline-block;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.10);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .promo-title{
+      font-family:"Baloo 2",sans-serif;
+      font-size:30px;
+      line-height:0.96;
+      margin-bottom:10px;
+    }
+
+    .promo-text{
+      color:#d7e8d8;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .code-box{
+      margin-top:16px;
+      background:rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:22px;
+      padding:18px;
+      text-align:center;
+    }
+
+    .code-label{
+      font-size:13px;
+      font-weight:700;
+      color:#dce9dc;
+      margin-bottom:8px;
+    }
+
+    .code{
+      font-family:"Baloo 2",sans-serif;
+      font-size:42px;
+      font-weight:800;
+      line-height:1;
+      letter-spacing:-0.03em;
+      word-break:break-word;
+    }
+
+    .section{
+      padding:18px 0 40px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .small-muted{
+      font-size:14px;
+      color:#5d7263;
+      margin-top:8px;
+    }
+
+    label{
+      display:block;
+      margin-top:14px;
+      font-weight:800;
+      color:#23402a;
     }
 
     input{
       width:100%;
       box-sizing:border-box;
       margin-top:10px;
-      padding:12px;
+      padding:13px 14px;
       border:1px solid #d7e5d8;
-      border-radius:10px;
+      border-radius:12px;
       font-size:16px;
+      font:inherit;
+      background:#fff;
     }
 
-    label{
-      display:block;
-      margin-top:14px;
-      font-weight:700;
+    input:focus{
+      outline:none;
+      border-color:#6cad62;
+      box-shadow:0 0 0 4px rgba(108,173,98,0.14);
     }
 
     .status{
@@ -121,61 +347,273 @@
       min-height:22px;
     }
 
+    .mini-steps{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .mini-step{
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:12px;
+      align-items:start;
+    }
+
+    .mini-step-number{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:var(--green-soft);
+      color:#1f4c27;
+      font-weight:900;
+      font-family:"Baloo 2",sans-serif;
+      font-size:20px;
+    }
+
+    .mini-step strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:18px;
+      color:#18361f;
+    }
+
     iframe{
       display:none;
     }
 
+    footer{
+      padding:0 0 34px;
+    }
+
+    .footer-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.04);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .footer-card p{
+      font-size:14px;
+    }
+
+    @media (max-width: 860px){
+      .hero-inner,
+      .grid{
+        grid-template-columns:1fr;
+      }
+    }
+
     @media (max-width: 720px){
-      h1{font-size:34px}
-      h2{font-size:28px}
-      .card{padding:20px}
-      .btn{width:100%}
+      .container{
+        padding:16px;
+      }
+
+      .nav{
+        min-height:auto;
+        padding:10px 0;
+      }
+
+      .brand-logo{
+        width:38px;
+        height:38px;
+      }
+
+      .brand span{
+        font-size:14px;
+      }
+
+      .hero{
+        padding:28px 0 16px;
+      }
+
+      .hero-inner,
+      .card,
+      .promo-box{
+        padding:20px;
+      }
+
+      .hero-actions .btn,
+      .btn-row .btn,
+      .nav-actions .btn{
+        width:100%;
+      }
+
+      .nav-actions{
+        width:100%;
+      }
+
+      .nav{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .footer-card{
+        align-items:flex-start;
+        flex-direction:column;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Extra rabatt på Offroad Bumpis</h1>
-    <p>
-      Spara rabattkoden, skicka din förfrågan och gå sedan vidare till bokning.
-    </p>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
+        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
+        <span>Offroad Bumpis</span>
+      </a>
 
-    <div class="card">
-      <div>Din rabattkod</div>
-      <div class="code" id="discountCode">HJP-1026</div>
-      <button class="btn btn-primary" type="button" id="copyBtn">Kopiera kod</button>
-      <div class="status" id="copyStatus"></div>
+      <div class="nav-actions">
+        <a href="/" class="btn btn-secondary">Till startsidan</a>
+        <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>Skicka bokningsförfrågan</h2>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-inner">
+            <div>
+              <span class="eyebrow">Bumperball i Skåne för barnkalas, skola, fritids och förening</span>
+              <h1>10 % rabatt på Offroad Bumpis</h1>
+              <p>
+                Vill du boka en aktivitet som barn faktiskt kommer ihåg? Här får du rabatt direkt. Spara koden, skicka din förfrågan och gå vidare till bokningen.
+              </p>
 
-      <form
-        id="bumpisForm"
-        action="https://script.google.com/macros/s/AKfycbwnPaoBJ-QXj3oGFf0x_dvgYQiyjjsJnh-NoxOOtd87-Xw-i0Aq1LZIO6GmGwjtwZcs/exec"
-        method="GET"
-        target="hidden_iframe"
-      >
-        <input type="hidden" name="Ref" value="aktivitetsguiden">
-        <input type="hidden" name="Kod" value="HJP-1026">
-        <input type="hidden" name="Typ" value="privat">
+              <ul class="hero-points">
+                <li><span class="check">✓</span><span>10 % rabatt med koden <strong>HJP-1026</strong></span></li>
+                <li><span class="check">✓</span><span>Heldag eller hela helgen till samma pris</span></li>
+                <li><span class="check">✓</span><span>Hämtning i Malmö eller leverans i Skåne</span></li>
+              </ul>
 
-        <label for="namn">Namn</label>
-        <input id="namn" type="text" name="Namn" required>
+              <div class="hero-actions">
+                <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka nu</a>
+                <a href="/" class="btn btn-secondary">Se hela Offroad Bumpis</a>
+              </div>
+            </div>
 
-        <label for="epost">E-post</label>
-        <input id="epost" type="email" name="E-post" required>
+            <div class="promo-box">
+              <div class="promo-label">Din rabattkod</div>
+              <div class="promo-title">Spara koden innan du bokar</div>
+              <div class="promo-text">
+                Kopiera koden nu så har du den redo när du går vidare till bokningen.
+              </div>
 
-        <label for="telefon">Telefon</label>
-        <input id="telefon" type="tel" name="Telefon" required>
+              <div class="code-box">
+                <div class="code-label">Kod att använda vid bokning</div>
+                <div class="code" id="discountCode">HJP-1026</div>
+              </div>
 
-        <button class="btn btn-primary" type="submit" id="submitBtn">Skicka och gå vidare</button>
-        <div class="status" id="formStatus"></div>
-      </form>
+              <div class="btn-row">
+                <button class="btn btn-primary" type="button" id="copyBtn">Kopiera kod och boka</button>
+              </div>
 
-      <iframe name="hidden_iframe" id="hidden_iframe"></iframe>
+              <div class="status" id="copyStatus"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid">
+        <article class="card">
+          <h2>Skicka bokningsförfrågan</h2>
+          <p>
+            Fyll i dina uppgifter så går du sedan vidare till bokningen.
+          </p>
+
+          <form
+            id="bumpisForm"
+            action="https://script.google.com/macros/s/AKfycbwnPaoBJ-QXj3oGFf0x_dvgYQiyjjsJnh-NoxOOtd87-Xw-i0Aq1LZIO6GmGwjtwZcs/exec"
+            method="GET"
+            target="hidden_iframe"
+          >
+            <input type="hidden" name="Ref" value="aktivitetsguiden">
+            <input type="hidden" name="Kod" value="HJP-1026">
+            <input type="hidden" name="Typ" value="privat">
+
+            <label for="namn">Namn</label>
+            <input id="namn" type="text" name="Namn" required>
+
+            <label for="epost">E-post</label>
+            <input id="epost" type="email" name="E-post" required>
+
+            <label for="telefon">Telefon</label>
+            <input id="telefon" type="tel" name="Telefon" required>
+
+            <div class="btn-row">
+              <button class="btn btn-primary" type="submit" id="submitBtn">Skicka och gå vidare</button>
+              <a href="/" class="btn btn-secondary">Till startsidan</a>
+            </div>
+
+            <div class="status" id="formStatus"></div>
+          </form>
+
+          <iframe name="hidden_iframe" id="hidden_iframe"></iframe>
+        </article>
+
+        <article class="card">
+          <h2>Så funkar det</h2>
+          <p>
+            Enkelt upplägg. Ingen konstig process.
+          </p>
+
+          <div class="mini-steps">
+            <div class="mini-step">
+              <div class="mini-step-number">1</div>
+              <div>
+                <strong>Kopiera koden</strong>
+                <p>Spara <strong>HJP-1026</strong> direkt så du inte tappar bort den.</p>
+              </div>
+            </div>
+
+            <div class="mini-step">
+              <div class="mini-step-number">2</div>
+              <div>
+                <strong>Skicka uppgifterna</strong>
+                <p>Fyll i namn, mejl och telefon så är du igång.</p>
+              </div>
+            </div>
+
+            <div class="mini-step">
+              <div class="mini-step-number">3</div>
+              <div>
+                <strong>Gå vidare till bokning</strong>
+                <p>Välj datum och använd rabattkoden när du bokar.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="small-muted">
+            Offroad Bumpis passar för barnkalas, skola, fritids och föreningar i Skåne.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-card">
+        <p>© 2026 Offroad Bumpis · Bumperball i Skåne</p>
+        <div class="btn-row" style="margin-top:0;">
+          <a href="/" class="btn btn-secondary">Startsidan</a>
+          <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 
   <script>
     (function () {
