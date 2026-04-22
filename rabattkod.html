@@ -7,7 +7,7 @@
   <title>10 % rabatt på Offroad Bumpis</title>
   <meta
     name="description"
-    content="Få 10 % rabatt på Offroad Bumpis. Kopiera koden, fyll i dina uppgifter och gå vidare till bokningen."
+    content="Få 10 % rabatt på Offroad Bumpis. Se koden, fyll i dina uppgifter och gå vidare till bokningen."
   />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="theme-color" content="#14361b" />
@@ -191,7 +191,6 @@
       margin-top:2px;
     }
 
-    .hero-actions,
     .btn-row{
       display:flex;
       gap:12px;
@@ -437,7 +436,6 @@
         padding:20px;
       }
 
-      .hero-actions .btn,
       .btn-row .btn,
       .nav-actions .btn{
         width:100%;
@@ -477,7 +475,7 @@
               <span class="eyebrow">Bumperball i Skåne för barnkalas, skola och fritids</span>
               <h1>10 % rabatt på Offroad Bumpis</h1>
               <p>
-                Boka bumperball i Skåne till lägre pris. Kopiera koden, fyll i dina uppgifter och gå vidare till bokningen.
+                Fyll i dina uppgifter här först. Därefter skickas du vidare till bokningen där du använder koden.
               </p>
 
               <ul class="hero-points">
@@ -485,23 +483,18 @@
                 <li><span class="check">✓</span><span>Heldag eller hel helg till samma pris</span></li>
                 <li><span class="check">✓</span><span>Hämtning i Malmö eller leverans i Skåne</span></li>
               </ul>
-
-              <div class="hero-actions">
-                <button class="btn btn-primary" type="button" id="copyBtn">Kopiera kod och boka</button>
-                <div class="status" id="copyStatus"></div>
-              </div>
             </div>
 
             <div class="promo-box">
               <div class="promo-label">Din rabattkod</div>
               <div class="promo-title">HJP-1026</div>
               <div class="promo-text">
-                Använd koden när du bokar.
+                Använd koden när du kommer till bokningen efter formuläret.
               </div>
 
               <div class="code-box">
                 <div class="code-label">Kod vid bokning</div>
-                <div class="code" id="discountCode">HJP-1026</div>
+                <div class="code">HJP-1026</div>
               </div>
             </div>
           </div>
@@ -514,7 +507,7 @@
         <article class="card">
           <h2>Skicka dina uppgifter</h2>
           <p>
-            Fyll i namn, mejl och telefon så går du vidare till bokningen.
+            Fyll i namn, mejl och telefon. Sedan skickas du vidare till bokningen.
           </p>
 
           <form
@@ -556,24 +549,24 @@
             <div class="mini-step">
               <div class="mini-step-number">1</div>
               <div>
-                <strong>Kopiera koden</strong>
-                <p>Använd <strong>HJP-1026</strong> när du bokar.</p>
+                <strong>Fyll i formuläret</strong>
+                <p>Det är här leaden sparas.</p>
               </div>
             </div>
 
             <div class="mini-step">
               <div class="mini-step-number">2</div>
               <div>
-                <strong>Skicka uppgifterna</strong>
-                <p>Fyll i formuläret så du kommer vidare.</p>
+                <strong>Gå vidare till bokning</strong>
+                <p>Efter formuläret skickas du vidare automatiskt.</p>
               </div>
             </div>
 
             <div class="mini-step">
               <div class="mini-step-number">3</div>
               <div>
-                <strong>Boka</strong>
-                <p>Välj datum och slutför bokningen.</p>
+                <strong>Använd koden</strong>
+                <p>Skriv in <strong>HJP-1026</strong> när du bokar.</p>
               </div>
             </div>
           </div>
@@ -596,27 +589,10 @@
 
   <script>
     (function () {
-      const code = "HJP-1026";
       const bookingUrl = "https://tidycal.com/boka-bumperballs";
-
-      const copyBtn = document.getElementById("copyBtn");
-      const copyStatus = document.getElementById("copyStatus");
       const form = document.getElementById("bumpisForm");
       const formStatus = document.getElementById("formStatus");
       const submitBtn = document.getElementById("submitBtn");
-
-      copyBtn.addEventListener("click", async function () {
-        try {
-          await navigator.clipboard.writeText(code);
-          copyStatus.textContent = "Rabattkoden är kopierad: " + code;
-        } catch (error) {
-          copyStatus.textContent = "Kunde inte kopiera automatiskt. Koden är: " + code;
-        }
-
-        setTimeout(function () {
-          window.location.href = bookingUrl;
-        }, 500);
-      });
 
       form.addEventListener("submit", function () {
         submitBtn.disabled = true;
