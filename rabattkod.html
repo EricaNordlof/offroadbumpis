@@ -185,10 +185,7 @@
       const ref = (params.get("ref") || "direkt").toLowerCase();
       const type = (params.get("type") || "privat").toLowerCase();
 
-      const privateUrl = "https://tidycal.com/boka-bumperballs/offroad-bumpis-1r6v6pz";
-      const schoolUrl = "https://tidycal.com/boka-bumperballs/offertforfragan-skolor-and-fritids-bumperballs";
-
-      const bookingUrl = type === "skola" ? schoolUrl : privateUrl;
+      const bookingUrl = "https://tidycal.com/boka-bumperballs";
 
       const discountCodeEl = document.getElementById("discountCode");
       const copyBtn = document.getElementById("copyBtn");
@@ -212,6 +209,10 @@
         } catch (error) {
           copyStatus.textContent = "Kunde inte kopiera automatiskt. Koden är: " + code;
         }
+
+        setTimeout(function () {
+          window.location.href = bookingUrl;
+        }, 500);
       });
 
       form.addEventListener("submit", function () {
@@ -220,12 +221,7 @@
         formStatus.textContent = "Skickar och öppnar bokningen...";
 
         setTimeout(function () {
-          window.location.href =
-            bookingUrl +
-            "?utm_source=affiliate&utm_medium=partner&utm_campaign=" +
-            encodeURIComponent(ref) +
-            "&utm_content=" +
-            encodeURIComponent(code);
+          window.location.href = bookingUrl;
         }, 1200);
       });
     })();
