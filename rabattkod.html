@@ -493,7 +493,7 @@
               </p>
 
               <ul class="hero-points">
-                <li><span class="check">✓</span><span>10 % rabatt med koden <strong>HJP-1026</strong></span></li>
+                <li><span class="check">✓</span><span>10 % rabatt med koden <strong id="heroCode">LADDAR...</strong></span></li>
                 <li><span class="check">✓</span><span>Heldag eller hel helg till samma pris</span></li>
                 <li><span class="check">✓</span><span>Hämtning i Malmö eller leverans i Skåne</span></li>
               </ul>
@@ -501,14 +501,14 @@
 
             <div class="promo-box">
               <div class="promo-label">Din rabattkod</div>
-              <div class="promo-title">HJP-1026</div>
+              <div class="promo-title" id="promoTitle">LADDAR...</div>
               <div class="promo-text">
                 Kopiera koden nu och använd den när du kommer till bokningen efter formuläret.
               </div>
 
               <div class="code-box">
                 <div class="code-label">Kod vid bokning</div>
-                <div class="code">HJP-1026</div>
+                <div class="code" id="discountCode">LADDAR...</div>
               </div>
 
               <div class="btn-row">
@@ -536,9 +536,9 @@
             method="GET"
             target="hidden_iframe"
           >
-            <input type="hidden" name="Ref" value="aktivitetsguiden">
-            <input type="hidden" name="Kod" value="HJP-1026">
-            <input type="hidden" name="Typ" value="privat">
+            <input type="hidden" name="Ref" id="refField">
+            <input type="hidden" name="Kod" id="codeField">
+            <input type="hidden" name="Typ" id="typeField">
 
             <label for="namn">Namn</label>
             <input id="namn" type="text" name="Namn" required>
@@ -570,7 +570,7 @@
               <div class="mini-step-number">1</div>
               <div>
                 <strong>Kopiera koden</strong>
-                <p>Spara <strong>HJP-1026</strong> så du har den redo.</p>
+                <p>Spara <strong id="stepCode">LADDAR...</strong> så du har den redo.</p>
               </div>
             </div>
 
@@ -609,14 +609,37 @@
 
   <script>
     (function () {
-      const code = "HJP-1026";
+      const params = new URLSearchParams(window.location.search);
+
+      const code = (params.get("code") || "KOMPASS-1026").toUpperCase();
+      const ref = (params.get("ref") || "direkt").toLowerCase();
+      const type = (params.get("type") || "privat").toLowerCase();
+
       const bookingUrl = "https://tidycal.com/boka-bumperballs";
+
+      const heroCode = document.getElementById("heroCode");
+      const promoTitle = document.getElementById("promoTitle");
+      const discountCode = document.getElementById("discountCode");
+      const stepCode = document.getElementById("stepCode");
+
+      const refField = document.getElementById("refField");
+      const codeField = document.getElementById("codeField");
+      const typeField = document.getElementById("typeField");
 
       const copyBtn = document.getElementById("copyBtn");
       const copyStatus = document.getElementById("copyStatus");
       const form = document.getElementById("bumpisForm");
       const formStatus = document.getElementById("formStatus");
       const submitBtn = document.getElementById("submitBtn");
+
+      heroCode.textContent = code;
+      promoTitle.textContent = code;
+      discountCode.textContent = code;
+      stepCode.textContent = code;
+
+      refField.value = ref;
+      codeField.value = code;
+      typeField.value = type;
 
       if (copyBtn) {
         copyBtn.addEventListener("click", async function () {
