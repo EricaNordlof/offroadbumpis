@@ -1,3 +1,5 @@
+Ändringen är viktig: nu blir upplägget starkare. Kunden får rabatt även framöver, och affiliaten får provision även på framtida bokningar från samma kund. Det är mer “bygg relation” än “engångsklipp”. Här är hela sidan uppdaterad:
+
 <!doctype html>
 <html lang="sv">
 <head>
@@ -6,19 +8,19 @@
   <title>Tipsprovision | 10 % rabatt till kund + 20 % provision | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Känner du någon i Skåne som planerar barnkalas, skolaktivitet, fritidsaktivitet, föreningsdag eller event? Tipsa Offroad Bumpis. Kunden får 10 % rabatt och vårdnadshavaren får 20 % provision på första godkända och betalda bokningen. Du ansvarar inte för bokning, leverans eller kundkontakt."
+    content="Känner du någon i Skåne som planerar barnkalas, skolaktivitet, fritidsaktivitet, föreningsdag eller event? Tipsa Offroad Bumpis. Kunden får 10 % rabatt även på framtida bokningar och vårdnadshavaren får 20 % provision på godkända och betalda bokningar där koden används. Du ansvarar inte för bokning, leverans eller kundkontakt."
   />
   <meta name="robots" content="index,follow" />
   <meta name="author" content="Erica Nordlöf" />
   <link rel="canonical" href="https://offroadbumpis.se/affiliate.html" />
   <meta property="og:title" content="Tipsprovision | 10 % rabatt till kund + 20 % provision | Offroad Bumpis" />
-  <meta property="og:description" content="Tipsa en relevant kund i Skåne. Kunden får 10 % rabatt och vårdnadshavaren får 20 % provision på första godkända och betalda bokningen." />
+  <meta property="og:description" content="Tipsa en relevant kund i Skåne. Kunden får 10 % rabatt även framöver och vårdnadshavaren får 20 % provision på godkända och betalda bokningar där koden används." />
   <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
   <meta property="og:url" content="https://offroadbumpis.se/affiliate.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tipsprovision | 10 % rabatt till kund + 20 % provision | Offroad Bumpis" />
-  <meta name="twitter:description" content="Tipsa en relevant kund i Skåne. Kunden får 10 % rabatt och vårdnadshavaren får 20 % provision på första godkända och betalda bokningen." />
+  <meta name="twitter:description" content="Tipsa en relevant kund i Skåne. Kunden får 10 % rabatt även framöver och vårdnadshavaren får 20 % provision på godkända och betalda bokningar där koden används." />
   <meta name="twitter:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
   <meta name="theme-color" content="#14361b" />
   <link rel="icon" type="image/png" href="Offroad Bumpis logo.png" />
@@ -34,7 +36,7 @@
         "@type":"WebPage",
         "name":"Tipsprovision | Offroad Bumpis",
         "url":"https://offroadbumpis.se/affiliate.html",
-        "description":"Tipsupplägg för Offroad Bumpis där en vårdnadshavare kan få en personlig tipskod att dela vidare. Kunden får 10 procent rabatt och vårdnadshavaren får 20 procent provision på första godkända och betalda bokningen. Tipsaren ansvarar inte för bokning, leverans, support eller kundkontakt."
+        "description":"Tipsupplägg för Offroad Bumpis där en vårdnadshavare kan få en personlig tipskod att dela vidare. Kunden får 10 procent rabatt även på framtida bokningar där koden används och vårdnadshavaren får 20 procent provision på godkända och betalda bokningar där koden används. Tipsaren ansvarar inte för bokning, leverans, support eller kundkontakt."
       },
       {
         "@type":"LocalBusiness",
@@ -67,7 +69,15 @@
             "name":"Hur fungerar tipsprovisionen?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Vårdnadshavaren ansöker om en personlig tipskod. Kunden får 10 procent rabatt när koden används vid bokning eller kontakt. Vårdnadshavaren får 20 procent provision på första godkända och betalda bokningen."
+              "text":"Vårdnadshavaren ansöker om en personlig tipskod. Kunden får 10 procent rabatt när koden används vid bokning eller kontakt. Vårdnadshavaren får 20 procent provision på godkända och betalda bokningar där koden används."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Gäller rabatt och provision även efter första bokningen?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Ja. Kunden kan få 10 procent rabatt även på framtida bokningar där koden används, och vårdnadshavaren kan få 20 procent provision även på framtida godkända och betalda bokningar där koden används."
             }
           },
           {
@@ -91,7 +101,7 @@
             "name":"Vilka kunder räknas?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Det gäller nya kunder som gör en godkänd och betald bokning där den personliga koden har använts eller tipsaren har angetts. Spam, falska förfrågningar och irrelevanta leads godkänns inte."
+              "text":"Det gäller nya kunder och återkommande kunder som gör godkända och betalda bokningar där den personliga koden har använts eller tipsaren har angetts på ett godkänt sätt. Spam, falska förfrågningar och irrelevanta leads godkänns inte."
             }
           }
         ]
@@ -326,11 +336,6 @@
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,0.03);
     }
-    .btn-green{
-      background:var(--green);
-      color:#102217;
-      box-shadow:0 14px 36px rgba(47,127,37,.18);
-    }
     .hero-card{
       background:linear-gradient(180deg, #1b4724 0%, #14361b 100%);
       color:#fff;
@@ -464,9 +469,6 @@
     .notice-box.dark p{
       color:#d7e8d8;
     }
-    .notice-box strong{
-      color:inherit;
-    }
     .price-box{
       background:linear-gradient(135deg, #14361b 0%, #0d2113 100%);
       color:#fff;
@@ -587,14 +589,6 @@
     .price-card h3{
       margin:16px 0 8px;
       font-size:30px;
-    }
-    .price{
-      font-size:48px;
-      font-weight:900;
-      letter-spacing:-0.06em;
-      line-height:1;
-      margin:0 0 10px;
-      font-family:"Baloo 2", sans-serif;
     }
     .price-card p{
       margin:0;
@@ -954,7 +948,6 @@
         padding:22px;
         border-radius:24px;
       }
-      .price,
       .price-big{
         font-size:40px;
       }
@@ -1018,18 +1011,19 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Tipsprovision · kund får 10 % rabatt · vårdnadshavare får 20 % · Skåne</span>
+          <span class="eyebrow">Tipsprovision · kund får 10 % rabatt · vårdnadshavare får 20 % · även framöver</span>
           <h1>Känner du någon som planerar kalas, skolaktivitet eller event?</h1>
           <p>
             Tipsa mig om rätt person, skola, fritids, förening eller grupp i Skåne.
-            Om tipset blir en godkänd och betald bokning får vårdnadshavaren 20 % provision.
+            Om tipset leder till en godkänd och betald bokning får vårdnadshavaren 20 % provision.
             Kunden får 10 % rabatt via din personliga tipskod.
+            Det gäller även på framtida bokningar där koden används.
           </p>
           <ul class="hero-points">
             <li><span class="check">✓</span><span>Du ansvarar inte för bokning, leverans, support eller kundkontakt</span></li>
             <li><span class="check">✓</span><span>Du gör bara en relevant introduktion eller delar din personliga rabattkod</span></li>
-            <li><span class="check">✓</span><span>Kunden får 10 % rabatt på första bokningen</span></li>
-            <li><span class="check">✓</span><span>Vårdnadshavaren får 20 % på första godkända och betalda bokningen</span></li>
+            <li><span class="check">✓</span><span>Kunden får 10 % rabatt på bokningar där koden används</span></li>
+            <li><span class="check">✓</span><span>Vårdnadshavaren får 20 % på godkända och betalda bokningar där koden används</span></li>
             <li><span class="check">✓</span><span>Barn kan dela tipskoden med vårdnadshavarens godkännande</span></li>
           </ul>
           <div class="hero-actions">
@@ -1055,11 +1049,11 @@
             </div>
             <div class="mini-card">
               <strong>2. Kunden får rabatt</strong>
-              <span>10 % rabatt gör tipset lättare att säga ja till.</span>
+              <span>10 % rabatt när koden används, även vid framtida bokningar.</span>
             </div>
             <div class="mini-card">
               <strong>3. Du får provision</strong>
-              <span>20 % betalas ut efter godkänd och betald bokning.</span>
+              <span>20 % betalas ut efter godkänd och betald bokning där koden används.</span>
             </div>
           </div>
         </div>
@@ -1100,7 +1094,7 @@
               <li><span class="check">✓</span><span>Jag sköter bokning och praktisk information</span></li>
               <li><span class="check">✓</span><span>Jag sköter leverans, uppföljning och villkor</span></li>
               <li><span class="check">✓</span><span>Du delar bara en personlig tipskod eller gör en relevant introduktion</span></li>
-              <li><span class="check">✓</span><span>Provision betalas bara om bokningen blir godkänd och betald</span></li>
+              <li><span class="check">✓</span><span>Provision betalas när bokningen är godkänd och betald</span></li>
             </ul>
           </div>
         </div>
@@ -1132,17 +1126,17 @@
             <ul class="feature-list">
               <li><span class="check">✓</span><span>Kunden får 10 % rabatt</span></li>
               <li><span class="check">✓</span><span>Koden visar vem som tipsat</span></li>
-              <li><span class="check">✓</span><span>Du kan dela koden till rätt målgrupp</span></li>
+              <li><span class="check">✓</span><span>Koden kan användas även vid framtida bokningar</span></li>
             </ul>
           </article>
           <article class="price-card">
             <span class="tag">Steg 3</span>
             <h3>Du får 20 % provision</h3>
-            <p>När kunden har gjort en godkänd och betald bokning får vårdnadshavaren provision.</p>
+            <p>När kunden gör en godkänd och betald bokning med din kod får vårdnadshavaren provision.</p>
             <ul class="feature-list">
-              <li><span class="check">✓</span><span>Gäller nya kunder</span></li>
-              <li><span class="check">✓</span><span>Gäller första bokningen</span></li>
-              <li><span class="check">✓</span><span>Gäller när bokningen är betald och godkänd</span></li>
+              <li><span class="check">✓</span><span>Gäller godkända kunder</span></li>
+              <li><span class="check">✓</span><span>Gäller bokningar där koden används</span></li>
+              <li><span class="check">✓</span><span>Gäller även framtida bokningar där koden används</span></li>
             </ul>
           </article>
         </div>
@@ -1181,7 +1175,7 @@
               <li><span class="check">✓</span><span>Någon som kan fatta beslut eller påverka bokningen</span></li>
               <li><span class="check">✓</span><span>Någon som förstår att det är uthyrning av bumperballs</span></li>
               <li><span class="check">✓</span><span>Någon som uppskattar rabatt, tydliga villkor och enkel bokning</span></li>
-              <li><span class="check">✓</span><span>Någon som har rimliga förväntningar</span></li>
+              <li><span class="check">✓</span><span>Någon som kan komma tillbaka och boka igen framöver</span></li>
             </ul>
           </article>
           <article class="card">
@@ -1272,26 +1266,27 @@
             <h2>10 % rabatt till kund. 20 % provision till vårdnadshavaren.</h2>
             <p>
               Koden gör två jobb samtidigt: kunden får en tydlig anledning att boka och jag ser direkt vem som skickat kunden.
-              Om ett barn delar länken sker ansökan, kontakt och utbetalning ändå med vårdnadshavaren.
+              Kunden kan använda koden även vid framtida bokningar, och vårdnadshavaren får provision även då,
+              så länge bokningen är godkänd, betald och koden används.
             </p>
           </div>
           <div class="price-panel">
             <div class="price-big">20 %</div>
             <div class="price-note">
               Kunden använder din kod vid bokning eller kontakt<br>
-              Kunden får 10 % rabatt på första bokningen<br>
-              Vårdnadshavaren får 20 % på första godkända och betalda bokningen
+              Kunden får 10 % rabatt på bokningar där koden används<br>
+              Vårdnadshavaren får 20 % på godkända och betalda bokningar där koden används
             </div>
           </div>
         </div>
         <div class="grid-3" style="margin-top:18px;">
           <div class="card">
             <h3>För kunden</h3>
-            <p>10 % rabatt på första bokningen när den personliga tipskoden används.</p>
+            <p>10 % rabatt på bokningar där den personliga tipskoden används. Även framöver.</p>
           </div>
           <div class="card">
             <h3>För tipsaren</h3>
-            <p>20 % provision till vårdnadshavaren på första godkända och betalda bokningen.</p>
+            <p>20 % provision till vårdnadshavaren på godkända och betalda bokningar där koden används.</p>
           </div>
           <div class="card">
             <h3>För spårningen</h3>
@@ -1322,10 +1317,11 @@
             <div class="list-item"><span class="check">✓</span><span>Affiliateansökan görs av myndig vårdnadshavare</span></div>
             <div class="list-item"><span class="check">✓</span><span>Barn under 18 år kan dela rabattkod med vårdnadshavarens godkännande</span></div>
             <div class="list-item"><span class="check">✓</span><span>Avtal, kontakt och utbetalning sker alltid med vårdnadshavaren</span></div>
-            <div class="list-item"><span class="check">✓</span><span>Gäller nya kunder</span></div>
+            <div class="list-item"><span class="check">✓</span><span>Rabatt och provision gäller bokningar där koden används</span></div>
             <div class="list-item"><span class="check">✓</span><span>Kunden behöver använda rabattkoden vid bokning eller kontakt</span></div>
             <div class="list-item"><span class="check">✓</span><span>Rabatt ges bara när koden faktiskt används</span></div>
             <div class="list-item"><span class="check">✓</span><span>Provision betalas bara på godkänd och betald bokning</span></div>
+            <div class="list-item"><span class="check">✓</span><span>Provision kan även betalas på framtida bokningar där samma kod används</span></div>
             <div class="list-item"><span class="check">✓</span><span>Spam, fejk, falska löften eller oseriösa leads godkänns inte</span></div>
             <div class="list-item"><span class="check">✓</span><span>Jag godkänner affiliates manuellt</span></div>
           </div>
@@ -1337,7 +1333,10 @@
               “Jag känner en som hyr ut bumperballs i Skåne. Du får 10 % rabatt med min kod om du vill boka.”
             </p>
             <p>
-              “Det kostar inget att kolla. Hon sköter bokning och frågor själv, jag delar bara rabattkoden.”
+              “Koden går att använda även nästa gång ni bokar, så spara den.”
+            </p>
+            <p>
+              “Hon sköter bokning och frågor själv, jag delar bara rabattkoden.”
             </p>
             <p>
               “Det kan passa om ni planerar barnkalas, skolaktivitet, fritidsaktivitet, föreningsdag eller event.”
@@ -1355,7 +1354,11 @@
           <div class="faq">
             <details>
               <summary>Är detta ett affiliateprogram?</summary>
-              <p>Tekniskt ja, men upplägget är mer ett tipsupplägg. Du tipsar en relevant kund, kunden får rabatt och vårdnadshavaren får provision om det blir en godkänd och betald bokning.</p>
+              <p>Tekniskt ja, men upplägget är mer ett tipsupplägg. Du tipsar en relevant kund, kunden får rabatt och vårdnadshavaren får provision om det blir en godkänd och betald bokning där koden används.</p>
+            </details>
+            <details>
+              <summary>Gäller det bara första bokningen?</summary>
+              <p>Nej. Kunden kan få 10 % rabatt även på framtida bokningar där koden används. Vårdnadshavaren kan också få 20 % provision även på framtida godkända och betalda bokningar där samma kod används.</p>
             </details>
             <details>
               <summary>Måste jag sälja?</summary>
@@ -1371,11 +1374,11 @@
             </details>
             <details>
               <summary>Vad får kunden?</summary>
-              <p>Kunden får 10 % rabatt på första bokningen när tipskoden används.</p>
+              <p>Kunden får 10 % rabatt på bokningar där tipskoden används.</p>
             </details>
             <details>
               <summary>Vad får tipsaren?</summary>
-              <p>Vårdnadshavaren får 20 % provision på första godkända och betalda bokningen där den personliga koden använts eller tipsaren angetts på ett godkänt sätt.</p>
+              <p>Vårdnadshavaren får 20 % provision på godkända och betalda bokningar där den personliga koden använts eller tipsaren angetts på ett godkänt sätt.</p>
             </details>
             <details>
               <summary>Kan barn dela en rabattkod eller länk?</summary>
@@ -1396,10 +1399,6 @@
             <details>
               <summary>Kan jag göra eget reklammaterial?</summary>
               <p>Ja, men materialet får inte innehålla fel priser, falska löften eller villkor som inte är godkända. Hör gärna av dig om du vill ha text eller bildmaterial.</p>
-            </details>
-            <details>
-              <summary>Gäller det gamla kunder?</summary>
-              <p>Nej. Det gäller nya kunder och godkända bokningar där koden faktiskt använts eller tipsaren angetts innan bokningen.</p>
             </details>
             <details>
               <summary>Är tipsprovision huvudkanalen för bokningar?</summary>
@@ -1428,7 +1427,7 @@
           <div class="form-body">
             <form class="contact-box" action="https://formsubmit.co/kontakt@offroadbumpis.se" method="POST" accept-charset="UTF-8" autocomplete="on">
               <strong>Ansökan om tipskod</strong>
-              <small>Blir du godkänd får du en personlig rabattkod att dela vidare. Om ett barn ska dela länken sker upplägget ändå med dig som vårdnadshavare.</small>
+              <small>Blir du godkänd får du en personlig rabattkod att dela vidare. Kunden kan använda koden även vid framtida bokningar, och provision kan betalas ut även då.</small>
               <input type="hidden" name="_subject" value="Ny ansökan om tipskod från offroadbumpis.se" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
@@ -1457,6 +1456,7 @@
                 Ansökan görs av myndig vårdnadshavare.<br>
                 Barn kan dela en rabattkod eller länk med vårdnadshavarens godkännande.<br>
                 Avtal, kontakt och utbetalning sker alltid med vårdnadshavaren.<br>
+                Rabatt och provision gäller bokningar där koden används och bokningen är godkänd och betald.<br>
                 Genom att skicka formuläret godkänner du att dina uppgifter behandlas enligt
                 <a href="/integritet.html">integritetspolicyn</a>.
               </small>
@@ -1478,6 +1478,7 @@
           <p style="margin-top:14px;">
             Tipsupplägget finns för att belöna personer som faktiskt kan skicka rätt kunder.
             Rabattkodslösningen gör det lättare för kunden, lättare för tipsaren och lättare för mig att hålla ordning.
+            Kunden kan använda koden även vid framtida bokningar, och vårdnadshavaren kan få provision även då.
             Barn kan dela rabattkod med vårdnadshavarens godkännande, men avtal och utbetalning sker alltid med vårdnadshavaren.
             Enkel matte. Inget clownsystem.
           </p>
