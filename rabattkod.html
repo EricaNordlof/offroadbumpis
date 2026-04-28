@@ -7,7 +7,7 @@
   <title>10 % rabatt på Offroad Bumpis</title>
   <meta
     name="description"
-    content="Få 10 % rabatt på Offroad Bumpis. Se koden, fyll i dina uppgifter och gå vidare till bokningen."
+    content="Få 10 % rabatt på Offroad Bumpis. Fyll i din mejladress för att aktivera rabattkoden och gå vidare till bokningen."
   />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="theme-color" content="#14361b" />
@@ -219,7 +219,7 @@
     }
 
     .btn:disabled{
-      opacity:.72;
+      opacity:.55;
       cursor:not-allowed;
       transform:none;
     }
@@ -301,6 +301,24 @@
       line-height:1;
       letter-spacing:-0.03em;
       word-break:break-word;
+    }
+
+    .notice{
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:#fff7d8;
+      border:1px solid rgba(139,98,0,0.18);
+      color:#5d4200;
+      font-weight:800;
+      line-height:1.55;
+      font-size:14px;
+    }
+
+    .notice.dark{
+      background:rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.14);
+      color:#fff4bd;
     }
 
     .section{
@@ -472,6 +490,7 @@
     }
   </style>
 </head>
+
 <body>
   <header class="topbar">
     <div class="container nav">
@@ -493,28 +512,48 @@
           <div class="hero-inner">
             <div>
               <span class="eyebrow">Bumperball i Skåne för barnkalas, skola och fritids</span>
+
               <h1>10 % rabatt på Offroad Bumpis</h1>
+
               <p>
-                Fyll i dina uppgifter här först. Därefter skickas du vidare till bokningen där du använder koden.
+                Fyll i din mejladress först för att aktivera rabattkoden. Sedan skickas du vidare till bokningen.
               </p>
 
               <ul class="hero-points">
-                <li><span class="check">✓</span><span>10 % rabatt med koden <strong id="heroCode">LADDAR...</strong></span></li>
-                <li><span class="check">✓</span><span>Heldag eller hel helg till samma pris</span></li>
-                <li><span class="check">✓</span><span>Hämtning i Malmö eller leverans i Skåne</span></li>
+                <li>
+                  <span class="check">✓</span>
+                  <span>10 % rabatt med koden <strong id="heroCode">LADDAR...</strong></span>
+                </li>
+                <li>
+                  <span class="check">✓</span>
+                  <span>Rabattkoden fungerar först när mejladressen är inskickad</span>
+                </li>
+                <li>
+                  <span class="check">✓</span>
+                  <span>Heldag eller hel helg till samma pris</span>
+                </li>
+                <li>
+                  <span class="check">✓</span>
+                  <span>Hämtning i Malmö eller leverans i Skåne</span>
+                </li>
               </ul>
             </div>
 
             <div class="promo-box">
               <div class="promo-label">Din rabattkod</div>
               <div class="promo-title" id="promoTitle">LADDAR...</div>
+
               <div class="promo-text">
-                Kopiera koden nu och använd den när du kommer till bokningen efter formuläret.
+                Koden aktiveras när du fyller i din mejladress. Det gör att personen som tipsade dig kan se att du kom via deras länk.
               </div>
 
               <div class="code-box">
                 <div class="code-label">Kod vid bokning</div>
                 <div class="code" id="discountCode">LADDAR...</div>
+              </div>
+
+              <div class="notice dark">
+                Viktigt: rabattkoden måste aktiveras via formuläret innan bokning. Annars fungerar inte rabatten.
               </div>
 
               <div class="btn-row">
@@ -531,10 +570,15 @@
     <section class="section">
       <div class="container grid">
         <article class="card">
-          <h2>Skicka dina uppgifter</h2>
+          <h2>Aktivera rabattkoden</h2>
+
           <p>
-            Fyll i namn, mejl och telefon. Sedan skickas du vidare till bokningen.
+            Fyll i din mejladress. Det är allt som behövs. Efteråt skickas du vidare till bokningen.
           </p>
+
+          <div class="notice">
+            Rabattkoden fungerar bara om formuläret är ifyllt först. Det är så affiliaten kan se sina leads och få rätt provision.
+          </div>
 
           <form
             id="bumpisForm"
@@ -546,14 +590,8 @@
             <input type="hidden" name="Kod" id="codeField">
             <input type="hidden" name="Typ" id="typeField">
 
-            <label for="namn">Namn</label>
-            <input
-              id="namn"
-              type="text"
-              name="Namn"
-              autocomplete="name"
-              required
-            >
+            <input type="hidden" name="Namn" value="">
+            <input type="hidden" name="Telefon" value="">
 
             <label for="epost">E-post</label>
             <input
@@ -561,21 +599,14 @@
               type="email"
               name="E-post"
               autocomplete="email"
-              required
-            >
-
-            <label for="telefon">Telefon</label>
-            <input
-              id="telefon"
-              type="tel"
-              name="Telefon"
-              autocomplete="tel"
-              inputmode="tel"
+              placeholder="dinmejl@example.com"
               required
             >
 
             <div class="btn-row">
-              <button class="btn btn-primary" type="submit" id="submitBtn">Skicka och gå vidare</button>
+              <button class="btn btn-primary" type="submit" id="submitBtn">
+                Aktivera rabattkod och gå vidare
+              </button>
             </div>
 
             <div class="status status-light" id="formStatus"></div>
@@ -586,6 +617,7 @@
 
         <article class="card">
           <h2>Så funkar det</h2>
+
           <p>
             Tre snabba steg.
           </p>
@@ -594,16 +626,16 @@
             <div class="mini-step">
               <div class="mini-step-number">1</div>
               <div>
-                <strong>Kopiera koden</strong>
-                <p>Spara <strong id="stepCode">LADDAR...</strong> så du har den redo.</p>
+                <strong>Fyll i mejladressen</strong>
+                <p>Det aktiverar rabattkoden och kopplar bokningen till rätt affiliate.</p>
               </div>
             </div>
 
             <div class="mini-step">
               <div class="mini-step-number">2</div>
               <div>
-                <strong>Fyll i formuläret</strong>
-                <p>Då sparas din förfrågan innan du går vidare.</p>
+                <strong>Kopiera koden</strong>
+                <p>Använd <strong id="stepCode">LADDAR...</strong> när du bokar.</p>
               </div>
             </div>
 
@@ -611,7 +643,7 @@
               <div class="mini-step-number">3</div>
               <div>
                 <strong>Slutför bokningen</strong>
-                <p>Efter formuläret skickas du vidare till bokningen.</p>
+                <p>Efter formuläret skickas du vidare till bokningen hos Offroad Bumpis.</p>
               </div>
             </div>
           </div>
@@ -678,6 +710,7 @@
       const form = document.getElementById("bumpisForm");
       const formStatus = document.getElementById("formStatus");
       const submitBtn = document.getElementById("submitBtn");
+      const emailInput = document.getElementById("epost");
 
       heroCode.textContent = code;
       promoTitle.textContent = code;
@@ -700,10 +733,23 @@
       }
 
       if (form) {
-        form.addEventListener("submit", function () {
+        form.addEventListener("submit", function (event) {
+          if (!emailInput.value || !emailInput.checkValidity()) {
+            event.preventDefault();
+            formStatus.textContent = "Fyll i en giltig mejladress för att aktivera rabattkoden.";
+            emailInput.focus();
+            return;
+          }
+
           submitBtn.disabled = true;
-          submitBtn.textContent = "Skickar...";
-          formStatus.textContent = "Skickar och öppnar bokningen...";
+          submitBtn.textContent = "Aktiverar rabattkod...";
+          formStatus.textContent = "Rabattkoden aktiveras. Du skickas strax vidare till bokningen.";
+
+          try {
+            navigator.clipboard.writeText(code);
+          } catch (error) {
+            // Ingen panik. Kunden ser koden på sidan ändå.
+          }
 
           setTimeout(function () {
             window.location.href = bookingUrl;
