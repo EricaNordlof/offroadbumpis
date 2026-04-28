@@ -218,6 +218,12 @@
       transform:translateY(-1px);
     }
 
+    .btn:disabled{
+      opacity:.72;
+      cursor:not-allowed;
+      transform:none;
+    }
+
     .btn-primary{
       background:var(--dark);
       color:#fff;
@@ -532,7 +538,7 @@
 
           <form
             id="bumpisForm"
-            action="https://script.google.com/macros/s/AKfycbwnPaoBJ-QXj3oGFf0x_dvgYQiyjjsJnh-NoxOOtd87-Xw-i0Aq1LZIO6GmGwjtwZcs/exec"
+            action="https://script.google.com/macros/s/AKfycbx_wlb98tmHb5MVUfX2zH04yiOLyt-W-9N_3Jlj9fBbCgP5Ue-58IjpEylR6Khncrw/exec"
             method="GET"
             target="hidden_iframe"
           >
@@ -541,13 +547,32 @@
             <input type="hidden" name="Typ" id="typeField">
 
             <label for="namn">Namn</label>
-            <input id="namn" type="text" name="Namn" required>
+            <input
+              id="namn"
+              type="text"
+              name="Namn"
+              autocomplete="name"
+              required
+            >
 
             <label for="epost">E-post</label>
-            <input id="epost" type="email" name="E-post" required>
+            <input
+              id="epost"
+              type="email"
+              name="E-post"
+              autocomplete="email"
+              required
+            >
 
             <label for="telefon">Telefon</label>
-            <input id="telefon" type="tel" name="Telefon" required>
+            <input
+              id="telefon"
+              type="tel"
+              name="Telefon"
+              autocomplete="tel"
+              inputmode="tel"
+              required
+            >
 
             <div class="btn-row">
               <button class="btn btn-primary" type="submit" id="submitBtn">Skicka och gå vidare</button>
@@ -556,7 +581,7 @@
             <div class="status status-light" id="formStatus"></div>
           </form>
 
-          <iframe name="hidden_iframe" id="hidden_iframe"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" title="Dolt formulärsvar"></iframe>
         </article>
 
         <article class="card">
@@ -578,7 +603,7 @@
               <div class="mini-step-number">2</div>
               <div>
                 <strong>Fyll i formuläret</strong>
-                <p>Det är här leaden sparas.</p>
+                <p>Då sparas din förfrågan innan du går vidare.</p>
               </div>
             </div>
 
@@ -611,9 +636,31 @@
     (function () {
       const params = new URLSearchParams(window.location.search);
 
-      const code = (params.get("code") || "KOMPASS-1026").toUpperCase();
-      const ref = (params.get("ref") || "direkt").toLowerCase();
-      const type = (params.get("type") || "privat").toLowerCase();
+      /*
+        Stödjer både:
+        ?ref=a104&code=BUMPIS-4827&type=privat
+
+        och svensk variant:
+        ?ref=a104&kod=BUMPIS-4827&typ=privat
+      */
+
+      const code = (
+        params.get("code") ||
+        params.get("kod") ||
+        "BUMPIS-2026"
+      ).trim().toUpperCase();
+
+      const ref = (
+        params.get("ref") ||
+        params.get("source") ||
+        "direkt"
+      ).trim().toLowerCase();
+
+      const type = (
+        params.get("type") ||
+        params.get("typ") ||
+        "privat"
+      ).trim().toLowerCase();
 
       const bookingUrl = "https://tidycal.com/boka-bumperballs";
 
@@ -652,15 +699,17 @@
         });
       }
 
-      form.addEventListener("submit", function () {
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Skickar...";
-        formStatus.textContent = "Skickar och öppnar bokningen...";
+      if (form) {
+        form.addEventListener("submit", function () {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Skickar...";
+          formStatus.textContent = "Skickar och öppnar bokningen...";
 
-        setTimeout(function () {
-          window.location.href = bookingUrl;
-        }, 1200);
-      });
+          setTimeout(function () {
+            window.location.href = bookingUrl;
+          }, 1500);
+        });
+      }
     })();
   </script>
 </body>
