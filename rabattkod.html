@@ -438,6 +438,35 @@
       font-size:14px;
     }
 
+    .missing-page{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      background:
+        radial-gradient(circle at top left, #fdffe7 0, transparent 22%),
+        radial-gradient(circle at top right, #e9ffd8 0, transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    }
+
+    .missing-card{
+      max-width:580px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .missing-card h1{
+      max-width:none;
+      font-size:clamp(2rem, 5vw, 3rem);
+    }
+
+    .missing-card .btn{
+      margin-top:20px;
+    }
+
     @media (max-width: 860px){
       .hero-inner,
       .grid{
@@ -659,7 +688,7 @@
   <footer>
     <div class="container">
       <div class="footer-card">
-        <p>© 2026 Offroad Bumpis · Bumperball i Skåne</p>
+        <p>Offroad Bumpis · Bumperball i Skåne</p>
       </div>
     </div>
   </footer>
@@ -668,17 +697,36 @@
     (function () {
       const params = new URLSearchParams(window.location.search);
 
-      const code = (
-        params.get("code") ||
-        params.get("kod") ||
-        "BUMPIS-2026"
-      ).trim().toUpperCase();
+      /*
+        Rätt länk behöver innehålla både ref och code/kod.
 
-      const ref = (
-        params.get("ref") ||
-        params.get("source") ||
-        "direkt"
-      ).trim().toLowerCase();
+        Exempel:
+        ?ref=a104&code=BUMPIS-4827&type=privat
+
+        Stödjer även:
+        ?ref=a104&kod=BUMPIS-4827&typ=privat
+      */
+
+      const rawCode = params.get("code") || params.get("kod");
+      const rawRef = params.get("ref") || params.get("source");
+
+      if (!rawCode || !rawRef) {
+        document.body.innerHTML = `
+          <main class="missing-page">
+            <section class="missing-card">
+              <h1>Rabattlänken saknar kod</h1>
+              <p>
+                Öppna den personliga rabattlänken igen. Rabattkoden behöver finnas i länken för att kunna aktiveras.
+              </p>
+              <a href="/" class="btn btn-primary">Till startsidan</a>
+            </section>
+          </main>
+        `;
+        return;
+      }
+
+      const code = rawCode.trim().toUpperCase();
+      const ref = rawRef.trim().toLowerCase();
 
       const type = (
         params.get("type") ||
