@@ -544,7 +544,7 @@
               <div class="promo-title" id="promoTitle">LADDAR...</div>
 
               <div class="promo-text">
-                Koden aktiveras när du fyller i din mejladress. Det gör att personen som tipsade dig kan se att du kom via deras länk.
+                Koden aktiveras när du fyller i din mejladress. Sedan kan du använda rabattkoden när du bokar.
               </div>
 
               <div class="code-box">
@@ -577,7 +577,7 @@
           </p>
 
           <div class="notice">
-            Rabattkoden fungerar bara om formuläret är ifyllt först. Det är så affiliaten kan se sina leads och få rätt provision.
+            Rabattkoden fungerar bara om formuläret är ifyllt först. Det räcker med din mejladress.
           </div>
 
           <form
@@ -627,7 +627,7 @@
               <div class="mini-step-number">1</div>
               <div>
                 <strong>Fyll i mejladressen</strong>
-                <p>Det aktiverar rabattkoden och kopplar bokningen till rätt affiliate.</p>
+                <p>Det aktiverar rabattkoden innan du går vidare till bokningen.</p>
               </div>
             </div>
 
@@ -667,14 +667,6 @@
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
-
-      /*
-        Stödjer både:
-        ?ref=a104&code=BUMPIS-4827&type=privat
-
-        och svensk variant:
-        ?ref=a104&kod=BUMPIS-4827&typ=privat
-      */
 
       const code = (
         params.get("code") ||
@@ -748,7 +740,7 @@
           try {
             navigator.clipboard.writeText(code);
           } catch (error) {
-            // Ingen panik. Kunden ser koden på sidan ändå.
+            // Kunden ser koden på sidan ändå.
           }
 
           setTimeout(function () {
