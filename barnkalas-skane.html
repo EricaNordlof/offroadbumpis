@@ -7,24 +7,35 @@
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   />
 
-  <title>Barnkalas Skåne med bumperball – aktivitet för barnkalas i Skåne | Offroad Bumpis</title>
+  <title>Barnkalas Skåne med bumperball | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Letar du efter barnkalas i Skåne med fartfylld aktivitet? Hyr bumperballs till barnkalas i Malmö, Lund, Helsingborg, Trelleborg, Ystad, Kristianstad, Hässleholm och fler orter i Skåne. Enkel bokning, tydliga priser och trygg uthyrning."
+    content="Hyr bumperballs till barnkalas i Skåne. Rolig aktivitet för barn med tydliga priser, enkel bokning och trygg uthyrning i Malmö, Lund och fler orter."
   />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://offroadbumpis/barnkalas-skane.html" />
-
-  <meta property="og:title" content="Barnkalas Skåne med bumperball – aktivitet för barnkalas i Skåne | Offroad Bumpis">
-  <meta property="og:description" content="Hyr bumperballs till barnkalas i Skåne. Perfekt för kalas, skola, fritids och förening. Enkel bokning, tydliga priser och trygg uthyrning.">
-  <meta property="og:image" content="https://offroadbumpis/Bumperball%20p%C3%A5%20fotbollsplan%20i%20Veber%C3%B6d.png">
-  <meta property="og:url" content="https://offroadbumpis/barnkalas-skane.html">
-  <meta property="og:type" content="website">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="Erica Nordlöf" />
   <meta name="theme-color" content="#14361b" />
+
+  <link rel="canonical" href="https://offroadbumpis.se/barnkalas-skane.html" />
+
+  <meta property="og:title" content="Barnkalas Skåne med bumperball | Offroad Bumpis">
+  <meta property="og:description" content="Hyr bumperballs till barnkalas i Skåne. Rolig aktivitet för barn med tydliga priser, enkel bokning och trygg uthyrning.">
+  <meta property="og:image" content="https://offroadbumpis.se/Bumperball%20p%C3%A5%20fotbollsplan%20i%20Veber%C3%B6d.png">
+  <meta property="og:url" content="https://offroadbumpis.se/barnkalas-skane.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Barnkalas Skåne med bumperball | Offroad Bumpis">
+  <meta name="twitter:description" content="Hyr bumperballs till barnkalas i Skåne. Rolig aktivitet för barn med tydliga priser, enkel bokning och trygg uthyrning.">
+  <meta name="twitter:image" content="https://offroadbumpis.se/Bumperball%20p%C3%A5%20fotbollsplan%20i%20Veber%C3%B6d.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root{
@@ -51,7 +62,9 @@
       --safe-left:env(safe-area-inset-left, 0px);
     }
 
-    *{box-sizing:border-box}
+    *{
+      box-sizing:border-box;
+    }
 
     html{
       scroll-behavior:smooth;
@@ -75,10 +88,20 @@
       overflow:hidden;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
 
-    a, button, summary, [role="button"]{
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a,
+    button,
+    summary,
+    [role="button"]{
       -webkit-tap-highlight-color:transparent;
     }
 
@@ -335,7 +358,10 @@
       flex-wrap:wrap;
     }
 
-    h1, h2, h3, h4{
+    h1,
+    h2,
+    h3,
+    h4{
       font-family:"Baloo 2", sans-serif;
       letter-spacing:-0.03em;
       margin:0;
@@ -346,7 +372,7 @@
 
     .hero h1{
       margin:14px 0 14px;
-      font-size:clamp(2.35rem, 8vw, 5.6rem);
+      font-size:clamp(2.35rem, 8vw, 5.2rem);
       line-height:0.95;
       max-width:12ch;
     }
@@ -423,8 +449,13 @@
       white-space:normal;
     }
 
-    .btn:hover{transform:translateY(-1px)}
-    .btn:active{transform:translateY(0)}
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn:active{
+      transform:translateY(0);
+    }
 
     .btn-primary{
       background:var(--dark);
@@ -554,6 +585,12 @@
     .grid-2{
       display:grid;
       grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
       gap:18px;
     }
 
@@ -1093,7 +1130,8 @@
       .showcase,
       .cta,
       .price-grid,
-      .grid-2{
+      .grid-2,
+      .grid-3{
         grid-template-columns:1fr;
       }
 
@@ -1431,12 +1469,138 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://offroadbumpis.se/barnkalas-skane.html#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Hem",
+            "item":"https://offroadbumpis.se/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Barnkalas Skåne",
+            "item":"https://offroadbumpis.se/barnkalas-skane.html"
+          }
+        ]
+      },
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://offroadbumpis.se/#business",
+        "name":"Offroad Bumpis",
+        "url":"https://offroadbumpis.se/",
+        "image":"https://offroadbumpis.se/Bumperball%20p%C3%A5%20fotbollsplan%20i%20Veber%C3%B6d.png",
+        "email":"kontakt@offroadbumpis.se",
+        "areaServed":[
+          "Skåne",
+          "Malmö",
+          "Lund",
+          "Helsingborg",
+          "Trelleborg",
+          "Ystad",
+          "Kristianstad",
+          "Hässleholm",
+          "Landskrona"
+        ],
+        "description":"Offroad Bumpis hyr ut bumperballs för barnkalas, skola, fritids och föreningar i Skåne.",
+        "sameAs":[
+          "https://www.linkedin.com/in/erica-nordlöf",
+          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
+        ]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://offroadbumpis.se/barnkalas-skane.html#service",
+        "serviceType":"Barnkalas i Skåne med bumperball",
+        "provider":{
+          "@id":"https://offroadbumpis.se/#business"
+        },
+        "areaServed":"Skåne",
+        "offers":[
+          {
+            "@type":"Offer",
+            "name":"2-pack bumperballs",
+            "price":"600",
+            "priceCurrency":"SEK"
+          },
+          {
+            "@type":"Offer",
+            "name":"10-pack bumperballs",
+            "price":"2000",
+            "priceCurrency":"SEK"
+          },
+          {
+            "@type":"Offer",
+            "name":"Turneringskit",
+            "price":"1000",
+            "priceCurrency":"SEK"
+          }
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://offroadbumpis.se/barnkalas-skane.html#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Är bumperball bra för barnkalas i Skåne?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Ja. Bumperball passar dig som söker barnkalas i Skåne med aktivitet där barnen får röra på sig, skratta och göra något mer än ett vanligt standardkalas."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Vilken ålder passar bumperballs för?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg. En person per boll gäller."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Behöver vi instruktör?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nej. Ni hyr utrustningen och ansvarig vuxen har tillsyn under aktiviteten."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Vad kostar barnkalas i Skåne med bumperball?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"2-pack kostar 600 kr och 10-pack kostar 2 000 kr. Turneringskit kostar 1 000 kr som tillval."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Vilka underlag fungerar?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a href="../../" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="../../Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
+      <a href="./" class="brand" aria-label="Offroad Bumpis startsida">
+        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
         <span>Offroad Bumpis</span>
       </a>
 
@@ -1493,21 +1657,31 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Barnkalas Skåne · bumperball · kalasaktivitet · skola · fritids</span>
+
           <h1>Barnkalas Skåne med bumperball – rolig aktivitet för barnkalas i Skåne</h1>
+
           <p>
-            Letar du efter barnkalas i Skåne med fart, skratt och rörelse? Offroad Bumpis erbjuder bumperball i Skåne för barnkalas, skola, fritids och förening. Det här passar dig som söker barnkalas Skåne med aktivitet, bumperball Skåne, barnaktivitet Skåne eller kalasaktivitet Skåne där barnen får göra något kul tillsammans och dagen känns mer som ett event än ett standardkalas.
+            Letar du efter barnkalas i Skåne med fart, skratt och rörelse? Offroad Bumpis erbjuder bumperball i Skåne för barnkalas, skola, fritids och förening. Det här passar dig som söker barnkalas Skåne med aktivitet, bumperball Skåne, barnaktivitet Skåne eller kalasaktivitet Skåne där barnen får göra något kul tillsammans.
           </p>
-       
+
+          <p class="hero-trust">
+            Ni hyr utrustningen, barnen spelar och kalaset får fart direkt. Operationsmodell: enkel. Barnens betyg: mycket studs.
+          </p>
+
           <ul class="hero-points">
             <li><span class="check">✓</span><span>Barnkalas i Skåne med 10-pack från 2 000 kr eller 2-pack från 600 kr</span></li>
             <li><span class="check">✓</span><span>Passar i Malmö, Lund, Helsingborg, Trelleborg, Ystad, Kristianstad, Hässleholm, Landskrona och fler orter</span></li>
             <li><span class="check">✓</span><span>För barn cirka 7–12 år, max 60 kg</span></li>
-            <li><span class="check">✓</span><span>Tydliga leveranszoner i hela Skåne</span></li>
+            <li><span class="check">✓</span><span>Tydliga leveranszoner i Skåne</span></li>
           </ul>
 
           <div class="hero-actions">
-            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Boka barnkalas Skåne</a>
-            <a href="#stad" class="btn btn-secondary">Se städer i Skåne</a>
+            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Boka barnkalas Skåne
+            </a>
+            <a href="#stad" class="btn btn-secondary">
+              Se städer i Skåne
+            </a>
           </div>
         </div>
 
@@ -1519,7 +1693,7 @@
 
           <div class="mockup-image">
             <img
-              src="../../Bumperball på fotbollsplan i Veberöd.png"
+              src="Bumperball på fotbollsplan i Veberöd.png"
               alt="Bumperball för barnkalas i Skåne"
             >
           </div>
@@ -1542,24 +1716,31 @@
     <section class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Barnkalas i Skåne som känns mer än bara ännu ett vanligt upplägg</h2>
+          <h2>Barnkalas i Skåne som inte känns som kopia nummer 47</h2>
           <p>
-            Många söker efter barnkalas i Skåne, aktivitet barnkalas Skåne eller barnaktivitet Skåne och möts av samma gamla förslag. Bumperball i Skåne passar dig som vill ha ett barnkalas med rörelse, skratt och energi där barnen får en aktivitet att samlas kring och minnas efteråt.
+            Många söker efter barnkalas i Skåne, aktivitet barnkalas Skåne eller barnaktivitet Skåne och möts av samma gamla förslag. Bumperball passar dig som vill ha rörelse, skratt och energi utan att göra planeringen till ett mindre EU-projekt.
           </p>
         </div>
 
-        <div class="grid-2">
+        <div class="grid-3">
           <article class="card">
-            <h3>Perfekt för barnkalas i Skåne</h3>
+            <h3>För barnkalas</h3>
             <p>
-              Offroad Bumpis passar för barnkalas i Skåne där du vill ha något som sticker ut och känns aktivt. Det fungerar också bra för skola, fritids, förening och andra grupper som letar efter bumperball i Skåne eller en barnaktivitet i Skåne som är enkel att förstå men riktigt kul från första minuten.
+              Offroad Bumpis passar för barnkalas i Skåne där du vill ha en aktivitet som startar snabbt och håller energin uppe.
             </p>
           </article>
 
           <article class="card">
-            <h3>Lokalt relevant i hela Skåne</h3>
+            <h3>För skola och fritids</h3>
             <p>
-              För dig som söker barnkalas i Skåne är den här sidan byggd för att vara tydlig direkt. Söker du bumperball Skåne, kalasaktivitet Skåne, barnkalas med aktivitet i Skåne eller hyr bumperballs Skåne ska du snabbt se vad som erbjuds, vad det kostar och hur du bokar.
+              Bumperball fungerar även för skolaktiviteter, fritidsgrupper och föreningar som vill ha en enkel men minnesvärd aktivitet.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>För fler orter</h3>
+            <p>
+              Sidan täcker Skåne brett och länkar vidare till lokala stadssidor där det finns mer specifik information.
             </p>
           </article>
         </div>
@@ -1571,7 +1752,7 @@
         <div class="section-title">
           <h2>Priser för barnkalas i Skåne</h2>
           <p>
-            Samma tydliga prislogik i hela Skåne. Det gör det enklare att jämföra, boka och komma vidare utan att fastna i onödigt krångel.
+            Tydliga paket för dig som söker barnkalas Skåne, bumperball Skåne eller en rolig aktivitet till barnkalas i Skåne.
           </p>
         </div>
 
@@ -1580,7 +1761,9 @@
             <span class="tag">Mini</span>
             <h3>2-pack</h3>
             <p class="price">600 kr</p>
-            <div class="price-note">Passar mindre barnkalas i Skåne där barnen vill köra dueller eller turas om.</div>
+            <div class="price-note">
+              Passar mindre barnkalas i Skåne där barnen vill köra dueller, turas om eller testa bumperball i mindre format.
+            </div>
             <ul class="feature-list">
               <li><span class="check">✓</span><span>2 bumperballs</span></li>
               <li><span class="check">✓</span><span>1 batteridriven pump</span></li>
@@ -1592,7 +1775,9 @@
             <span class="tag">Populärast</span>
             <h3>10-pack</h3>
             <p class="price">2 000 kr</p>
-            <div class="price-note">Bästa valet för barnkalas i Skåne, större grupper, skolor och fritids.</div>
+            <div class="price-note">
+              Bästa valet för barnkalas i Skåne, större grupper, skolor, fritids och föreningar.
+            </div>
             <ul class="feature-list">
               <li><span class="check">✓</span><span>10 bumperballs</span></li>
               <li><span class="check">✓</span><span>2 batteridrivna pumpar</span></li>
@@ -1604,7 +1789,9 @@
             <span class="tag">Tillval</span>
             <h3>Turneringskit</h3>
             <p class="price">1 000 kr</p>
-            <div class="price-note">Gör ditt barnkalas i Skåne ännu roligare med lag, matcher och finalkänsla.</div>
+            <div class="price-note">
+              Gör barnkalaset i Skåne ännu roligare med lag, matcher och tydligare upplägg.
+            </div>
             <ul class="feature-list">
               <li><span class="check">✓</span><span>Lagvästar, koner och markörer</span></li>
               <li><span class="check">✓</span><span>Matchboll och enkel poängstruktur</span></li>
@@ -1621,7 +1808,7 @@
         <div class="section-title">
           <h2>Underlag som funkar för bumperball i Skåne</h2>
           <p>
-            När du planerar barnkalas i Skåne är det smart att veta vilka underlag som funkar. Då blir planeringen enklare och kalaset landar bättre direkt.
+            Rätt underlag gör aktiviteten roligare och tryggare. Affärskritiskt? För barnens knän: absolut.
           </p>
         </div>
 
@@ -1643,47 +1830,47 @@
         <div class="section-title">
           <h2>Populära städer för barnkalas i Skåne</h2>
           <p>
-            Söker du barnkalas Skåne finns ofta en lokal stadssida också. Det gör det enklare att hitta rätt direkt om du vill jämföra leveranszon, ort och bokning.
+            Söker du barnkalas Skåne finns ofta en lokal stadssida också. Det gör det enklare att hitta rätt ort, se relevant information och boka snabbare.
           </p>
         </div>
 
         <div class="city-grid">
-          <a class="city-card" href="../../barnkalas-malmo.html">
+          <a class="city-card" href="barnkalas-malmo.html">
             <strong>Malmö</strong>
             <span>Barnkalas i Malmö med bumperball för kalas, skola, fritids och förening.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-lund.html">
+          <a class="city-card" href="barnkalas-lund.html">
             <strong>Lund</strong>
             <span>Aktivitet för barnkalas i Lund med tydliga priser, zon och bokning.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-helsingborg.html">
+          <a class="city-card" href="barnkalas-helsingborg.html">
             <strong>Helsingborg</strong>
             <span>Bumperball i Helsingborg för barnkalas med fart, skratt och rörelse.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-trelleborg.html">
+          <a class="city-card" href="barnkalas-trelleborg.html">
             <strong>Trelleborg</strong>
             <span>Rolig barnaktivitet i Trelleborg för kalas och grupper som vill ha något mer levande.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-ystad.html">
+          <a class="city-card" href="barnkalas-ystad.html">
             <strong>Ystad</strong>
             <span>Barnkalas i Ystad med aktivitet som sticker ut direkt och känns mer än standard.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-kristianstad.html">
+          <a class="city-card" href="barnkalas-kristianstad.html">
             <strong>Kristianstad</strong>
             <span>Bumperball i Kristianstad för kalas, skola, fritids och föreningar.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-hassleholm.html">
+          <a class="city-card" href="barnkalas-hassleholm.html">
             <strong>Hässleholm</strong>
             <span>Barnaktivitet i Hässleholm för dig som vill boka något kul, enkelt och tydligt.</span>
           </a>
 
-          <a class="city-card" href="../../barnkalas-landskrona.html">
+          <a class="city-card" href="barnkalas-landskrona.html">
             <strong>Landskrona</strong>
             <span>Kalasaktivitet i Landskrona med bumperballs, lagkänsla och rörelse.</span>
           </a>
@@ -1695,7 +1882,7 @@
       <div class="container showcase">
         <article class="card">
           <img
-            src="../../Fotbollslag spelar bumperball i Veberöd.png"
+            src="Fotbollslag spelar bumperball i Veberöd.png"
             alt="Barn spelar bumperball som aktivitet för barnkalas i Skåne"
           >
           <div class="showcase-content">
@@ -1771,7 +1958,7 @@
         <div class="section-title">
           <h2>Spelidéer för barnkalas i Skåne</h2>
           <p>
-            En tydlig bonus för den som söker barnkalas i Skåne: du ser inte bara att bumperballs går att hyra, utan också vad man faktiskt kan göra med dem.
+            Här är några enkla upplägg som fungerar bra när du hyr bumperballs till barnkalas i Skåne.
           </p>
         </div>
 
@@ -1825,10 +2012,10 @@
             <p>Nej. Ni hyr utrustningen och barnen spelar själva. En ansvarig vuxen ska ha tillsyn under hela aktiviteten.</p>
           </details>
 
-           <details>
-    <summary>Hur lång tid tar det att pumpa upp bumperballs?</summary>
-    <p>Det tar cirka 2 minuter per boll att pumpa upp. Vid hyra av 10 bollar ingår 2 batteripumpar, så om ni är 2 personer tar det bara ungefär 10 minuter att pumpa upp alla 10 bollar.</p>
-  </details>
+          <details>
+            <summary>Hur lång tid tar det att pumpa upp bumperballs?</summary>
+            <p>Det tar cirka 2 minuter per boll att pumpa upp. Vid hyra av 10 bollar ingår 2 batteripumpar, så om ni är 2 personer tar det ungefär 10 minuter att pumpa upp alla 10 bollar.</p>
+          </details>
 
           <details>
             <summary>Vilka underlag funkar i Skåne?</summary>
@@ -1836,7 +2023,12 @@
           </details>
 
           <details>
-            <summary>Vad gäller om vi vill boka barnkalas i Skåne och sedan avboka?</summary>
+            <summary>Vad kostar barnkalas i Skåne med bumperball?</summary>
+            <p>2-pack kostar 600 kr och 10-pack kostar 2 000 kr. Turneringskit kostar 1 000 kr som tillval.</p>
+          </details>
+
+          <details>
+            <summary>Vad gäller vid avbokning?</summary>
             <p>Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.</p>
           </details>
         </div>
@@ -1854,7 +2046,7 @@
           <div class="trust-actions">
             <a href="https://www.linkedin.com/in/erica-nordlöf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Se verifierad LinkedIn-profil</a>
             <a href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
-            <a href="../../" class="btn btn-secondary">Till huvudsidan</a>
+            <a href="./" class="btn btn-secondary">Till huvudsidan</a>
           </div>
         </div>
       </div>
@@ -1915,7 +2107,7 @@
   <footer>
     <div class="container footer-line">
       <span>© 2026 Offroad Bumpis</span>
-      <span>Barnkalas Skåne · Bumperball Skåne · Trygg uthyrning</span>
+      <span>Barnkalas Skåne · Bumperball Skåne · Aktivitet barnkalas Skåne · Trygg uthyrning</span>
     </div>
   </footer>
 
