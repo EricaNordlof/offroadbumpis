@@ -1,3 +1,6 @@
+Här är hela `villkor.html` med ny Bumpis-struktur: logo + menyknapp, sticky header, ren footer och Affiliate kvar i footern. 
+
+```html
 <!doctype html>
 <html lang="sv">
 <head>
@@ -9,8 +12,11 @@
     name="description"
     content="Läs Offroad Bumpis villkor för uthyrning av bumperballs i Skåne. Tydlig info om användning, ansvar, bokning, avbokning, betalning, säkerhet och återlämning."
   />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Erica Nordlöf" />
+  <meta name="theme-color" content="#14361b" />
+  <meta name="msvalidate.01" content="92586BA25D845A7D1185B5EE710E8A08" />
+
   <link rel="canonical" href="https://offroadbumpis.se/villkor.html" />
 
   <meta property="og:title" content="Villkor | Offroad Bumpis" />
@@ -18,20 +24,22 @@
   <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
   <meta property="og:url" content="https://offroadbumpis.se/villkor.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Villkor | Offroad Bumpis" />
   <meta name="twitter:description" content="Tydliga villkor för bokning, användning, säkerhet, betalning och återlämning av bumperballs." />
   <meta name="twitter:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
 
-  <meta name="theme-color" content="#14361b" />
-
   <link rel="icon" type="image/png" href="Offroad Bumpis logo.png" />
   <link rel="apple-touch-icon" href="Offroad Bumpis logo.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
   <script type="application/ld+json">
   {
@@ -39,19 +47,62 @@
     "@graph":[
       {
         "@type":"WebPage",
+        "@id":"https://offroadbumpis.se/villkor.html#webpage",
         "name":"Villkor | Offroad Bumpis",
         "url":"https://offroadbumpis.se/villkor.html",
-        "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning."
+        "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning.",
+        "inLanguage":"sv-SE",
+        "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
+        "about":{"@id":"https://offroadbumpis.se/#business"}
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://offroadbumpis.se/#website",
+        "name":"Offroad Bumpis",
+        "url":"https://offroadbumpis.se/",
+        "inLanguage":"sv-SE",
+        "publisher":{"@id":"https://offroadbumpis.se/#business"}
       },
       {
         "@type":"LocalBusiness",
+        "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "url":"https://offroadbumpis.se/",
         "image":"https://offroadbumpis.se/Offroad%20Bumpis%20logo.png",
-        "email":"mailto:kontakt@offroadbumpis.se",
+        "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
-        "founder":{"@type":"Person","name":"Erica Nordlöf"}
+        "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids och föreningar.",
+        "areaServed":{
+          "@type":"AdministrativeArea",
+          "name":"Skåne"
+        },
+        "founder":{
+          "@type":"Person",
+          "name":"Erica Nordlöf",
+          "sameAs":"https://www.linkedin.com/in/erica-nordl%C3%B6f/"
+        },
+        "sameAs":[
+          "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
+          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
+        ]
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://offroadbumpis.se/villkor.html#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Hem",
+            "item":"https://offroadbumpis.se/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Villkor",
+            "item":"https://offroadbumpis.se/villkor.html"
+          }
+        ]
       }
     ]
   }
@@ -60,44 +111,106 @@
   <style>
     :root{
       --bg:#f5fff1;
-      --bg-2:#ecffe4;
       --card:#ffffff;
       --text:#16311d;
       --muted:#4d6454;
-      --line:rgba(18, 64, 29, 0.10);
+      --line:rgba(18,64,29,.12);
       --green:#74d64c;
       --green-dark:#2f7f25;
       --green-soft:#dff8d1;
       --yellow:#ffd84d;
       --dark:#102217;
-      --dark-2:#14361b;
-      --shadow:0 18px 55px rgba(14, 53, 22, 0.10);
-      --shadow-soft:0 10px 28px rgba(14, 53, 22, 0.06);
+      --focus:#111111;
+      --shadow:0 18px 55px rgba(14,53,22,.10);
+      --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
       --content-max:900px;
-      --tap:48px;
       --header-offset:92px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      -webkit-text-size-adjust:100%;
+    }
+
     body{
       margin:0;
+      min-width:320px;
       font-family:"Inter",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, #fdffe7 0, transparent 22%),
-        radial-gradient(circle at top right, #e9ffd8 0, transparent 24%),
-        linear-gradient(180deg, var(--bg) 0%, #effbea 100%);
+        radial-gradient(circle at top left,#fdffe7 0,transparent 22%),
+        radial-gradient(circle at top right,#e9ffd8 0,transparent 24%),
+        linear-gradient(180deg,var(--bg) 0%,#effbea 100%);
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
       overflow-x:hidden;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    :target{scroll-margin-top:var(--header-offset)}
+    body.menu-open{
+      overflow:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    input,
+    select,
+    textarea,
+    button{
+      font:inherit;
+    }
+
+    button{
+      border:0;
+    }
+
+    :target{
+      scroll-margin-top:var(--header-offset);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible{
+      outline:3px solid var(--focus);
+      outline-offset:4px;
+      box-shadow:0 0 0 6px rgba(255,255,255,.92);
+    }
+
+    .skip-link{
+      position:absolute;
+      left:12px;
+      top:12px;
+      z-index:999;
+      transform:translateY(-150%);
+      background:#fff;
+      color:#000;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:900;
+      border:2px solid #000;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+      transition:.15s ease;
+    }
+
+    .skip-link:focus{
+      transform:translateY(0);
+    }
 
     .container{
       width:min(var(--max), calc(100% - 32px));
@@ -107,11 +220,12 @@
     .topbar{
       position:sticky;
       top:0;
-      z-index:50;
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-      background:rgba(245,255,241,0.84);
+      z-index:80;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      background:rgba(245,255,241,.9);
       border-bottom:1px solid var(--line);
+      padding-top:env(safe-area-inset-top);
     }
 
     .nav{
@@ -127,8 +241,8 @@
       display:flex;
       align-items:center;
       gap:12px;
-      font-weight:800;
-      letter-spacing:-0.02em;
+      font-weight:900;
+      letter-spacing:-.02em;
       min-width:0;
     }
 
@@ -161,35 +275,175 @@
       white-space:nowrap;
     }
 
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      color:#35523c;
-      font-size:14px;
-      font-weight:700;
-    }
-
-    .nav-links a{
-      opacity:.92;
-      transition:.2s ease;
-    }
-
-    .nav-links a:hover{opacity:1}
-
-    .nav-cta{
+    .menu-button{
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      gap:9px;
       min-height:46px;
       padding:12px 18px;
       border-radius:999px;
       background:var(--dark);
       color:#fff;
-      font-weight:800;
-      white-space:nowrap;
+      font-weight:900;
+      cursor:pointer;
       box-shadow:var(--shadow-soft);
+      border:1px solid rgba(255,255,255,.1);
       flex:0 0 auto;
+    }
+
+    .menu-button span{
+      width:16px;
+      height:12px;
+      position:relative;
+      display:inline-block;
+    }
+
+    .menu-button span::before,
+    .menu-button span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:16px;
+      height:2px;
+      border-radius:99px;
+      background:#fff;
+      transition:.2s ease;
+    }
+
+    .menu-button span::before{
+      top:1px;
+    }
+
+    .menu-button span::after{
+      bottom:1px;
+    }
+
+    .menu-button[aria-expanded="true"] span::before{
+      top:5px;
+      transform:rotate(45deg);
+    }
+
+    .menu-button[aria-expanded="true"] span::after{
+      bottom:5px;
+      transform:rotate(-45deg);
+    }
+
+    .menu-backdrop{
+      position:fixed;
+      inset:0;
+      z-index:90;
+      background:rgba(7,22,11,.46);
+      opacity:0;
+      pointer-events:none;
+      transition:.2s ease;
+    }
+
+    .menu-backdrop.is-open{
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    .site-menu{
+      position:fixed;
+      top:16px;
+      right:16px;
+      bottom:16px;
+      z-index:100;
+      width:min(420px, calc(100vw - 32px));
+      border-radius:30px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:0 28px 90px rgba(7,22,11,.25);
+      padding:20px;
+      transform:translateX(calc(100% + 32px));
+      transition:.24s ease;
+      overflow:auto;
+    }
+
+    .site-menu.is-open{
+      transform:translateX(0);
+    }
+
+    .menu-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:14px;
+    }
+
+    .menu-head strong{
+      font-family:"Baloo 2",sans-serif;
+      font-size:28px;
+      line-height:1;
+      letter-spacing:-.03em;
+    }
+
+    .menu-close{
+      width:46px;
+      height:46px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#102217;
+      color:#fff;
+      font-weight:900;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .menu-links{
+      display:grid;
+      gap:10px;
+    }
+
+    .menu-links a{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:15px 16px;
+      border-radius:18px;
+      background:#f5fff1;
+      border:1px solid var(--line);
+      font-weight:900;
+      color:#17351e;
+      line-height:1.35;
+    }
+
+    .menu-links a::after{
+      content:"→";
+      color:#2f7f25;
+      flex:0 0 auto;
+    }
+
+    .menu-cta{
+      margin-top:16px;
+      padding:18px;
+      border-radius:22px;
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+    }
+
+    .menu-cta strong{
+      display:block;
+      font-family:"Baloo 2",sans-serif;
+      font-size:26px;
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .menu-cta p{
+      margin:0 0 14px;
+      color:#d7e8d8;
+      line-height:1.65;
+      font-size:14px;
+    }
+
+    .menu-cta .btn{
+      width:100%;
     }
 
     .hero{
@@ -197,13 +451,14 @@
     }
 
     .hero-card{
-      background:linear-gradient(180deg, #1b4724 0%, #14361b 100%);
+      background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
       color:#fff;
       border-radius:30px;
-      padding:24px;
-      box-shadow:0 28px 80px rgba(8, 34, 16, 0.18);
+      padding:28px;
+      box-shadow:0 28px 80px rgba(8,34,16,.18);
       overflow:hidden;
       position:relative;
+      isolation:isolate;
     }
 
     .hero-card::after{
@@ -214,8 +469,9 @@
       width:240px;
       height:240px;
       border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
+      background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);
       pointer-events:none;
+      z-index:-1;
     }
 
     .eyebrow{
@@ -223,32 +479,30 @@
       align-items:center;
       gap:8px;
       padding:8px 12px;
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.10);
       border-radius:999px;
       font-size:13px;
-      font-weight:800;
+      font-weight:900;
       color:#dff1df;
       max-width:100%;
       line-height:1.4;
-      position:relative;
-      z-index:1;
     }
 
-    h1,h2,h3{
-      font-family:"Baloo 2", sans-serif;
-      letter-spacing:-0.03em;
+    h1,
+    h2,
+    h3{
+      font-family:"Baloo 2",sans-serif;
+      letter-spacing:-.03em;
       margin:0;
-      line-height:0.96;
+      line-height:.96;
     }
 
     .hero-card h1{
       margin:14px 0 14px;
-      font-size:clamp(2.6rem, 5vw, 4.8rem);
+      font-size:clamp(2.6rem,5vw,4.8rem);
       color:#fff;
       max-width:10ch;
-      position:relative;
-      z-index:1;
     }
 
     .hero-card p{
@@ -257,8 +511,6 @@
       line-height:1.8;
       color:#d7e8d8;
       max-width:760px;
-      position:relative;
-      z-index:1;
     }
 
     .hero-points{
@@ -268,10 +520,8 @@
       padding:0;
       list-style:none;
       color:#eef6ee;
-      font-weight:600;
-      max-width:760px;
-      position:relative;
-      z-index:1;
+      font-weight:700;
+      max-width:780px;
     }
 
     .hero-points li{
@@ -306,7 +556,7 @@
     }
 
     .card{
-      background:rgba(255,255,255,0.94);
+      background:rgba(255,255,255,.94);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:24px;
@@ -332,7 +582,9 @@
       font-size:16px;
     }
 
-    .card p:last-child{margin-bottom:0}
+    .card p:last-child{
+      margin-bottom:0;
+    }
 
     .bullet-list{
       display:grid;
@@ -365,15 +617,17 @@
       min-height:50px;
       padding:14px 20px;
       border-radius:999px;
-      font-weight:800;
+      font-weight:900;
       transition:.2s ease;
-      border:none;
+      border:1px solid transparent;
       cursor:pointer;
-      font:inherit;
       text-align:center;
+      line-height:1.1;
     }
 
-    .btn:hover{transform:translateY(-1px)}
+    .btn:hover{
+      transform:translateY(-1px);
+    }
 
     .btn-primary{
       background:var(--dark);
@@ -385,7 +639,7 @@
       background:#fff;
       color:var(--text);
       border:1px solid var(--line);
-      box-shadow:0 8px 22px rgba(0,0,0,0.03);
+      box-shadow:0 8px 22px rgba(0,0,0,.03);
     }
 
     .doc-links{
@@ -400,7 +654,7 @@
       text-decoration:underline;
       text-underline-offset:3px;
       color:#27442e;
-      font-weight:600;
+      font-weight:800;
     }
 
     footer{
@@ -424,12 +678,55 @@
       text-underline-offset:3px;
     }
 
-    @media (max-width:980px){
-      .nav-links{display:none}
+    @media (prefers-reduced-motion: reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+      }
+
+      .btn:hover{
+        transform:none;
+      }
+    }
+
+    @media (prefers-contrast: more){
+      :root{
+        --text:#000;
+        --muted:#222;
+        --line:rgba(0,0,0,.35);
+      }
+
+      .card{
+        border-color:rgba(0,0,0,.35);
+      }
+    }
+
+    @media (forced-colors: active){
+      .btn,
+      .menu-button,
+      .menu-close,
+      .card,
+      .hero-card{
+        border:2px solid ButtonText;
+      }
+
+      a,
+      button{
+        text-decoration:underline;
+      }
     }
 
     @media (max-width:720px){
-      :root{--header-offset:84px}
+      :root{
+        --header-offset:84px;
+      }
 
       .container{
         width:min(var(--max), calc(100% - 24px));
@@ -437,6 +734,7 @@
 
       .nav{
         gap:10px;
+        min-height:64px;
         padding:10px 0;
       }
 
@@ -459,10 +757,18 @@
         display:none;
       }
 
-      .nav-cta{
+      .menu-button{
         min-height:42px;
         padding:10px 14px;
         font-size:14px;
+      }
+
+      .site-menu{
+        top:10px;
+        right:10px;
+        bottom:10px;
+        width:calc(100vw - 20px);
+        border-radius:24px;
       }
 
       .hero{
@@ -471,11 +777,11 @@
 
       .hero-card{
         border-radius:24px;
-        padding:18px;
+        padding:20px 18px;
       }
 
       .hero-card h1{
-        font-size:clamp(2.1rem, 10vw, 3.2rem);
+        font-size:clamp(2.1rem,10vw,3.2rem);
         max-width:none;
       }
 
@@ -532,29 +838,62 @@
     }
   </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Hoppa till huvudinnehåll</a>
+
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo">
+        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span class="brand-text">
           <span class="brand-title">Offroad Bumpis</span>
           <span class="brand-sub">Villkor</span>
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="Snabblänkar">
-        <a href="#bokning">Bokning</a>
-        <a href="#anvandning">Användning</a>
-        <a href="#skador">Skador</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-
-      <a href="/" class="nav-cta">Till startsidan</a>
+      <button
+        class="menu-button"
+        type="button"
+        id="menuButton"
+        aria-controls="siteMenu"
+        aria-expanded="false"
+      >
+        Meny
+        <span aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
-  <main>
+  <div class="menu-backdrop" id="menuBackdrop" hidden></div>
+
+  <aside class="site-menu" id="siteMenu" aria-label="Meny" hidden>
+    <div class="menu-head">
+      <strong>Meny</strong>
+      <button class="menu-close" type="button" id="menuClose" aria-label="Stäng meny">×</button>
+    </div>
+
+    <nav class="menu-links" aria-label="Huvudmeny">
+      <a href="/">Startsida</a>
+      <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
+      <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+      <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+      <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+      <a href="/villkor.html">Villkor</a>
+      <a href="/integritet.html">Integritet</a>
+    </nav>
+
+    <div class="menu-cta">
+      <strong>Klar att boka?</strong>
+      <p>Välj datum, paket och eventuella tillval. Enkelt upplägg, tydliga priser och minimalt krångel.</p>
+      <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+        Boka bumperballs
+      </a>
+    </div>
+  </aside>
+
+  <main id="main">
     <section class="hero">
       <div class="container">
         <div class="hero-card">
@@ -566,9 +905,9 @@
           </p>
 
           <ul class="hero-points">
-            <li><span class="check">✓</span><span>10 bumperballs, 2 batteridrivna pumpar, 2 väskor och 1 transportplatta ingår i grundpaketet</span></li>
-            <li><span class="check">✓</span><span>Ingen deposition och ingen självrisk vid normal användning enligt villkoren</span></li>
-            <li><span class="check">✓</span><span>Vuxen tillsyn krävs hela tiden och utrustningen får bara användas på lämpligt underlag</span></li>
+            <li><span class="check">✓</span><span>10 bumperballs, 2 batteridrivna pumpar, 2 väskor och 1 transportplatta ingår i grundpaketet.</span></li>
+            <li><span class="check">✓</span><span>Ingen deposition och ingen självrisk vid normal användning enligt villkoren.</span></li>
+            <li><span class="check">✓</span><span>Vuxen tillsyn krävs hela tiden och utrustningen får bara användas på lämpligt underlag.</span></li>
           </ul>
         </div>
       </div>
@@ -596,7 +935,7 @@
               Om fakturan inte betalas i tid släpps bokningen.
             </p>
             <p>
-              Grundpriset är 2000 kr inklusive moms per uthyrningsdag för 10 bumperballs.
+              Grundpriset är 2 000 kr inklusive moms per uthyrningsdag för 10 bumperballs.
               Helgregeln är fredag kl. 08.00 till söndag kl. 20.00 som räknas som en uthyrningsdag.
             </p>
             <p>
@@ -617,7 +956,7 @@
           </article>
 
           <article class="card" id="anvandning">
-            <h2>Vem får använda utrustningen</h2>
+            <h2>Vem får använda utrustningen?</h2>
             <p>
               Bumperballs är avsedda för barn, ungefär 7–12 år, med maxvikt cirka 60 kg.
               Det är 1 person per boll. Vuxna eller personer över viktgränsen får inte använda dem.
@@ -636,7 +975,10 @@
               <li><span class="check">✓</span><span>Mjuk eller packad snö</span></li>
             </ul>
 
-            <p>Utrustningen får inte användas på till exempel asfalt, grus, betong, is eller hårda, ojämna och steniga ytor.</p>
+            <p>
+              Utrustningen får inte användas på till exempel asfalt, grus, betong, is eller hårda,
+              ojämna och steniga ytor.
+            </p>
           </article>
 
           <article class="card">
@@ -644,12 +986,12 @@
             <p>Följande regler gäller under hela användningen:</p>
 
             <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Ansvarig vuxen ska övervaka hela tiden</span></li>
-              <li><span class="check">✓</span><span>Inga tacklingar bakifrån</span></li>
-              <li><span class="check">✓</span><span>Ingen kontakt med spelare som ligger ner</span></li>
-              <li><span class="check">✓</span><span>Inga dobbar, cleats, smycken eller vassa föremål nära bollarna</span></li>
-              <li><span class="check">✓</span><span>Avbryt direkt om någon får ont, blir yr eller känner obehag</span></li>
-              <li><span class="check">✓</span><span>Ingen hopp från höjd eller annan risklek som hör hemma i kategorin dåliga beslut</span></li>
+              <li><span class="check">✓</span><span>Ansvarig vuxen ska övervaka hela tiden.</span></li>
+              <li><span class="check">✓</span><span>Inga tacklingar bakifrån.</span></li>
+              <li><span class="check">✓</span><span>Ingen kontakt med spelare som ligger ner.</span></li>
+              <li><span class="check">✓</span><span>Inga dobbar, cleats, smycken eller vassa föremål nära bollarna.</span></li>
+              <li><span class="check">✓</span><span>Avbryt direkt om någon får ont, blir yr eller känner obehag.</span></li>
+              <li><span class="check">✓</span><span>Ingen hopp från höjd eller annan risklek som hör hemma i kategorin dåliga beslut.</span></li>
             </ul>
           </article>
 
@@ -724,10 +1066,10 @@
           <article class="card">
             <h2>Avbokning och utebliven hämtning</h2>
             <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Avbokning mer än 3 dagar före uthyrningsdatum: 100 % återbetalning</span></li>
-              <li><span class="check">✓</span><span>Avbokning mindre än 3 dagar före uthyrningsdatum: 100 % debitering, men beloppet kan krediteras mot ny bokning inom 6 månader</span></li>
-              <li><span class="check">✓</span><span>Utrustning som inte hämtas ut: 100 % debitering</span></li>
-              <li><span class="check">✓</span><span>Sen återlämning kan leda till extra avgifter eller förlängd hyrdebitering</span></li>
+              <li><span class="check">✓</span><span>Avbokning mer än 3 dagar före uthyrningsdatum: 100 % återbetalning.</span></li>
+              <li><span class="check">✓</span><span>Avbokning mindre än 3 dagar före uthyrningsdatum: 100 % debitering, men beloppet kan krediteras mot ny bokning inom 6 månader.</span></li>
+              <li><span class="check">✓</span><span>Utrustning som inte hämtas ut: 100 % debitering.</span></li>
+              <li><span class="check">✓</span><span>Sen återlämning kan leda till extra avgifter eller förlängd hyrdebitering.</span></li>
             </ul>
           </article>
 
@@ -747,19 +1089,19 @@
           </article>
 
           <article class="card">
-  <h2>Användarmanual</h2>
-  <p>
-    Här hittar du användarmanualen med praktiska instruktioner för pumpning, hantering och användning av bumperballs.
-  </p>
+            <h2>Användarmanual</h2>
+            <p>
+              Här hittar du användarmanualen med praktiska instruktioner för pumpning, hantering och användning av bumperballs.
+            </p>
 
-  <div class="doc-links">
-    <a href="Användarmanual.pdf" download>Användarmanual (PDF)</a>
-  </div>
-</article>
+            <div class="doc-links">
+              <a href="/Användarmanual.pdf" download>Användarmanual PDF</a>
+            </div>
+          </article>
 
           <article class="card">
             <h2>Senast uppdaterad</h2>
-            <p>2026-04-17</p>
+            <p>2026-05-08</p>
           </article>
         </div>
       </div>
@@ -772,13 +1114,108 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
-          <a href="/affiliate.html">Affiliate</a> ·
+          <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
+          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a> ·
-          <a href="Användarmanual.pdf" download>Manual PDF</a>
+          <a href="/affiliate.html">Affiliate</a> ·
+          <a href="/Användarmanual.pdf" download>Manual PDF</a>
         </span>
       </div>
     </div>
   </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const siteMenu = document.getElementById('siteMenu');
+    const menuClose = document.getElementById('menuClose');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    function getFocusableMenuItems() {
+      return siteMenu.querySelectorAll('a[href], button:not([disabled])');
+    }
+
+    function openMenu() {
+      siteMenu.hidden = false;
+      menuBackdrop.hidden = false;
+
+      requestAnimationFrame(() => {
+        siteMenu.classList.add('is-open');
+        menuBackdrop.classList.add('is-open');
+        document.body.classList.add('menu-open');
+        menuButton.setAttribute('aria-expanded', 'true');
+        menuClose.focus();
+      });
+    }
+
+    function closeMenu() {
+      siteMenu.classList.remove('is-open');
+      menuBackdrop.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+
+      window.setTimeout(() => {
+        siteMenu.hidden = true;
+        menuBackdrop.hidden = true;
+      }, 240);
+
+      menuButton.focus();
+    }
+
+    if (menuButton && siteMenu && menuClose && menuBackdrop) {
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      menuClose.addEventListener('click', closeMenu);
+      menuBackdrop.addEventListener('click', closeMenu);
+
+      siteMenu.addEventListener('click', (event) => {
+        const link = event.target.closest('a');
+
+        if (link) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+
+        if (!isOpen) return;
+
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          closeMenu();
+        }
+
+        if (event.key === 'Tab') {
+          const focusableItems = Array.from(getFocusableMenuItems());
+
+          if (!focusableItems.length) return;
+
+          const firstItem = focusableItems[0];
+          const lastItem = focusableItems[focusableItems.length - 1];
+
+          if (event.shiftKey && document.activeElement === firstItem) {
+            event.preventDefault();
+            lastItem.focus();
+          } else if (!event.shiftKey && document.activeElement === lastItem) {
+            event.preventDefault();
+            firstItem.focus();
+          }
+        }
+      });
+    }
+  </script>
 </body>
 </html>
+```
