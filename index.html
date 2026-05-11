@@ -13,12 +13,8 @@
   <meta name="theme-color" content="#14361b" />
   <meta name="msvalidate.01" content="92586BA25D845A7D1185B5EE710E8A08" />
   <link rel="canonical" href="https://offroadbumpis.se/" />
-
-  <link rel="canonical" href="https://offroadbumpis.se/" />
-
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=2" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
-  
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
   <meta property="og:title" content="Bumperball i Skåne | Offroad Bumpis" />
   <meta property="og:description" content="Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. 2-pack från 600 kr och 10-pack från 2 000 kr." />
   <meta property="og:image" content="https://offroadbumpis.se/Bumperball%20på%20fotbollsplan%20i%20Veber%C3%B6d.png" />
@@ -901,12 +897,23 @@
       color:var(--muted);
       line-height:1.65;
       font-size:15px;
-      flex:1 1 auto;
+    }
+    .game-image{
+      width:100%;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+      object-position:center;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#f5fff1;
+      margin:0 0 14px;
+      box-shadow:0 8px 22px rgba(14,53,22,.06);
     }
     .game-tags{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
+      margin-top:auto;
     }
     .game-tags span{
       padding:8px 10px;
@@ -1748,21 +1755,45 @@
           <article class="game-card">
             <h3>Bumper Tag</h3>
             <p>Två jagare startar. Blir du nuddad eller lätt krockad byter du roll.</p>
+            <img
+              src="bumper-tag.PNG"
+              alt="Mangaserie där barn spelar Bumper Tag med bumperballs"
+              class="game-image"
+              loading="lazy"
+            />
             <div class="game-tags"><span>Puls</span><span>Snabb</span><span>3 min</span></div>
           </article>
           <article class="game-card">
             <h3>Kungen av ringen</h3>
             <p>Markera en cirkel. Målet är att hålla sig kvar längst. Åker du ut vilar du och kommer in igen.</p>
+            <img
+              src="king-pin.PNG"
+              alt="Mangaserie där barn spelar Kungen av ringen med bumperballs"
+              class="game-image"
+              loading="lazy"
+            />
             <div class="game-tags"><span>Lag/fritt</span><span>Puls</span><span>5 min</span></div>
           </article>
           <article class="game-card">
             <h3>Rushmatch 5v5</h3>
             <p>Korta matcher med hög energi. Perfekt när många ska hinna spela.</p>
+            <img
+              src="rushmatch.PNG"
+              alt="Mangaserie där barn spelar Rushmatch 5v5 med bumperballs"
+              class="game-image"
+              loading="lazy"
+            />
             <div class="game-tags"><span>Lag</span><span>Snabb</span><span>3 min</span></div>
           </article>
           <article class="game-card">
             <h3>Sköldpaddan</h3>
             <p>På signal ska alla försiktigt välta och ta sig upp igen. Enkel favorit.</p>
+            <img
+              src="skoldpaddan.PNG"
+              alt="Mangaserie där barn spelar Sköldpaddan med bumperballs"
+              class="game-image"
+              loading="lazy"
+            />
             <div class="game-tags"><span>Puls</span><span>Snabb</span><span>2 min</span></div>
           </article>
         </div>
