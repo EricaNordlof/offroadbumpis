@@ -7,7 +7,7 @@
   <title>10 % rabatt på Offroad Bumpis</title>
   <meta
     name="description"
-    content="Få 10 % rabatt på Offroad Bumpis. Fyll i din mejladress för att aktivera rabattkoden och gå vidare till bokningen."
+    content="Få 10 % rabatt på Offroad Bumpis. Kopiera rabattkoden och skriv in den när du bokar bumperballs."
   />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="theme-color" content="#14361b" />
@@ -60,6 +60,7 @@
       z-index:20;
       background:rgba(243,251,238,0.88);
       backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
       border-bottom:1px solid var(--line);
     }
 
@@ -151,6 +152,7 @@
     h2{
       font-size:clamp(1.9rem, 4vw, 2.8rem);
       margin-bottom:10px;
+      color:var(--dark-2);
     }
 
     p{
@@ -216,12 +218,6 @@
 
     .btn:hover{
       transform:translateY(-1px);
-    }
-
-    .btn:disabled{
-      opacity:.55;
-      cursor:not-allowed;
-      transform:none;
     }
 
     .btn-primary{
@@ -345,31 +341,6 @@
       margin-top:8px;
     }
 
-    label{
-      display:block;
-      margin-top:14px;
-      font-weight:800;
-      color:#23402a;
-    }
-
-    input{
-      width:100%;
-      box-sizing:border-box;
-      margin-top:10px;
-      padding:13px 14px;
-      border:1px solid #d7e5d8;
-      border-radius:12px;
-      font-size:16px;
-      font:inherit;
-      background:#fff;
-    }
-
-    input:focus{
-      outline:none;
-      border-color:#6cad62;
-      box-shadow:0 0 0 4px rgba(108,173,98,0.14);
-    }
-
     .status{
       margin-top:12px;
       font-size:14px;
@@ -416,10 +387,6 @@
       margin-bottom:4px;
       font-size:18px;
       color:#18361f;
-    }
-
-    iframe{
-      display:none;
     }
 
     footer{
@@ -545,7 +512,7 @@
               <h1>10 % rabatt på Offroad Bumpis</h1>
 
               <p>
-                Fyll i din mejladress först för att aktivera rabattkoden. Sedan skickas du vidare till bokningen.
+                Kopiera rabattkoden och skriv in den när du bokar. Ingen aktivering via mejl behövs.
               </p>
 
               <ul class="hero-points">
@@ -555,7 +522,7 @@
                 </li>
                 <li>
                   <span class="check">✓</span>
-                  <span>Rabattkoden fungerar först när mejladressen är inskickad</span>
+                  <span>Skriv in rabattkoden vid bokning eller i meddelandefältet</span>
                 </li>
                 <li>
                   <span class="check">✓</span>
@@ -566,6 +533,15 @@
                   <span>Hämtning i Malmö eller leverans i Skåne</span>
                 </li>
               </ul>
+
+              <div class="btn-row">
+                <button class="btn btn-primary" type="button" id="copyBtnHero">Kopiera rabattkod</button>
+                <a href="https://tidycal.com/boka-bumperballs" class="btn btn-light" target="_blank" rel="noopener noreferrer">
+                  Gå till bokning
+                </a>
+              </div>
+
+              <div class="status status-light" id="copyStatusHero"></div>
             </div>
 
             <div class="promo-box">
@@ -573,7 +549,7 @@
               <div class="promo-title" id="promoTitle">LADDAR...</div>
 
               <div class="promo-text">
-                Koden aktiveras när du fyller i din mejladress. Sedan kan du använda rabattkoden när du bokar.
+                Använd koden när du bokar bumperballs. Du behöver inte fylla i något formulär först.
               </div>
 
               <div class="code-box">
@@ -582,11 +558,14 @@
               </div>
 
               <div class="notice dark">
-                Viktigt: rabattkoden måste aktiveras via formuläret innan bokning. Annars fungerar inte rabatten.
+                Viktigt: skriv in rabattkoden när du bokar, så dras 10 % rabatt enligt erbjudandet.
               </div>
 
               <div class="btn-row">
                 <button class="btn btn-secondary" type="button" id="copyBtn">Kopiera rabattkod</button>
+                <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  Boka nu
+                </a>
               </div>
 
               <div class="status status-dark" id="copyStatus"></div>
@@ -599,69 +578,36 @@
     <section class="section">
       <div class="container grid">
         <article class="card">
-          <h2>Aktivera rabattkoden</h2>
+          <h2>Använd rabattkoden</h2>
 
           <p>
-            Fyll i din mejladress. Det är allt som behövs. Efteråt skickas du vidare till bokningen.
+            Kopiera koden och skriv in den när du bokar. Om det inte finns ett särskilt rabattkodsfält kan du skriva koden i meddelandefältet.
           </p>
 
           <div class="notice">
-            Rabattkoden fungerar bara om formuläret är ifyllt först. Det räcker med din mejladress.
+            Ingen mejladress krävs för att aktivera rabatten. Koden används direkt vid bokning.
           </div>
 
-          <form
-            id="bumpisForm"
-            action="https://script.google.com/macros/s/AKfycbx_wlb98tmHb5MVUfX2zH04yiOLyt-W-9N_3Jlj9fBbCgP5Ue-58IjpEylR6Khncrw/exec"
-            method="GET"
-            target="hidden_iframe"
-          >
-            <input type="hidden" name="Ref" id="refField">
-            <input type="hidden" name="Kod" id="codeField">
-            <input type="hidden" name="Typ" id="typeField">
+          <div class="btn-row">
+            <button class="btn btn-primary" type="button" id="copyBtnCard">Kopiera rabattkod</button>
+            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-light" target="_blank" rel="noopener noreferrer">
+              Gå till bokning
+            </a>
+          </div>
 
-            <input type="hidden" name="Namn" value="">
-            <input type="hidden" name="Telefon" value="">
-
-            <label for="epost">E-post</label>
-            <input
-              id="epost"
-              type="email"
-              name="E-post"
-              autocomplete="email"
-              placeholder="dinmejl@example.com"
-              required
-            >
-
-            <div class="btn-row">
-              <button class="btn btn-primary" type="submit" id="submitBtn">
-                Aktivera rabattkod och gå vidare
-              </button>
-            </div>
-
-            <div class="status status-light" id="formStatus"></div>
-          </form>
-
-          <iframe name="hidden_iframe" id="hidden_iframe" title="Dolt formulärsvar"></iframe>
+          <div class="status status-light" id="copyStatusCard"></div>
         </article>
 
         <article class="card">
           <h2>Så funkar det</h2>
 
           <p>
-            Tre snabba steg.
+            Tre snabba steg. Ingen mejlkarusell. Bara kod, bokning och rabatt.
           </p>
 
           <div class="mini-steps">
             <div class="mini-step">
               <div class="mini-step-number">1</div>
-              <div>
-                <strong>Fyll i mejladressen</strong>
-                <p>Det aktiverar rabattkoden innan du går vidare till bokningen.</p>
-              </div>
-            </div>
-
-            <div class="mini-step">
-              <div class="mini-step-number">2</div>
               <div>
                 <strong>Kopiera koden</strong>
                 <p>Använd <strong id="stepCode">LADDAR...</strong> när du bokar.</p>
@@ -669,16 +615,24 @@
             </div>
 
             <div class="mini-step">
+              <div class="mini-step-number">2</div>
+              <div>
+                <strong>Gå till bokningen</strong>
+                <p>Välj datum och skriv in rabattkoden i bokningen eller meddelandefältet.</p>
+              </div>
+            </div>
+
+            <div class="mini-step">
               <div class="mini-step-number">3</div>
               <div>
-                <strong>Slutför bokningen</strong>
-                <p>Efter formuläret skickas du vidare till bokningen hos Offroad Bumpis.</p>
+                <strong>Få 10 % rabatt</strong>
+                <p>Rabatten kopplas till koden när bokningen hanteras av Offroad Bumpis.</p>
               </div>
             </div>
           </div>
 
           <p class="small-muted">
-            Passar barnkalas, skola, fritids och föreningar i Skåne.
+            Passar barnkalas, skola, fritids, föreningar, lagavslutningar och event i Skåne.
           </p>
         </article>
       </div>
@@ -698,25 +652,24 @@
       const params = new URLSearchParams(window.location.search);
 
       /*
-        Rätt länk behöver innehålla både ref och code/kod.
+        Rabattlänken behöver innehålla code eller kod.
 
         Exempel:
-        ?ref=a104&code=BUMPIS-4827&type=privat
+        ?ref=behar-blaca&code=BEHAR-1026&type=forening
 
         Stödjer även:
-        ?ref=a104&kod=BUMPIS-4827&typ=privat
+        ?ref=behar-blaca&kod=BEHAR-1026&typ=forening
       */
 
       const rawCode = params.get("code") || params.get("kod");
-      const rawRef = params.get("ref") || params.get("source");
 
-      if (!rawCode || !rawRef) {
+      if (!rawCode) {
         document.body.innerHTML = `
           <main class="missing-page">
             <section class="missing-card">
               <h1>Rabattlänken saknar kod</h1>
               <p>
-                Öppna den personliga rabattlänken igen. Rabattkoden behöver finnas i länken för att kunna aktiveras.
+                Öppna den personliga rabattlänken igen. Rabattkoden behöver finnas i länken för att kunna visas.
               </p>
               <a href="/" class="btn btn-primary">Till startsidan</a>
             </section>
@@ -726,74 +679,49 @@
       }
 
       const code = rawCode.trim().toUpperCase();
-      const ref = rawRef.trim().toLowerCase();
-
-      const type = (
-        params.get("type") ||
-        params.get("typ") ||
-        "privat"
-      ).trim().toLowerCase();
-
-      const bookingUrl = "https://tidycal.com/boka-bumperballs";
 
       const heroCode = document.getElementById("heroCode");
       const promoTitle = document.getElementById("promoTitle");
       const discountCode = document.getElementById("discountCode");
       const stepCode = document.getElementById("stepCode");
 
-      const refField = document.getElementById("refField");
-      const codeField = document.getElementById("codeField");
-      const typeField = document.getElementById("typeField");
-
       const copyBtn = document.getElementById("copyBtn");
+      const copyBtnHero = document.getElementById("copyBtnHero");
+      const copyBtnCard = document.getElementById("copyBtnCard");
+
       const copyStatus = document.getElementById("copyStatus");
-      const form = document.getElementById("bumpisForm");
-      const formStatus = document.getElementById("formStatus");
-      const submitBtn = document.getElementById("submitBtn");
-      const emailInput = document.getElementById("epost");
+      const copyStatusHero = document.getElementById("copyStatusHero");
+      const copyStatusCard = document.getElementById("copyStatusCard");
 
       heroCode.textContent = code;
       promoTitle.textContent = code;
       discountCode.textContent = code;
       stepCode.textContent = code;
 
-      refField.value = ref;
-      codeField.value = code;
-      typeField.value = type;
+      async function copyCode(statusElement) {
+        try {
+          await navigator.clipboard.writeText(code);
+          statusElement.textContent = "Rabattkoden är kopierad: " + code;
+        } catch (error) {
+          statusElement.textContent = "Kunde inte kopiera automatiskt. Koden är: " + code;
+        }
+      }
 
       if (copyBtn) {
-        copyBtn.addEventListener("click", async function () {
-          try {
-            await navigator.clipboard.writeText(code);
-            copyStatus.textContent = "Rabattkoden är kopierad: " + code;
-          } catch (error) {
-            copyStatus.textContent = "Kunde inte kopiera automatiskt. Koden är: " + code;
-          }
+        copyBtn.addEventListener("click", function () {
+          copyCode(copyStatus);
         });
       }
 
-      if (form) {
-        form.addEventListener("submit", function (event) {
-          if (!emailInput.value || !emailInput.checkValidity()) {
-            event.preventDefault();
-            formStatus.textContent = "Fyll i en giltig mejladress för att aktivera rabattkoden.";
-            emailInput.focus();
-            return;
-          }
+      if (copyBtnHero) {
+        copyBtnHero.addEventListener("click", function () {
+          copyCode(copyStatusHero);
+        });
+      }
 
-          submitBtn.disabled = true;
-          submitBtn.textContent = "Aktiverar rabattkod...";
-          formStatus.textContent = "Rabattkoden aktiveras. Du skickas strax vidare till bokningen.";
-
-          try {
-            navigator.clipboard.writeText(code);
-          } catch (error) {
-            // Kunden ser koden på sidan ändå.
-          }
-
-          setTimeout(function () {
-            window.location.href = bookingUrl;
-          }, 1500);
+      if (copyBtnCard) {
+        copyBtnCard.addEventListener("click", function () {
+          copyCode(copyStatusCard);
         });
       }
     })();
