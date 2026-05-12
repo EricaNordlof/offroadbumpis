@@ -91,7 +91,7 @@
             "name":"Turneringskit",
             "price":"1000",
             "priceCurrency":"SEK",
-            "description":"Lagvästar, koner, markörer, matchboll, digitala diplom, pokal, visselpipa och reflexer."
+            "description":"Turneringskit med souvenirer: utskrivna diplom med 10 % rabattkod giltig tillsvidare, pokal, visselpipa och reflexer. Till låns ingår lagvästar, knäskydd, koner, markörer, skumfotboll, utskrivna poängmallar och poängtavla."
           }
         ]
       },
@@ -121,6 +121,14 @@
             "acceptedAnswer":{
               "@type":"Answer",
               "text":"Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Vad ingår i turneringskitet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Som souvenirer ingår utskrivna diplom med 10 % rabattkod om man vill hyra igen, giltig tillsvidare, samt pokal, visselpipa och reflexer. Till låns ingår lagvästar, knäskydd, koner, markörer, skumfotboll, enkla utskrivna poängmallar och en poängtavla."
             }
           },
           {
@@ -831,12 +839,25 @@
       color:#d7e8d7;
     }
 
+    .kit-subtitle{
+      margin:18px 0 8px;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:#2f7f25;
+    }
+
     .feature-list{
       list-style:none;
       padding:0;
       margin:0;
       display:grid;
       gap:10px;
+    }
+
+    .feature-list + .kit-subtitle{
+      margin-top:18px;
     }
 
     .feature-list li{
@@ -1890,14 +1911,22 @@
             <h3>Turneringskit</h3>
             <p class="price">1 000 kr</p>
             <div class="price-note">
-              För kalas, skolor, fritids och föreningar som vill få mer struktur och finalkänsla.
+              För kalas, skolor, fritids och föreningar som vill få struktur, finalkänsla och något kul med hem.
             </div>
-            <ul class="feature-list">
-              <li><span class="check">✓</span><span>Lagvästar, koner och markörer</span></li>
-              <li><span class="check">✓</span><span>Matchboll och enkel poängstruktur</span></li>
-              <li><span class="check">✓</span><span>Digitala diplom</span></li>
-              <li><span class="check">✓</span><span>Pokal, visselpipa och reflexer</span></li>
-            </ul>
+
+            <div class="kit-subtitle">Souvenirer att behålla</div>
+<ul class="feature-list">
+  <li><span class="check">✓</span><span>Utskrivna diplom med 10 % rabattkod om man vill hyra igen, giltig tillsvidare</span></li>
+  <li><span class="check">✓</span><span>Enkla utskrivna poängmallar</span></li>
+  <li><span class="check">✓</span><span>Pokal, visselpipa och reflexer</span></li>
+</ul>
+
+<div class="kit-subtitle">Till låns under hyran</div>
+<ul class="feature-list">
+  <li><span class="check">✓</span><span>Lagvästar, knäskydd, koner och markörer</span></li>
+  <li><span class="check">✓</span><span>Skumfotboll</span></li>
+  <li><span class="check">✓</span><span>Poängtavla</span></li>
+</ul>
           </article>
         </div>
       </div>
@@ -2091,23 +2120,23 @@
                 <div class="step-number">A</div>
                 <div>
                   <h4>Dela in lag</h4>
-                  <p>Lagvästar, koner, markörer och matchboll gör att du kommer igång utan improvisation.</p>
+                  <p>Lagvästar, knäskydd, koner, markörer och skumfotboll hjälper dig att komma igång utan kaoslogistik.</p>
                 </div>
               </div>
 
               <div class="step">
                 <div class="step-number">B</div>
                 <div>
-                  <h4>Korta matcher</h4>
-                  <p>3–5 minuter per match håller tempot uppe och gör att fler hinner spela.</p>
+                  <h4>Håll koll på poängen</h4>
+                  <p>Enkla utskrivna poängmallar och en poängtavla gör turneringen lättare att styra.</p>
                 </div>
               </div>
 
               <div class="step">
                 <div class="step-number">C</div>
                 <div>
-                  <h4>Final, pokal och diplom</h4>
-                  <p>Dagen får ett tydligt avslut. Barnlogistikens motsvarighet till konfetti, fast utan att dammsuga i tre veckor.</p>
+                  <h4>Souvenirer efteråt</h4>
+                  <p>Utskrivna diplom med 10 % rabattkod, pokal, visselpipa och reflexer gör att dagen får ett tydligt avslut. Finalkänsla utan att någon behöver uppfinna OS på plats.</p>
                 </div>
               </div>
             </div>
@@ -2239,6 +2268,16 @@
             <details>
               <summary>Vilka underlag är okej?</summary>
               <p>Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar. Asfalt, grus, betong, is och hårda ojämna underlag är inte tillåtna.</p>
+            </details>
+
+            <details>
+              <summary>Vad ingår i turneringskitet?</summary>
+              <p>
+                Som souvenirer ingår utskrivna diplom med en 10 % rabattkod om man vill hyra igen, giltig tillsvidare,
+                samt pokal, visselpipa och reflexer. Som souvenirer får man utskrivna diplom med rabattkod, enkla utskrivna poängmallar,
+pokal, visselpipa och reflexer. Till låns får man lagvästar, knäskydd, koner,
+markörer, skumfotboll och en poängtavla.
+              </p>
             </details>
 
             <details>
