@@ -181,7 +181,8 @@
       overflow-x:hidden;
     }
 
-    body.menu-open{
+    body.menu-open,
+    body.lightbox-open{
       overflow:hidden;
     }
 
@@ -1027,6 +1028,98 @@
       box-shadow:0 8px 22px rgba(14,53,22,.06);
     }
 
+    .comic-zoom-button{
+      display:block;
+      width:100%;
+      padding:0;
+      margin:0 0 14px;
+      border:0;
+      background:transparent;
+      cursor:zoom-in;
+      border-radius:18px;
+      text-align:inherit;
+    }
+
+    .comic-zoom-button .game-image{
+      margin:0;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .comic-zoom-button:hover .game-image,
+    .comic-zoom-button:hover .tournament-comic{
+      transform:scale(1.015);
+      box-shadow:0 14px 34px rgba(14,53,22,.14);
+    }
+
+    .comic-zoom-button--wide{
+      margin:0;
+      border-radius:0;
+      overflow:hidden;
+    }
+
+    .comic-zoom-button--wide .tournament-comic{
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .comic-lightbox{
+      position:fixed;
+      inset:0;
+      z-index:200;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      background:rgba(6,18,10,.78);
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+    }
+
+    .comic-lightbox.is-open{
+      display:flex;
+    }
+
+    .comic-lightbox-inner{
+      position:relative;
+      width:min(1120px,96vw);
+      max-height:92vh;
+      background:#fff;
+      border-radius:24px;
+      padding:14px;
+      box-shadow:0 30px 100px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.3);
+    }
+
+    .comic-lightbox img{
+      width:100%;
+      max-height:84vh;
+      object-fit:contain;
+      border-radius:16px;
+      background:#f5fff1;
+    }
+
+    .comic-lightbox-close{
+      position:absolute;
+      top:-16px;
+      right:-16px;
+      width:46px;
+      height:46px;
+      border-radius:999px;
+      background:#102217;
+      color:#fff;
+      font-size:26px;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 14px 34px rgba(0,0,0,.25);
+    }
+
+    .comic-lightbox-caption{
+      margin:10px 4px 0;
+      color:#16311d;
+      font-weight:900;
+      line-height:1.4;
+      text-align:center;
+    }
+
     .game-tags{
       display:flex;
       flex-wrap:wrap;
@@ -1299,7 +1392,9 @@
 
       .btn:hover,
       .local-area-card:hover,
-      .contact-link:hover{
+      .contact-link:hover,
+      .comic-zoom-button:hover .game-image,
+      .comic-zoom-button:hover .tournament-comic{
         transform:none;
       }
     }
@@ -1335,7 +1430,8 @@
       .zone-card,
       .game-card,
       .local-area-card,
-      details{
+      details,
+      .comic-lightbox-inner{
         border:2px solid ButtonText;
       }
 
@@ -1573,6 +1669,20 @@
       .cta-buttons .btn,
       .trust-actions .btn{
         width:100%;
+      }
+
+      .comic-lightbox{
+        padding:14px;
+      }
+
+      .comic-lightbox-inner{
+        width:100%;
+        border-radius:20px;
+      }
+
+      .comic-lightbox-close{
+        top:8px;
+        right:8px;
       }
 
       .footer-line{
@@ -1957,12 +2067,21 @@
         </article>
 
         <article class="card">
-          <img
-            src="turnering.jpeg"
-            alt="Seriestripp om Offroad Bumpis turnering med diplom, pokal och bumperboll"
-            class="tournament-comic"
-            loading="lazy"
-          />
+          <button
+            class="comic-zoom-button comic-zoom-button--wide"
+            type="button"
+            data-comic-src="turnering.jpeg"
+            data-comic-alt="Seriestripp om Offroad Bumpis turnering med diplom, pokal och bumperboll"
+            data-comic-caption="Turneringskit"
+            aria-label="Zooma serie: Turneringskit"
+          >
+            <img
+              src="turnering.jpeg"
+              alt="Seriestripp om Offroad Bumpis turnering med diplom, pokal och bumperboll"
+              class="tournament-comic"
+              loading="lazy"
+            />
+          </button>
 
           <div class="showcase-content">
             <h2 style="font-size:clamp(2rem,4vw,2.5rem); margin-bottom:10px;">Turneringskit</h2>
@@ -2010,48 +2129,84 @@
           <article class="game-card">
             <h3>Bumper Tag</h3>
             <p>Två jagare startar. Blir du nuddad eller lätt krockad byter du roll.</p>
-            <img
-              src="bumper-tag.PNG"
-              alt="Mangaserie där barn spelar Bumper Tag med bumperballs"
-              class="game-image"
-              loading="lazy"
-            />
+            <button
+              class="comic-zoom-button"
+              type="button"
+              data-comic-src="bumper-tag.PNG"
+              data-comic-alt="Mangaserie där barn spelar Bumper Tag med bumperballs"
+              data-comic-caption="Bumper Tag"
+              aria-label="Zooma serie: Bumper Tag"
+            >
+              <img
+                src="bumper-tag.PNG"
+                alt="Mangaserie där barn spelar Bumper Tag med bumperballs"
+                class="game-image"
+                loading="lazy"
+              />
+            </button>
             <div class="game-tags"><span>Puls</span><span>Snabb</span><span>3 min</span></div>
           </article>
 
           <article class="game-card">
             <h3>Kungen av ringen</h3>
             <p>Markera en cirkel. Målet är att hålla sig kvar längst. Åker du ut vilar du och kommer in igen.</p>
-            <img
-              src="kungen-av-ringen.PNG"
-              alt="Mangaserie där barn spelar Kungen av ringen med bumperballs"
-              class="game-image"
-              loading="lazy"
-            />
+            <button
+              class="comic-zoom-button"
+              type="button"
+              data-comic-src="kungen-av-ringen.PNG"
+              data-comic-alt="Mangaserie där barn spelar Kungen av ringen med bumperballs"
+              data-comic-caption="Kungen av ringen"
+              aria-label="Zooma serie: Kungen av ringen"
+            >
+              <img
+                src="kungen-av-ringen.PNG"
+                alt="Mangaserie där barn spelar Kungen av ringen med bumperballs"
+                class="game-image"
+                loading="lazy"
+              />
+            </button>
             <div class="game-tags"><span>Lag/fritt</span><span>Puls</span><span>5 min</span></div>
           </article>
 
           <article class="game-card">
             <h3>Rushmatch 5v5</h3>
             <p>Korta matcher med hög energi. Perfekt när många ska hinna spela.</p>
-            <img
-              src="rushmatch.PNG"
-              alt="Mangaserie där barn spelar Rushmatch 5v5 med bumperballs"
-              class="game-image"
-              loading="lazy"
-            />
+            <button
+              class="comic-zoom-button"
+              type="button"
+              data-comic-src="rushmatch.PNG"
+              data-comic-alt="Mangaserie där barn spelar Rushmatch 5v5 med bumperballs"
+              data-comic-caption="Rushmatch 5v5"
+              aria-label="Zooma serie: Rushmatch 5v5"
+            >
+              <img
+                src="rushmatch.PNG"
+                alt="Mangaserie där barn spelar Rushmatch 5v5 med bumperballs"
+                class="game-image"
+                loading="lazy"
+              />
+            </button>
             <div class="game-tags"><span>Lag</span><span>Snabb</span><span>3 min</span></div>
           </article>
 
           <article class="game-card">
             <h3>Sköldpaddan</h3>
             <p>På signal ska alla försiktigt välta och ta sig upp igen. Enkel favorit.</p>
-            <img
-              src="skoldpaddan.PNG"
-              alt="Mangaserie där barn spelar Sköldpaddan med bumperballs"
-              class="game-image"
-              loading="lazy"
-            />
+            <button
+              class="comic-zoom-button"
+              type="button"
+              data-comic-src="skoldpaddan.PNG"
+              data-comic-alt="Mangaserie där barn spelar Sköldpaddan med bumperballs"
+              data-comic-caption="Sköldpaddan"
+              aria-label="Zooma serie: Sköldpaddan"
+            >
+              <img
+                src="skoldpaddan.PNG"
+                alt="Mangaserie där barn spelar Sköldpaddan med bumperballs"
+                class="game-image"
+                loading="lazy"
+              />
+            </button>
             <div class="game-tags"><span>Puls</span><span>Snabb</span><span>2 min</span></div>
           </article>
         </div>
@@ -2264,6 +2419,14 @@
         </div>
       </div>
     </section>
+
+    <div class="comic-lightbox" id="comicLightbox" aria-hidden="true">
+      <div class="comic-lightbox-inner" role="dialog" aria-modal="true" aria-labelledby="comicLightboxCaption">
+        <button class="comic-lightbox-close" type="button" id="comicLightboxClose" aria-label="Stäng zoomad serie">×</button>
+        <img src="" alt="" id="comicLightboxImage" />
+        <div class="comic-lightbox-caption" id="comicLightboxCaption"></div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -2372,6 +2535,84 @@
         }
       });
     }
+
+    const comicButtons = document.querySelectorAll('.comic-zoom-button');
+    const comicLightbox = document.getElementById('comicLightbox');
+    const comicLightboxImage = document.getElementById('comicLightboxImage');
+    const comicLightboxCaption = document.getElementById('comicLightboxCaption');
+    const comicLightboxClose = document.getElementById('comicLightboxClose');
+
+    let lastFocusedComicButton = null;
+
+    function openComicLightbox(button) {
+      const src = button.getAttribute('data-comic-src');
+      const alt = button.getAttribute('data-comic-alt') || '';
+      const caption = button.getAttribute('data-comic-caption') || '';
+
+      if (!src || !comicLightbox || !comicLightboxImage || !comicLightboxCaption) return;
+
+      lastFocusedComicButton = button;
+
+      comicLightboxImage.src = src;
+      comicLightboxImage.alt = alt;
+      comicLightboxCaption.textContent = caption;
+
+      comicLightbox.classList.add('is-open');
+      comicLightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+
+      if (comicLightboxClose) {
+        comicLightboxClose.focus();
+      }
+    }
+
+    function closeComicLightbox() {
+      if (!comicLightbox || !comicLightboxImage) return;
+
+      comicLightbox.classList.remove('is-open');
+      comicLightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+
+      window.setTimeout(() => {
+        comicLightboxImage.src = '';
+      }, 180);
+
+      if (lastFocusedComicButton) {
+        lastFocusedComicButton.focus();
+      }
+    }
+
+    comicButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        openComicLightbox(button);
+      });
+    });
+
+    if (comicLightboxClose) {
+      comicLightboxClose.addEventListener('click', closeComicLightbox);
+    }
+
+    if (comicLightbox) {
+      comicLightbox.addEventListener('click', (event) => {
+        if (event.target === comicLightbox) {
+          closeComicLightbox();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (!comicLightbox || !comicLightbox.classList.contains('is-open')) return;
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeComicLightbox();
+      }
+
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        comicLightboxClose.focus();
+      }
+    });
   </script>
 </body>
 </html>
