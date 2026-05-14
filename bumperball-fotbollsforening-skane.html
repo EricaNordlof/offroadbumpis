@@ -7,7 +7,7 @@
   <title>Bumperball för fotbollsföreningar i Skåne | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för sommarfotboll, avslutning, extraträning och intern miniturnering för barn 7–12 år."
+    content="Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för avslutning, extraträning, sommarfotboll, föreningsdag och intern miniturnering för barn 7–12 år."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" type="image/png" href="bilder/offroad-bumpis-logo.png" />
 
   <meta property="og:title" content="Bumperball för fotbollsföreningar i Skåne | Offroad Bumpis" />
-  <meta property="og:description" content="Hyr 10 bumperballs till sommarfotboll, avslutning eller extraträning. För barn 7–12 år i Skåne." />
+  <meta property="og:description" content="Hyr 10 bumperballs till avslutning, extraträning eller föreningsdag. För barn 7–12 år i Skåne." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/bumperball-fotbollsforening-skane.html" />
   <meta property="og:type" content="website" />
@@ -79,7 +79,7 @@
         "@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#webpage",
         "url":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html",
         "name":"Bumperball för fotbollsföreningar i Skåne",
-        "description":"Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för sommarfotboll, avslutning, extraträning och intern miniturnering för barn 7–12 år.",
+        "description":"Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för avslutning, extraträning, sommarfotboll och intern miniturnering för barn 7–12 år.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"}
@@ -476,7 +476,9 @@
       margin:0;
       line-height:.96;
       color:#14361b;
-      overflow-wrap:anywhere;
+      overflow-wrap:normal;
+      word-break:normal;
+      hyphens:none;
     }
 
     .section{
@@ -494,7 +496,7 @@
 
     .section-title h2{
       font-size:clamp(2.2rem,4vw,3.25rem);
-      max-width:14ch;
+      max-width:16ch;
     }
 
     .section-title p{
@@ -574,9 +576,9 @@
 
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(3rem,5vw,5.2rem);
+      font-size:clamp(2.8rem,4.4vw,4.7rem);
       color:#14361b;
-      max-width:12ch;
+      max-width:14ch;
     }
 
     .hero p{
@@ -730,7 +732,13 @@
       font-weight:700;
     }
 
-    .panel.dark .list li{
+    .panel.dark .list li,
+    .price-card .list li{
+      color:#eef6ee;
+    }
+
+    .panel.dark .list span:last-child,
+    .price-card .list span:last-child{
       color:#eef6ee;
     }
 
@@ -787,6 +795,139 @@
       line-height:1.7;
     }
 
+    .league-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .league-control{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:12px;
+      align-items:end;
+      margin-top:18px;
+    }
+
+    .field label{
+      display:block;
+      font-size:13px;
+      font-weight:900;
+      color:#14361b;
+      margin-bottom:8px;
+    }
+
+    select{
+      width:100%;
+      min-height:54px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#f9fff6;
+      color:#14361b;
+      font-weight:900;
+      padding:0 16px;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+    }
+
+    .league-result{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);
+      gap:16px;
+      align-items:start;
+    }
+
+    .result-card{
+      background:#f9fff6;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:20px;
+      min-width:0;
+    }
+
+    .result-card h3{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .result-row{
+      display:grid;
+      grid-template-columns:160px minmax(0,1fr);
+      gap:10px;
+      padding:11px 0;
+      border-top:1px solid var(--line);
+      line-height:1.5;
+    }
+
+    .result-row:first-of-type{
+      border-top:0;
+    }
+
+    .result-label{
+      color:#4d6454;
+      font-weight:900;
+      font-size:14px;
+    }
+
+    .result-value{
+      color:#16311d;
+      font-weight:800;
+      word-break:break-word;
+    }
+
+    .status-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:7px 11px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:13px;
+      background:#dff8d1;
+      color:#24542f;
+    }
+
+    .status-pill.waiting{
+      background:#fff8d8;
+      color:#694f00;
+    }
+
+    .mini-table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0 8px;
+      margin-top:8px;
+    }
+
+    .mini-table th{
+      text-align:left;
+      font-size:13px;
+      color:#4d6454;
+      padding:0 10px 4px;
+    }
+
+    .mini-table td{
+      background:#fff;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:12px 10px;
+      color:#16311d;
+      font-weight:800;
+    }
+
+    .mini-table td:first-child{
+      border-left:1px solid var(--line);
+      border-radius:14px 0 0 14px;
+    }
+
+    .mini-table td:last-child{
+      border-right:1px solid var(--line);
+      border-radius:0 14px 14px 0;
+    }
+
     .price-card{
       background:linear-gradient(180deg,#14371b 0%,#102817 100%);
       border:1px solid rgba(255,255,255,.12);
@@ -831,28 +972,6 @@
       margin:0;
       color:#d7e8d7;
       line-height:1.75;
-    }
-
-    .discount-box{
-      background:#fff8d8;
-      border:1px solid rgba(143,105,0,.22);
-      border-radius:24px;
-      padding:22px;
-      box-shadow:var(--shadow-soft);
-      margin-top:18px;
-    }
-
-    .discount-box h3{
-      font-size:30px;
-      margin-bottom:8px;
-      color:#14361b;
-    }
-
-    .discount-box p{
-      margin:0;
-      color:#4d6454;
-      line-height:1.75;
-      font-weight:700;
     }
 
     .games{
@@ -1102,7 +1221,8 @@
     @media (max-width:1120px){
       .hero-grid,
       .split,
-      .cta{
+      .cta,
+      .league-result{
         grid-template-columns:1fr;
       }
 
@@ -1123,6 +1243,10 @@
 
     @media (max-width:900px){
       .number-grid{
+        grid-template-columns:1fr;
+      }
+
+      .league-control{
         grid-template-columns:1fr;
       }
     }
@@ -1177,7 +1301,7 @@
       }
 
       .hero h1{
-        font-size:clamp(2.25rem,11vw,3.6rem);
+        font-size:clamp(2.25rem,10vw,3.6rem);
         line-height:.98;
         max-width:none;
       }
@@ -1210,9 +1334,10 @@
       .number-card,
       .game-card,
       .price-card,
-      .discount-box,
       .cta,
       .contact-box,
+      .league-box,
+      .result-card,
       details{
         border-radius:20px;
       }
@@ -1220,7 +1345,9 @@
       .panel,
       .number-card,
       .game-card,
-      .contact-box{
+      .contact-box,
+      .league-box,
+      .result-card{
         padding:18px;
       }
 
@@ -1237,6 +1364,11 @@
         position:static;
         width:100%;
         margin-top:12px;
+      }
+
+      .result-row{
+        grid-template-columns:1fr;
+        gap:4px;
       }
 
       .cta-buttons{
@@ -1328,12 +1460,12 @@
         <div>
           <div class="eyebrow">För fotbollsföreningar i Skåne</div>
 
-          <h1 id="hero-title">Bumperball till sommarfotbollen</h1>
+          <h1 id="hero-title">Bumperball för fotbollslag</h1>
 
           <p>
             Hyr 10 bumperballs och låt barnen köra en intern miniturnering på er egen plan.
             Ett enkelt upplägg för fotbollsföreningar som vill göra avslutningen, extraträningen
-            eller sommarfotbollen roligare.
+            eller föreningsdagen roligare.
           </p>
 
           <div class="hero-actions">
@@ -1410,10 +1542,10 @@
           </p>
 
           <ul class="list">
-            <li><span class="check">✓</span><span>Sommarfotboll</span></li>
             <li><span class="check">✓</span><span>Avslutning</span></li>
             <li><span class="check">✓</span><span>Extraträning</span></li>
             <li><span class="check">✓</span><span>Föreningsdag</span></li>
+            <li><span class="check">✓</span><span>Sommarfotboll</span></li>
             <li><span class="check">✓</span><span>Lagaktivitet för barn 7–12 år</span></li>
           </ul>
         </article>
@@ -1459,35 +1591,52 @@
     </section>
 
     <section class="section" id="bumpisligan">
-      <div class="container split">
-        <article class="panel">
-          <h2>Bumpisligan Skåne</h2>
-          <p>
-            Vill ni göra det lite större? Då kan ni låta vinnande smålag från er förening hamna i Bumpisligan Skåne.
-            På sikt kan vinnare från olika föreningar utmana varandra.
-          </p>
+      <div class="container">
+        <div class="league-box">
+          <div class="section-title">
+            <h2>Bumpisligan Skåne</h2>
+            <p>
+              Välj en fotbollsförening i listan och se internturneringens status, resultat,
+              vinnande lag och om föreningen är öppen för att möta vinnare från annan förening.
+            </p>
+          </div>
 
-          <ul class="list">
-            <li><span class="check">✓</span><span>Föreningen kör först en intern turnering.</span></li>
-            <li><span class="check">✓</span><span>Vinnande lag kan skickas in till topplistan.</span></li>
-            <li><span class="check">✓</span><span>Vid intresse kan vinnare möta vinnare från annan förening.</span></li>
-          </ul>
-        </article>
+          <div class="league-control">
+            <div class="field">
+              <label for="clubSelect">Välj förening</label>
+              <select id="clubSelect">
+                <option value="">Välj fotbollsförening i Skåne</option>
+              </select>
+            </div>
 
-        <article class="panel">
-          <h2>Ni slipper klyddet</h2>
-          <p>
-            Ni behöver inte samordna med andra föreningar direkt. Börja med en intern aktivitet.
-            Om det blir succé kan nästa steg bli en utmaning mot ett annat vinnarlag i Skåne.
-          </p>
+            <a href="#kontakt" class="btn btn-primary">Anmäl resultat</a>
+          </div>
 
-          <ul class="list">
-            <li><span class="check">✓</span><span>En plan</span></li>
-            <li><span class="check">✓</span><span>En förening</span></li>
-            <li><span class="check">✓</span><span>En aktivitet</span></li>
-            <li><span class="check">✓</span><span>Maximal studs per arbetstimme</span></li>
-          </ul>
-        </article>
+          <div class="league-result" id="leagueResult" aria-live="polite">
+            <div class="result-card">
+              <h3>Ingen förening vald</h3>
+              <div class="result-row">
+                <div class="result-label">Status</div>
+                <div class="result-value"><span class="status-pill waiting">Väntar på val</span></div>
+              </div>
+              <div class="result-row">
+                <div class="result-label">Vinnande lag</div>
+                <div class="result-value">Välj en förening i rullgardinen.</div>
+              </div>
+              <div class="result-row">
+                <div class="result-label">Öppen för match</div>
+                <div class="result-value">Ej valt.</div>
+              </div>
+            </div>
+
+            <div class="result-card">
+              <h3>Internresultat</h3>
+              <p>
+                Här visas föreningens interna smålag när resultat har skickats in.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1512,28 +1661,19 @@
           </ul>
         </article>
 
-        <article>
-          <div class="panel">
-            <h2>Ni har redan resten</h2>
-            <p>
-              Fotbollsföreningar har oftast redan bollar, koner, västar, markörer och ledare.
-              Därför är föreningspaketet fokuserat på det ni faktiskt behöver från oss:
-              bumperballs och ett enkelt upplägg.
-            </p>
+        <article class="panel">
+          <h2>Ni har redan resten</h2>
+          <p>
+            Fotbollsföreningar har oftast redan bollar, koner, västar, markörer och ledare.
+            Därför är föreningspaketet fokuserat på det ni faktiskt behöver från oss:
+            bumperballs och ett enkelt upplägg.
+          </p>
 
-            <ul class="list">
-              <li><span class="check">✓</span><span>Ni ordnar plan eller yta.</span></li>
-              <li><span class="check">✓</span><span>Ni har vuxna ledare på plats.</span></li>
-              <li><span class="check">✓</span><span>Ni använder gärna egen boll, egna västar och egna koner.</span></li>
-            </ul>
-          </div>
-
-          <div class="discount-box">
-            <h3>Kommer ni via mejlet?</h3>
-            <p>
-              Svara på mejlet så drar vi av 10 % på bokningen. Enkelt, manuellt och utan rabattkodscirkus.
-            </p>
-          </div>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Ni ordnar plan eller yta.</span></li>
+            <li><span class="check">✓</span><span>Ni har vuxna ledare på plats.</span></li>
+            <li><span class="check">✓</span><span>Ni använder gärna egen boll, egna västar och egna koner.</span></li>
+          </ul>
         </article>
       </div>
     </section>
@@ -1652,7 +1792,8 @@
             <h2>Vill ni testa bumperball?</h2>
             <p>
               Skicka ett mejl om datum, förening, ungefärligt antal barn och ort.
-              Kommer ni via mejlet? Svara på mejlet så drar vi av 10 % på bokningen.
+              Vill ni vara med i Bumpisligan? Skicka även internresultat, vinnande lag
+              och om ni är öppna för att möta annan förening.
             </p>
 
             <div class="cta-buttons">
@@ -1783,6 +1924,308 @@
             firstItem.focus();
           }
         }
+      });
+    }
+
+    const clubs = [
+      "Ariana FC",
+      "Arlövs BI",
+      "Askeröds IF",
+      "Asmundtorps IF",
+      "Bara GIF",
+      "Billesholms GIF",
+      "Billeberga GIF",
+      "Bjärnums GoIF",
+      "Bjärreds IF",
+      "BK Flagg",
+      "BK Höllviken",
+      "BK Olympic",
+      "Blentarps BK",
+      "Bjuvstorps FF",
+      "Borrby IF",
+      "Borstahusens BK",
+      "Broby IF",
+      "Brösarps IF",
+      "Burlövs BI",
+      "Båstads GIF",
+      "Charlo IF",
+      "Dalby GIF",
+      "Degeberga GoIF",
+      "Dösjöbro IF",
+      "Eket IF",
+      "Ekeby GIF",
+      "Eskilsminne IF",
+      "Eslövs BK",
+      "FC Rosengård",
+      "FC Trelleborg",
+      "Flyinge IF",
+      "Fortuna FF",
+      "Furulunds IK",
+      "Förslövs IF",
+      "Gessie Villastads IF",
+      "GIF Nike",
+      "Gislövs IF",
+      "Glimåkra IF",
+      "Glumslövs FF",
+      "Grevie GIK",
+      "Gualövs GoIF",
+      "Gärsnäs AIS",
+      "Hammenhögs IF",
+      "Hanaskogs IS",
+      "Helsingborgs IF",
+      "Hittarps IK",
+      "Hjärnarps GIF",
+      "Hjärups GIF",
+      "Hofterups IF",
+      "Holmeja IS",
+      "Huaröds IF",
+      "Husie IF",
+      "Hyllie IK",
+      "Hyllinge GIF",
+      "Hässelholms IF",
+      "Hästveda IF",
+      "Höganäs BK",
+      "Högaborgs BK",
+      "Höörs IS",
+      "Hörby FF",
+      "IFK Hässleholm",
+      "IFK Lund",
+      "IFK Malmö FK",
+      "IFK Osby",
+      "IFK Simrishamn",
+      "IFK Trelleborg",
+      "IFK Ystad FK",
+      "Ifö Bromölla IF",
+      "IK Wormo",
+      "Janstorps AIF",
+      "Jonstorps IF FK",
+      "Killebergs IF",
+      "Klagstorps IF",
+      "Klippans FF",
+      "Klågerups GIF",
+      "Knislinge IF",
+      "Kulladals FF",
+      "Kullavägens BK",
+      "Kvarnby IK",
+      "Kvidinge IF",
+      "Kyrkheddinge IK",
+      "Kävlinge Harrie FF",
+      "Köpingebro IF",
+      "LB07",
+      "Limhamn FF",
+      "Linero IF",
+      "Ljungbyheds IF",
+      "Lomma FC",
+      "Lunds BK",
+      "Lunds SK",
+      "Lödde IF",
+      "Lönsboda GoIF",
+      "Lövestads IF",
+      "Malmö City FC",
+      "Malmö FF",
+      "Marieholms IS",
+      "Munka Ljungby IF",
+      "Näsets FF",
+      "Näsby IF",
+      "Näsums IF",
+      "Onslunda IF",
+      "Oxie SK",
+      "Perstorps SK",
+      "Rydsgårds AIF",
+      "Råå IF",
+      "Röstånga IS",
+      "Sankt Olofs IF",
+      "Sibbhults IF",
+      "Sjöbo IF",
+      "Skanör-Falsterbo IF",
+      "Skegrie BK",
+      "Skillinge IF",
+      "Skivarps GIF",
+      "Skurups AIF",
+      "Skånes-Fagerhults IF",
+      "Smygehuk FF",
+      "Södra Sandby IF",
+      "Sösdala IF",
+      "Spjutstorps IF",
+      "Staffanstorp United FC",
+      "Stattena IF",
+      "Stehags AIF",
+      "Strövelstorps GIF",
+      "Svalövs BK",
+      "Svedala IF",
+      "Sövestads IF",
+      "Teckomatorps SK",
+      "Tollarps IF",
+      "Tomelilla IF",
+      "Torns IF",
+      "Torekovs IK",
+      "Trelleborgs FF",
+      "Trollenäs IF",
+      "Tygelsjö IK",
+      "Tyringe IF",
+      "Tågarps AIK",
+      "Uppåkra IF",
+      "Veberöds AIF",
+      "Vejby IF",
+      "Vellinge IF",
+      "Viby IF",
+      "Viken IK",
+      "Vinslövs IF",
+      "Vittsjö GIK",
+      "Vollsjö AIF",
+      "Väsby FK",
+      "Västra Ingelstads IS",
+      "Västra Karups IF",
+      "Wä IF",
+      "Ystads IF FF",
+      "Åhus Horna BK",
+      "Åhus IF",
+      "Åstorps FF",
+      "Ängelholms FF",
+      "Önneköps IF",
+      "Örkelljunga IF"
+    ];
+
+    const leagueData = {
+      "Veberöds AIF": {
+        status: "Resultat registrerat",
+        statusType: "active",
+        internalTournament: "Bumpis Challenge P/F 7–12",
+        winner: "Lag Grön",
+        openForMatch: "Ja, öppna för att möta annan förening",
+        updated: "Exempelpost – byt till riktigt resultat när föreningen skickat in poängmall.",
+        teams: [
+          { place: "1", team: "Lag Grön", points: "12 poäng" },
+          { place: "2", team: "Lag Svart", points: "9 poäng" },
+          { place: "3", team: "Lag Gul", points: "6 poäng" },
+          { place: "4", team: "Lag Vit", points: "3 poäng" }
+        ]
+      }
+    };
+
+    const clubSelect = document.getElementById('clubSelect');
+    const leagueResult = document.getElementById('leagueResult');
+
+    function createOption(name) {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = name;
+      return option;
+    }
+
+    function getDefaultClubData(clubName) {
+      return {
+        status: "Inget resultat registrerat ännu",
+        statusType: "waiting",
+        internalTournament: "Väntar på inskickad poängmall",
+        winner: "Ej avgjort",
+        openForMatch: "Ej angivet",
+        updated: "När föreningen har hyrt bumperballs och skickat in resultat visas internturnering, vinnande lag och eventuell matchöppenhet här.",
+        teams: []
+      };
+    }
+
+    function renderLeagueResult(clubName) {
+      if (!clubName) {
+        leagueResult.innerHTML = `
+          <div class="result-card">
+            <h3>Ingen förening vald</h3>
+            <div class="result-row">
+              <div class="result-label">Status</div>
+              <div class="result-value"><span class="status-pill waiting">Väntar på val</span></div>
+            </div>
+            <div class="result-row">
+              <div class="result-label">Vinnande lag</div>
+              <div class="result-value">Välj en förening i rullgardinen.</div>
+            </div>
+            <div class="result-row">
+              <div class="result-label">Öppen för match</div>
+              <div class="result-value">Ej valt.</div>
+            </div>
+          </div>
+
+          <div class="result-card">
+            <h3>Internresultat</h3>
+            <p>Här visas föreningens interna smålag när resultat har skickats in.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const data = leagueData[clubName] || getDefaultClubData(clubName);
+      const statusClass = data.statusType === "active" ? "status-pill" : "status-pill waiting";
+
+      const rows = data.teams.length
+        ? data.teams.map(item => `
+          <tr>
+            <td>${item.place}</td>
+            <td>${item.team}</td>
+            <td>${item.points}</td>
+          </tr>
+        `).join('')
+        : `
+          <tr>
+            <td>—</td>
+            <td>Inga lag registrerade ännu</td>
+            <td>—</td>
+          </tr>
+        `;
+
+      leagueResult.innerHTML = `
+        <div class="result-card">
+          <h3>${clubName}</h3>
+
+          <div class="result-row">
+            <div class="result-label">Status</div>
+            <div class="result-value"><span class="${statusClass}">${data.status}</span></div>
+          </div>
+
+          <div class="result-row">
+            <div class="result-label">Internturnering</div>
+            <div class="result-value">${data.internalTournament}</div>
+          </div>
+
+          <div class="result-row">
+            <div class="result-label">Vinnande lag</div>
+            <div class="result-value">${data.winner}</div>
+          </div>
+
+          <div class="result-row">
+            <div class="result-label">Öppen för match</div>
+            <div class="result-value">${data.openForMatch}</div>
+          </div>
+
+          <div class="result-row">
+            <div class="result-label">Senast uppdaterad</div>
+            <div class="result-value">${data.updated}</div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <h3>Internresultat</h3>
+          <table class="mini-table">
+            <thead>
+              <tr>
+                <th>Placering</th>
+                <th>Lag</th>
+                <th>Poäng</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    if (clubSelect && leagueResult) {
+      clubs.sort((a, b) => a.localeCompare(b, 'sv')).forEach(club => {
+        clubSelect.appendChild(createOption(club));
+      });
+
+      clubSelect.addEventListener('change', () => {
+        renderLeagueResult(clubSelect.value);
       });
     }
   </script>
