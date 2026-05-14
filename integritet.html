@@ -7,7 +7,7 @@
   <title>Integritetspolicy | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Läs hur Offroad Bumpis hanterar personuppgifter vid bokning, kontakt, formulär och frågor. Tydlig information om vilka uppgifter som sparas och varför."
+    content="Läs hur Offroad Bumpis hanterar personuppgifter vid bokning, kontakt, formulär, betalning och frågor. Tydlig information om vilka uppgifter som sparas och varför."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Erica Nordlöf" />
@@ -16,20 +16,20 @@
 
   <link rel="canonical" href="https://offroadbumpis.se/integritet.html" />
 
+  <link rel="icon" type="image/png" sizes="512x512" href="https://offroadbumpis.se/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://offroadbumpis.se/apple-touch-icon.png" />
+
   <meta property="og:title" content="Integritetspolicy | Offroad Bumpis" />
-  <meta property="og:description" content="Så hanterar Offroad Bumpis personuppgifter vid bokning, kontakt och formulär." />
-  <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+  <meta property="og:description" content="Så hanterar Offroad Bumpis personuppgifter vid bokning, kontakt, betalning och formulär." />
+  <meta property="og:image" content="https://offroadbumpis.se/bilder/offroad-bumpis-logo.png" />
   <meta property="og:url" content="https://offroadbumpis.se/integritet.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sv_SE" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Integritetspolicy | Offroad Bumpis" />
-  <meta name="twitter:description" content="Så hanterar Offroad Bumpis personuppgifter vid bokning, kontakt och formulär." />
-  <meta name="twitter:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
-
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=2" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+  <meta name="twitter:description" content="Så hanterar Offroad Bumpis personuppgifter vid bokning, kontakt, betalning och formulär." />
+  <meta name="twitter:image" content="https://offroadbumpis.se/bilder/offroad-bumpis-logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,7 @@
         "@id":"https://offroadbumpis.se/integritet.html#webpage",
         "name":"Integritetspolicy | Offroad Bumpis",
         "url":"https://offroadbumpis.se/integritet.html",
-        "description":"Integritetspolicy för Offroad Bumpis med information om hur personuppgifter hanteras vid bokning, kontakt, mejl och formulär.",
+        "description":"Integritetspolicy för Offroad Bumpis med information om hur personuppgifter hanteras vid bokning, kontakt, mejl, formulär, betalning och administration.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"}
@@ -65,7 +65,7 @@
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "url":"https://offroadbumpis.se/",
-        "image":"https://offroadbumpis.se/Offroad%20Bumpis%20logo.png",
+        "image":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
         "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids och föreningar.",
@@ -78,6 +78,7 @@
           "name":"Erica Nordlöf",
           "sameAs":"https://www.linkedin.com/in/erica-nordl%C3%B6f/"
         },
+        "priceRange":"600 SEK - 3000 SEK",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
           "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
@@ -112,17 +113,20 @@
       --text:#16311d;
       --muted:#4d6454;
       --line:rgba(18,64,29,.12);
+      --line-strong:rgba(18,64,29,.2);
       --green:#74d64c;
       --green-dark:#2f7f25;
+      --green-deep:#14361b;
       --green-soft:#dff8d1;
       --yellow:#ffd84d;
       --dark:#102217;
+      --white:#ffffff;
       --focus:#111111;
       --shadow:0 18px 55px rgba(14,53,22,.10);
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
-      --content-max:900px;
+      --content-max:980px;
       --header-offset:92px;
     }
 
@@ -439,23 +443,38 @@
       font-size:14px;
     }
 
-    .menu-cta .btn{
-      width:100%;
+    h1,
+    h2,
+    h3{
+      font-family:"Baloo 2",sans-serif;
+      letter-spacing:-.03em;
+      margin:0;
+      line-height:.96;
+      color:#14361b;
+      overflow-wrap:anywhere;
     }
 
     .hero{
-      padding:54px 0 28px;
+      padding:42px 0 24px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(300px,.72fr);
+      gap:22px;
+      align-items:stretch;
     }
 
     .hero-card{
-      background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
-      border-radius:30px;
-      padding:28px;
+      border-radius:34px;
+      padding:30px;
       box-shadow:0 28px 80px rgba(8,34,16,.18);
       overflow:hidden;
       position:relative;
       isolation:isolate;
+      min-width:0;
     }
 
     .hero-card::after{
@@ -477,7 +496,7 @@
       gap:8px;
       padding:8px 12px;
       background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
       border-radius:999px;
       font-size:13px;
       font-weight:900;
@@ -486,26 +505,17 @@
       line-height:1.4;
     }
 
-    h1,
-    h2,
-    h3{
-      font-family:"Baloo 2",sans-serif;
-      letter-spacing:-.03em;
-      margin:0;
-      line-height:.96;
-    }
-
     .hero-card h1{
       margin:14px 0 14px;
-      font-size:clamp(2.6rem,5vw,4.8rem);
+      font-size:clamp(2.45rem,5vw,4.75rem);
       color:#fff;
-      max-width:12ch;
+      max-width:13ch;
     }
 
     .hero-card p{
       margin:0;
       font-size:17px;
-      line-height:1.8;
+      line-height:1.78;
       color:#d7e8d8;
       max-width:760px;
     }
@@ -521,7 +531,8 @@
       max-width:780px;
     }
 
-    .hero-points li{
+    .hero-points li,
+    .bullet-list li{
       display:flex;
       gap:10px;
       align-items:flex-start;
@@ -534,56 +545,42 @@
       border-radius:50%;
       display:grid;
       place-items:center;
-      background:var(--green);
-      color:#14361b;
+      background:var(--green-dark);
+      color:#fff;
       font-size:12px;
       font-weight:900;
       margin-top:2px;
     }
 
-    .section{
-      padding:24px 0 42px;
+    .hero-card .check{
+      background:var(--green);
+      color:#14361b;
     }
 
-    .content-wrap{
-      width:min(var(--content-max), 100%);
-      margin:0 auto;
-      display:grid;
-      gap:18px;
-    }
-
-    .card{
-      background:rgba(255,255,255,.94);
+    .privacy-preview{
+      background:rgba(255,255,255,.92);
       border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:24px;
+      border-radius:34px;
+      padding:22px;
       box-shadow:var(--shadow);
+      display:grid;
+      gap:14px;
+      align-content:start;
+      min-width:0;
     }
 
-    .card h2{
-      font-size:32px;
-      margin-bottom:12px;
-      color:#14361b;
+    .privacy-preview h2{
+      font-size:30px;
     }
 
-    .card h3{
-      font-size:24px;
-      margin-bottom:10px;
-      color:#14361b;
-    }
-
-    .card p{
-      margin:0 0 14px;
+    .privacy-preview p{
+      margin:0;
       color:var(--muted);
-      line-height:1.8;
-      font-size:16px;
+      line-height:1.7;
+      font-weight:700;
     }
 
-    .card p:last-child{
-      margin-bottom:0;
-    }
-
-    .bullet-list{
+    .mini-list{
       display:grid;
       gap:10px;
       margin:0;
@@ -591,19 +588,194 @@
       list-style:none;
     }
 
+    .mini-list li{
+      background:#f5fff1;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:13px 14px;
+      color:#2e4b35;
+      font-weight:800;
+      line-height:1.45;
+    }
+
+    .quick-strip{
+      padding:0 0 14px;
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .quick-item{
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+      box-shadow:var(--shadow-soft);
+      color:#36523c;
+      font-weight:800;
+      line-height:1.4;
+    }
+
+    .quick-item strong{
+      display:block;
+      color:var(--text);
+      font-size:18px;
+      margin-bottom:3px;
+      font-weight:900;
+    }
+
+    .section{
+      padding:32px 0;
+    }
+
+    .content-wrap{
+      width:min(var(--content-max), 100%);
+      margin:0 auto;
+      display:grid;
+      gap:16px;
+    }
+
+    .section-title{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,520px);
+      gap:22px;
+      align-items:end;
+      margin-bottom:18px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.1rem,4vw,3.2rem);
+      max-width:14ch;
+    }
+
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:16px;
+      font-weight:700;
+    }
+
+    .summary-card,
+    .cta{
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .summary-card h2{
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .summary-card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:16px;
+    }
+
+    .summary-card p:last-child{
+      margin-bottom:0;
+    }
+
+    .bullet-list{
+      display:grid;
+      gap:9px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
     .bullet-list li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
+      color:var(--muted);
+      line-height:1.7;
+      font-weight:700;
+    }
+
+    .terms{
+      display:grid;
+      gap:12px;
+    }
+
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:0;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+      overflow:hidden;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      list-style:none;
+      padding:17px 48px 17px 18px;
+      position:relative;
+      line-height:1.45;
+      color:#17351e;
+    }
+
+    summary::after{
+      content:"+";
+      position:absolute;
+      right:18px;
+      top:50%;
+      transform:translateY(-50%);
+      width:26px;
+      height:26px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:20px;
+      font-weight:900;
+    }
+
+    details[open] summary::after{
+      content:"–";
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .details-content{
+      padding:0 18px 18px;
+      border-top:1px solid rgba(18,64,29,.08);
+    }
+
+    .details-content p{
+      margin:14px 0 0;
       color:var(--muted);
       line-height:1.75;
     }
 
-    .link-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
+    .details-content ul{
+      margin:14px 0 0;
+    }
+
+    .details-content strong{
+      color:#17351e;
+    }
+
+    .notice{
+      border-color:rgba(255,216,77,.55);
+      background:linear-gradient(180deg,#fffdf2 0%,#fff 100%);
+    }
+
+    .notice summary::after{
+      background:#fff6c4;
+      border-color:rgba(255,216,77,.55);
+      color:#7a5a00;
     }
 
     .btn{
@@ -637,6 +809,67 @@
       color:var(--text);
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,.03);
+    }
+
+    .link-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .cta{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-radius:34px;
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+      gap:20px;
+      align-items:start;
+      padding:30px;
+    }
+
+    .cta h2{
+      color:#fff;
+      font-size:clamp(2rem,4vw,3rem);
+      margin-bottom:10px;
+      max-width:13ch;
+    }
+
+    .cta p{
+      margin:0;
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:680px;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:24px;
+      padding:20px;
+      display:grid;
+      gap:10px;
+      min-width:0;
+    }
+
+    .contact-box strong{
+      color:#fff;
+      font-size:20px;
+    }
+
+    .contact-link{
+      display:flex;
+      align-items:center;
+      min-height:48px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      font-weight:800;
+      line-height:1.45;
+      word-break:break-word;
     }
 
     footer{
@@ -685,7 +918,10 @@
         --line:rgba(0,0,0,.35);
       }
 
-      .card{
+      details,
+      .summary-card,
+      .privacy-preview,
+      .quick-item{
         border-color:rgba(0,0,0,.35);
       }
     }
@@ -694,14 +930,36 @@
       .btn,
       .menu-button,
       .menu-close,
-      .card,
-      .hero-card{
+      details,
+      .summary-card,
+      .privacy-preview,
+      .hero-card,
+      .cta{
         border:2px solid ButtonText;
       }
 
       a,
       button{
         text-decoration:underline;
+      }
+    }
+
+    @media (max-width:1120px){
+      .hero-grid,
+      .cta{
+        grid-template-columns:1fr;
+      }
+
+      .privacy-preview{
+        max-width:620px;
+      }
+
+      .quick-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .section-title{
+        grid-template-columns:1fr;
       }
     }
 
@@ -754,39 +1012,54 @@
       }
 
       .hero{
-        padding:30px 0 18px;
+        padding:28px 0 18px;
       }
 
-      .hero-card{
+      .hero-card,
+      .privacy-preview,
+      .cta{
         border-radius:24px;
         padding:20px 18px;
       }
 
       .hero-card h1{
-        font-size:clamp(2.1rem,10vw,3.2rem);
+        font-size:clamp(2.1rem,10vw,3.25rem);
         max-width:none;
       }
 
-      .hero-card p{
+      .hero-card p,
+      .section-title p,
+      .summary-card p,
+      .details-content p,
+      .cta p{
         font-size:15.5px;
         line-height:1.72;
       }
 
-      .section{
-        padding:18px 0 30px;
-      }
-
-      .card{
-        padding:18px;
-        border-radius:20px;
-      }
-
-      .card h2{
+      .privacy-preview h2,
+      .summary-card h2{
         font-size:28px;
       }
 
-      .card h3{
-        font-size:22px;
+      .quick-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section{
+        padding:24px 0;
+      }
+
+      summary{
+        padding:16px 46px 16px 16px;
+      }
+
+      .details-content{
+        padding:0 16px 16px;
+      }
+
+      .summary-card{
+        padding:18px;
+        border-radius:20px;
       }
 
       .link-row{
@@ -794,7 +1067,8 @@
         align-items:stretch;
       }
 
-      .link-row .btn{
+      .link-row .btn,
+      .cta .btn{
         width:100%;
       }
 
@@ -810,12 +1084,13 @@
         padding:7px 10px;
       }
 
-      .card h2{
-        font-size:25px;
+      .section-title h2{
+        font-size:2rem;
       }
 
-      .card h3{
-        font-size:20px;
+      .summary-card h2,
+      .privacy-preview h2{
+        font-size:25px;
       }
     }
   </style>
@@ -827,10 +1102,10 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span class="brand-text">
           <span class="brand-title">Offroad Bumpis</span>
-          <span class="brand-sub">Integritetspolicy</span>
+          <span class="brand-sub">Integritet</span>
         </span>
       </a>
 
@@ -864,6 +1139,7 @@
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
+      <a href="/affiliate.html">Affiliate</a>
     </nav>
 
     <div class="menu-cta">
@@ -877,184 +1153,312 @@
 
   <main id="main">
     <section class="hero">
-      <div class="container">
+      <div class="container hero-grid">
         <div class="hero-card">
-          <span class="eyebrow">Tydligt och enkelt</span>
+          <span class="eyebrow">Integritet · bokning · kontakt · administration</span>
+
           <h1>Integritetspolicy</h1>
+
           <p>
             Här står hur Offroad Bumpis hanterar personuppgifter när du bokar, skickar mejl,
             använder formulär eller kontaktar verksamheten på annat sätt.
           </p>
 
           <ul class="hero-points">
-            <li><span class="check">✓</span><span>Offroad Bumpis sparar bara uppgifter som behövs för bokning, kontakt och administration.</span></li>
+            <li><span class="check">✓</span><span>Endast uppgifter som behövs för bokning, kontakt, betalning och administration hanteras.</span></li>
             <li><span class="check">✓</span><span>Personuppgifter säljs inte vidare.</span></li>
-            <li><span class="check">✓</span><span>Du kan kontakta Offroad Bumpis om du vill veta vad som finns sparat eller vill att något tas bort.</span></li>
+            <li><span class="check">✓</span><span>Du kan kontakta Offroad Bumpis om du vill veta vad som finns sparat eller vill begära ändring.</span></li>
           </ul>
+
+          <div class="link-row">
+            <a class="btn btn-secondary" href="#integritet">Läs mer</a>
+            <a class="btn btn-secondary" href="/villkor.html">Villkor</a>
+            <a class="btn btn-secondary" href="mailto:kontakt@offroadbumpis.se">Kontakt</a>
+          </div>
+        </div>
+
+        <aside class="privacy-preview" aria-label="Kort sammanfattning">
+          <h2>Policy utan snårskog</h2>
+          <p>
+            Kort, praktiskt och läsbart. GDPR behöver inte kännas som att gå vilse i kommunens källararkiv.
+          </p>
+
+          <ul class="mini-list">
+            <li>Kontaktuppgifter används för att kunna svara dig.</li>
+            <li>Bokningsuppgifter används för att kunna genomföra uthyrning.</li>
+            <li>Fakturauppgifter sparas enligt bokföringsregler.</li>
+            <li>Du kan begära insyn, rättelse eller radering när det är möjligt.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Snabb information">
+      <div class="container quick-grid">
+        <div class="quick-item">
+          <strong>Ingen försäljning</strong>
+          Uppgifter säljs inte vidare
+        </div>
+
+        <div class="quick-item">
+          <strong>Bokning</strong>
+          Uppgifter används för uthyrning
+        </div>
+
+        <div class="quick-item">
+          <strong>Kontakt</strong>
+          Du kan begära insyn
+        </div>
+
+        <div class="quick-item">
+          <strong>2026-05-14</strong>
+          Senast uppdaterad
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="integritet">
       <div class="container">
         <div class="content-wrap">
-          <article class="card">
-            <h2>Personuppgiftsansvarig</h2>
+          <div class="section-title">
+            <h2>Integritet i kompakt format</h2>
             <p>
-              Offroad Bumpis drivs av Erica Nordlöf. Verksamheten ansvarar för hur personuppgifter hanteras.
+              Öppna det du vill läsa mer om. Resten ligger snyggt parkerat, som en välpackad transportsäck.
             </p>
-            <p>
-              Kontakt:
-              <a href="mailto:kontakt@offroadbumpis.se" style="text-decoration:underline; text-underline-offset:3px;">kontakt@offroadbumpis.se</a>
-            </p>
-          </article>
+          </div>
 
-          <article class="card" id="vilka-uppgifter">
-            <h2>Vilka uppgifter som kan samlas in</h2>
+          <article class="summary-card">
+            <h2>Det här gäller i korthet</h2>
             <p>
-              När du bokar, kontaktar Offroad Bumpis eller skickar in ett formulär kan följande uppgifter behandlas:
+              Offroad Bumpis behandlar personuppgifter för att kunna hantera bokningar, svara på frågor,
+              administrera betalningar och sköta uthyrningen på ett tryggt och tydligt sätt.
             </p>
 
             <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Namn</span></li>
-              <li><span class="check">✓</span><span>E-postadress</span></li>
-              <li><span class="check">✓</span><span>Telefonnummer om du lämnar det</span></li>
-              <li><span class="check">✓</span><span>Ort, adress eller plats för leverans eller upphämtning</span></li>
-              <li><span class="check">✓</span><span>Bokningsdatum, paket, tillval och meddelanden du själv skickar</span></li>
-              <li><span class="check">✓</span><span>Faktura- eller företagsuppgifter om bokningen gäller företag, skola, förening eller fakturabokning</span></li>
-              <li><span class="check">✓</span><span>Uppgifter du lämnar i kontaktformulär</span></li>
+              <li><span class="check">✓</span><span>Uppgifter används bara när det finns ett tydligt syfte.</span></li>
+              <li><span class="check">✓</span><span>Känsliga uppgifter ska inte skickas in om de inte behövs.</span></li>
+              <li><span class="check">✓</span><span>Personuppgifter sparas inte längre än nödvändigt.</span></li>
+              <li><span class="check">✓</span><span>Personuppgifter säljs inte vidare.</span></li>
             </ul>
           </article>
 
-          <article class="card" id="varfor">
-            <h2>Varför uppgifterna används</h2>
-            <p>Personuppgifterna används för att kunna:</p>
+          <div class="terms">
+            <details open>
+              <summary>Personuppgiftsansvarig</summary>
+              <div class="details-content">
+                <p>
+                  Offroad Bumpis drivs av Erica Nordlöf. Verksamheten ansvarar för hur personuppgifter hanteras.
+                </p>
+                <p>
+                  Kontakt:
+                  <a href="mailto:kontakt@offroadbumpis.se" style="text-decoration:underline; text-underline-offset:3px;">kontakt@offroadbumpis.se</a>
+                </p>
+              </div>
+            </details>
 
-            <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Ta emot och hantera bokningar</span></li>
-              <li><span class="check">✓</span><span>Skicka bekräftelser, praktisk information och svar på frågor</span></li>
-              <li><span class="check">✓</span><span>Hantera betalning, faktura och bokföringsunderlag</span></li>
-              <li><span class="check">✓</span><span>Följa upp bokningar, ändringar, avbokningar eller eventuella skador</span></li>
-              <li><span class="check">✓</span><span>Hantera kontaktförfrågningar</span></li>
-              <li><span class="check">✓</span><span>Skydda verksamheten mot spam, missbruk och oseriösa förfrågningar</span></li>
-            </ul>
-          </article>
+            <details>
+              <summary>Vilka uppgifter som kan samlas in</summary>
+              <div class="details-content">
+                <p>
+                  När du bokar, kontaktar Offroad Bumpis eller skickar in ett formulär kan följande uppgifter behandlas:
+                </p>
 
-          <article class="card">
-            <h2>Rättslig grund</h2>
-            <p>
-              Personuppgifter behandlas främst för att kunna fullgöra en bokning eller ett avtal,
-              till exempel när du bokar bumperballs, begär information eller behöver återkoppling kring en förfrågan.
-            </p>
-            <p>
-              Vissa uppgifter kan också behandlas för att uppfylla rättsliga skyldigheter,
-              till exempel bokföring, eller utifrån ett berättigat intresse, till exempel för att svara på kontaktförfrågningar
-              och hålla ordning på verksamheten.
-            </p>
-          </article>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Namn</span></li>
+                  <li><span class="check">✓</span><span>E-postadress</span></li>
+                  <li><span class="check">✓</span><span>Telefonnummer om du lämnar det</span></li>
+                  <li><span class="check">✓</span><span>Ort, adress eller plats för leverans eller upphämtning</span></li>
+                  <li><span class="check">✓</span><span>Bokningsdatum, paket, tillval och meddelanden du själv skickar</span></li>
+                  <li><span class="check">✓</span><span>Faktura- eller företagsuppgifter om bokningen gäller företag, skola, förening eller fakturabokning</span></li>
+                  <li><span class="check">✓</span><span>Uppgifter du lämnar via mejl, bokningsverktyg eller kontaktformulär</span></li>
+                </ul>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Formulär och e-post</h2>
-            <p>
-              Om du skickar in uppgifter via formulär på sidan eller via e-post används uppgifterna för att kunna svara dig,
-              hantera din bokning, skicka information inför uthyrning eller följa upp praktiska frågor.
-            </p>
-            <p>
-              Skicka inte känsliga personuppgifter som inte behövs. Bumperballs behöver datum och plats, inte hela Netflix-dokumentären.
-            </p>
-          </article>
+            <details>
+              <summary>Varför uppgifterna används</summary>
+              <div class="details-content">
+                <p>Personuppgifter används för att kunna:</p>
 
-          <article class="card">
-            <h2>Bokning och betalning</h2>
-            <p>
-              Vid bokning kan personuppgifter behandlas för att reservera datum, hantera kontakt före och efter uthyrning,
-              skicka dokumentation, bekräftelser och administrera betalning eller faktura.
-            </p>
-            <p>
-              Om bokningen sker via faktura används uppgifterna också för att skicka faktura och följa upp betalning före utlämning.
-              Uppgifter kan även behöva sparas som del av bokföring, kundadministration och underlag kopplat till bokningen.
-            </p>
-          </article>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Ta emot och hantera bokningar</span></li>
+                  <li><span class="check">✓</span><span>Skicka bekräftelser, praktisk information och svar på frågor</span></li>
+                  <li><span class="check">✓</span><span>Hantera betalning, faktura och bokföringsunderlag</span></li>
+                  <li><span class="check">✓</span><span>Följa upp bokningar, ändringar, avbokningar eller eventuella skador</span></li>
+                  <li><span class="check">✓</span><span>Hantera kontaktförfrågningar</span></li>
+                  <li><span class="check">✓</span><span>Skydda verksamheten mot spam, missbruk och oseriösa förfrågningar</span></li>
+                </ul>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Tredje parter</h2>
-            <p>
-              Offroad Bumpis kan använda externa tjänster för till exempel bokning, formulärhantering, e-post, betalning,
-              fakturering och andra administrativa funktioner som behövs för att verksamheten ska fungera.
-            </p>
-            <p>
-              De tjänsterna behandlar i så fall uppgifter i den mån det behövs för att tjänsten ska fungera.
-              Personuppgifter säljs inte vidare till andra.
-            </p>
-          </article>
+            <details>
+              <summary>Rättslig grund</summary>
+              <div class="details-content">
+                <p>
+                  Personuppgifter behandlas främst för att kunna fullgöra en bokning eller ett avtal,
+                  till exempel när du bokar bumperballs, begär information eller behöver återkoppling kring en förfrågan.
+                </p>
+                <p>
+                  Vissa uppgifter kan också behandlas för att uppfylla rättsliga skyldigheter,
+                  till exempel bokföring. Uppgifter kan även behandlas utifrån ett berättigat intresse,
+                  till exempel för att svara på kontaktförfrågningar och hålla ordning på verksamheten.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Cookies och statistik</h2>
-            <p>
-              Webbplatsen kan använda tekniska lösningar som behövs för att sidan ska fungera.
-              I vissa fall kan enkel statistik användas för att förstå hur sidan används och förbättra informationen.
-            </p>
-            <p>
-              Om externa tjänster används, till exempel bokningsverktyg eller formulärverktyg, kan de ha egna tekniska lösningar
-              och egna villkor för hur deras tjänst fungerar.
-            </p>
-          </article>
+            <details>
+              <summary>Formulär och e-post</summary>
+              <div class="details-content">
+                <p>
+                  Om du skickar in uppgifter via formulär på sidan eller via e-post används uppgifterna för att kunna svara dig,
+                  hantera din bokning, skicka information inför uthyrning eller följa upp praktiska frågor.
+                </p>
+                <p>
+                  Skicka inte känsliga personuppgifter som inte behövs. Bumperballs behöver datum och plats,
+                  inte hela Netflix-dokumentären.
+                </p>
+              </div>
+            </details>
 
-          <article class="card" id="lagring">
-            <h2>Hur länge uppgifterna sparas</h2>
-            <p>
-              Uppgifter sparas inte längre än nödvändigt. Boknings- och fakturauppgifter kan behöva sparas så länge det krävs enligt lag,
-              till exempel bokföringsregler.
-            </p>
-            <p>
-              Kontaktförfrågningar och formulär rensas när de inte längre behövs för kontakt, uppföljning eller administration.
-            </p>
-          </article>
+            <details>
+              <summary>Bokning och betalning</summary>
+              <div class="details-content">
+                <p>
+                  Vid bokning kan personuppgifter behandlas för att reservera datum, hantera kontakt före och efter uthyrning,
+                  skicka dokumentation, bekräftelser och administrera betalning eller faktura.
+                </p>
+                <p>
+                  Om bokningen sker via faktura används uppgifterna också för att skicka faktura och följa upp betalning före utlämning.
+                  Uppgifter kan även behöva sparas som del av bokföring, kundadministration och underlag kopplat till bokningen.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Hur uppgifterna skyddas</h2>
-            <p>
-              Rimliga tekniska och administrativa åtgärder används för att skydda uppgifter mot obehörig åtkomst,
-              förlust eller missbruk.
-            </p>
-            <p>
-              Endast uppgifter som behövs för verksamheten ska hanteras. Mindre data, mindre trassel. Det är bra governance även i barnkalasbranschen.
-            </p>
-          </article>
+            <details>
+              <summary>Dokumentation vid överlämning, återlämning och skada</summary>
+              <div class="details-content">
+                <p>
+                  Vid uthyrning kan uppgifter kopplade till bokningen användas för att dokumentera överlämning,
+                  återlämning och eventuella avvikelser.
+                </p>
+                <p>
+                  Bilder eller video kan tas om det behövs för att dokumentera utrustningens skick,
+                  skada, saknade delar eller annan avvikelse. Detta används för administration, uppföljning och eventuell tvist.
+                </p>
+              </div>
+            </details>
 
-          <article class="card" id="rattigheter">
-            <h2>Dina rättigheter</h2>
-            <p>Du har rätt att kontakta Offroad Bumpis om du vill:</p>
+            <details>
+              <summary>Tredje parter och externa tjänster</summary>
+              <div class="details-content">
+                <p>
+                  Offroad Bumpis kan använda externa tjänster för till exempel bokning, formulärhantering, e-post, betalning,
+                  fakturering, webbpublicering och andra administrativa funktioner som behövs för att verksamheten ska fungera.
+                </p>
+                <p>
+                  De tjänsterna behandlar i så fall uppgifter i den mån det behövs för att tjänsten ska fungera.
+                  Personuppgifter säljs inte vidare till andra.
+                </p>
+              </div>
+            </details>
 
-            <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Få veta vilka personuppgifter som finns sparade om dig</span></li>
-              <li><span class="check">✓</span><span>Begära rättelse om något är fel</span></li>
-              <li><span class="check">✓</span><span>Begära att uppgifter tas bort när de inte längre behövs</span></li>
-              <li><span class="check">✓</span><span>Invända mot viss behandling</span></li>
-            </ul>
+            <details>
+              <summary>Cookies och statistik</summary>
+              <div class="details-content">
+                <p>
+                  Webbplatsen kan använda tekniska lösningar som behövs för att sidan ska fungera.
+                  I vissa fall kan enkel statistik användas för att förstå hur sidan används och förbättra informationen.
+                </p>
+                <p>
+                  Om externa tjänster används, till exempel bokningsverktyg eller formulärverktyg, kan de ha egna tekniska lösningar
+                  och egna villkor för hur deras tjänst fungerar.
+                </p>
+              </div>
+            </details>
 
-            <p>
-              Du kan också lämna klagomål till Integritetsskyddsmyndigheten om du tycker att personuppgifter hanteras fel.
-            </p>
-          </article>
+            <details>
+              <summary>Hur länge uppgifterna sparas</summary>
+              <div class="details-content">
+                <p>
+                  Uppgifter sparas inte längre än nödvändigt. Boknings- och fakturauppgifter kan behöva sparas så länge det krävs enligt lag,
+                  till exempel bokföringsregler.
+                </p>
+                <p>
+                  Kontaktförfrågningar och formulär rensas när de inte längre behövs för kontakt, uppföljning eller administration.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Kontakt</h2>
-            <p>
-              Har du frågor om integritet eller personuppgifter, mejla:
-              <a href="mailto:kontakt@offroadbumpis.se" style="text-decoration:underline; text-underline-offset:3px;">kontakt@offroadbumpis.se</a>
-            </p>
+            <details>
+              <summary>Hur uppgifterna skyddas</summary>
+              <div class="details-content">
+                <p>
+                  Rimliga tekniska och administrativa åtgärder används för att skydda uppgifter mot obehörig åtkomst,
+                  förlust eller missbruk.
+                </p>
+                <p>
+                  Endast uppgifter som behövs för verksamheten ska hanteras. Mindre data, mindre trassel.
+                  Det är bra governance även i barnkalasbranschen.
+                </p>
+              </div>
+            </details>
 
-            <div class="link-row">
-              <a class="btn btn-primary" href="/">Till startsidan</a>
-              <a class="btn btn-secondary" href="/villkor.html">Läs villkor</a>
-              <a class="btn btn-secondary" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+            <details>
+              <summary>Dina rättigheter</summary>
+              <div class="details-content">
+                <p>Du har rätt att kontakta Offroad Bumpis om du vill:</p>
+
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Få veta vilka personuppgifter som finns sparade om dig</span></li>
+                  <li><span class="check">✓</span><span>Begära rättelse om något är fel</span></li>
+                  <li><span class="check">✓</span><span>Begära att uppgifter tas bort när de inte längre behövs</span></li>
+                  <li><span class="check">✓</span><span>Invända mot viss behandling</span></li>
+                </ul>
+
+                <p>
+                  Du kan också lämna klagomål till Integritetsskyddsmyndigheten om du tycker att personuppgifter hanteras fel.
+                </p>
+              </div>
+            </details>
+
+            <details class="notice">
+              <summary>Viktigt om känsliga uppgifter</summary>
+              <div class="details-content">
+                <p>
+                  Skicka inte känsliga personuppgifter via mejl eller formulär om det inte är absolut nödvändigt.
+                  Skriv hellre kort och praktiskt: datum, ort, paket, kontaktuppgifter och eventuell leveransinfo.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <article class="cta" id="kontakt">
+            <div>
+              <h2>Frågor om integritet?</h2>
+              <p>
+                Kontakta Offroad Bumpis om du vill veta vilka uppgifter som finns sparade,
+                begära rättelse eller ställa en fråga om personuppgifter.
+              </p>
+
+              <div class="link-row">
+                <a class="btn btn-secondary" href="mailto:kontakt@offroadbumpis.se">Skicka mejl</a>
+                <a class="btn btn-secondary" href="/villkor.html">Läs villkor</a>
+                <a class="btn btn-secondary" href="/">Till startsidan</a>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <strong>Kontakt</strong>
+              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+              <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
+              <a class="contact-link" href="/villkor.html">Villkor</a>
+              <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
             </div>
           </article>
 
-          <article class="card">
+          <article class="summary-card">
             <h2>Senast uppdaterad</h2>
-            <p>2026-05-08</p>
+            <p>2026-05-14</p>
           </article>
         </div>
       </div>
@@ -1074,7 +1478,8 @@
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a> ·
-          <a href="/affiliate.html">Affiliate</a>
+          <a href="/affiliate.html">Affiliate</a> ·
+          <a href="/bilder/manual.png" download>Användarmanual</a>
         </span>
       </div>
     </div>
@@ -1170,4 +1575,3 @@
   </script>
 </body>
 </html>
-```
