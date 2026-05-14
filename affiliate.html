@@ -162,20 +162,18 @@
       --text:#16311d;
       --muted:#4d6454;
       --line:rgba(18,64,29,.12);
-      --line-strong:rgba(18,64,29,.2);
+      --line-strong:rgba(18,64,29,.22);
       --green:#74d64c;
       --green-dark:#2f7f25;
-      --green-deep:#14361b;
       --green-soft:#dff8d1;
       --yellow:#ffd84d;
       --dark:#102217;
-      --white:#ffffff;
-      --focus:#111111;
+      --deep:#14361b;
+      --focus:#111;
       --shadow:0 18px 55px rgba(14,53,22,.10);
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
-      --content-max:980px;
       --header-offset:92px;
     }
 
@@ -490,6 +488,10 @@
       font-size:14px;
     }
 
+    .menu-cta .btn{
+      width:100%;
+    }
+
     h1,
     h2,
     h3,
@@ -499,43 +501,17 @@
       margin:0;
       line-height:.96;
       color:#14361b;
-      overflow-wrap:anywhere;
     }
 
     .hero{
-      padding:42px 0 24px;
+      padding:54px 0 38px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0,1.08fr) minmax(320px,.72fr);
-      gap:22px;
-      align-items:stretch;
-    }
-
-    .hero-card{
-      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
-      color:#fff;
-      border-radius:34px;
-      padding:30px;
-      box-shadow:0 28px 80px rgba(8,34,16,.18);
-      overflow:hidden;
-      position:relative;
-      isolation:isolate;
-      min-width:0;
-    }
-
-    .hero-card::after{
-      content:"";
-      position:absolute;
-      right:-90px;
-      bottom:-90px;
-      width:240px;
-      height:240px;
-      border-radius:50%;
-      background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);
-      pointer-events:none;
-      z-index:-1;
+      grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);
+      gap:40px;
+      align-items:start;
     }
 
     .eyebrow{
@@ -543,48 +519,55 @@
       align-items:center;
       gap:8px;
       padding:8px 12px;
-      background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.12);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:999px;
       font-size:13px;
       font-weight:900;
-      color:#dff1df;
+      color:#42634a;
+      box-shadow:0 10px 24px rgba(0,0,0,.04);
       max-width:100%;
       line-height:1.4;
     }
 
-    .hero-card h1{
-      margin:14px 0 14px;
-      font-size:clamp(2.35rem,5vw,4.65rem);
-      color:#fff;
-      max-width:13ch;
+    .hero h1{
+      margin:14px 0 16px;
+      font-size:clamp(2.6rem,5vw,5rem);
+      max-width:11ch;
     }
 
-    .hero-card p{
+    .hero p{
       margin:0;
       font-size:17px;
       line-height:1.78;
-      color:#d7e8d8;
-      max-width:760px;
+      color:#3f5c46;
+      max-width:690px;
+    }
+
+    .hero-points,
+    .feature-list,
+    .split-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
     }
 
     .hero-points{
-      display:grid;
-      gap:10px;
-      margin:20px 0 0;
-      padding:0;
-      list-style:none;
-      color:#eef6ee;
+      margin-top:22px;
+      color:#2c4632;
       font-weight:700;
-      max-width:780px;
+      max-width:720px;
     }
 
     .hero-points li,
-    .bullet-list li,
+    .feature-list li,
     .split-list li{
       display:flex;
       gap:10px;
       align-items:flex-start;
+      line-height:1.65;
     }
 
     .check{
@@ -601,270 +584,11 @@
       margin-top:2px;
     }
 
-    .hero-card .check{
-      background:var(--green);
-      color:#14361b;
-    }
-
-    .hero-actions,
-    .link-row,
-    .trust-actions{
+    .hero-actions{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
-      margin-top:22px;
-    }
-
-    .affiliate-preview{
-      background:rgba(255,255,255,.92);
-      border:1px solid var(--line);
-      border-radius:34px;
-      padding:22px;
-      box-shadow:var(--shadow);
-      display:grid;
-      gap:14px;
-      align-content:start;
-      min-width:0;
-    }
-
-    .affiliate-preview h2{
-      font-size:30px;
-    }
-
-    .affiliate-preview p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.7;
-      font-weight:700;
-    }
-
-    .mini-list{
-      display:grid;
-      gap:10px;
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-
-    .mini-list li{
-      background:#f5fff1;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:13px 14px;
-      color:#2e4b35;
-      font-weight:800;
-      line-height:1.45;
-    }
-
-    .quick-strip{
-      padding:0 0 14px;
-    }
-
-    .quick-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:12px;
-    }
-
-    .quick-item{
-      background:rgba(255,255,255,.86);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:14px 16px;
-      box-shadow:var(--shadow-soft);
-      color:#36523c;
-      font-weight:800;
-      line-height:1.4;
-    }
-
-    .quick-item strong{
-      display:block;
-      color:var(--text);
-      font-size:18px;
-      margin-bottom:3px;
-      font-weight:900;
-    }
-
-    .section{
-      padding:32px 0;
-    }
-
-    .content-wrap{
-      width:min(var(--content-max), 100%);
-      margin:0 auto;
-      display:grid;
-      gap:16px;
-    }
-
-    .section-title{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(280px,520px);
-      gap:22px;
-      align-items:end;
-      margin-bottom:18px;
-    }
-
-    .section-title h2{
-      font-size:clamp(2.1rem,4vw,3.2rem);
-      max-width:15ch;
-    }
-
-    .section-title p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:16px;
-      font-weight:700;
-    }
-
-    .summary-card,
-    .card,
-    .quote-box{
-      background:rgba(255,255,255,.94);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow:var(--shadow);
-      min-width:0;
-    }
-
-    .summary-card h2{
-      font-size:34px;
-      margin-bottom:12px;
-    }
-
-    .card h3{
-      font-size:28px;
-      margin-bottom:10px;
-    }
-
-    .summary-card p,
-    .card p,
-    .quote-box p{
-      margin:0 0 14px;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:16px;
-    }
-
-    .summary-card p:last-child,
-    .card p:last-child,
-    .quote-box p:last-child{
-      margin-bottom:0;
-    }
-
-    .card small{
-      display:block;
-      margin-top:10px;
-      color:#657868;
-      line-height:1.65;
-      font-weight:800;
-    }
-
-    .bullet-list,
-    .split-list{
-      display:grid;
-      gap:9px;
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-
-    .bullet-list li,
-    .split-list li{
-      color:var(--muted);
-      line-height:1.7;
-      font-weight:700;
-    }
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:16px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:16px;
-    }
-
-    .terms{
-      display:grid;
-      gap:12px;
-    }
-
-    details{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:0;
-      box-shadow:0 8px 22px rgba(0,0,0,.04);
-      overflow:hidden;
-    }
-
-    summary{
-      cursor:pointer;
-      font-weight:900;
-      list-style:none;
-      padding:17px 48px 17px 18px;
-      position:relative;
-      line-height:1.45;
-      color:#17351e;
-    }
-
-    summary::after{
-      content:"+";
-      position:absolute;
-      right:18px;
-      top:50%;
-      transform:translateY(-50%);
-      width:26px;
-      height:26px;
-      border-radius:999px;
-      display:grid;
-      place-items:center;
-      background:#f1ffe9;
-      border:1px solid var(--line);
-      color:#2f7f25;
-      font-size:20px;
-      font-weight:900;
-    }
-
-    details[open] summary::after{
-      content:"–";
-    }
-
-    summary::-webkit-details-marker{
-      display:none;
-    }
-
-    .details-content{
-      padding:0 18px 18px;
-      border-top:1px solid rgba(18,64,29,.08);
-    }
-
-    .details-content p{
-      margin:14px 0 0;
-      color:var(--muted);
-      line-height:1.75;
-    }
-
-    .details-content ul,
-    .details-content .grid-2,
-    .details-content .grid-3{
-      margin-top:14px;
-    }
-
-    .notice{
-      border-color:rgba(255,216,77,.55);
-      background:linear-gradient(180deg,#fffdf2 0%,#fff 100%);
-    }
-
-    .notice summary::after{
-      background:#fff6c4;
-      border-color:rgba(255,216,77,.55);
-      color:#7a5a00;
+      margin-top:26px;
     }
 
     .btn{
@@ -900,86 +624,405 @@
       box-shadow:0 8px 22px rgba(0,0,0,.03);
     }
 
+    .hero-card{
+      background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:18px;
+      box-shadow:0 28px 80px rgba(8,34,16,.18);
+      overflow:hidden;
+      position:relative;
+      isolation:isolate;
+      min-width:0;
+      width:100%;
+    }
+
+    .hero-card::after,
+    .dark-block::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .mockup-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+      color:#d7ead8;
+      font-size:14px;
+      font-weight:800;
+      line-height:1.4;
+    }
+
+    .dots{
+      display:flex;
+      gap:6px;
+      flex:0 0 auto;
+    }
+
+    .dots span{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#6aa85b;
+    }
+
+    .mockup-image{
+      border-radius:24px;
+      overflow:hidden;
+      margin-bottom:14px;
+      aspect-ratio:4 / 5;
+      background:#1f3826;
+    }
+
+    .mockup-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .mockup-panel{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+    }
+
+    .mini-card{
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:12px;
+      min-height:88px;
+    }
+
+    .mini-card strong{
+      display:block;
+      font-size:13px;
+      line-height:1.45;
+      color:#f2faf2;
+    }
+
+    .mini-card span{
+      display:block;
+      margin-top:6px;
+      font-size:12px;
+      line-height:1.55;
+      color:#d7ead8;
+    }
+
+    .section{
+      padding:46px 0;
+    }
+
+    .section-title{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(260px,520px);
+      gap:24px;
+      align-items:end;
+      margin-bottom:22px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.15rem,4vw,3.25rem);
+      max-width:15ch;
+    }
+
+    .section-title p{
+      margin:0;
+      max-width:520px;
+      justify-self:end;
+      line-height:1.75;
+      color:var(--muted);
+      font-size:16px;
+    }
+
     .dark-block{
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
       border-radius:34px;
-      padding:30px;
+      padding:34px;
       box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
     }
 
     .dark-block h2,
-    .dark-block h3{
+    .dark-block .dark-heading{
       color:#fff;
     }
 
-    .dark-block h2{
-      font-size:clamp(2rem,4vw,3rem);
-      margin-bottom:10px;
-      max-width:14ch;
-    }
-
-    .dark-block p{
-      margin:0;
+    .dark-block > p,
+    .dark-block .dark-copy{
       color:#d7e8d8;
-      line-height:1.78;
-      max-width:760px;
+      line-height:1.8;
     }
 
-    .commission-panel{
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:24px;
-      padding:22px;
-      min-width:0;
-    }
-
-    .commission-grid{
+    .notice-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
       display:grid;
-      grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);
-      gap:20px;
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      gap:24px;
       align-items:start;
     }
 
-    .price-big{
-      font-size:56px;
-      font-weight:900;
-      letter-spacing:-.06em;
-      line-height:1;
-      margin:0 0 10px;
-      font-family:"Baloo 2",sans-serif;
+    .notice-box h2{
+      font-size:clamp(2rem,4vw,3rem);
+      margin-bottom:10px;
+    }
+
+    .notice-box p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .notice-box.dark{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border:0;
+    }
+
+    .notice-box.dark h2{
       color:#fff;
     }
 
-    .commission-panel p{
+    .notice-box.dark p{
       color:#d7e8d8;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      min-width:0;
+      color:var(--text);
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:10px;
+      color:#14361b;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
       line-height:1.75;
-      font-size:15px;
+    }
+
+    .card small{
+      display:block;
+      margin-top:10px;
+      color:#657868;
+      line-height:1.65;
+      font-weight:800;
+    }
+
+    .dark-block .card{
+      background:#f7fff4;
+      border-color:rgba(116,214,76,.28);
+      color:var(--text);
+    }
+
+    .dark-block .card h3{
+      color:#14361b;
+    }
+
+    .dark-block .card p,
+    .dark-block .card small{
+      color:#2f4d36;
+      max-width:none;
+    }
+
+    .price-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .price-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      color:var(--text);
+    }
+
+    .price-card.featured{
+      background:linear-gradient(180deg,#14371b 0%,#102817 100%);
+      color:#fff;
+      transform:translateY(-8px);
+    }
+
+    .tag{
+      display:inline-block;
+      align-self:flex-start;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(18,49,29,.08);
+    }
+
+    .featured .tag{
+      background:rgba(255,255,255,.12);
+      color:#e9ffe8;
+    }
+
+    .price-card h3{
+      margin:16px 0 8px;
+      font-size:30px;
+      color:#14361b;
+    }
+
+    .price-card p{
+      margin:0;
+      color:#627066;
       font-weight:700;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .featured h3,
+    .featured p{
+      color:#fff;
+    }
+
+    .featured p{
+      color:#d7e8d7;
+    }
+
+    .feature-list{
+      margin-top:16px;
+    }
+
+    .feature-list li{
+      color:#425646;
+    }
+
+    .featured .feature-list li{
+      color:#eef6ee;
     }
 
     .quote-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:22px;
       box-shadow:var(--shadow-soft);
     }
 
     .quote-box p{
+      margin:0;
       color:#425646;
+      line-height:1.75;
       font-weight:800;
+    }
+
+    .quote-box p + p{
+      margin-top:12px;
+    }
+
+    .faq-wrap{
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .faq{
+      display:grid;
+      gap:12px;
+    }
+
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:16px 18px;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      list-style:none;
+      padding-right:28px;
+      position:relative;
+      line-height:1.5;
+    }
+
+    summary::after{
+      content:"+";
+      position:absolute;
+      right:0;
+      top:0;
+      font-size:20px;
+      font-weight:900;
+      color:#2f7f25;
+    }
+
+    details[open] summary::after{
+      content:"–";
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.75;
     }
 
     .form-card{
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
       border-radius:34px;
-      padding:30px;
+      padding:34px;
       box-shadow:var(--shadow);
     }
 
-    .form-card-head h2{
+    .form-card-head h3{
       font-size:clamp(2rem,4vw,3rem);
       margin-bottom:10px;
       color:#fff;
-      max-width:14ch;
     }
 
     .form-card-head p{
@@ -995,7 +1038,7 @@
 
     .contact-box{
       background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.10);
       border-radius:24px;
       padding:22px;
       display:grid;
@@ -1081,6 +1124,35 @@
       pointer-events:none;
     }
 
+    .trust-card{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .trust-card h2{
+      font-size:clamp(2rem,4vw,3rem);
+      margin-bottom:12px;
+      color:#fff;
+      max-width:18ch;
+    }
+
+    .trust-card p{
+      margin:0;
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:850px;
+    }
+
+    .trust-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
     footer{
       padding:30px 0 56px;
       color:#5b6e60;
@@ -1127,12 +1199,10 @@
         --line:rgba(0,0,0,.35);
       }
 
-      details,
-      .summary-card,
-      .affiliate-preview,
-      .quick-item,
       .card,
-      .quote-box{
+      .price-card,
+      details,
+      .notice-box{
         border-color:rgba(0,0,0,.35);
       }
     }
@@ -1141,14 +1211,11 @@
       .btn,
       .menu-button,
       .menu-close,
-      details,
-      .summary-card,
-      .affiliate-preview,
-      .hero-card,
-      .dark-block,
-      .form-card,
       .card,
-      .quote-box{
+      .hero-card,
+      .notice-box,
+      .dark-block,
+      .form-card{
         border:2px solid ButtonText;
       }
 
@@ -1160,25 +1227,33 @@
 
     @media (max-width:1120px){
       .hero-grid,
-      .commission-grid{
-        grid-template-columns:1fr;
-      }
-
-      .affiliate-preview{
-        max-width:620px;
-      }
-
-      .quick-grid,
-      .grid-2{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      .grid-3{
+      .notice-box{
         grid-template-columns:1fr;
       }
 
       .section-title{
         grid-template-columns:1fr;
+      }
+
+      .section-title p{
+        justify-self:start;
+        max-width:none;
+      }
+
+      .hero-card{
+        max-width:560px;
+      }
+    }
+
+    @media (max-width:980px){
+      .price-grid,
+      .grid-2,
+      .grid-3{
+        grid-template-columns:1fr;
+      }
+
+      .price-card.featured{
+        transform:none;
       }
     }
 
@@ -1231,76 +1306,91 @@
       }
 
       .hero{
-        padding:28px 0 18px;
+        padding:30px 0 22px;
       }
 
-      .hero-card,
-      .affiliate-preview,
-      .dark-block,
-      .form-card{
-        border-radius:24px;
-        padding:20px 18px;
+      .hero-grid{
+        gap:22px;
       }
 
-      .hero-card h1{
-        font-size:clamp(2.05rem,10vw,3.25rem);
+      .hero h1{
+        font-size:clamp(2.05rem,11vw,3.45rem);
+        line-height:.98;
         max-width:none;
       }
 
-      .hero-card p,
-      .section-title p,
-      .summary-card p,
-      .details-content p,
-      .dark-block p{
+      .hero p{
         font-size:15.5px;
         line-height:1.72;
       }
 
-      .affiliate-preview h2,
-      .summary-card h2{
-        font-size:28px;
+      .hero-points{
+        gap:9px;
+        margin-top:18px;
       }
 
-      .quick-grid,
-      .grid-2{
+      .hero-actions{
+        gap:10px;
+        margin-top:22px;
+      }
+
+      .hero-actions .btn{
+        flex:1 1 100%;
+        width:100%;
+      }
+
+      .hero-card{
+        border-radius:24px;
+        padding:14px;
+        max-width:none;
+      }
+
+      .mockup-image{
+        border-radius:18px;
+      }
+
+      .mockup-panel{
         grid-template-columns:1fr;
       }
 
+      .mini-card{
+        min-height:auto;
+      }
+
       .section{
-        padding:24px 0;
+        padding:30px 0;
       }
 
-      summary{
-        padding:16px 46px 16px 16px;
-      }
-
-      .details-content{
-        padding:0 16px 16px;
-      }
-
-      .summary-card,
       .card,
-      .quote-box,
-      .contact-box{
-        padding:18px;
+      .price-card,
+      .contact-box,
+      details,
+      .quote-box{
         border-radius:20px;
       }
 
-      .link-row,
-      .hero-actions,
+      .card,
+      .price-card,
+      .contact-box,
+      .quote-box{
+        padding:18px;
+      }
+
+      .trust-card,
+      .dark-block,
+      .form-card,
+      .notice-box{
+        padding:22px;
+        border-radius:24px;
+      }
+
       .trust-actions{
         flex-direction:column;
         align-items:stretch;
       }
 
-      .link-row .btn,
-      .hero-actions .btn,
       .trust-actions .btn{
         width:100%;
-      }
-
-      .price-big{
-        font-size:42px;
       }
 
       .footer-line{
@@ -1310,23 +1400,28 @@
     }
 
     @media (max-width:420px){
+      .hero h1{
+        font-size:2.05rem;
+      }
+
       .eyebrow{
         font-size:12px;
         padding:7px 10px;
       }
 
       .section-title h2{
-        font-size:2rem;
+        font-size:1.95rem;
       }
 
-      .summary-card h2,
-      .affiliate-preview h2,
-      .card h3{
-        font-size:25px;
+      .card h3,
+      .price-card h3{
+        font-size:26px;
       }
 
+      .trust-card h2,
+      .form-card-head h3,
       .dark-block h2,
-      .form-card-head h2{
+      .notice-box h2{
         font-size:2rem;
       }
     }
@@ -1376,7 +1471,7 @@
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
-      <a href="/affiliate.html">Affiliate</a>
+      <a href="/affiliate.html">Tipsprovision</a>
     </nav>
 
     <div class="menu-cta">
@@ -1391,435 +1486,526 @@
   <main id="main">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-card">
-          <span class="eyebrow">Tipsprovision · 10 % rabatt till kund · 20 % provision</span>
+        <div>
+          <span class="eyebrow">Tipsprovision · kund får 10 % rabatt · vårdnadshavare kan få 20 %</span>
 
-          <h1>Tipsa rätt kund. Få provision.</h1>
+          <h1>Känner du någon som planerar kalas, skolaktivitet eller event?</h1>
 
           <p>
-            Känner du någon i Skåne som planerar barnkalas, skolaktivitet, fritidsaktivitet,
-            föreningsdag eller event? Då kan du ansöka om en personlig tipskod.
+            Tipsa Offroad Bumpis om rätt person, skola, fritids, förening eller grupp i Skåne.
+            Om tipset leder till en godkänd och betald bokning kan vårdnadshavaren få 20 % provision.
+            Kunden får 10 % rabatt via din personliga tipskod.
           </p>
 
           <ul class="hero-points">
-            <li><span class="check">✓</span><span>Kunden får 10 % rabatt när koden används.</span></li>
-            <li><span class="check">✓</span><span>Vårdnadshavaren kan få 20 % provision på godkända och betalda bokningar.</span></li>
             <li><span class="check">✓</span><span>Du ansvarar inte för bokning, leverans, support eller kundkontakt.</span></li>
-            <li><span class="check">✓</span><span>Barn kan dela rabattkoden med vårdnadshavarens godkännande.</span></li>
+            <li><span class="check">✓</span><span>Du gör bara en relevant introduktion eller delar din personliga rabattkod.</span></li>
+            <li><span class="check">✓</span><span>Kunden får 10 % rabatt på bokningar där koden används.</span></li>
+            <li><span class="check">✓</span><span>Vårdnadshavaren kan få 20 % på godkända och betalda bokningar där koden används.</span></li>
+            <li><span class="check">✓</span><span>Barn kan dela tipskoden med vårdnadshavarens godkännande.</span></li>
           </ul>
 
           <div class="hero-actions">
-            <a href="#ansok" class="btn btn-secondary">Ansök om tipskod</a>
-            <a href="#las-mer" class="btn btn-secondary">Läs mer</a>
+            <a href="#ansok" class="btn btn-primary">Ansök om personlig tipskod</a>
+            <a href="#ratt-kund" class="btn btn-secondary">Se vem som passar</a>
           </div>
         </div>
 
-        <aside class="affiliate-preview" aria-label="Kort sammanfattning av tipsprovision">
-          <h2>Rätt tips, inte massutskick</h2>
-          <p>
-            Det här är inte ett “spamma alla grupper”-program. Det är för varma tips från personer
-            som redan känner rätt målgrupp.
-          </p>
+        <div class="hero-card">
+          <div class="mockup-header">
+            <span>Offroad Bumpis · rätt tips in, rabatt ut</span>
+            <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
 
-          <ul class="mini-list">
-            <li>1. Vårdnadshavare ansöker.</li>
-            <li>2. Godkänd tipsare får personlig kod.</li>
-            <li>3. Kunden använder koden.</li>
-            <li>4. Provision kan betalas ut efter godkänd och betald bokning.</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
+          <div class="mockup-image">
+            <img
+              src="Bumperball på fotbollsplan i Veberöd.png"
+              alt="Barn spelar bumperball på fotbollsplan i Veberöd"
+            />
+          </div>
 
-    <section class="quick-strip" aria-label="Snabb information">
-      <div class="container quick-grid">
-        <div class="quick-item">
-          <strong>10 %</strong>
-          Rabatt till kund
-        </div>
+          <div class="mockup-panel">
+            <div class="mini-card">
+              <strong>1. Du får en tipskod</strong>
+              <span>En personlig kod som kunden kan använda vid bokning eller kontakt.</span>
+            </div>
 
-        <div class="quick-item">
-          <strong>20 %</strong>
-          Provision till vårdnadshavare
-        </div>
+            <div class="mini-card">
+              <strong>2. Kunden får rabatt</strong>
+              <span>10 % rabatt när koden används.</span>
+            </div>
 
-        <div class="quick-item">
-          <strong>0 ansvar</strong>
-          För bokning och leverans
-        </div>
-
-        <div class="quick-item">
-          <strong>Skåne</strong>
-          Barnkalas, skola, fritids & förening
+            <div class="mini-card">
+              <strong>3. Du får provision</strong>
+              <span>20 % kan betalas ut efter godkänd och betald bokning.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="las-mer">
+    <section class="section" id="strategi">
       <div class="container">
-        <div class="content-wrap">
-          <div class="section-title">
-            <h2>Upplägget i kompakt format</h2>
+        <div class="notice-box dark">
+          <div>
+            <h2>Relevanta tips. Inte massutskick.</h2>
+          </div>
+
+          <div>
             <p>
-              Öppna det du vill läsa mer om. Affiliate utan fluff, provisionssnack utan rökkanon.
+              Det här är ett litet tipsupplägg för personer som redan känner rätt målgrupp.
+              Offroad Bumpis sköter kundkontakt, frågor, bokning och leverans.
+            </p>
+            <p style="margin-top:12px;">
+              Ett bra tips slår tio irrelevanta leads. Samma motor, bättre kaross.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ansvar">
+      <div class="container">
+        <div class="notice-box">
+          <div>
+            <h2>Du ansvarar inte för leveransen</h2>
+            <p>
+              Det här är inte ett säljarjobb där du ska hantera kunden.
+              Du behöver inte boka, leverera, förklara alla regler eller svara på följdfrågor.
             </p>
           </div>
 
-          <article class="summary-card">
-            <h2>Det här gäller i korthet</h2>
-            <p>
-              Vårdnadshavaren ansöker om en personlig tipskod. Kunden får 10 % rabatt när koden används
-              vid bokning eller kontakt. Vårdnadshavaren kan få 20 % provision på godkända och betalda
-              bokningar där koden används.
-            </p>
+          <div>
+            <ul class="split-list">
+              <li><span class="check">✓</span><span>Offroad Bumpis sköter kundkontakt.</span></li>
+              <li><span class="check">✓</span><span>Offroad Bumpis sköter bokning och praktisk information.</span></li>
+              <li><span class="check">✓</span><span>Offroad Bumpis sköter leverans, uppföljning och villkor.</span></li>
+              <li><span class="check">✓</span><span>Du delar bara en personlig tipskod eller gör en relevant introduktion.</span></li>
+              <li><span class="check">✓</span><span>Provision betalas när bokningen är godkänd och betald.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Offroad Bumpis sköter kundkontakt, bokning, villkor och leverans.</span></li>
-              <li><span class="check">✓</span><span>Tipsaren delar en kod eller gör en relevant introduktion.</span></li>
-              <li><span class="check">✓</span><span>Provision gäller bara när bokningen är godkänd, betald och kopplad till koden.</span></li>
-              <li><span class="check">✓</span><span>Spam, fejkförfrågningar och falska löften godkänns inte.</span></li>
+    <section class="section" id="sa-funkar-det">
+      <div class="container">
+        <div class="section-title">
+          <h2>Så funkar det</h2>
+          <p>
+            Rakt upplägg. Ingen influencer-cirkus. Bara relevant tips, rabatt och tydlig spårning.
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <span class="tag">Steg 1</span>
+            <h3>Du ansöker</h3>
+            <p>Vårdnadshavaren ansöker via formuläret. Ansökningar går igenom manuellt.</p>
+
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Myndig vårdnadshavare ansöker.</span></li>
+              <li><span class="check">✓</span><span>Upplägget ska vara relevant från start.</span></li>
+              <li><span class="check">✓</span><span>Ingen spam eller fejkade förfrågningar.</span></li>
             </ul>
           </article>
 
-          <div class="terms">
-            <details open>
-              <summary>Så funkar det</summary>
-              <div class="details-content">
-                <div class="grid-3">
-                  <article class="card">
-                    <h3>1. Ansök</h3>
-                    <p>Vårdnadshavaren ansöker via formuläret. Ansökningar går igenom manuellt.</p>
-                  </article>
+          <article class="price-card featured">
+            <span class="tag">Steg 2</span>
+            <h3>Du får en tipskod</h3>
+            <p>Du får en kod som kunden kan använda när de bokar eller kontaktar Offroad Bumpis.</p>
 
-                  <article class="card">
-                    <h3>2. Få kod</h3>
-                    <p>Godkänd tipsare får en personlig rabattkod som kunden kan använda.</p>
-                  </article>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Kunden får 10 % rabatt.</span></li>
+              <li><span class="check">✓</span><span>Koden visar vem som tipsat.</span></li>
+              <li><span class="check">✓</span><span>Kunden anger koden vid bokning eller kontakt.</span></li>
+            </ul>
+          </article>
 
-                  <article class="card">
-                    <h3>3. Få provision</h3>
-                    <p>När bokningen är godkänd, betald och koden har använts kan provision betalas ut.</p>
-                  </article>
-                </div>
-              </div>
-            </details>
+          <article class="price-card">
+            <span class="tag">Steg 3</span>
+            <h3>Du får provision</h3>
+            <p>När kunden gör en godkänd och betald bokning med din kod kan vårdnadshavaren få provision.</p>
 
-            <details>
-              <summary>Vem är rätt kund att tipsa?</summary>
-              <div class="details-content">
-                <p>
-                  Bästa tipset är någon som redan har ett verkligt behov. Inte någon som bara “kanske någon gång eventuellt”
-                  vill kolla runt.
-                </p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Gäller godkända kunder.</span></li>
+              <li><span class="check">✓</span><span>Gäller bokningar där koden används.</span></li>
+              <li><span class="check">✓</span><span>Utbetalning sker till vårdnadshavare.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                <div class="grid-3">
-                  <article class="card">
-                    <h3>Föräldrar</h3>
-                    <p>Föräldrar som planerar barnkalas, klassaktivitet, sommarlovsaktivitet eller något kul för barnen.</p>
-                    <small>Bra signal: “Vi behöver komma på något roligt till kalaset.”</small>
-                  </article>
+    <section class="section" id="ratt-kund">
+      <div class="container">
+        <div class="section-title">
+          <h2>Vem är rätt att tipsa?</h2>
+          <p>
+            Bästa tipset är någon som redan har ett verkligt behov. Inte någon som bara “kanske någon gång eventuellt” vill kolla runt.
+          </p>
+        </div>
 
-                  <article class="card">
-                    <h3>Skolor & fritids</h3>
-                    <p>Skolor, fritidshem eller fritidsledare som söker en enkel gruppaktivitet i Skåne.</p>
-                    <small>Bra signal: “Vi behöver en aktivitet för en grupp barn.”</small>
-                  </article>
-
-                  <article class="card">
-                    <h3>Föreningar & lag</h3>
-                    <p>Föreningar, lag, lokala grupper eller arrangörer som planerar en aktivitetsdag eller ett event.</p>
-                    <small>Bra signal: “Vi letar efter något annorlunda men enkelt.”</small>
-                  </article>
-                </div>
-              </div>
-            </details>
-
-            <details>
-              <summary>Vem upplägget passar för</summary>
-              <div class="details-content">
-                <div class="grid-2">
-                  <article class="card">
-                    <h3>Det passar dig om du</h3>
-                    <ul class="split-list">
-                      <li><span class="check">✓</span><span>redan möter rätt målgrupp i vardagen.</span></li>
-                      <li><span class="check">✓</span><span>vill tipsa utan att själv ta ansvar för bokningen.</span></li>
-                      <li><span class="check">✓</span><span>hellre gör varma introduktioner än kall försäljning.</span></li>
-                      <li><span class="check">✓</span><span>förstår att kvalitet på tipset är viktigare än volym.</span></li>
-                    </ul>
-                  </article>
-
-                  <article class="card">
-                    <h3>Det passar inte dig om du</h3>
-                    <ul class="split-list">
-                      <li><span class="check">✓</span><span>vill spamma länkar i grupper.</span></li>
-                      <li><span class="check">✓</span><span>lovar saker som inte står på sidan.</span></li>
-                      <li><span class="check">✓</span><span>skickar irrelevanta leads bara för att fylla en lista.</span></li>
-                      <li><span class="check">✓</span><span>vill ha betalt för kontakter som inte har verkligt behov.</span></li>
-                    </ul>
-                  </article>
-                </div>
-              </div>
-            </details>
-
-            <details>
-              <summary>Vad kunden får</summary>
-              <div class="details-content">
-                <p>
-                  Du tipsar inte om något luddigt. Kunden får ett konkret erbjudande:
-                  bumperballs i Skåne med tydlig bokning och tydliga villkor.
-                </p>
-
-                <div class="grid-3">
-                  <article class="card">
-                    <h3>2-pack bumperballs</h3>
-                    <p>Passar mindre sällskap eller enklare aktivitet. Kunden kan använda tipskoden för 10 % rabatt.</p>
-                  </article>
-
-                  <article class="card">
-                    <h3>10-pack bumperballs</h3>
-                    <p>Passar barnkalas, skolor, fritids, föreningar och grupper som vill köra flera deltagare i rotation.</p>
-                  </article>
-
-                  <article class="card">
-                    <h3>Turneringskit</h3>
-                    <p>Kan kombineras med 10-pack för mer uppstyrd aktivitet med lag, koner, spelupplägg och finalkänsla.</p>
-                  </article>
-                </div>
-              </div>
-            </details>
-
-            <details>
-              <summary>Regler utan krusiduller</summary>
-              <div class="details-content">
-                <ul class="split-list">
-                  <li><span class="check">✓</span><span>Affiliateansökan görs av myndig vårdnadshavare.</span></li>
-                  <li><span class="check">✓</span><span>Barn under 18 år kan dela rabattkod med vårdnadshavarens godkännande.</span></li>
-                  <li><span class="check">✓</span><span>Avtal, kontakt och utbetalning sker alltid med vårdnadshavaren.</span></li>
-                  <li><span class="check">✓</span><span>Kunden behöver använda rabattkoden vid bokning eller kontakt.</span></li>
-                  <li><span class="check">✓</span><span>Provision betalas bara på godkänd och betald bokning.</span></li>
-                  <li><span class="check">✓</span><span>Spam, fejk, falska löften eller oseriösa leads godkänns inte.</span></li>
-                  <li><span class="check">✓</span><span>Offroad Bumpis godkänner tipsare manuellt.</span></li>
-                </ul>
-              </div>
-            </details>
-
-            <details class="notice">
-              <summary>Vad du kan säga när du tipsar</summary>
-              <div class="details-content">
-                <div class="quote-box">
-                  <p>“Jag känner en som hyr ut bumperballs i Skåne. Du får 10 % rabatt med min kod om du vill boka.”</p>
-                  <p>“Hon sköter bokning och frågor själv. Jag delar bara rabattkoden.”</p>
-                  <p>“Det kan passa om ni planerar barnkalas, skolaktivitet, fritidsaktivitet, föreningsdag eller event.”</p>
-                </div>
-              </div>
-            </details>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Föräldrar</h3>
+            <p>Föräldrar som planerar barnkalas, klassaktivitet, sommarlovsaktivitet eller något kul för barnen.</p>
+            <small>Bra signal: “Vi behöver komma på något roligt till kalaset.”</small>
           </div>
 
-          <article class="dark-block" id="ersattning">
-            <div class="commission-grid">
-              <div>
-                <h2>10 % rabatt till kund. 20 % provision till vårdnadshavaren.</h2>
-                <p>
-                  Koden gör två jobb samtidigt: kunden får en tydlig anledning att boka och Offroad Bumpis
-                  ser vem som tipsat kunden. Provision gäller bara när bokningen är godkänd, betald och koden används.
-                </p>
-              </div>
+          <div class="card">
+            <h3>Skolor & fritids</h3>
+            <p>Skolor, fritidshem eller fritidsledare som söker en enkel gruppaktivitet i Skåne.</p>
+            <small>Bra signal: “Vi behöver en aktivitet för en grupp barn.”</small>
+          </div>
 
-              <div class="commission-panel">
-                <div class="price-big">20 %</div>
-                <p>
-                  Kunden använder din kod vid bokning eller kontakt.<br />
-                  Kunden får 10 % rabatt på bokningar där koden används.<br />
-                  Vårdnadshavaren kan få 20 % på godkända och betalda bokningar där koden används.
-                </p>
-              </div>
-            </div>
+          <div class="card">
+            <h3>Föreningar & lag</h3>
+            <p>Föreningar, lag, lokala grupper eller arrangörer som planerar en aktivitetsdag eller ett event.</p>
+            <small>Bra signal: “Vi letar efter något annorlunda men enkelt.”</small>
+          </div>
+        </div>
 
-            <div class="grid-3" style="margin-top:18px;">
-              <article class="card">
-                <h3>2-pack</h3>
-                <p>600 kr → upp till 120 kr i provision före eventuell rabatt- och villkorsjustering.</p>
-              </article>
-
-              <article class="card">
-                <h3>10-pack</h3>
-                <p>2 000 kr → upp till 400 kr i provision före eventuell rabatt- och villkorsjustering.</p>
-              </article>
-
-              <article class="card">
-                <h3>10-pack + turneringskit</h3>
-                <p>3 000 kr → upp till 600 kr i provision före eventuell rabatt- och villkorsjustering.</p>
-              </article>
-            </div>
+        <div class="grid-2" style="margin-top:18px;">
+          <article class="card">
+            <h3>Bäst kund att tipsa</h3>
+            <ul class="split-list">
+              <li><span class="check">✓</span><span>Någon som planerar kalas, skolaktivitet, fritidsaktivitet, föreningsdag eller event i Skåne.</span></li>
+              <li><span class="check">✓</span><span>Någon som kan fatta beslut eller påverka bokningen.</span></li>
+              <li><span class="check">✓</span><span>Någon som förstår att det är uthyrning av bumperballs.</span></li>
+              <li><span class="check">✓</span><span>Någon som uppskattar rabatt, tydliga villkor och enkel bokning.</span></li>
+            </ul>
           </article>
 
-          <section class="section" id="faq" style="padding:0;">
-            <div class="section-title" style="grid-template-columns:1fr; margin-bottom:18px;">
-              <h2>Vanliga frågor</h2>
-            </div>
+          <article class="card">
+            <h3>Fel kund att tipsa</h3>
+            <ul class="split-list">
+              <li><span class="check">✓</span><span>Personer som bara vill ha gratisaktivitet.</span></li>
+              <li><span class="check">✓</span><span>Personer utanför rimligt område utan verklig plan.</span></li>
+              <li><span class="check">✓</span><span>Personer som inte är relevanta för barnkalas, grupper, skolor, fritids, föreningar eller event.</span></li>
+              <li><span class="check">✓</span><span>Fejkförfrågningar, spam eller “jag skickar alla jag hittar”-leads.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="terms">
-              <details>
-                <summary>Är detta ett affiliateprogram?</summary>
-                <div class="details-content">
-                  <p>Tekniskt ja, men upplägget är mer ett tipsupplägg. Du tipsar en relevant kund, kunden får rabatt och vårdnadshavaren kan få provision om det blir en godkänd och betald bokning där koden används.</p>
-                </div>
-              </details>
+    <section class="section" id="passar">
+      <div class="container">
+        <div class="section-title">
+          <h2>Vem upplägget passar för</h2>
+          <p>
+            Det här passar bäst för personer som redan rör sig nära rätt målgrupp.
+            Varma tips slår kall länkspam.
+          </p>
+        </div>
 
-              <details>
-                <summary>Måste jag sälja?</summary>
-                <div class="details-content">
-                  <p>Nej. Du kan bara tipsa eller göra en introduktion. Offroad Bumpis sköter kundkontakt, bokning, leverans och uppföljning.</p>
-                </div>
-              </details>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Föräldrar & klassföräldrar</h3>
+            <p>Du har kontakt med andra föräldrar och hör ofta snack om barnkalas, klassaktiviteter och helgplaner.</p>
+          </div>
 
-              <details>
-                <summary>Ansvarar jag om kunden inte blir nöjd?</summary>
-                <div class="details-content">
-                  <p>Nej. Du ansvarar inte för leverans, support eller kundkontakt. Det ansvaret ligger hos Offroad Bumpis.</p>
-                </div>
-              </details>
+          <div class="card">
+            <h3>Skolnära nätverk</h3>
+            <p>Du har kontakt med skolor, fritids, lag, föreningar eller personer som ibland letar efter enkla aktiviteter.</p>
+          </div>
 
-              <details>
-                <summary>Hur vet Offroad Bumpis vem som tipsat kunden?</summary>
-                <div class="details-content">
-                  <p>Rabattkoden används som spårning i bokningen eller i kundens förfrågan. Varje godkänd tipsare får en egen kod.</p>
-                </div>
-              </details>
+          <div class="card">
+            <h3>Lokala eventkontakter</h3>
+            <p>Du känner personer i Skåne som ordnar aktiviteter, kalas, föreningsdagar eller mindre event.</p>
+          </div>
+        </div>
 
-              <details>
-                <summary>Vad får kunden?</summary>
-                <div class="details-content">
-                  <p>Kunden får 10 % rabatt på bokningar där tipskoden används.</p>
-                </div>
-              </details>
+        <div class="grid-2" style="margin-top:18px;">
+          <article class="card">
+            <h3>Det passar dig om du</h3>
+            <ul class="split-list">
+              <li><span class="check">✓</span><span>redan möter rätt målgrupp i vardagen.</span></li>
+              <li><span class="check">✓</span><span>vill tipsa utan att själv ta ansvar för bokningen.</span></li>
+              <li><span class="check">✓</span><span>hellre gör varma introduktioner än kall försäljning.</span></li>
+              <li><span class="check">✓</span><span>förstår att kvalitet på tipset är viktigare än volym.</span></li>
+            </ul>
+          </article>
 
-              <details>
-                <summary>Vad får tipsaren?</summary>
-                <div class="details-content">
-                  <p>Vårdnadshavaren kan få 20 % provision på godkända och betalda bokningar där den personliga koden används.</p>
-                </div>
-              </details>
+          <article class="card">
+            <h3>Det passar inte dig om du</h3>
+            <ul class="split-list">
+              <li><span class="check">✓</span><span>vill spamma länkar i grupper.</span></li>
+              <li><span class="check">✓</span><span>lovar saker som inte står på sidan.</span></li>
+              <li><span class="check">✓</span><span>skickar irrelevanta leads bara för att fylla en lista.</span></li>
+              <li><span class="check">✓</span><span>vill ha betalt för kontakter som inte har verkligt behov.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-              <details>
-                <summary>Kan barn dela en rabattkod eller länk?</summary>
-                <div class="details-content">
-                  <p>Ja. Barn kan dela en personlig rabattkod eller länk med vårdnadshavarens godkännande. Avtal, kontakt och eventuell utbetalning sker alltid med vårdnadshavaren.</p>
-                </div>
-              </details>
+    <section class="section" id="vad-kunden-far">
+      <div class="container">
+        <div class="section-title">
+          <h2>Vad kunden får</h2>
+          <p>
+            Du tipsar inte om något luddigt. Kunden får ett konkret erbjudande: bumperballs i Skåne med tydlig bokning och tydliga villkor.
+          </p>
+        </div>
 
-              <details>
-                <summary>Vem får utbetalningen?</summary>
-                <div class="details-content">
-                  <p>Utbetalning sker alltid till vårdnadshavaren. Avtal, kontakt och utbetalningsuppgifter hanteras med en myndig person.</p>
-                </div>
-              </details>
+        <div class="grid-3">
+          <article class="card">
+            <h3>2-pack bumperballs</h3>
+            <p>Passar mindre sällskap eller enklare aktivitet. Kunden kan använda tipskoden för 10 % rabatt.</p>
+          </article>
 
-              <details>
-                <summary>När får vårdnadshavaren betalt?</summary>
-                <div class="details-content">
-                  <p>När bokningen är genomförd, godkänd och betald enligt villkoren.</p>
-                </div>
-              </details>
+          <article class="card">
+            <h3>10-pack bumperballs</h3>
+            <p>Passar barnkalas, skolor, fritids, föreningar och grupper som vill köra flera deltagare i rotation.</p>
+          </article>
 
-              <details>
-                <summary>Får jag posta i grupper?</summary>
-                <div class="details-content">
-                  <p>Ja, om gruppens regler tillåter det och inlägget är relevant. Ingen spam, inga massutskick och inga falska löften.</p>
-                </div>
-              </details>
+          <article class="card">
+            <h3>Turneringskit</h3>
+            <p>Kan kombineras med 10-pack för mer uppstyrd aktivitet med lag, koner, spelupplägg och finalkänsla.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-              <details>
-                <summary>Kan jag göra eget reklammaterial?</summary>
-                <div class="details-content">
-                  <p>Ja, men materialet får inte innehålla fel priser, falska löften eller villkor som inte är godkända. Hör av dig om du vill ha text eller bildmaterial.</p>
-                </div>
-              </details>
-            </div>
-          </section>
+    <section class="section" id="ersattning">
+      <div class="container">
+        <div class="dark-block">
+          <div class="section-title" style="grid-template-columns:1fr; margin-bottom:22px;">
+            <h2 class="dark-heading">10 % rabatt till kund. 20 % provision till vårdnadshavaren.</h2>
+            <p class="dark-copy">
+              Koden gör två jobb samtidigt: kunden får en tydlig anledning att boka och Offroad Bumpis ser vem som tipsat kunden.
+              Provision gäller bara när bokningen är godkänd, betald och koden används.
+            </p>
+          </div>
 
-          <section class="form-card" id="ansok">
-            <div class="form-card-head">
-              <h2>Ansök om personlig tipskod</h2>
-              <p>
-                Ansökningar går igenom manuellt. Målet är inte flest möjliga tipsare.
-                Målet är rätt tipsare som kan nå rätt kund utan spam.
-              </p>
-            </div>
+          <div class="grid-3">
+            <article class="card">
+              <h3>2-pack</h3>
+              <p>600 kr → upp till 120 kr i provision före eventuell rabatt- och villkorsjustering.</p>
+            </article>
 
-            <div class="form-body">
-              <form class="contact-box" action="https://formsubmit.co/kontakt@offroadbumpis.se" method="POST" accept-charset="UTF-8" autocomplete="on">
-                <strong>Ansökan om tipskod</strong>
-                <small>Blir du godkänd får du en personlig rabattkod att dela vidare.</small>
+            <article class="card">
+              <h3>10-pack</h3>
+              <p>2 000 kr → upp till 400 kr i provision före eventuell rabatt- och villkorsjustering.</p>
+            </article>
 
-                <input type="hidden" name="_subject" value="Ny ansökan om tipskod från offroadbumpis.se" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://offroadbumpis.se/tack.html" />
-                <input type="hidden" name="_autoresponse" value="Tack! Din ansökan om personlig tipskod har kommit in." />
-                <input class="hidden-field" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            <article class="card">
+              <h3>10-pack + turneringskit</h3>
+              <p>3 000 kr → upp till 600 kr i provision före eventuell rabatt- och villkorsjustering.</p>
+            </article>
+          </div>
 
-                <label for="namn">Namn på vårdnadshavare</label>
-                <input id="namn" type="text" name="Namn på vårdnadshavare" required autocomplete="name" />
+          <div class="grid-3" style="margin-top:18px;">
+            <article class="card">
+              <h3>För kunden</h3>
+              <p>10 % rabatt på bokningar där den personliga tipskoden används.</p>
+            </article>
 
-                <label for="email">E-post</label>
-                <input id="email" type="email" name="E-post" required autocomplete="email" inputmode="email" />
+            <article class="card">
+              <h3>För tipsaren</h3>
+              <p>20 % provision till vårdnadshavaren på godkända och betalda bokningar där koden används.</p>
+            </article>
 
-                <label for="telefon">Telefon</label>
-                <input id="telefon" type="tel" name="Telefon" autocomplete="tel" inputmode="tel" />
+            <article class="card">
+              <h3>För spårningen</h3>
+              <p>Koden visar vem som tipsat kunden. Mindre tjafs, mer ordning.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <label for="kanaler">Hur tänker du nå relevanta kunder?</label>
-                <input id="kanaler" type="text" name="Hur når du relevanta kunder?" placeholder="t.ex. föräldranätverk, klass, förening, fritids, sociala medier eller lokala grupper" />
+    <section class="section" id="regler">
+      <div class="container grid-2">
+        <article class="card">
+          <h3>Regler utan krusiduller</h3>
 
-                <label for="malgrupp">Vilken målgrupp känner du bäst?</label>
-                <input id="malgrupp" type="text" name="Målgrupp" placeholder="t.ex. föräldrar i Malmö, skola i Skåne, fotbollslag, förening eller eventgrupp" />
+          <ul class="split-list">
+            <li><span class="check">✓</span><span>Affiliateansökan görs av myndig vårdnadshavare.</span></li>
+            <li><span class="check">✓</span><span>Barn under 18 år kan dela rabattkod med vårdnadshavarens godkännande.</span></li>
+            <li><span class="check">✓</span><span>Avtal, kontakt och utbetalning sker alltid med vårdnadshavaren.</span></li>
+            <li><span class="check">✓</span><span>Kunden behöver använda rabattkoden vid bokning eller kontakt.</span></li>
+            <li><span class="check">✓</span><span>Provision betalas bara på godkänd och betald bokning.</span></li>
+            <li><span class="check">✓</span><span>Spam, fejk, falska löften eller oseriösa leads godkänns inte.</span></li>
+            <li><span class="check">✓</span><span>Offroad Bumpis godkänner tipsare manuellt.</span></li>
+          </ul>
+        </article>
 
-                <label for="utbetalning">Hur vill du helst få eventuell utbetalning?</label>
-                <input id="utbetalning" type="text" name="Önskat utbetalningssätt" placeholder="t.ex. svenskt bankkonto, Swish eller faktura från företag" />
+        <article class="card">
+          <h3>Vad du kan säga när du tipsar</h3>
 
-                <label for="bakgrund">Berätta kort om dig</label>
-                <textarea id="bakgrund" name="Kort om dig" rows="4" placeholder="Vad du gör, vilken målgrupp du når och varför upplägget passar"></textarea>
+          <div class="quote-box">
+            <p>“Jag känner en som hyr ut bumperballs i Skåne. Du får 10 % rabatt med min kod om du vill boka.”</p>
+            <p>“Hon sköter bokning och frågor själv. Jag delar bara rabattkoden.”</p>
+            <p>“Det kan passa om ni planerar barnkalas, skolaktivitet, fritidsaktivitet, föreningsdag eller event.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-                <label for="barn">Ska ett barn dela koden?</label>
-                <input id="barn" type="text" name="Barn som delar koden" placeholder="t.ex. Ja, min son 9 år / Nej" />
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="faq-wrap">
+          <div class="section-title" style="grid-template-columns:1fr; margin-bottom:18px;">
+            <h2>Vanliga frågor</h2>
+          </div>
 
-                <label for="ovrigt">Övrigt</label>
-                <textarea id="ovrigt" name="Övrigt" rows="4" placeholder="Länkar, målgrupp, ort eller annat som är bra att veta"></textarea>
+          <div class="faq">
+            <details>
+              <summary>Är detta ett affiliateprogram?</summary>
+              <p>Tekniskt ja, men upplägget är mer ett tipsupplägg. Du tipsar en relevant kund, kunden får rabatt och vårdnadshavaren kan få provision om det blir en godkänd och betald bokning där koden används.</p>
+            </details>
 
-                <small class="form-legal">
-                  Ansökan görs av myndig vårdnadshavare.<br />
-                  Barn kan dela en rabattkod eller länk med vårdnadshavarens godkännande.<br />
-                  Avtal, kontakt och utbetalning sker alltid med vårdnadshavaren.<br />
-                  Rabatt och provision gäller bokningar där koden används och bokningen är godkänd och betald.<br />
-                  Genom att skicka formuläret godkänner du att dina uppgifter behandlas enligt
-                  <a href="/integritet.html">integritetspolicyn</a>.
-                </small>
+            <details>
+              <summary>Måste jag sälja?</summary>
+              <p>Nej. Du kan bara tipsa eller göra en introduktion. Offroad Bumpis sköter kundkontakt, bokning, leverans och uppföljning.</p>
+            </details>
 
-                <button class="btn contact-submit" type="submit">Skicka ansökan om tipskod</button>
-              </form>
-            </div>
-          </section>
+            <details>
+              <summary>Ansvarar jag om kunden inte blir nöjd?</summary>
+              <p>Nej. Du ansvarar inte för leverans, support eller kundkontakt. Det ansvaret ligger hos Offroad Bumpis.</p>
+            </details>
 
-          <article class="dark-block">
-            <h2>Vem driver detta?</h2>
+            <details>
+              <summary>Hur vet Offroad Bumpis vem som tipsat kunden?</summary>
+              <p>Rabattkoden används som spårning i bokningen eller i kundens förfrågan. Varje godkänd tipsare får en egen kod.</p>
+            </details>
+
+            <details>
+              <summary>Vad får kunden?</summary>
+              <p>Kunden får 10 % rabatt på bokningar där tipskoden används.</p>
+            </details>
+
+            <details>
+              <summary>Vad får tipsaren?</summary>
+              <p>Vårdnadshavaren kan få 20 % provision på godkända och betalda bokningar där den personliga koden används.</p>
+            </details>
+
+            <details>
+              <summary>Kan barn dela en rabattkod eller länk?</summary>
+              <p>Ja. Barn kan dela en personlig rabattkod eller länk med vårdnadshavarens godkännande. Avtal, kontakt och eventuell utbetalning sker alltid med vårdnadshavaren.</p>
+            </details>
+
+            <details>
+              <summary>Vem får utbetalningen?</summary>
+              <p>Utbetalning sker alltid till vårdnadshavaren. Avtal, kontakt och utbetalningsuppgifter hanteras med en myndig person.</p>
+            </details>
+
+            <details>
+              <summary>När får vårdnadshavaren betalt?</summary>
+              <p>När bokningen är genomförd, godkänd och betald enligt villkoren.</p>
+            </details>
+
+            <details>
+              <summary>Får jag posta i grupper?</summary>
+              <p>Ja, om gruppens regler tillåter det och inlägget är relevant. Ingen spam, inga massutskick och inga falska löften.</p>
+            </details>
+
+            <details>
+              <summary>Kan jag göra eget reklammaterial?</summary>
+              <p>Ja, men materialet får inte innehålla fel priser, falska löften eller villkor som inte är godkända. Hör av dig om du vill ha text eller bildmaterial.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ansok">
+      <div class="container">
+        <div class="section-title">
+          <h2>Ansök om personlig tipskod</h2>
+          <p>
+            Är du vårdnadshavare kan du ansöka själv. Om ett barn ska dela koden är det fortfarande du som står för ansökan, kontakt och eventuell utbetalning.
+          </p>
+        </div>
+
+        <section class="form-card">
+          <div class="form-card-head">
+            <h3>Skicka in din ansökan</h3>
             <p>
-              Offroad Bumpis drivs av <strong>Erica Nordlöf</strong>.
-              Verksamheten hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar och grupper med tydligt upplägg,
-              tydliga villkor och personlig kontakt.
+              Ansökningar går igenom manuellt. Målet är inte flest möjliga tipsare.
+              Målet är rätt tipsare som kan nå rätt kund utan spam.
             </p>
+          </div>
 
-            <p style="margin-top:14px;">
-              Tipsupplägget finns för att belöna personer som faktiskt kan skicka rätt kunder.
-              Rabattkodslösningen gör det lättare för kunden, lättare för tipsaren och lättare för Offroad Bumpis att hålla ordning.
-              Enkel matte. Inget clownsystem.
-            </p>
+          <div class="form-body">
+            <form class="contact-box" action="https://formsubmit.co/kontakt@offroadbumpis.se" method="POST" accept-charset="UTF-8" autocomplete="on">
+              <strong>Ansökan om tipskod</strong>
+              <small>Blir du godkänd får du en personlig rabattkod att dela vidare.</small>
 
-            <div class="trust-actions">
-              <a href="/" class="btn btn-secondary">Till startsidan</a>
-              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">kontakt@offroadbumpis.se</a>
-              <a href="/villkor.html" class="btn btn-secondary">Läs villkor</a>
-            </div>
-          </article>
+              <input type="hidden" name="_subject" value="Ny ansökan om tipskod från offroadbumpis.se" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://offroadbumpis.se/tack.html" />
+              <input type="hidden" name="_autoresponse" value="Tack! Din ansökan om personlig tipskod har kommit in." />
+              <input class="hidden-field" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+
+              <label for="namn">Namn på vårdnadshavare</label>
+              <input id="namn" type="text" name="Namn på vårdnadshavare" required autocomplete="name" />
+
+              <label for="email">E-post</label>
+              <input id="email" type="email" name="E-post" required autocomplete="email" inputmode="email" />
+
+              <label for="telefon">Telefon</label>
+              <input id="telefon" type="tel" name="Telefon" autocomplete="tel" inputmode="tel" />
+
+              <label for="kanaler">Hur tänker du nå relevanta kunder?</label>
+              <input id="kanaler" type="text" name="Hur når du relevanta kunder?" placeholder="t.ex. föräldranätverk, klass, förening, fritids, sociala medier eller lokala grupper" />
+
+              <label for="malgrupp">Vilken målgrupp känner du bäst?</label>
+              <input id="malgrupp" type="text" name="Målgrupp" placeholder="t.ex. föräldrar i Malmö, skola i Skåne, fotbollslag, förening eller eventgrupp" />
+
+              <label for="utbetalning">Hur vill du helst få eventuell utbetalning?</label>
+              <input id="utbetalning" type="text" name="Önskat utbetalningssätt" placeholder="t.ex. svenskt bankkonto, Swish eller faktura från företag" />
+
+              <label for="bakgrund">Berätta kort om dig</label>
+              <textarea id="bakgrund" name="Kort om dig" rows="4" placeholder="Vad du gör, vilken målgrupp du når och varför upplägget passar"></textarea>
+
+              <label for="barn">Ska ett barn dela koden?</label>
+              <input id="barn" type="text" name="Barn som delar koden" placeholder="t.ex. Ja, min son 9 år / Nej" />
+
+              <label for="ovrigt">Övrigt</label>
+              <textarea id="ovrigt" name="Övrigt" rows="4" placeholder="Länkar, målgrupp, ort eller annat som är bra att veta"></textarea>
+
+              <small class="form-legal">
+                Ansökan görs av myndig vårdnadshavare.<br />
+                Barn kan dela en rabattkod eller länk med vårdnadshavarens godkännande.<br />
+                Avtal, kontakt och utbetalning sker alltid med vårdnadshavaren.<br />
+                Rabatt och provision gäller bokningar där koden används och bokningen är godkänd och betald.<br />
+                Genom att skicka formuläret godkänner du att dina uppgifter behandlas enligt
+                <a href="/integritet.html">integritetspolicyn</a>.
+              </small>
+
+              <button class="btn contact-submit" type="submit">Skicka ansökan om tipskod</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="trust-card">
+          <h2>Vem driver detta?</h2>
+          <p>
+            Offroad Bumpis drivs av <strong>Erica Nordlöf</strong>.
+            Verksamheten hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar och grupper med tydligt upplägg,
+            tydliga villkor och personlig kontakt.
+          </p>
+
+          <p style="margin-top:14px;">
+            Tipsupplägget finns för att belöna personer som faktiskt kan skicka rätt kunder.
+            Rabattkodslösningen gör det lättare för kunden, lättare för tipsaren och lättare för Offroad Bumpis att hålla ordning.
+            Enkel matte. Inget clownsystem.
+          </p>
+
+          <div class="trust-actions">
+            <a href="/" class="btn btn-secondary">Till startsidan</a>
+            <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">kontakt@offroadbumpis.se</a>
+            <a href="/villkor.html" class="btn btn-secondary">Läs villkor</a>
+          </div>
         </div>
       </div>
     </section>
@@ -1838,7 +2024,7 @@
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a> ·
-          <a href="/affiliate.html">Affiliate</a>
+          <a href="/affiliate.html">Tipsprovision</a>
         </span>
       </div>
     </div>
