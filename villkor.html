@@ -16,9 +16,12 @@
 
   <link rel="canonical" href="https://offroadbumpis.se/villkor.html" />
 
+  <link rel="icon" type="image/png" sizes="512x512" href="https://offroadbumpis.se/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://offroadbumpis.se/apple-touch-icon.png" />
+
   <meta property="og:title" content="Villkor | Offroad Bumpis" />
   <meta property="og:description" content="Tydliga villkor för bokning, användning, säkerhet, betalning och återlämning av bumperballs." />
-  <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+  <meta property="og:image" content="https://offroadbumpis.se/bilder/offroad-bumpis-logo.png" />
   <meta property="og:url" content="https://offroadbumpis.se/villkor.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sv_SE" />
@@ -26,10 +29,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Villkor | Offroad Bumpis" />
   <meta name="twitter:description" content="Tydliga villkor för bokning, användning, säkerhet, betalning och återlämning av bumperballs." />
-  <meta name="twitter:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
-
-  <link rel="icon" type="image/png" sizes="512x512" href="https://offroadbumpis.se/favicon.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="https://offroadbumpis.se/apple-touch-icon.png" />
+  <meta name="twitter:image" content="https://offroadbumpis.se/bilder/offroad-bumpis-logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,8 @@
         "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
-        "about":{"@id":"https://offroadbumpis.se/#business"}
+        "about":{"@id":"https://offroadbumpis.se/#business"},
+        "primaryImageOfPage":"https://offroadbumpis.se/bilder/manual.png"
       },
       {
         "@type":"WebSite",
@@ -65,7 +66,7 @@
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "url":"https://offroadbumpis.se/",
-        "image":"https://offroadbumpis.se/Offroad%20Bumpis%20logo.png",
+        "image":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
         "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids och föreningar.",
@@ -599,6 +600,22 @@
       line-height:1.75;
     }
 
+    .manual-preview{
+      margin-top:18px;
+      overflow:hidden;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:#f7fff4;
+      box-shadow:0 12px 34px rgba(14,53,22,.08);
+    }
+
+    .manual-preview img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      background:#f7fff4;
+    }
+
     .link-row{
       display:flex;
       flex-wrap:wrap;
@@ -637,21 +654,6 @@
       color:var(--text);
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,.03);
-    }
-
-    .doc-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px 14px;
-      font-size:15px;
-      line-height:1.7;
-    }
-
-    .doc-links a{
-      text-decoration:underline;
-      text-underline-offset:3px;
-      color:#27442e;
-      font-weight:800;
     }
 
     footer{
@@ -700,7 +702,8 @@
         --line:rgba(0,0,0,.35);
       }
 
-      .card{
+      .card,
+      .manual-preview{
         border-color:rgba(0,0,0,.35);
       }
     }
@@ -710,7 +713,8 @@
       .menu-button,
       .menu-close,
       .card,
-      .hero-card{
+      .hero-card,
+      .manual-preview{
         border:2px solid ButtonText;
       }
 
@@ -804,6 +808,10 @@
         font-size:22px;
       }
 
+      .manual-preview{
+        border-radius:18px;
+      }
+
       .link-row{
         flex-direction:column;
         align-items:stretch;
@@ -842,7 +850,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span class="brand-text">
           <span class="brand-title">Offroad Bumpis</span>
           <span class="brand-sub">Villkor</span>
@@ -1085,15 +1093,25 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="manual">
             <h2>Användarmanual</h2>
             <p>
-              Här hittar du användarmanualen med praktiska instruktioner för pumpning, hantering och användning av bumperballs.
+              Här hittar du användarmanualen med praktiska instruktioner för säker användning, pumpning, tillsyn,
+              underlag och ansvar.
             </p>
 
-            <div class="doc-links">
-              <a href="/Användarmanual.pdf" download>Användarmanual PDF</a>
+            <div class="link-row">
+              <a class="btn btn-primary" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Öppna manual</a>
+              <a class="btn btn-secondary" href="/bilder/manual.png" download>Ladda ner manual</a>
             </div>
+
+            <a class="manual-preview" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer" aria-label="Öppna användarmanualen som bild">
+              <img
+                src="/bilder/manual.png"
+                alt="Användarmanual för Offroad Bumpis bumperball med säker användning, målgrupp, underlag, spelregler, tillsyn, pumpning och ansvar"
+                loading="lazy"
+              />
+            </a>
           </article>
 
           <article class="card">
@@ -1119,7 +1137,7 @@
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a> ·
           <a href="/affiliate.html">Affiliate</a> ·
-          <a href="/bilder/manual.png" download>Användarmanual
+          <a href="/bilder/manual.png" download>Användarmanual</a>
         </span>
       </div>
     </div>
@@ -1215,4 +1233,3 @@
   </script>
 </body>
 </html>
-```
