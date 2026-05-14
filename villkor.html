@@ -50,8 +50,7 @@
         "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
-        "about":{"@id":"https://offroadbumpis.se/#business"},
-        "primaryImageOfPage":"https://offroadbumpis.se/bilder/manual.png"
+        "about":{"@id":"https://offroadbumpis.se/#business"}
       },
       {
         "@type":"WebSite",
@@ -79,6 +78,7 @@
           "name":"Erica Nordlöf",
           "sameAs":"https://www.linkedin.com/in/erica-nordl%C3%B6f/"
         },
+        "priceRange":"600 SEK - 3000 SEK",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
           "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
@@ -113,17 +113,20 @@
       --text:#16311d;
       --muted:#4d6454;
       --line:rgba(18,64,29,.12);
+      --line-strong:rgba(18,64,29,.2);
       --green:#74d64c;
       --green-dark:#2f7f25;
+      --green-deep:#14361b;
       --green-soft:#dff8d1;
       --yellow:#ffd84d;
       --dark:#102217;
+      --white:#ffffff;
       --focus:#111111;
       --shadow:0 18px 55px rgba(14,53,22,.10);
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
-      --content-max:900px;
+      --content-max:980px;
       --header-offset:92px;
     }
 
@@ -440,23 +443,38 @@
       font-size:14px;
     }
 
-    .menu-cta .btn{
-      width:100%;
+    h1,
+    h2,
+    h3{
+      font-family:"Baloo 2",sans-serif;
+      letter-spacing:-.03em;
+      margin:0;
+      line-height:.96;
+      color:#14361b;
+      overflow-wrap:anywhere;
     }
 
     .hero{
-      padding:54px 0 28px;
+      padding:42px 0 24px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(300px,.72fr);
+      gap:22px;
+      align-items:stretch;
     }
 
     .hero-card{
-      background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
-      border-radius:30px;
-      padding:28px;
+      border-radius:34px;
+      padding:30px;
       box-shadow:0 28px 80px rgba(8,34,16,.18);
       overflow:hidden;
       position:relative;
       isolation:isolate;
+      min-width:0;
     }
 
     .hero-card::after{
@@ -478,7 +496,7 @@
       gap:8px;
       padding:8px 12px;
       background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
       border-radius:999px;
       font-size:13px;
       font-weight:900;
@@ -487,26 +505,17 @@
       line-height:1.4;
     }
 
-    h1,
-    h2,
-    h3{
-      font-family:"Baloo 2",sans-serif;
-      letter-spacing:-.03em;
-      margin:0;
-      line-height:.96;
-    }
-
     .hero-card h1{
       margin:14px 0 14px;
-      font-size:clamp(2.6rem,5vw,4.8rem);
+      font-size:clamp(2.45rem,5vw,4.75rem);
       color:#fff;
-      max-width:10ch;
+      max-width:11ch;
     }
 
     .hero-card p{
       margin:0;
       font-size:17px;
-      line-height:1.8;
+      line-height:1.78;
       color:#d7e8d8;
       max-width:760px;
     }
@@ -522,7 +531,8 @@
       max-width:780px;
     }
 
-    .hero-points li{
+    .hero-points li,
+    .bullet-list li{
       display:flex;
       gap:10px;
       align-items:flex-start;
@@ -535,92 +545,232 @@
       border-radius:50%;
       display:grid;
       place-items:center;
-      background:var(--green);
-      color:#14361b;
+      background:var(--green-dark);
+      color:#fff;
       font-size:12px;
       font-weight:900;
       margin-top:2px;
     }
 
+    .hero-card .check{
+      background:var(--green);
+      color:#14361b;
+    }
+
+    .manual-preview{
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      display:grid;
+      gap:14px;
+      align-content:start;
+      min-width:0;
+    }
+
+    .manual-preview h2{
+      font-size:30px;
+    }
+
+    .manual-preview p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-weight:700;
+    }
+
+    .manual-image{
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .manual-image img{
+      width:100%;
+      height:auto;
+    }
+
+    .quick-strip{
+      padding:0 0 14px;
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .quick-item{
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+      box-shadow:var(--shadow-soft);
+      color:#36523c;
+      font-weight:800;
+      line-height:1.4;
+    }
+
+    .quick-item strong{
+      display:block;
+      color:var(--text);
+      font-size:18px;
+      margin-bottom:3px;
+      font-weight:900;
+    }
+
     .section{
-      padding:24px 0 42px;
+      padding:32px 0;
     }
 
     .content-wrap{
       width:min(var(--content-max), 100%);
       margin:0 auto;
       display:grid;
-      gap:18px;
+      gap:16px;
     }
 
-    .card{
+    .section-title{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,520px);
+      gap:22px;
+      align-items:end;
+      margin-bottom:18px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.1rem,4vw,3.2rem);
+      max-width:14ch;
+    }
+
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:16px;
+      font-weight:700;
+    }
+
+    .summary-card,
+    .cta{
       background:rgba(255,255,255,.94);
       border:1px solid var(--line);
       border-radius:var(--radius);
-      padding:24px;
+      padding:22px;
       box-shadow:var(--shadow);
     }
 
-    .card h2{
-      font-size:32px;
+    .summary-card h2{
+      font-size:34px;
       margin-bottom:12px;
-      color:#14361b;
     }
 
-    .card h3{
-      font-size:24px;
-      margin-bottom:10px;
-      color:#14361b;
-    }
-
-    .card p{
+    .summary-card p{
       margin:0 0 14px;
       color:var(--muted);
-      line-height:1.8;
+      line-height:1.75;
       font-size:16px;
     }
 
-    .card p:last-child{
+    .summary-card p:last-child{
       margin-bottom:0;
     }
 
     .bullet-list{
       display:grid;
-      gap:10px;
+      gap:9px;
       margin:0;
       padding:0;
       list-style:none;
     }
 
     .bullet-list li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
+      color:var(--muted);
+      line-height:1.7;
+      font-weight:700;
+    }
+
+    .terms{
+      display:grid;
+      gap:12px;
+    }
+
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:0;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+      overflow:hidden;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      list-style:none;
+      padding:17px 48px 17px 18px;
+      position:relative;
+      line-height:1.45;
+      color:#17351e;
+    }
+
+    summary::after{
+      content:"+";
+      position:absolute;
+      right:18px;
+      top:50%;
+      transform:translateY(-50%);
+      width:26px;
+      height:26px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:20px;
+      font-weight:900;
+    }
+
+    details[open] summary::after{
+      content:"–";
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .details-content{
+      padding:0 18px 18px;
+      border-top:1px solid rgba(18,64,29,.08);
+    }
+
+    .details-content p{
+      margin:14px 0 0;
       color:var(--muted);
       line-height:1.75;
     }
 
-    .manual-preview{
-      margin-top:18px;
-      overflow:hidden;
-      border-radius:22px;
-      border:1px solid var(--line);
-      background:#f7fff4;
-      box-shadow:0 12px 34px rgba(14,53,22,.08);
+    .details-content ul{
+      margin:14px 0 0;
     }
 
-    .manual-preview img{
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      background:#f7fff4;
+    .details-content strong{
+      color:#17351e;
     }
 
-    .link-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
+    .notice{
+      border-color:rgba(255,216,77,.55);
+      background:linear-gradient(180deg,#fffdf2 0%,#fff 100%);
+    }
+
+    .notice summary::after{
+      background:#fff6c4;
+      border-color:rgba(255,216,77,.55);
+      color:#7a5a00;
     }
 
     .btn{
@@ -654,6 +804,67 @@
       color:var(--text);
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,.03);
+    }
+
+    .link-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .cta{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-radius:34px;
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+      gap:20px;
+      align-items:start;
+      padding:30px;
+    }
+
+    .cta h2{
+      color:#fff;
+      font-size:clamp(2rem,4vw,3rem);
+      margin-bottom:10px;
+      max-width:13ch;
+    }
+
+    .cta p{
+      margin:0;
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:680px;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:24px;
+      padding:20px;
+      display:grid;
+      gap:10px;
+      min-width:0;
+    }
+
+    .contact-box strong{
+      color:#fff;
+      font-size:20px;
+    }
+
+    .contact-link{
+      display:flex;
+      align-items:center;
+      min-height:48px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      font-weight:800;
+      line-height:1.45;
+      word-break:break-word;
     }
 
     footer{
@@ -702,8 +913,10 @@
         --line:rgba(0,0,0,.35);
       }
 
-      .card,
-      .manual-preview{
+      details,
+      .summary-card,
+      .manual-preview,
+      .quick-item{
         border-color:rgba(0,0,0,.35);
       }
     }
@@ -712,15 +925,36 @@
       .btn,
       .menu-button,
       .menu-close,
-      .card,
+      details,
+      .summary-card,
+      .manual-preview,
       .hero-card,
-      .manual-preview{
+      .cta{
         border:2px solid ButtonText;
       }
 
       a,
       button{
         text-decoration:underline;
+      }
+    }
+
+    @media (max-width:1120px){
+      .hero-grid,
+      .cta{
+        grid-template-columns:1fr;
+      }
+
+      .manual-preview{
+        max-width:620px;
+      }
+
+      .quick-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .section-title{
+        grid-template-columns:1fr;
       }
     }
 
@@ -773,43 +1007,54 @@
       }
 
       .hero{
-        padding:30px 0 18px;
+        padding:28px 0 18px;
       }
 
-      .hero-card{
+      .hero-card,
+      .manual-preview,
+      .cta{
         border-radius:24px;
         padding:20px 18px;
       }
 
       .hero-card h1{
-        font-size:clamp(2.1rem,10vw,3.2rem);
+        font-size:clamp(2.1rem,10vw,3.25rem);
         max-width:none;
       }
 
-      .hero-card p{
+      .hero-card p,
+      .section-title p,
+      .summary-card p,
+      .details-content p,
+      .cta p{
         font-size:15.5px;
         line-height:1.72;
       }
 
-      .section{
-        padding:18px 0 30px;
-      }
-
-      .card{
-        padding:18px;
-        border-radius:20px;
-      }
-
-      .card h2{
+      .manual-preview h2,
+      .summary-card h2{
         font-size:28px;
       }
 
-      .card h3{
-        font-size:22px;
+      .quick-grid{
+        grid-template-columns:1fr;
       }
 
-      .manual-preview{
-        border-radius:18px;
+      .section{
+        padding:24px 0;
+      }
+
+      summary{
+        padding:16px 46px 16px 16px;
+      }
+
+      .details-content{
+        padding:0 16px 16px;
+      }
+
+      .summary-card{
+        padding:18px;
+        border-radius:20px;
       }
 
       .link-row{
@@ -817,7 +1062,8 @@
         align-items:stretch;
       }
 
-      .link-row .btn{
+      .link-row .btn,
+      .cta .btn{
         width:100%;
       }
 
@@ -833,12 +1079,13 @@
         padding:7px 10px;
       }
 
-      .card h2{
-        font-size:25px;
+      .section-title h2{
+        font-size:2rem;
       }
 
-      .card h3{
-        font-size:20px;
+      .summary-card h2,
+      .manual-preview h2{
+        font-size:25px;
       }
     }
   </style>
@@ -887,6 +1134,7 @@
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
+      <a href="/affiliate.html">Affiliate</a>
     </nav>
 
     <div class="menu-cta">
@@ -900,223 +1148,333 @@
 
   <main id="main">
     <section class="hero">
-      <div class="container">
+      <div class="container hero-grid">
         <div class="hero-card">
-          <span class="eyebrow">Tydligt och enkelt</span>
+          <span class="eyebrow">Tydliga villkor · tryggare bokning · mindre frågetecken</span>
+
           <h1>Villkor</h1>
+
           <p>
             Här står vad som gäller när du bokar och hyr bumperballs från Offroad Bumpis.
-            Syftet är att allt ska vara tydligt före bokning, under uthyrning och vid återlämning.
+            Syftet är enkelt: tydlig bokning, säker användning och smidig återlämning.
           </p>
 
           <ul class="hero-points">
-            <li><span class="check">✓</span><span>10 bumperballs, 2 batteridrivna pumpar, 2 väskor och 1 transportplatta ingår i grundpaketet.</span></li>
-            <li><span class="check">✓</span><span>Ingen deposition och ingen självrisk vid normal användning enligt villkoren.</span></li>
-            <li><span class="check">✓</span><span>Vuxen tillsyn krävs hela tiden och utrustningen får bara användas på lämpligt underlag.</span></li>
+            <li><span class="check">✓</span><span>10 bumperballs, 2 batteridrivna pumpar, 5 transportsäckar och 1 transportplatta ingår i 10-pack.</span></li>
+            <li><span class="check">✓</span><span>För varje 2-pack bumperballs ingår 1 transportsäck.</span></li>
+            <li><span class="check">✓</span><span>Vuxen tillsyn krävs hela tiden och utrustningen får bara användas på godkänt underlag.</span></li>
           </ul>
+
+          <div class="link-row">
+            <a class="btn btn-secondary" href="#villkor">Läs villkor</a>
+            <a class="btn btn-secondary" href="#manual">Se manual</a>
+            <a class="btn btn-secondary" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Boka</a>
+          </div>
+        </div>
+
+        <aside class="manual-preview" id="manual" aria-label="Användarmanual">
+          <h2>Användarmanual</h2>
+          <p>Manualen finns som bild här på sidan. Smart nog att läsa före start. Inte som IKEA, fast med mer studs.</p>
+
+          <a class="manual-image" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer" aria-label="Öppna användarmanualen i större format">
+            <img src="/bilder/manual.png" alt="Användarmanual för bumperball från Offroad Bumpis" loading="lazy" />
+          </a>
+
+          <div class="link-row">
+            <a class="btn btn-primary" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Öppna manual</a>
+            <a class="btn btn-secondary" href="/bilder/manual.png" download>Ladda ner</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Snabb information">
+      <div class="container quick-grid">
+        <div class="quick-item">
+          <strong>7–12 år</strong>
+          Rekommenderad ålder
+        </div>
+
+        <div class="quick-item">
+          <strong>Max 60 kg</strong>
+          Per deltagare
+        </div>
+
+        <div class="quick-item">
+          <strong>1 transportsäck</strong>
+          Per 2-pack
+        </div>
+
+        <div class="quick-item">
+          <strong>3 dagar</strong>
+          Avbokningsgräns
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="villkor">
       <div class="container">
         <div class="content-wrap">
-          <article class="card">
+          <div class="section-title">
+            <h2>Villkor i kompakt format</h2>
+            <p>
+              Öppna bara de delar du behöver. Resten ligger snyggt parkerat tills någon vill läsa mer.
+            </p>
+          </div>
+
+          <article class="summary-card">
             <h2>Det här gäller i korthet</h2>
             <p>
               Offroad Bumpis hyr ut bumperballs för barnaktiviteter som barnkalas, skola, fritids,
               föreningar och liknande. Kunden ansvarar för uppsättning, användning, tillsyn och förvaring under hyrestiden.
             </p>
-            <p>
-              Utrustningen får användas inomhus eller utomhus, men bara på plana och lämpliga underlag.
-              Hård, ojämn eller vass miljö är en dålig idé direkt ur driftsperspektiv.
-            </p>
-          </article>
-
-          <article class="card" id="bokning">
-            <h2>Bokning och betalning</h2>
-            <p>
-              Bokningen låses när den är bekräftad. Faktura ska vara betald senast 3 dagar före uthyrningsdatum.
-              Om fakturan inte betalas i tid släpps bokningen.
-            </p>
-            <p>
-              Grundpriset är 2 000 kr inklusive moms per uthyrningsdag för 10 bumperballs.
-              Helgregeln är fredag kl. 08.00 till söndag kl. 20.00 som räknas som en uthyrningsdag.
-            </p>
-            <p>
-              Upphämtning i Malmö är gratis. Leverans kan väljas som tillval enligt aktuell leveranszon.
-            </p>
-          </article>
-
-          <article class="card">
-            <h2>Det som ingår</h2>
-            <p>Följande ingår i grundpaketet och ska lämnas tillbaka:</p>
 
             <ul class="bullet-list">
-              <li><span class="check">✓</span><span>10 bumperballs</span></li>
-              <li><span class="check">✓</span><span>2 batteridrivna luftpumpar</span></li>
-              <li><span class="check">✓</span><span>2 transportväskor</span></li>
-              <li><span class="check">✓</span><span>1 transportplatta</span></li>
+              <li><span class="check">✓</span><span>Bumperballs är för barn cirka 7–12 år, max 60 kg.</span></li>
+              <li><span class="check">✓</span><span>1 person per boll gäller.</span></li>
+              <li><span class="check">✓</span><span>Inga vuxna eller personer över viktgränsen får använda bollarna.</span></li>
+              <li><span class="check">✓</span><span>Ansvarig vuxen ska övervaka hela aktiviteten.</span></li>
             </ul>
           </article>
 
-          <article class="card" id="anvandning">
-            <h2>Vem får använda utrustningen?</h2>
-            <p>
-              Bumperballs är avsedda för barn, ungefär 7–12 år, med maxvikt cirka 60 kg.
-              Det är 1 person per boll. Vuxna eller personer över viktgränsen får inte använda dem.
-            </p>
-          </article>
+          <div class="terms">
+            <details>
+              <summary>Bokning och betalning</summary>
+              <div class="details-content">
+                <p>
+                  Bokningen låses när den är bekräftad. Faktura ska vara betald senast 3 dagar före uthyrningsdatum.
+                  Om fakturan inte betalas i tid släpps bokningen.
+                </p>
+                <p>
+                  Grundpriset är 2 000 kr inklusive moms per uthyrningsdag för 10 bumperballs.
+                  Helgregeln är fredag kl. 08.00 till söndag kl. 20.00 som räknas som en uthyrningsdag.
+                </p>
+                <p>
+                  Upphämtning i Malmö är gratis. Leverans kan väljas som tillval enligt aktuell leveranszon.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Tillåtna underlag</h2>
-            <p>Utrustningen får användas på mjuka och lämpliga underlag som:</p>
+            <details open>
+              <summary>Det som ingår</summary>
+              <div class="details-content">
+                <p><strong>2-pack bumperballs:</strong></p>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>2 bumperballs</span></li>
+                  <li><span class="check">✓</span><span>1 batteridriven pump</span></li>
+                  <li><span class="check">✓</span><span>1 transportsäck</span></li>
+                </ul>
 
-            <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Gräs</span></li>
-              <li><span class="check">✓</span><span>Konstgräs</span></li>
-              <li><span class="check">✓</span><span>Sporthallsgolv</span></li>
-              <li><span class="check">✓</span><span>Fin sand</span></li>
-              <li><span class="check">✓</span><span>Mjuk eller packad snö</span></li>
-            </ul>
+                <p><strong>10-pack bumperballs:</strong></p>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>10 bumperballs</span></li>
+                  <li><span class="check">✓</span><span>2 batteridrivna luftpumpar</span></li>
+                  <li><span class="check">✓</span><span>5 transportsäckar</span></li>
+                  <li><span class="check">✓</span><span>1 transportplatta</span></li>
+                </ul>
+              </div>
+            </details>
 
-            <p>
-              Utrustningen får inte användas på till exempel asfalt, grus, betong, is eller hårda,
-              ojämna och steniga ytor.
-            </p>
-          </article>
+            <details>
+              <summary>Ålder, vikt och användare</summary>
+              <div class="details-content">
+                <p>
+                  Bumperballs är avsedda för barn, ungefär 7–12 år, med maxvikt cirka 60 kg.
+                  Det är 1 person per boll.
+                </p>
+                <p>
+                  Vuxna eller personer över viktgränsen får inte använda dem. Den regeln är inte förhandlingsbar,
+                  eftersom utrustningen är i barnstorlek.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Säker användning</h2>
-            <p>Följande regler gäller under hela användningen:</p>
+            <details>
+              <summary>Tillåtna och otillåtna underlag</summary>
+              <div class="details-content">
+                <p><strong>Tillåtna underlag:</strong></p>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Gräs</span></li>
+                  <li><span class="check">✓</span><span>Konstgräs</span></li>
+                  <li><span class="check">✓</span><span>Sporthallsgolv</span></li>
+                  <li><span class="check">✓</span><span>Fin sand</span></li>
+                  <li><span class="check">✓</span><span>Mjuk eller packad snö</span></li>
+                </ul>
 
-            <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Ansvarig vuxen ska övervaka hela tiden.</span></li>
-              <li><span class="check">✓</span><span>Inga tacklingar bakifrån.</span></li>
-              <li><span class="check">✓</span><span>Ingen kontakt med spelare som ligger ner.</span></li>
-              <li><span class="check">✓</span><span>Inga dobbar, cleats, smycken eller vassa föremål nära bollarna.</span></li>
-              <li><span class="check">✓</span><span>Avbryt direkt om någon får ont, blir yr eller känner obehag.</span></li>
-              <li><span class="check">✓</span><span>Ingen hopp från höjd eller annan risklek som hör hemma i kategorin dåliga beslut.</span></li>
-            </ul>
-          </article>
+                <p>
+                  Utrustningen får inte användas på asfalt, grus, betong, is eller hårda,
+                  ojämna och steniga ytor. Ytan ska vara fri från vassa föremål och hinder.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Pumpning och hantering</h2>
-            <p>
-              Pumpning ska bara göras av vuxen. Barn får inte använda pumpen.
-              Långt hår ska bindas upp och pumpen ska hållas manuellt över ventilöppningen enligt instruktionen.
-            </p>
-            <p>
-              Om luft pyser ut ska det justeras direkt. Felaktig hantering av pump eller ventil räknas inte som normal användning.
-            </p>
-          </article>
+            <details>
+              <summary>Säker användning</summary>
+              <div class="details-content">
+                <p>Följande regler gäller under hela användningen:</p>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Ansvarig vuxen ska övervaka hela tiden.</span></li>
+                  <li><span class="check">✓</span><span>Inga tacklingar bakifrån.</span></li>
+                  <li><span class="check">✓</span><span>Ingen kontakt med spelare som ligger ner.</span></li>
+                  <li><span class="check">✓</span><span>Inga dobbar, cleats, smycken eller vassa föremål nära bollarna.</span></li>
+                  <li><span class="check">✓</span><span>Avbryt direkt vid obehag, skada, yrsel eller risk.</span></li>
+                  <li><span class="check">✓</span><span>Ingen hopp från höjd, hård satsning eller grov lek.</span></li>
+                </ul>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Försäkring och olycksfall</h2>
-            <p>
-              Offroad Bumpis ansvarsförsäkring är inte en olycksfallsförsäkring för kunden eller deltagarna.
-              Om någon skadar sig under användning behöver deltagaren eller vårdnadshavaren i normalfallet ha egen olycksfallsförsäkring.
-            </p>
-            <p>
-              Ansvarsförsäkring kan bli relevant om det finns en brist eller skada på uthyrd utrustning och det riktas ett ansvarskrav mot Offroad Bumpis.
-              Det betyder inte att alla skador under aktivitet automatiskt ersätts.
-            </p>
-          </article>
+            <details>
+              <summary>Pumpning och hantering</summary>
+              <div class="details-content">
+                <p>
+                  Pumpning ska bara göras av vuxen. Barn får inte använda pumpen.
+                  Långt hår ska bindas upp och lösa kläder ska hållas borta från pumpen.
+                </p>
+                <p>
+                  Pumpen hålls manuellt över ventilöppningen. Öppna eller stäng ventilen genom att trycka in
+                  och skruva åt höger eller vänster. Riktningen kan variera.
+                </p>
+                <p>
+                  Om luft pyser ut ska det justeras direkt. Felaktig hantering av pump eller ventil räknas inte som normal användning.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Överlämning och återlämning</h2>
-            <p>
-              Utrustningens skick dokumenteras vid överlämning och kan även dokumenteras vid återlämning.
-              Bilder eller video tas bara om det faktiskt finns avvikelser. Inga noterade avvikelser betyder i praktiken att inget avvikande har dokumenterats.
-            </p>
-            <p>
-              Utrustningen ska lämnas tillbaka i tid och i samma dokumenterade skick som vid utlämning,
-              bortsett från normalt slitage.
-            </p>
-          </article>
+            <details>
+              <summary>Tillsyn och ansvarig vuxen</summary>
+              <div class="details-content">
+                <p>
+                  En ansvarig vuxen ska övervaka aktiviteten hela tiden. Ingen användning utan tillsyn.
+                  Den ansvariga vuxna ska stoppa leken direkt om reglerna inte följs.
+                </p>
+                <p>
+                  Kunden ansvarar för att deltagare och ansvariga vuxna följer villkoren, manualen och säkerhetsinstruktionerna.
+                </p>
+              </div>
+            </details>
 
-          <article class="card" id="skador">
-            <h2>Skador, förlust och ansvar</h2>
-            <p>
-              Ingen deposition tas ut. Ingen självrisk gäller vid normal användning enligt villkoren.
-              Små hål och normalt slitage hanteras av Offroad Bumpis.
-            </p>
-            <p>
-              Skadefaktura kan bli aktuell vid grov oaktsamhet, uppsåtlig skada, felaktig användning,
-              förlorade delar, utebliven återlämning eller andra tydliga avvikelser som kan styrkas genom dokumentation.
-            </p>
-            <p>
-              Baslinjen vid en eventuell tvist är dokumenterat skick vid överlämning jämfört med dokumenterat skick vid återlämning.
-            </p>
-            <p>
-              Kunden ansvarar för utrustningen under hyrestiden. Det gäller även om utrustningen försvinner,
-              inte lämnas tillbaka eller skadas på ett sätt som inte räknas som normalt slitage.
-            </p>
-          </article>
+            <details>
+              <summary>Försäkring och olycksfall</summary>
+              <div class="details-content">
+                <p>
+                  Offroad Bumpis ansvarsförsäkring är inte en olycksfallsförsäkring för kunden eller deltagarna.
+                  Om någon skadar sig under användning behöver deltagaren eller vårdnadshavaren i normalfallet ha egen olycksfallsförsäkring.
+                </p>
+                <p>
+                  Ansvarsförsäkring kan bli relevant om det finns en brist eller skada på uthyrd utrustning och det riktas ett ansvarskrav mot Offroad Bumpis.
+                  Det betyder inte att alla skador under aktivitet automatiskt ersätts.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Stöld och förvaring</h2>
-            <p>
-              Utrustningen ska förvaras aktsamt och skyddas mot stöld, väta, onödigt slitage och skador under hela hyrestiden.
-            </p>
-            <p>
-              Offroad Bumpis försäkring omfattar inte stöldskydd för utrustningen när den är hos kunden.
-              Kunden ansvarar därför för hyrd utrustning under hyrestiden tills allt är återlämnat.
-            </p>
-            <p>
-              Eventuell egendomsförsäkring kopplad till Offroad Bumpis gäller på försäkringsstället, inte som ett frikort ute hos kund.
-            </p>
-          </article>
+            <details>
+              <summary>Överlämning och återlämning</summary>
+              <div class="details-content">
+                <p>
+                  Utrustningens skick dokumenteras vid överlämning och kan även dokumenteras vid återlämning.
+                  Bilder eller video tas bara om det faktiskt finns avvikelser.
+                </p>
+                <p>
+                  Utrustningen ska lämnas tillbaka i tid och i samma dokumenterade skick som vid utlämning,
+                  bortsett från normalt slitage.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Avbokning och utebliven hämtning</h2>
-            <ul class="bullet-list">
-              <li><span class="check">✓</span><span>Avbokning mer än 3 dagar före uthyrningsdatum: 100 % återbetalning.</span></li>
-              <li><span class="check">✓</span><span>Avbokning mindre än 3 dagar före uthyrningsdatum: 100 % debitering, men beloppet kan krediteras mot ny bokning inom 6 månader.</span></li>
-              <li><span class="check">✓</span><span>Utrustning som inte hämtas ut: 100 % debitering.</span></li>
-              <li><span class="check">✓</span><span>Sen återlämning kan leda till extra avgifter eller förlängd hyrdebitering.</span></li>
-            </ul>
-          </article>
+            <details>
+              <summary>Skador, förlust och ansvar</summary>
+              <div class="details-content">
+                <p>
+                  Ingen deposition tas ut. Ingen självrisk gäller vid normal användning enligt villkoren.
+                  Små hål och normalt slitage hanteras av Offroad Bumpis.
+                </p>
+                <p>
+                  Skadefaktura kan bli aktuell vid grov oaktsamhet, uppsåtlig skada, felaktig användning,
+                  förlorade delar, utebliven återlämning eller andra tydliga avvikelser som kan styrkas genom dokumentation.
+                </p>
+                <p>
+                  Baslinjen vid en eventuell tvist är dokumenterat skick vid överlämning jämfört med dokumenterat skick vid återlämning.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h2>Kontakt och frågor</h2>
-            <p>
-              Har du frågor före bokning eller vill stämma av något praktiskt, mejla
-              <a href="mailto:kontakt@offroadbumpis.se" style="text-decoration:underline; text-underline-offset:3px;">kontakt@offroadbumpis.se</a>
-              eller ring 079-344 25 20.
-            </p>
+            <details>
+              <summary>Stöld och förvaring</summary>
+              <div class="details-content">
+                <p>
+                  Utrustningen ska förvaras aktsamt och skyddas mot stöld, väta, onödigt slitage och skador under hela hyrestiden.
+                </p>
+                <p>
+                  Offroad Bumpis försäkring omfattar inte stöldskydd för utrustningen när den är hos kunden.
+                  Kunden ansvarar därför för hyrd utrustning under hyrestiden tills allt är återlämnat.
+                </p>
+              </div>
+            </details>
 
-            <div class="link-row" id="kontakt">
-              <a class="btn btn-primary" href="/">Till startsidan</a>
-              <a class="btn btn-secondary" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
-              <a class="btn btn-secondary" href="/integritet.html">Läs integritetspolicy</a>
+            <details>
+              <summary>Avbokning och utebliven hämtning</summary>
+              <div class="details-content">
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Avbokning mer än 3 dagar före uthyrningsdatum: 100 % återbetalning.</span></li>
+                  <li><span class="check">✓</span><span>Avbokning mindre än 3 dagar före uthyrningsdatum: 100 % debitering, men beloppet kan krediteras mot ny bokning inom 6 månader.</span></li>
+                  <li><span class="check">✓</span><span>Utrustning som inte hämtas ut: 100 % debitering.</span></li>
+                  <li><span class="check">✓</span><span>Sen återlämning kan leda till extra avgifter eller förlängd hyrdebitering.</span></li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="notice">
+              <summary>Viktigt vid osäkerhet</summary>
+              <div class="details-content">
+                <p>
+                  Använd inte utrustningen om något känns osäkert, om en boll läcker luft eller om underlaget inte följer reglerna.
+                  Stoppa aktiviteten och kontakta Offroad Bumpis.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Användarmanual</summary>
+              <div class="details-content">
+                <p>
+                  Användarmanualen finns som bild på sidan och kan öppnas eller laddas ner.
+                  Den visar målgrupp, underlag, spelregler, tillsyn, pumpning, ansvar och viktig säkerhetsinfo.
+                </p>
+                <div class="link-row">
+                  <a class="btn btn-primary" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Öppna manual</a>
+                  <a class="btn btn-secondary" href="/bilder/manual.png" download>Ladda ner manual</a>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <article class="cta" id="kontakt">
+            <div>
+              <h2>Frågor före bokning?</h2>
+              <p>
+                Mejla eller boka direkt. Vid större upplägg: skriv datum, ort, ungefärligt antal barn
+                och om ni vill hämta själva eller ha leverans.
+              </p>
+
+              <div class="link-row">
+                <a class="btn btn-secondary" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Boka bumperballs</a>
+                <a class="btn btn-secondary" href="mailto:kontakt@offroadbumpis.se">Skicka mejl</a>
+                <a class="btn btn-secondary" href="/">Till startsidan</a>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <strong>Kontakt</strong>
+              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+              <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
+              <a class="contact-link" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+              <a class="contact-link" href="/integritet.html">Integritetspolicy</a>
             </div>
           </article>
 
-          <article class="card" id="manual">
-            <h2>Användarmanual</h2>
-            <p>
-              Här hittar du användarmanualen med praktiska instruktioner för säker användning, pumpning, tillsyn,
-              underlag och ansvar.
-            </p>
-
-            <div class="link-row">
-              <a class="btn btn-primary" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Öppna manual</a>
-              <a class="btn btn-secondary" href="/bilder/manual.png" download>Ladda ner manual</a>
-            </div>
-
-            <a class="manual-preview" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer" aria-label="Öppna användarmanualen som bild">
-              <img
-                src="/bilder/manual.png"
-                alt="Användarmanual för Offroad Bumpis bumperball med säker användning, målgrupp, underlag, spelregler, tillsyn, pumpning och ansvar"
-                loading="lazy"
-              />
-            </a>
-          </article>
-
-          <article class="card">
+          <article class="summary-card">
             <h2>Senast uppdaterad</h2>
-            <p>2026-05-08</p>
+            <p>2026-05-14</p>
           </article>
         </div>
       </div>
