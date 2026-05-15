@@ -7,7 +7,7 @@
   <title>Bumperball för fotbollsföreningar i Skåne | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för avslutning, extraträning, sommarfotboll, föreningsdag och intern miniturnering för barn 7–12 år."
+    content="Hyr 10 bumperballs till fotbollsförening i Skåne. Kör internturnering, Bumpisligan, avslutning, extraträning eller föreningsdag för barn 7–12 år."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" type="image/png" href="bilder/offroad-bumpis-logo.png" />
 
   <meta property="og:title" content="Bumperball för fotbollsföreningar i Skåne | Offroad Bumpis" />
-  <meta property="og:description" content="Hyr 10 bumperballs till avslutning, extraträning eller föreningsdag. För barn 7–12 år i Skåne." />
+  <meta property="og:description" content="Hyr 10 bumperballs till avslutning, extraträning eller föreningsdag. Kör internturnering och Bumpisligan för barn 7–12 år i Skåne." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/bumperball-fotbollsforening-skane.html" />
   <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bumperball för fotbollsföreningar i Skåne | Offroad Bumpis" />
-  <meta name="twitter:description" content="En färdig aktivitet för fotbollsföreningar: 10 bumperballs, 2 pumpar, poängmallar, diplom och pokal." />
+  <meta name="twitter:description" content="En färdig aktivitet för fotbollsföreningar: 10 bumperballs, 2 pumpar, poängmallar, diplom, pokal och Bumpisligan." />
   <meta name="twitter:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,7 +79,7 @@
         "@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#webpage",
         "url":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html",
         "name":"Bumperball för fotbollsföreningar i Skåne",
-        "description":"Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för avslutning, extraträning, sommarfotboll och intern miniturnering för barn 7–12 år.",
+        "description":"Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för avslutning, extraträning, sommarfotboll, intern miniturnering och Bumpisligan för barn 7–12 år.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"}
@@ -98,6 +98,14 @@
         "@type":"FAQPage",
         "@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#faq",
         "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Är Bumpisligan en egen förening?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nej. Bumpisligan är ett aktivitetskoncept från Offroad Bumpis. Fotbollsföreningar hyr utrustningen, kör sin egen internturnering och kan skicka in resultat."
+            }
+          },
           {
             "@type":"Question",
             "name":"Vilken ålder passar bumperballs för?",
@@ -589,6 +597,28 @@
       max-width:680px;
     }
 
+    .hero-note{
+      margin-top:18px;
+      padding:16px 18px;
+      border-radius:22px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero-note strong{
+      display:block;
+      margin-bottom:4px;
+      color:#14361b;
+      font-weight:900;
+    }
+
+    .hero-note p{
+      font-size:15px;
+      line-height:1.65;
+      color:#4d6454;
+    }
+
     .hero-actions{
       display:flex;
       gap:12px;
@@ -803,6 +833,44 @@
       box-shadow:var(--shadow);
     }
 
+    .concept-note{
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr);
+      gap:14px;
+      align-items:start;
+      padding:16px 18px;
+      border-radius:22px;
+      background:#f5fff1;
+      border:1px solid var(--line);
+      margin:4px 0 20px;
+    }
+
+    .concept-note-icon{
+      width:38px;
+      height:38px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--green),var(--yellow));
+      color:#14361b;
+      font-weight:900;
+      flex:0 0 auto;
+    }
+
+    .concept-note strong{
+      display:block;
+      color:#14361b;
+      font-weight:900;
+      margin-bottom:4px;
+    }
+
+    .concept-note p{
+      margin:0;
+      color:#4d6454;
+      line-height:1.65;
+      font-size:15px;
+    }
+
     .league-control{
       display:grid;
       grid-template-columns:minmax(0,1fr) auto;
@@ -850,6 +918,12 @@
     .result-card h3{
       font-size:28px;
       margin-bottom:10px;
+    }
+
+    .result-card p{
+      margin:0;
+      color:#4d6454;
+      line-height:1.7;
     }
 
     .result-row{
@@ -1366,6 +1440,10 @@
         margin-top:12px;
       }
 
+      .concept-note{
+        grid-template-columns:1fr;
+      }
+
       .result-row{
         grid-template-columns:1fr;
         gap:4px;
@@ -1467,6 +1545,14 @@
             Ett enkelt upplägg för fotbollsföreningar som vill göra avslutningen, extraträningen
             eller föreningsdagen roligare.
           </p>
+
+          <div class="hero-note">
+            <strong>Bumpisligan är ett aktivitetskoncept – inte en egen förening.</strong>
+            <p>
+              Fotbollsföreningar hyr utrustningen, kör sin egen internturnering och kan skicka in resultatet.
+              Mindre administration. Mer studs. Exakt som en bra matchplan ska vara.
+            </p>
+          </div>
 
           <div class="hero-actions">
             <a href="mailto:kontakt@offroadbumpis.se?subject=Intresse%20f%C3%B6r%20bumperball%20till%20fotbollsf%C3%B6rening" class="btn btn-primary">
@@ -1599,6 +1685,17 @@
               Välj en fotbollsförening i listan och se internturneringens status, resultat,
               vinnande lag och om föreningen är öppen för att möta vinnare från annan förening.
             </p>
+          </div>
+
+          <div class="concept-note">
+            <div class="concept-note-icon" aria-hidden="true">!</div>
+            <div>
+              <strong>Bumpisligan är ett koncept från Offroad Bumpis.</strong>
+              <p>
+                Det är ingen separat förening och inget medlemskap krävs. Varje fotbollsförening ansvarar för sin egen aktivitet,
+                sina ledare och sina deltagare. Offroad Bumpis hyr ut utrustningen och kan visa inskickade resultat här.
+              </p>
+            </div>
           </div>
 
           <div class="league-control">
@@ -1750,6 +1847,14 @@
           <p>
             Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg.
             En person per boll gäller.
+          </p>
+        </details>
+
+        <details>
+          <summary>Är Bumpisligan en egen förening?</summary>
+          <p>
+            Nej. Bumpisligan är ett aktivitetskoncept från Offroad Bumpis, inte en juridisk förening.
+            Fotbollsföreningar hyr utrustningen, ansvarar själva för aktiviteten och kan skicka in sina resultat.
           </p>
         </details>
 
