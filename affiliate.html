@@ -21,7 +21,7 @@
 
   <meta property="og:title" content="Tipsprovision stängd just nu | Offroad Bumpis" />
   <meta property="og:description" content="Vi tar inte emot nya tipsare just nu. Ansökan är stängd för tillfället." />
-  <meta property="og:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+  <meta property="og:image" content="https://offroadbumpis.se/bilder/offroad-bumpis-logo.png" />
   <meta property="og:url" content="https://offroadbumpis.se/affiliate.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sv_SE" />
@@ -29,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tipsprovision stängd just nu | Offroad Bumpis" />
   <meta name="twitter:description" content="Vi tar inte emot nya tipsare just nu. Ansökan är stängd för tillfället." />
-  <meta name="twitter:image" content="https://offroadbumpis.se/Offroad%20Bumpis%20logo.png" />
+  <meta name="twitter:image" content="https://offroadbumpis.se/bilder/offroad-bumpis-logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,8 @@
         "description":"Ansökan till Offroad Bumpis tipsprovision är stängd just nu. Vi tar inte emot nya tipsare för tillfället.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
-        "about":{"@id":"https://offroadbumpis.se/#business"}
+        "about":{"@id":"https://offroadbumpis.se/#business"},
+        "breadcrumb":{"@id":"https://offroadbumpis.se/affiliate.html#breadcrumb"}
       },
       {
         "@type":"WebSite",
@@ -65,7 +66,7 @@
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "url":"https://offroadbumpis.se/",
-        "image":"https://offroadbumpis.se/Offroad%20Bumpis%20logo.png",
+        "image":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
         "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids och föreningar.",
@@ -78,9 +79,11 @@
           "name":"Erica Nordlöf",
           "sameAs":"https://www.linkedin.com/in/erica-nordl%C3%B6f/"
         },
+        "priceRange":"600 SEK - 3000 SEK",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
-          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
+          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic",
+          "https://webutvecklare.se/"
         ],
         "offers":[
           {
@@ -162,10 +165,16 @@
       --text:#16311d;
       --muted:#4d6454;
       --line:rgba(18,64,29,.12);
+      --line-strong:rgba(18,64,29,.2);
+      --green:#74d64c;
       --green-dark:#2f7f25;
+      --green-deep:#14361b;
+      --green-soft:#dff8d1;
+      --yellow:#ffd84d;
       --dark:#102217;
       --deep:#14361b;
-      --focus:#111;
+      --white:#ffffff;
+      --focus:#111111;
       --shadow:0 18px 55px rgba(14,53,22,.10);
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
@@ -173,14 +182,20 @@
       --header-offset:92px;
     }
 
-    *{box-sizing:border-box;}
+    *{
+      box-sizing:border-box;
+      min-width:0;
+    }
 
     html{
+      width:100%;
       scroll-behavior:smooth;
       -webkit-text-size-adjust:100%;
+      overflow-x:hidden;
     }
 
     body{
+      width:100%;
       margin:0;
       min-width:320px;
       font-family:"Inter",sans-serif;
@@ -194,7 +209,9 @@
       overflow-x:hidden;
     }
 
-    body.menu-open{overflow:hidden;}
+    body.menu-open{
+      overflow:hidden;
+    }
 
     a{
       color:inherit;
@@ -203,12 +220,24 @@
 
     img{
       max-width:100%;
+      height:auto;
       display:block;
     }
 
-    button{font:inherit;border:0;}
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
+    }
 
-    :target{scroll-margin-top:var(--header-offset);}
+    button{
+      border:0;
+    }
+
+    :target{
+      scroll-margin-top:var(--header-offset);
+    }
 
     a:focus-visible,
     button:focus-visible,
@@ -234,7 +263,9 @@
       transition:.15s ease;
     }
 
-    .skip-link:focus{transform:translateY(0);}
+    .skip-link:focus{
+      transform:translateY(0);
+    }
 
     .container{
       width:min(var(--max), calc(100% - 32px));
@@ -290,6 +321,9 @@
       font-size:15px;
       line-height:1.1;
       white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:180px;
     }
 
     .brand-sub{
@@ -297,6 +331,9 @@
       color:#4f6954;
       line-height:1.2;
       white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:180px;
     }
 
     .menu-button{
@@ -321,6 +358,7 @@
       height:12px;
       position:relative;
       display:inline-block;
+      flex:0 0 auto;
     }
 
     .menu-button span::before,
@@ -335,8 +373,13 @@
       transition:.2s ease;
     }
 
-    .menu-button span::before{top:1px;}
-    .menu-button span::after{bottom:1px;}
+    .menu-button span::before{
+      top:1px;
+    }
+
+    .menu-button span::after{
+      bottom:1px;
+    }
 
     .menu-button[aria-expanded="true"] span::before{
       top:5px;
@@ -370,6 +413,7 @@
       bottom:16px;
       z-index:100;
       width:min(420px, calc(100vw - 32px));
+      max-width:calc(100vw - 32px);
       border-radius:30px;
       background:#fff;
       border:1px solid var(--line);
@@ -378,9 +422,12 @@
       transform:translateX(calc(100% + 32px));
       transition:.24s ease;
       overflow:auto;
+      overflow-x:hidden;
     }
 
-    .site-menu.is-open{transform:translateX(0);}
+    .site-menu.is-open{
+      transform:translateX(0);
+    }
 
     .menu-head{
       display:flex;
@@ -410,6 +457,7 @@
       font-weight:900;
       font-size:22px;
       cursor:pointer;
+      flex:0 0 auto;
     }
 
     .menu-links{
@@ -420,6 +468,7 @@
     .menu-links a{
       display:flex;
       justify-content:space-between;
+      align-items:center;
       gap:12px;
       padding:15px 16px;
       border-radius:18px;
@@ -428,12 +477,33 @@
       font-weight:900;
       color:#17351e;
       line-height:1.35;
+      overflow-wrap:anywhere;
     }
 
     .menu-links a::after{
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+      align-self:center;
     }
 
     .menu-cta{
@@ -459,7 +529,9 @@
       font-size:14px;
     }
 
-    .menu-cta .btn{width:100%;}
+    .menu-cta .btn{
+      width:100%;
+    }
 
     h1,
     h2,
@@ -469,6 +541,17 @@
       margin:0;
       line-height:.96;
       color:#14361b;
+      overflow-wrap:anywhere;
+    }
+
+    p,
+    li,
+    span,
+    strong,
+    small,
+    summary,
+    a{
+      overflow-wrap:anywhere;
     }
 
     .hero{
@@ -477,7 +560,7 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0,1.02fr) minmax(360px,.9fr);
+      grid-template-columns:minmax(0,1.02fr) minmax(0,.9fr);
       gap:40px;
       align-items:start;
     }
@@ -496,6 +579,7 @@
       box-shadow:0 10px 24px rgba(0,0,0,.04);
       max-width:100%;
       line-height:1.4;
+      overflow-wrap:anywhere;
     }
 
     .hero h1{
@@ -572,10 +656,14 @@
       border:1px solid transparent;
       cursor:pointer;
       text-align:center;
-      line-height:1.1;
+      line-height:1.15;
+      max-width:100%;
+      white-space:normal;
     }
 
-    .btn:hover{transform:translateY(-1px);}
+    .btn:hover{
+      transform:translateY(-1px);
+    }
 
     .btn-primary{
       background:var(--dark);
@@ -598,7 +686,9 @@
       box-shadow:none;
     }
 
-    .btn-disabled:hover{transform:none;}
+    .btn-disabled:hover{
+      transform:none;
+    }
 
     .hero-card{
       background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
@@ -609,8 +699,8 @@
       overflow:hidden;
       position:relative;
       isolation:isolate;
-      min-width:0;
       width:100%;
+      max-width:100%;
     }
 
     .hero-card::after,
@@ -659,6 +749,7 @@
       margin-bottom:14px;
       aspect-ratio:4 / 5;
       background:#1f3826;
+      max-width:100%;
     }
 
     .mockup-image img{
@@ -702,7 +793,7 @@
 
     .section-title{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(260px,520px);
+      grid-template-columns:minmax(0,1fr) minmax(0,520px);
       gap:24px;
       align-items:end;
       margin-bottom:22px;
@@ -732,6 +823,8 @@
       grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
       gap:24px;
       align-items:start;
+      max-width:100%;
+      overflow:hidden;
     }
 
     .notice-box h2{
@@ -751,8 +844,13 @@
       border:0;
     }
 
-    .notice-box.dark h2{color:#fff;}
-    .notice-box.dark p{color:#d7e8d8;}
+    .notice-box.dark h2{
+      color:#fff;
+    }
+
+    .notice-box.dark p{
+      color:#d7e8d8;
+    }
 
     .grid-3{
       display:grid;
@@ -773,8 +871,9 @@
       border-radius:var(--radius);
       padding:24px;
       box-shadow:var(--shadow);
-      min-width:0;
       color:var(--text);
+      max-width:100%;
+      overflow:hidden;
     }
 
     .card h3,
@@ -801,7 +900,6 @@
     .price-card{
       border-radius:28px;
       position:relative;
-      overflow:hidden;
       display:flex;
       flex-direction:column;
     }
@@ -823,6 +921,8 @@
       border-radius:999px;
       background:rgba(18,49,29,.08);
       margin-bottom:14px;
+      max-width:100%;
+      white-space:normal;
     }
 
     .featured .tag{
@@ -857,6 +957,7 @@
       position:relative;
       overflow:hidden;
       isolation:isolate;
+      max-width:100%;
     }
 
     .closed-card h3{
@@ -882,6 +983,8 @@
       padding:22px;
       display:grid;
       gap:12px;
+      max-width:100%;
+      overflow:hidden;
     }
 
     .closed-panel strong{
@@ -909,6 +1012,7 @@
       font-weight:900;
       font-size:13px;
       margin-bottom:14px;
+      white-space:normal;
     }
 
     .faq-wrap{
@@ -927,6 +1031,8 @@
       border-radius:20px;
       padding:16px 18px;
       box-shadow:0 8px 22px rgba(0,0,0,.04);
+      max-width:100%;
+      overflow:hidden;
     }
 
     summary{
@@ -936,6 +1042,7 @@
       padding-right:28px;
       position:relative;
       line-height:1.5;
+      color:#14361b;
     }
 
     summary::after{
@@ -948,13 +1055,32 @@
       color:#2f7f25;
     }
 
-    details[open] summary::after{content:"–";}
-    summary::-webkit-details-marker{display:none;}
+    details[open] summary::after{
+      content:"–";
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
 
     details p{
       margin:12px 0 0;
       color:var(--muted);
       line-height:1.75;
+    }
+
+    details ul{
+      margin:12px 0 0;
+      padding-left:0;
+      list-style:none;
+      display:grid;
+      gap:9px;
+    }
+
+    details li{
+      color:var(--muted);
+      line-height:1.65;
+      font-weight:700;
     }
 
     .trust-card{
@@ -963,6 +1089,8 @@
       border-radius:30px;
       padding:30px;
       box-shadow:var(--shadow);
+      max-width:100%;
+      overflow:hidden;
     }
 
     .trust-card h2{
@@ -1007,8 +1135,19 @@
       text-underline-offset:3px;
     }
 
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
+    }
+
     @media (prefers-reduced-motion: reduce){
-      html{scroll-behavior:auto;}
+      html{
+        scroll-behavior:auto;
+      }
 
       *,
       *::before,
@@ -1018,7 +1157,9 @@
         transition-duration:.01ms !important;
       }
 
-      .btn:hover{transform:none;}
+      .btn:hover{
+        transform:none;
+      }
     }
 
     @media (prefers-contrast: more){
@@ -1043,7 +1184,9 @@
       .card,
       .hero-card,
       .notice-box,
-      .closed-card{
+      .closed-card,
+      .trust-card,
+      details{
         border:2px solid ButtonText;
       }
 
@@ -1086,7 +1229,9 @@
     }
 
     @media (max-width:720px){
-      :root{--header-offset:84px;}
+      :root{
+        --header-offset:84px;
+      }
 
       .container{
         width:min(var(--max), calc(100% - 24px));
@@ -1098,7 +1243,9 @@
         padding:10px 0;
       }
 
-      .brand{gap:10px;}
+      .brand{
+        gap:10px;
+      }
 
       .brand-logo{
         width:38px;
@@ -1111,7 +1258,9 @@
         white-space:normal;
       }
 
-      .brand-sub{display:none;}
+      .brand-sub{
+        display:none;
+      }
 
       .menu-button{
         min-height:42px;
@@ -1124,7 +1273,19 @@
         right:10px;
         bottom:10px;
         width:calc(100vw - 20px);
+        max-width:calc(100vw - 20px);
         border-radius:24px;
+        padding:16px;
+      }
+
+      .menu-links a{
+        padding:14px;
+        font-size:15px;
+      }
+
+      .menu-links a[aria-current="page"]::after{
+        content:"✓";
+        padding:4px 7px;
       }
 
       .hero{
@@ -1146,6 +1307,10 @@
         line-height:1.72;
       }
 
+      .hero-actions{
+        gap:10px;
+      }
+
       .hero-actions .btn{
         flex:1 1 100%;
         width:100%;
@@ -1157,16 +1322,30 @@
         max-width:none;
       }
 
-      .mockup-image{border-radius:18px;}
+      .mockup-header{
+        font-size:13px;
+      }
+
+      .mockup-image{
+        border-radius:18px;
+        aspect-ratio:4 / 3;
+      }
 
       .mockup-panel{
         grid-template-columns:1fr;
       }
 
-      .mini-card{min-height:auto;}
+      .mini-card{
+        min-height:auto;
+      }
 
       .section{
         padding:30px 0;
+      }
+
+      .section-title{
+        gap:10px;
+        margin-bottom:16px;
       }
 
       .card,
@@ -1208,14 +1387,22 @@
     }
 
     @media (max-width:420px){
-      .hero h1{font-size:2.05rem;}
+      .container{
+        width:min(var(--max), calc(100% - 20px));
+      }
+
+      .hero h1{
+        font-size:2.05rem;
+      }
 
       .eyebrow{
         font-size:12px;
         padding:7px 10px;
       }
 
-      .section-title h2{font-size:1.95rem;}
+      .section-title h2{
+        font-size:1.95rem;
+      }
 
       .card h3,
       .price-card h3{
@@ -1227,6 +1414,10 @@
       .notice-box h2{
         font-size:2rem;
       }
+
+      .btn{
+        padding:13px 16px;
+      }
     }
   </style>
 </head>
@@ -1237,7 +1428,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="Offroad Bumpis logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span class="brand-text">
           <span class="brand-title">Offroad Bumpis</span>
           <span class="brand-sub">Tipsprovision</span>
@@ -1267,14 +1458,16 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Startsida</a>
+      <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
       <a href="/barnkalas-lund.html">Barnkalas Lund</a>
       <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
-      <a href="/affiliate.html">Tipsprovision</a>
+      <a href="/affiliate.html" aria-current="page">Tipsprovision</a>
     </nav>
 
     <div class="menu-cta">
@@ -1323,8 +1516,8 @@
 
           <div class="mockup-image">
             <img
-              src="Bumperball på fotbollsplan i Veberöd.png"
-              alt="Barn spelar bumperball på fotbollsplan i Veberöd"
+              src="/bilder/barn-springer-i-bumperballs.jpg"
+              alt="Barn springer i bumperballs på konstgräs"
             />
           </div>
 
@@ -1510,6 +1703,23 @@
             </details>
 
             <details>
+              <summary>Villkor för redan godkända tipskoder</summary>
+              <p>
+                De här villkoren gäller bara personer som redan har fått en godkänd tipskod av Offroad Bumpis.
+                Nya tipskoder delas inte ut just nu.
+              </p>
+
+              <ul>
+                <li>Kunden ska själv ange tipskoden vid bokning eller kontakt.</li>
+                <li>Provision gäller bara på godkända, genomförda och betalda bokningar där tipskoden används.</li>
+                <li>Provision gäller inte på avbokade, obetalda eller återbetalda bokningar.</li>
+                <li>Offroad Bumpis kan pausa eller avsluta en tipskod om den missbrukas.</li>
+                <li>Tipsaren ansvarar för att lämna korrekta uppgifter för eventuell utbetalning.</li>
+                <li>Eventuell utbetalning sker enligt tidigare överenskommelse mellan tipsaren och Offroad Bumpis.</li>
+              </ul>
+            </details>
+
+            <details>
               <summary>När öppnar ansökan igen?</summary>
               <p>Det finns inget bestämt datum just nu. Sidan uppdateras om ansökan öppnar igen.</p>
             </details>
@@ -1553,14 +1763,16 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
+          <a href="/nyheter.html">Nyheter</a> ·
           <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
           <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
           <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a> ·
-          <a href="/affiliate.html">Tipsprovision</a>
+          <a href="/affiliate.html" aria-current="page">Tipsprovision</a>
         </span>
       </div>
     </div>
