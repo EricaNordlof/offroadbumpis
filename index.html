@@ -16,8 +16,8 @@
 
   <link rel="canonical" href="https://offroadbumpis.se/" />
 
-  <link rel="icon" type="image/png" href="bilder/offroad-bumpis-logo.png" />
-  <link rel="apple-touch-icon" type="image/png" href="bilder/offroad-bumpis-logo.png" />
+  <link rel="icon" type="image/png" href="/bilder/offroad-bumpis-logo.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/bilder/offroad-bumpis-logo.png" />
 
   <meta property="og:title" content="Bumperball i Skåne | Offroad Bumpis" />
   <meta property="og:description" content="Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. 2-pack från 600 kr och 10-pack från 2 000 kr." />
@@ -51,12 +51,23 @@
         "publisher":{"@id":"https://offroadbumpis.se/#business"}
       },
       {
+        "@type":"WebPage",
+        "@id":"https://offroadbumpis.se/#webpage",
+        "url":"https://offroadbumpis.se/",
+        "name":"Bumperball i Skåne för barnkalas, skola & förening",
+        "description":"Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. Barn 7–12 år. 2-pack från 600 kr och 10-pack från 2 000 kr.",
+        "inLanguage":"sv-SE",
+        "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
+        "about":{"@id":"https://offroadbumpis.se/#business"}
+      },
+      {
         "@type":"LocalBusiness",
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "url":"https://offroadbumpis.se/",
         "image":"https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg",
         "email":"kontakt@offroadbumpis.se",
+        "telephone":"+46793442520",
         "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids och föreningar.",
         "areaServed":{
           "@type":"AdministrativeArea",
@@ -93,7 +104,7 @@
             "name":"Turneringskit",
             "price":"1000",
             "priceCurrency":"SEK",
-            "description":"Turneringskit med souvenirer att behålla: utskrivna diplom, enkla utskrivna poängmallar, pokal, visselpipa och reflexer. Till låns under hyran ingår lagvästar, knäskydd, koner, markörer och skumfotboll."
+            "description":"Turneringskit med utskrivna diplom, enkla poängmallar, pokal, visselpipa, reflexer, lagvästar, knäskydd, koner, markörer och skumfotboll."
           }
         ]
       },
@@ -168,19 +179,23 @@
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
-      --faq-max:980px;
+      --header-offset:92px;
     }
 
     *{
       box-sizing:border-box;
+      min-width:0;
     }
 
     html{
+      width:100%;
       scroll-behavior:smooth;
       -webkit-text-size-adjust:100%;
+      overflow-x:hidden;
     }
 
     body{
+      width:100%;
       margin:0;
       min-width:320px;
       font-family:"Inter",sans-serif;
@@ -205,6 +220,7 @@
 
     img{
       max-width:100%;
+      height:auto;
       display:block;
     }
 
@@ -219,8 +235,22 @@
       border:0;
     }
 
+    p,
+    li,
+    span,
+    strong,
+    small,
+    summary,
+    a,
+    h1,
+    h2,
+    h3,
+    h4{
+      overflow-wrap:anywhere;
+    }
+
     :target{
-      scroll-margin-top:94px;
+      scroll-margin-top:var(--header-offset);
     }
 
     a:focus-visible,
@@ -303,7 +333,7 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
-      max-width:150px;
+      max-width:160px;
     }
 
     .menu-button{
@@ -328,6 +358,7 @@
       height:12px;
       position:relative;
       display:inline-block;
+      flex:0 0 auto;
     }
 
     .menu-button span::before,
@@ -382,6 +413,7 @@
       bottom:16px;
       z-index:100;
       width:min(420px, calc(100vw - 32px));
+      max-width:calc(100vw - 32px);
       border-radius:30px;
       background:#fff;
       border:1px solid var(--line);
@@ -390,6 +422,7 @@
       transform:translateX(calc(100% + 32px));
       transition:.24s ease;
       overflow:auto;
+      overflow-x:hidden;
     }
 
     .site-menu.is-open{
@@ -424,6 +457,7 @@
       font-weight:900;
       font-size:22px;
       cursor:pointer;
+      flex:0 0 auto;
     }
 
     .menu-links{
@@ -433,6 +467,7 @@
 
     .menu-links a{
       display:flex;
+      align-items:center;
       justify-content:space-between;
       gap:12px;
       padding:15px 16px;
@@ -448,6 +483,25 @@
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
     }
 
     .menu-cta{
@@ -486,34 +540,6 @@
       margin:0;
       line-height:.96;
       color:#14361b;
-      overflow-wrap:anywhere;
-    }
-
-    .section{
-      padding:46px 0;
-      scroll-margin-top:88px;
-    }
-
-    .section-title{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(260px,560px);
-      gap:24px;
-      align-items:end;
-      margin-bottom:22px;
-    }
-
-    .section-title h2{
-      font-size:clamp(2.2rem,4vw,3.25rem);
-      max-width:14ch;
-    }
-
-    .section-title p{
-      margin:0;
-      max-width:620px;
-      justify-self:end;
-      line-height:1.75;
-      color:var(--muted);
-      font-size:16px;
     }
 
     .btn{
@@ -529,7 +555,9 @@
       border:1px solid transparent;
       cursor:pointer;
       text-align:center;
-      line-height:1.1;
+      line-height:1.15;
+      max-width:100%;
+      white-space:normal;
     }
 
     .btn:hover{
@@ -549,15 +577,59 @@
       box-shadow:0 8px 22px rgba(0,0,0,.03);
     }
 
+    .section{
+      padding:46px 0;
+      scroll-margin-top:88px;
+    }
+
+    .section-title{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,560px);
+      gap:24px;
+      align-items:end;
+      margin-bottom:22px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.2rem,4vw,3.25rem);
+      max-width:14ch;
+    }
+
+    .section-title p{
+      margin:0;
+      max-width:620px;
+      justify-self:end;
+      line-height:1.75;
+      color:var(--muted);
+      font-size:16px;
+    }
+
     .hero{
       padding:54px 0 38px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0,1.02fr) minmax(360px,.92fr);
+      grid-template-columns:minmax(0,1.02fr) minmax(0,.92fr);
       gap:40px;
       align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:13px;
+      font-weight:900;
+      color:#42634a;
+      box-shadow:0 10px 24px rgba(0,0,0,.04);
+      max-width:100%;
+      line-height:1.35;
+      margin-bottom:14px;
     }
 
     .hero h1{
@@ -610,6 +682,7 @@
       color:#36523c;
       font-weight:800;
       line-height:1.4;
+      overflow:hidden;
     }
 
     .quick-item strong{
@@ -651,7 +724,6 @@
       box-shadow:var(--shadow);
       position:relative;
       overflow:hidden;
-      min-width:0;
       display:flex;
       flex-direction:column;
     }
@@ -673,6 +745,8 @@
       border-radius:999px;
       background:rgba(18,49,29,.08);
       line-height:1.2;
+      max-width:100%;
+      white-space:normal;
     }
 
     .featured .tag{
@@ -750,6 +824,7 @@
       padding:16px 18px;
       box-shadow:0 8px 22px rgba(0,0,0,.04);
       margin-bottom:14px;
+      overflow:hidden;
     }
 
     summary{
@@ -819,6 +894,7 @@
       box-shadow:0 8px 22px rgba(0,0,0,.04);
       font-size:14px;
       text-align:center;
+      max-width:100%;
     }
 
     .pill.no{
@@ -840,8 +916,8 @@
       border-radius:22px;
       padding:18px;
       box-shadow:var(--shadow);
-      min-width:0;
       height:100%;
+      overflow:hidden;
     }
 
     .zone-card strong{
@@ -863,7 +939,6 @@
       color:var(--muted);
       line-height:1.65;
       font-size:14px;
-      word-break:break-word;
     }
 
     .steps{
@@ -874,7 +949,7 @@
 
     .step{
       display:grid;
-      grid-template-columns:46px 1fr;
+      grid-template-columns:46px minmax(0,1fr);
       gap:14px;
       align-items:start;
     }
@@ -919,9 +994,9 @@
       border-radius:24px;
       padding:20px;
       box-shadow:var(--shadow);
-      min-width:0;
       display:flex;
       flex-direction:column;
+      overflow:hidden;
     }
 
     .game-card h3{
@@ -983,6 +1058,7 @@
       box-shadow:0 10px 28px rgba(0,0,0,.05);
       transition:.2s ease;
       min-height:170px;
+      overflow:hidden;
     }
 
     .local-area-card:hover{
@@ -1010,12 +1086,13 @@
       border-radius:34px;
       padding:34px;
       display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);
+      grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
       gap:20px;
       align-items:start;
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
       box-shadow:var(--shadow);
+      overflow:hidden;
     }
 
     .cta-copy h2,
@@ -1047,7 +1124,7 @@
       padding:22px;
       display:grid;
       gap:12px;
-      min-width:0;
+      overflow:hidden;
     }
 
     .contact-box strong{
@@ -1107,6 +1184,15 @@
     .footer-line a{
       text-decoration:underline;
       text-underline-offset:3px;
+    }
+
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -1205,6 +1291,10 @@
     }
 
     @media (max-width:720px){
+      :root{
+        --header-offset:84px;
+      }
+
       .container{
         width:min(var(--max), calc(100% - 24px));
       }
@@ -1241,7 +1331,19 @@
         right:10px;
         bottom:10px;
         width:calc(100vw - 20px);
+        max-width:calc(100vw - 20px);
         border-radius:24px;
+        padding:16px;
+      }
+
+      .menu-links a{
+        padding:14px;
+        font-size:15px;
+      }
+
+      .menu-links a[aria-current="page"]::after{
+        content:"✓";
+        padding:4px 7px;
       }
 
       .hero{
@@ -1286,6 +1388,11 @@
         padding:30px 0;
       }
 
+      .section-title{
+        gap:10px;
+        margin-bottom:16px;
+      }
+
       .price-card,
       .zone-card,
       .game-card,
@@ -1327,7 +1434,7 @@
       }
 
       .step{
-        grid-template-columns:40px 1fr;
+        grid-template-columns:40px minmax(0,1fr);
         gap:12px;
       }
 
@@ -1358,8 +1465,17 @@
     }
 
     @media (max-width:420px){
+      .container{
+        width:min(var(--max), calc(100% - 20px));
+      }
+
       .hero h1{
         font-size:2.05rem;
+      }
+
+      .eyebrow{
+        font-size:12px;
+        padding:7px 10px;
       }
 
       .section-title h2{
@@ -1374,6 +1490,10 @@
       .cta h2{
         font-size:2rem;
       }
+
+      .btn{
+        padding:13px 16px;
+      }
     }
   </style>
 </head>
@@ -1384,7 +1504,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span>Offroad Bumpis</span>
       </a>
 
@@ -1410,7 +1530,7 @@
     </div>
 
     <nav class="menu-links" aria-label="Huvudmeny">
-      <a href="/">Startsida</a>
+      <a href="/" aria-current="page">Startsida</a>
       <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
@@ -1424,7 +1544,7 @@
 
     <div class="menu-cta">
       <strong>Boka direkt</strong>
-      <p>Välj datum, paket och eventuella tillval. Tiderna fylls upp snabbt.</p>
+      <p>Välj datum, paket och eventuella tillval. Tiderna fylls snabbt – boka i tid.</p>
       <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
         Boka bumperballs
       </a>
@@ -1435,6 +1555,8 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
+          <span class="eyebrow">Bumperball i Skåne · barnkalas · skola · förening</span>
+
           <h1 id="hero-title">Boka bumperball direkt</h1>
 
           <p>
@@ -1455,7 +1577,7 @@
 
         <aside aria-label="Bild på bumperballs">
           <img
-            src="bilder/barn-springer-i-bumperballs.jpg"
+            src="/bilder/barn-springer-i-bumperballs.jpg"
             alt="Barn springer i bumperballs på konstgräs"
             class="hero-image"
           />
@@ -1491,13 +1613,13 @@
       <div class="container">
         <div class="photos-grid">
           <img
-            src="bilder/barn-i-bumperball-utomhus.jpg"
+            src="/bilder/barn-i-bumperball-utomhus.jpg"
             alt="Barn i en bumperball utomhus"
             class="photo-img"
           />
 
           <img
-            src="bilder/barn-spelar-bumperballs.jpg"
+            src="/bilder/barn-spelar-bumperballs.jpg"
             alt="Barn spelar bumperball på gräsplan"
             class="photo-img"
           />
@@ -1550,7 +1672,7 @@
             <h3>Turneringskit</h3>
             <p class="price">1 000 kr</p>
             <div class="price-note">
-              För kalas, skolor, fritids och föreningar som vill få struktur, finalkänsla och något kul med hem.
+              För kalas, skolor, fritids och föreningar som vill ha struktur, finalkänsla och något kul med hem.
             </div>
 
             <ul class="feature-list">
@@ -1569,13 +1691,13 @@
       <div class="container">
         <div class="photos-grid">
           <img
-            src="bilder/barn-upp-och-ner-bumperball.png"
+            src="/bilder/barn-upp-och-ner-bumperball.png"
             alt="Barn upp och ner i en bumperball"
             class="photo-img"
           />
 
           <img
-            src="bilder/fotbollslag-spelar-bumperball-veberod.png"
+            src="/bilder/fotbollslag-spelar-bumperball-veberod.png"
             alt="Barn och ungdomar spelar bumperball i Veberöd"
             class="photo-img"
           />
@@ -1913,8 +2035,8 @@
           <div class="cta-copy">
             <h2>Klar att boka?</h2>
             <p>
-              Välj paket och datum i vårt bokningssystem och säkra din plats. Tiderna fylls snabbt så boka i tid!
-              Har du frågor är du alltid välkommen att kontakta oss.
+              Välj paket och datum i bokningssystemet och säkra din plats. Tiderna fylls snabbt så boka i tid.
+              Har du frågor är du välkommen att kontakta Offroad Bumpis.
             </p>
 
             <div class="cta-buttons">
@@ -1955,7 +2077,7 @@
       <div class="footer-line">
         <span>© 2026 Offroad Bumpis</span>
         <span>
-          <a href="/">Hem</a> ·
+          <a href="/" aria-current="page">Hem</a> ·
           <a href="/nyheter.html">Nyheter</a> ·
           <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
