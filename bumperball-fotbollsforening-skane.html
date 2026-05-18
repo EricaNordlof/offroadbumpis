@@ -15,7 +15,6 @@
   <meta name="msvalidate.01" content="92586BA25D845A7D1185B5EE710E8A08" />
 
   <link rel="canonical" href="https://offroadbumpis.se/bumperball-fotbollsforening-skane.html" />
-
   <link rel="icon" type="image/png" href="bilder/offroad-bumpis-logo.png" />
   <link rel="apple-touch-icon" type="image/png" href="bilder/offroad-bumpis-logo.png" />
 
@@ -75,6 +74,24 @@
         ]
       },
       {
+        "@type":"BreadcrumbList",
+        "@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Hem",
+            "item":"https://offroadbumpis.se/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Fotbollsförening",
+            "item":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html"
+          }
+        ]
+      },
+      {
         "@type":"WebPage",
         "@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#webpage",
         "url":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html",
@@ -82,7 +99,8 @@
         "description":"Hyr 10 bumperballs till fotbollsförening i Skåne. Perfekt för avslutning, extraträning, sommarfotboll, intern miniturnering och Bumpisligan för barn 7–12 år.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
-        "about":{"@id":"https://offroadbumpis.se/#business"}
+        "about":{"@id":"https://offroadbumpis.se/#business"},
+        "breadcrumb":{"@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#breadcrumb"}
       },
       {
         "@type":"Offer",
@@ -98,16 +116,14 @@
         "@type":"FAQPage",
         "@id":"https://offroadbumpis.se/bumperball-fotbollsforening-skane.html#faq",
         "mainEntity":[
-
-        {
-  "@type":"Question",
-  "name":"Kan föreningen använda Fritidskortet?",
-  "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Om föreningen är ansluten till Fritidskortet kan bumperballs eventuellt ingå som en del av en ledarledd återkommande aktivitet. Kontakta Offroad Bumpis för upplägg."
-  }
-}
-
+          {
+            "@type":"Question",
+            "name":"Kan föreningen använda Fritidskortet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Om föreningen är ansluten till Fritidskortet kan bumperballs eventuellt ingå som en del av en ledarledd återkommande aktivitet. Kontakta Offroad Bumpis för upplägg."
+            }
+          },
           {
             "@type":"Question",
             "name":"Är Bumpisligan en egen förening?",
@@ -460,6 +476,26 @@
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+      align-self:center;
     }
 
     .menu-cta{
@@ -1283,6 +1319,15 @@
       text-underline-offset:3px;
     }
 
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
+    }
+
     @media (prefers-reduced-motion: reduce){
       html{
         scroll-behavior:auto;
@@ -1523,12 +1568,13 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Startsida</a>
+      <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
       <a href="/barnkalas-lund.html">Barnkalas Lund</a>
       <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+      <a href="/bumperball-fotbollsforening-skane.html" aria-current="page">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
     </nav>
@@ -1571,6 +1617,8 @@
             <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
               Boka direkt
             </a>
+            <a href="/nyheter.html" class="btn btn-secondary">Nyheter</a>
+            <a href="/skola-fritids-forening-skane.html" class="btn btn-secondary">Skola, fritids & förening</a>
           </div>
         </div>
 
@@ -1853,12 +1901,12 @@
         </details>
 
         <details>
-  <summary>Kan föreningen använda Fritidskortet?</summary>
-  <p>
-    Om ni är en förening som är ansluten till Fritidskortet kan bumperballs eventuellt ingå
-    som en del av er ledarledda återkommande aktivitet. Kontakta Offroad Bumpis så hittar vi ett upplägg.
-  </p>
-</details>
+          <summary>Kan föreningen använda Fritidskortet?</summary>
+          <p>
+            Om ni är en förening som är ansluten till Fritidskortet kan bumperballs eventuellt ingå
+            som en del av er ledarledda återkommande aktivitet. Kontakta Offroad Bumpis så hittar vi ett upplägg.
+          </p>
+        </details>
 
         <details>
           <summary>Ålder och maxvikt</summary>
@@ -1905,6 +1953,17 @@
             Senare avbokning debiteras fullt men kan krediteras i 6 månader.
           </p>
         </details>
+
+        <details>
+          <summary>Nyheter från Offroad Bumpis</summary>
+          <p>
+            På nyhetssidan samlas uppdateringar om nya bollar, nya upplägg och sånt som händer hos Offroad Bumpis.
+          </p>
+
+          <div class="pill-row">
+            <a class="pill" href="/nyheter.html">Läs nyheter</a>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -1936,6 +1995,9 @@
             <div class="contact-links">
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="https://offroadbumpis.se/">offroadbumpis.se</a>
+              <a class="contact-link" href="/nyheter.html">Nyheter</a>
+              <a class="contact-link" href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+              <a class="contact-link" href="/barnkalas-skane.html">Barnkalas i Skåne</a>
               <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
               <a class="contact-link" href="/villkor.html">Läs villkor</a>
               <a class="contact-link" href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" target="_blank" rel="noopener noreferrer">Adress / recensioner</a>
@@ -1952,9 +2014,13 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
+          <a href="/nyheter.html">Nyheter</a> ·
           <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
+          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
-          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
+          <a href="/bumperball-fotbollsforening-skane.html" aria-current="page">Fotbollsförening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a>
         </span>
