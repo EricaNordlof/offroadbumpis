@@ -50,7 +50,8 @@
         "description":"Integritetspolicy för Offroad Bumpis med information om hur personuppgifter hanteras vid bokning, kontakt, mejl, formulär, betalning och administration.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
-        "about":{"@id":"https://offroadbumpis.se/#business"}
+        "about":{"@id":"https://offroadbumpis.se/#business"},
+        "breadcrumb":{"@id":"https://offroadbumpis.se/integritet.html#breadcrumb"}
       },
       {
         "@type":"WebSite",
@@ -81,7 +82,8 @@
         "priceRange":"600 SEK - 3000 SEK",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
-          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
+          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic",
+          "https://webutvecklare.se/"
         ]
       },
       {
@@ -418,6 +420,26 @@
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+      align-self:center;
     }
 
     .menu-cta{
@@ -767,6 +789,12 @@
       color:#17351e;
     }
 
+    .details-content a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+      font-weight:800;
+    }
+
     .notice{
       border-color:rgba(255,216,77,.55);
       background:linear-gradient(180deg,#fffdf2 0%,#fff 100%);
@@ -891,6 +919,15 @@
     .footer-line a{
       text-decoration:underline;
       text-underline-offset:3px;
+    }
+
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -1132,13 +1169,15 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Startsida</a>
+      <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
       <a href="/barnkalas-lund.html">Barnkalas Lund</a>
       <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
-      <a href="/integritet.html">Integritet</a>
+      <a href="/integritet.html" aria-current="page">Integritet</a>
       <a href="/affiliate.html">Affiliate</a>
     </nav>
 
@@ -1211,7 +1250,7 @@
         </div>
 
         <div class="quick-item">
-          <strong>2026-05-14</strong>
+          <strong>2026-05-18</strong>
           Senast uppdaterad
         </div>
       </div>
@@ -1251,7 +1290,7 @@
                 </p>
                 <p>
                   Kontakt:
-                  <a href="mailto:kontakt@offroadbumpis.se" style="text-decoration:underline; text-underline-offset:3px;">kontakt@offroadbumpis.se</a>
+                  <a href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
                 </p>
               </div>
             </details>
@@ -1452,13 +1491,14 @@
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
               <a class="contact-link" href="/villkor.html">Villkor</a>
+              <a class="contact-link" href="/nyheter.html">Nyheter</a>
               <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
             </div>
           </article>
 
           <article class="summary-card">
             <h2>Senast uppdaterad</h2>
-            <p>2026-05-14</p>
+            <p>2026-05-18</p>
           </article>
         </div>
       </div>
@@ -1471,13 +1511,15 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
+          <a href="/nyheter.html">Nyheter</a> ·
           <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
           <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
           <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
           <a href="/villkor.html">Villkor</a> ·
-          <a href="/integritet.html">Integritet</a> ·
+          <a href="/integritet.html" aria-current="page">Integritet</a> ·
           <a href="/affiliate.html">Affiliate</a> ·
           <a href="/bilder/manual.png" download>Användarmanual</a>
         </span>
