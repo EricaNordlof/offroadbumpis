@@ -500,6 +500,26 @@
       flex:0 0 auto;
     }
 
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+      align-self:center;
+    }
+
     .menu-cta{
       margin-top:16px;
       padding:18px;
@@ -1250,6 +1270,15 @@
       text-underline-offset:3px;
     }
 
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
+    }
+
     @media (prefers-reduced-motion: reduce){
       html{
         scroll-behavior:auto;
@@ -1577,7 +1606,7 @@
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
       <a href="/barnkalas-lund.html">Barnkalas Lund</a>
       <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+      <a href="/skola-fritids-forening-skane.html" aria-current="page">Skola, fritids & förening</a>
       <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
@@ -1623,6 +1652,7 @@
             </a>
             <a href="#paket" class="btn btn-secondary">Se paket</a>
             <a href="#merinfo" class="btn btn-secondary">Mer info</a>
+            <a href="/nyheter.html" class="btn btn-secondary">Nyheter</a>
             <a href="/bumperball-fotbollsforening-skane.html" class="btn btn-secondary">
               För fotbollsföreningar
             </a>
@@ -2007,6 +2037,20 @@
         </details>
 
         <details>
+          <summary>Nyheter från Offroad Bumpis</summary>
+          <p>
+            På nyhetssidan samlas uppdateringar om nya bollar, nya upplägg och sånt som händer hos Offroad Bumpis.
+            Där finns till exempel nyheten om att större bumperballs är beställda.
+          </p>
+
+          <div class="trust-actions">
+            <a href="/nyheter.html" class="btn btn-secondary">
+              Läs nyheter
+            </a>
+          </div>
+        </details>
+
+        <details>
           <summary>Passar i hela Skåne</summary>
           <p>
             Offroad Bumpis utgår från Malmö och kan användas för skola, fritids och förening i flera delar av Skåne.
@@ -2033,6 +2077,16 @@
             <a class="city-card" href="/barnkalas-skane.html">
               <strong>Övriga Skåne</strong>
               <span>Ystad, Kristianstad, Trelleborg, Hässleholm, Höör, Hörby, Svedala och fler.</span>
+            </a>
+
+            <a class="city-card" href="/nyheter.html">
+              <strong>Nyheter</strong>
+              <span>Senaste nytt från Offroad Bumpis, nya bollar och kommande upplägg.</span>
+            </a>
+
+            <a class="city-card" href="/bumperball-fotbollsforening-skane.html">
+              <strong>Fotbollsförening</strong>
+              <span>Sida för fotbollsföreningar i Skåne med Bumpisligan och internturnering.</span>
             </a>
           </div>
         </details>
@@ -2150,6 +2204,7 @@
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
               <a class="contact-link" href="https://www.linkedin.com/in/erica-nordl%C3%B6f/" target="_blank" rel="noopener noreferrer">Verifierad LinkedIn-profil</a>
+              <a class="contact-link" href="/nyheter.html">Nyheter</a>
               <a class="contact-link" href="/barnkalas-skane.html">Barnkalas i Skåne</a>
               <a class="contact-link" href="/bumperball-fotbollsforening-skane.html">För fotbollsföreningar</a>
               <a class="contact-link" href="/villkor.html">Läs villkor</a>
@@ -2172,7 +2227,7 @@
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
           <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
           <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
-          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
+          <a href="/skola-fritids-forening-skane.html" aria-current="page">Skola, fritids & förening</a> ·
           <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a>
