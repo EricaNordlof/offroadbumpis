@@ -477,6 +477,26 @@
       flex:0 0 auto;
     }
 
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+      align-self:center;
+    }
+
     .menu-cta{
       margin-top:16px;
       padding:18px;
@@ -1226,6 +1246,15 @@
       text-underline-offset:3px;
     }
 
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
+    }
+
     @media (prefers-reduced-motion: reduce){
       html{
         scroll-behavior:auto;
@@ -1548,11 +1577,13 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Startsida</a>
-      <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
+      <a href="/nyheter.html">Nyheter</a>
+      <a href="/barnkalas-skane.html" aria-current="page">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
       <a href="/barnkalas-lund.html">Barnkalas Lund</a>
       <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
     </nav>
@@ -1598,6 +1629,8 @@
             </a>
             <a href="#paket" class="btn btn-secondary">Se paket</a>
             <a href="#merinfo" class="btn btn-secondary">Mer info</a>
+            <a href="/nyheter.html" class="btn btn-secondary">Nyheter</a>
+            <a href="/bumperball-fotbollsforening-skane.html" class="btn btn-secondary">Fotbollsförening</a>
           </div>
         </div>
 
@@ -1901,29 +1934,39 @@
               <span>Barnkalas med bumperballs i Helsingborg, Höganäs, Ängelholm, Landskrona, Bjuv och Åstorp.</span>
             </a>
 
-            <a class="city-card" href="/barnkalas-skane.html">
+            <a class="city-card" href="/barnkalas-skane.html" aria-current="page">
               <strong>Ystad</strong>
               <span>Ystad samlas på Skåne-sidan tillsammans med andra mindre orter.</span>
             </a>
 
-            <a class="city-card" href="/barnkalas-skane.html">
+            <a class="city-card" href="/barnkalas-skane.html" aria-current="page">
               <strong>Kristianstad</strong>
               <span>Kristianstad ingår i den breda sidan för barnkalas i Skåne.</span>
             </a>
 
-            <a class="city-card" href="/barnkalas-skane.html">
+            <a class="city-card" href="/barnkalas-skane.html" aria-current="page">
               <strong>Trelleborg</strong>
               <span>Trelleborg hanteras via Skåne-sidan och leveranszon enligt upplägg.</span>
             </a>
 
-            <a class="city-card" href="/barnkalas-skane.html">
+            <a class="city-card" href="/barnkalas-skane.html" aria-current="page">
               <strong>Hässleholm</strong>
               <span>Hässleholm och närliggande orter samlas här för enklare struktur.</span>
             </a>
 
-            <a class="city-card" href="/barnkalas-skane.html">
+            <a class="city-card" href="/barnkalas-skane.html" aria-current="page">
               <strong>Fler orter</strong>
               <span>Landskrona, Lomma, Eslöv, Staffanstorp, Vellinge, Höör, Hörby, Svedala och fler.</span>
+            </a>
+
+            <a class="city-card" href="/nyheter.html">
+              <strong>Nyheter</strong>
+              <span>Senaste nytt från Offroad Bumpis, till exempel större bumperballs och nya upplägg.</span>
+            </a>
+
+            <a class="city-card" href="/bumperball-fotbollsforening-skane.html">
+              <strong>Fotbollsförening</strong>
+              <span>Bumperball för fotbollsföreningar i Skåne, internturnering och Bumpisligan.</span>
             </a>
           </div>
         </details>
@@ -2112,6 +2155,8 @@
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
               <a class="contact-link" href="https://www.linkedin.com/in/erica-nordl%C3%B6f/" target="_blank" rel="noopener noreferrer">Verifierad LinkedIn-profil</a>
+              <a class="contact-link" href="/nyheter.html">Nyheter</a>
+              <a class="contact-link" href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
               <a class="contact-link" href="/villkor.html">Läs villkor</a>
               <a class="contact-link" href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
               <a class="contact-link" href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" target="_blank" rel="noopener noreferrer">Se adress eller lämna recension på Google</a>
@@ -2128,11 +2173,13 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
-          <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
+          <a href="/nyheter.html">Nyheter</a> ·
+          <a href="/barnkalas-skane.html" aria-current="page">Barnkalas Skåne</a> ·
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
           <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
           <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a>
         </span>
