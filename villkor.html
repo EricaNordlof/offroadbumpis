@@ -50,7 +50,8 @@
         "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
-        "about":{"@id":"https://offroadbumpis.se/#business"}
+        "about":{"@id":"https://offroadbumpis.se/#business"},
+        "breadcrumb":{"@id":"https://offroadbumpis.se/villkor.html#breadcrumb"}
       },
       {
         "@type":"WebSite",
@@ -81,7 +82,8 @@
         "priceRange":"600 SEK - 3000 SEK",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
-          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic"
+          "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic",
+          "https://webutvecklare.se/"
         ]
       },
       {
@@ -418,6 +420,26 @@
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+      align-self:center;
     }
 
     .menu-cta{
@@ -773,6 +795,17 @@
       color:#7a5a00;
     }
 
+    .affiliate-box{
+      border-color:rgba(116,214,76,.42);
+      background:linear-gradient(180deg,#f8fff4 0%,#fff 100%);
+    }
+
+    .affiliate-box summary::after{
+      background:#dff8d1;
+      border-color:rgba(116,214,76,.42);
+      color:#24542f;
+    }
+
     .btn{
       display:inline-flex;
       align-items:center;
@@ -886,6 +919,15 @@
     .footer-line a{
       text-decoration:underline;
       text-underline-offset:3px;
+    }
+
+    .footer-line a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -1127,12 +1169,14 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Startsida</a>
+      <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
       <a href="/barnkalas-lund.html">Barnkalas Lund</a>
       <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/villkor.html">Villkor</a>
+      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+      <a href="/villkor.html" aria-current="page">Villkor</a>
       <a href="/integritet.html">Integritet</a>
       <a href="/affiliate.html">Affiliate</a>
     </nav>
@@ -1423,6 +1467,40 @@
               </div>
             </details>
 
+            <details class="affiliate-box">
+              <summary>Villkor för affiliate / tipsprovision</summary>
+              <div class="details-content">
+                <p>
+                  Offroad Bumpis kan erbjuda tipsprovision till godkända affiliates eller tipsare.
+                  Upplägget gäller bara när det finns en aktiv och godkänd rabattkod eller affiliatelänk från Offroad Bumpis.
+                </p>
+
+                <p><strong>Grundupplägg:</strong></p>
+                <ul class="bullet-list">
+                  <li><span class="check">✓</span><span>Kunden får rabatt enligt den kod eller länk som Offroad Bumpis har godkänt.</span></li>
+                  <li><span class="check">✓</span><span>Tipsaren kan få provision på godkända och betalda bokningar där koden används korrekt.</span></li>
+                  <li><span class="check">✓</span><span>Provision gäller inte automatiskt. Offroad Bumpis måste kunna koppla bokningen till rätt kod eller länk.</span></li>
+                  <li><span class="check">✓</span><span>Provision betalas inte ut för avbokade, obetalda eller krediterade bokningar.</span></li>
+                  <li><span class="check">✓</span><span>Provision betalas inte ut vid egenbokning, missbruk, felaktig marknadsföring eller försök att kringgå upplägget.</span></li>
+                </ul>
+
+                <p>
+                  Tipsaren ansvarar för att marknadsföringen är tydlig, enkel och inte lovar mer än Offroad Bumpis faktiskt erbjuder.
+                  Det ska framgå att Offroad Bumpis hyr ut utrustning, inte skickar med instruktör.
+                </p>
+
+                <p>
+                  Offroad Bumpis kan när som helst pausa, ändra eller avsluta affiliateupplägg, rabattkoder och provisionsvillkor.
+                  Redan godkända och betalda bokningar hanteras enligt den överenskommelse som gällde när bokningen registrerades.
+                </p>
+
+                <div class="link-row">
+                  <a class="btn btn-primary" href="/affiliate.html">Läs mer om affiliate</a>
+                  <a class="btn btn-secondary" href="mailto:kontakt@offroadbumpis.se?subject=Affiliate%20Offroad%20Bumpis">Fråga om affiliate</a>
+                </div>
+              </div>
+            </details>
+
             <details class="notice">
               <summary>Viktigt vid osäkerhet</summary>
               <div class="details-content">
@@ -1468,6 +1546,7 @@
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
               <a class="contact-link" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+              <a class="contact-link" href="/nyheter.html">Nyheter</a>
               <a class="contact-link" href="/integritet.html">Integritetspolicy</a>
             </div>
           </article>
@@ -1487,12 +1566,14 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
+          <a href="/nyheter.html">Nyheter</a> ·
           <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
           <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
           <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
-          <a href="/villkor.html">Villkor</a> ·
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
+          <a href="/villkor.html" aria-current="page">Villkor</a> ·
           <a href="/integritet.html">Integritet</a> ·
           <a href="/affiliate.html">Affiliate</a> ·
           <a href="/bilder/manual.png" download>Användarmanual</a>
