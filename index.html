@@ -7,7 +7,7 @@
   <title>Bumperball i Skåne för barnkalas, skola & förening | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. Barn 7–12 år. 2-pack från 600 kr och 10-pack från 2 000 kr. Enkel bokning."
+    content="Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. Barn 7–12 år. Från 600 kr. Se alla priser på prissidan."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -15,13 +15,11 @@
   <meta name="msvalidate.01" content="92586BA25D845A7D1185B5EE710E8A08" />
 
   <link rel="canonical" href="https://offroadbumpis.se/" />
-
-<link rel="icon" type="image/png" sizes="32x32" href="/bilder/favicon-offroad-bumpis32.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="/bilder/favicon-offroad-bumpis192.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/bilder/apple-touch-icon180.png" />
+  <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+  <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png?v=2" />
 
   <meta property="og:title" content="Bumperball i Skåne | Offroad Bumpis" />
-  <meta property="og:description" content="Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. 2-pack från 600 kr och 10-pack från 2 000 kr." />
+  <meta property="og:description" content="Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. Från 600 kr. Se alla priser på prissidan." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/" />
   <meta property="og:type" content="website" />
@@ -56,7 +54,7 @@
         "@id":"https://offroadbumpis.se/#webpage",
         "url":"https://offroadbumpis.se/",
         "name":"Bumperball i Skåne för barnkalas, skola & förening",
-        "description":"Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. Barn 7–12 år. 2-pack från 600 kr och 10-pack från 2 000 kr.",
+        "description":"Hyr bumperballs i Skåne för barnkalas, skola, fritids och förening. Barn 7–12 år. Från 600 kr.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"}
@@ -79,7 +77,8 @@
           "name":"Erica Nordlöf",
           "sameAs":"https://www.linkedin.com/in/erica-nordl%C3%B6f/"
         },
-        "priceRange":"600 SEK - 3000 SEK",
+        "priceRange":"Från 600 SEK",
+        "paymentAccepted":"Kort via betalningslänk, Klarna via betalningslänk, Swish, faktura, bankgiro och banköverföring",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
           "https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic",
@@ -88,24 +87,11 @@
         "makesOffer":[
           {
             "@type":"Offer",
-            "name":"2-pack bumperballs",
+            "name":"Bumperballs från 600 kr",
             "price":"600",
             "priceCurrency":"SEK",
-            "description":"2 bumperballs och 1 batteridriven pump."
-          },
-          {
-            "@type":"Offer",
-            "name":"10-pack bumperballs",
-            "price":"2000",
-            "priceCurrency":"SEK",
-            "description":"10 bumperballs, 2 batteridrivna pumpar, laddare och transportplatta."
-          },
-          {
-            "@type":"Offer",
-            "name":"Turneringskit",
-            "price":"1000",
-            "priceCurrency":"SEK",
-            "description":"Turneringskit med utskrivna diplom, enkla poängmallar, pokal, visselpipa, reflexer, lagvästar, knäskydd, koner, markörer och skumfotboll."
+            "url":"https://offroadbumpis.se/priser.html",
+            "description":"Hyr bumperballs i barnstorlek. Full prislista finns på prissidan."
           }
         ]
       },
@@ -142,15 +128,15 @@
             "name":"Vad kostar det att hyra bumperballs?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"2-pack kostar 600 kr och 10-pack kostar 2 000 kr. Turneringskit kostar 1 000 kr som tillval."
+              "text":"Bumperballs kan hyras från 600 kr. Full prislista finns på https://offroadbumpis.se/priser.html."
             }
           },
           {
             "@type":"Question",
-            "name":"Vad gäller vid avbokning?",
+            "name":"Hur kan jag betala?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader."
+              "text":"Du väljer önskat betalningssätt i bokningen: kort eller Klarna via betalningslänk, Swish, faktura eller bankgiro/banköverföring."
             }
           }
         ]
@@ -180,7 +166,7 @@
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
-      --header-offset:92px;
+      --header-height:72px;
     }
 
     *{
@@ -236,6 +222,10 @@
       border:0;
     }
 
+    main{
+      padding-top:var(--header-height);
+    }
+
     p,
     li,
     span,
@@ -251,7 +241,7 @@
     }
 
     :target{
-      scroll-margin-top:var(--header-offset);
+      scroll-margin-top:94px;
     }
 
     a:focus-visible,
@@ -266,7 +256,7 @@
     }
 
     .skip-link{
-      position:absolute;
+      position:fixed;
       left:12px;
       top:12px;
       z-index:999;
@@ -291,8 +281,11 @@
     }
 
     .topbar{
-      position:sticky;
+      position:fixed;
       top:0;
+      left:0;
+      right:0;
+      width:100%;
       z-index:80;
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
@@ -648,6 +641,47 @@
       max-width:680px;
     }
 
+    .hero-trust{
+      margin-top:14px;
+      color:#36553d;
+      font-size:15px;
+      line-height:1.7;
+      font-weight:700;
+      max-width:720px;
+    }
+
+    .hero-points{
+      display:grid;
+      gap:10px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+      color:#2c4632;
+      font-weight:700;
+      max-width:720px;
+    }
+
+    .hero-points li,
+    .feature-list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .check{
+      flex:0 0 auto;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green-dark);
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      margin-top:2px;
+    }
+
     .hero-actions{
       display:flex;
       gap:12px;
@@ -708,6 +742,32 @@
       border-radius:24px;
       box-shadow:var(--shadow);
       background:#dff8d1;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      min-width:0;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
     }
 
     .price-grid{
@@ -792,9 +852,6 @@
     }
 
     .feature-list li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
       color:#425646;
       line-height:1.65;
       font-weight:600;
@@ -804,18 +861,34 @@
       color:#eef6ee;
     }
 
-    .check{
-      flex:0 0 auto;
-      width:22px;
-      height:22px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:var(--green-dark);
-      color:#fff;
-      font-size:12px;
-      font-weight:900;
-      margin-top:2px;
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:42px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:800;
+      color:#35523d;
+      box-shadow:0 8px 22px rgba(0,0,0,.04);
+      font-size:14px;
+      text-align:center;
+      max-width:100%;
+    }
+
+    .pill.no{
+      background:#fff4f0;
+      color:#6d2d20;
+      border-color:rgba(109,45,32,.18);
     }
 
     details{
@@ -872,74 +945,6 @@
       margin:5px 0;
       color:var(--muted);
       line-height:1.7;
-    }
-
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:42px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid var(--line);
-      font-weight:800;
-      color:#35523d;
-      box-shadow:0 8px 22px rgba(0,0,0,.04);
-      font-size:14px;
-      text-align:center;
-      max-width:100%;
-    }
-
-    .pill.no{
-      background:#fff4f0;
-      color:#6d2d20;
-      border-color:rgba(109,45,32,.18);
-    }
-
-    .zone-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .zone-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:18px;
-      box-shadow:var(--shadow);
-      height:100%;
-      overflow:hidden;
-    }
-
-    .zone-card strong{
-      display:block;
-      font-size:24px;
-      font-family:"Baloo 2",sans-serif;
-      margin-bottom:6px;
-    }
-
-    .zone-card .zone-price{
-      font-weight:900;
-      font-size:22px;
-      color:#1d4e26;
-      margin-bottom:8px;
-    }
-
-    .zone-card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.65;
-      font-size:14px;
     }
 
     .steps{
@@ -1083,6 +1088,38 @@
       font-size:14px;
     }
 
+    .trust-card,
+    .cta{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .trust-card h2,
+    .cta h2{
+      font-size:clamp(2rem,4vw,3rem);
+      margin-bottom:12px;
+      color:#fff;
+      max-width:18ch;
+    }
+
+    .trust-card p,
+    .cta p{
+      margin:0;
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:860px;
+    }
+
+    .trust-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
     .cta{
       border-radius:34px;
       padding:34px;
@@ -1090,25 +1127,18 @@
       grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
       gap:20px;
       align-items:start;
-      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
-      color:#fff;
-      box-shadow:var(--shadow);
       overflow:hidden;
     }
 
-    .cta-copy h2,
-    .cta h2{
+    .cta-copy h2{
       font-size:clamp(2rem,4vw,3.2rem);
       margin-bottom:10px;
       max-width:12ch;
-      color:#fff;
     }
 
-    .cta p{
+    .cta-copy p{
       margin:0 0 18px;
       max-width:640px;
-      color:#d7e8d8;
-      line-height:1.8;
     }
 
     .cta-buttons{
@@ -1223,9 +1253,9 @@
         --line:rgba(0,0,0,.35);
       }
 
+      .card,
       .price-card,
       .quick-item,
-      .zone-card,
       .game-card,
       .local-area-card,
       details{
@@ -1237,10 +1267,11 @@
       .btn,
       .menu-button,
       .menu-close,
+      .card,
       .price-card,
       .quick-item,
       .cta,
-      .zone-card,
+      .trust-card,
       .game-card,
       .local-area-card,
       details{
@@ -1259,9 +1290,8 @@
         grid-template-columns:1fr;
       }
 
-      .zone-grid,
-      .games,
       .local-area-grid,
+      .games,
       .quick-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
@@ -1274,6 +1304,10 @@
         justify-self:start;
         max-width:none;
       }
+
+      .grid-3{
+        grid-template-columns:1fr;
+      }
     }
 
     @media (max-width:980px){
@@ -1285,6 +1319,7 @@
         transform:none;
       }
 
+      .trust-card h2,
       .cta-copy h2,
       .cta h2{
         max-width:none;
@@ -1293,7 +1328,7 @@
 
     @media (max-width:720px){
       :root{
-        --header-offset:84px;
+        --header-height:64px;
       }
 
       .container{
@@ -1367,6 +1402,16 @@
         line-height:1.72;
       }
 
+      .eyebrow{
+        font-size:12px;
+        padding:7px 10px;
+      }
+
+      .hero-points{
+        gap:9px;
+        margin-top:18px;
+      }
+
       .hero-actions{
         gap:10px;
         margin-top:22px;
@@ -1378,7 +1423,6 @@
       }
 
       .quick-grid,
-      .zone-grid,
       .games,
       .local-area-grid,
       .photos-grid{
@@ -1394,24 +1438,26 @@
         margin-bottom:16px;
       }
 
+      .card,
       .price-card,
-      .zone-card,
       .game-card,
       .local-area-card,
+      .trust-card,
       .cta,
       .contact-box,
       details{
         border-radius:20px;
       }
 
+      .card,
       .price-card,
-      .zone-card,
       .game-card,
       .local-area-card,
       .contact-box{
         padding:18px;
       }
 
+      .trust-card,
       .cta{
         padding:22px;
       }
@@ -1450,12 +1496,14 @@
         font-size:19px;
       }
 
-      .cta-buttons{
+      .cta-buttons,
+      .trust-actions{
         flex-direction:column;
         align-items:stretch;
       }
 
-      .cta-buttons .btn{
+      .cta-buttons .btn,
+      .trust-actions .btn{
         width:100%;
       }
 
@@ -1474,19 +1522,16 @@
         font-size:2.05rem;
       }
 
-      .eyebrow{
-        font-size:12px;
-        padding:7px 10px;
-      }
-
       .section-title h2{
         font-size:1.95rem;
       }
 
+      .card h3,
       .price-card h3{
         font-size:26px;
       }
 
+      .trust-card h2,
       .cta-copy h2,
       .cta h2{
         font-size:2rem;
@@ -1505,7 +1550,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span>Offroad Bumpis</span>
       </a>
 
@@ -1532,6 +1577,7 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/" aria-current="page">Startsida</a>
+      <a href="/priser.html">Priser</a>
       <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
       <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
@@ -1545,7 +1591,7 @@
 
     <div class="menu-cta">
       <strong>Boka direkt</strong>
-      <p>Välj datum, paket och eventuella tillval. Tiderna fylls snabbt – boka i tid.</p>
+      <p>Välj datum, antal bollar, leverans och betalningssätt. Full prislista finns på prissidan.</p>
       <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
         Boka bumperballs
       </a>
@@ -1562,23 +1608,35 @@
 
           <p>
             Offroad Bumpis hyr ut bumperballs i barnstorlek för kalas och aktiviteter i Skåne.
-            Tydliga priser och smidig bokning. Våra tider blir snabbt uppbokade – säkra din plats
-            genom att boka nu.
+            Aktivt, enkelt och lagom kaosigt på rätt sätt. Barnen springer, krockar mjukt och skrattar.
+            Du slipper uppfinna ett kalas från noll.
           </p>
+
+          <p class="hero-trust">
+            Från 600 kr. Full prislista, leveranszoner och tillval finns på prissidan.
+            Betalning kan ske med kort eller Klarna via betalningslänk, Swish, faktura eller bankgiro/banköverföring.
+          </p>
+
+          <ul class="hero-points">
+            <li><span class="check">✓</span><span>Bumperballs för barn cirka 7–12 år, max 60 kg.</span></li>
+            <li><span class="check">✓</span><span>Passar barnkalas, skola, fritids, förening och kompisgäng.</span></li>
+            <li><span class="check">✓</span><span>Hämtning i Malmö eller leverans inom Skåne enligt zon.</span></li>
+            <li><span class="check">✓</span><span>Batteridriven pump ingår, så ni kan spela långt från eluttag.</span></li>
+          </ul>
 
           <div class="hero-actions">
             <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Boka nu
+              Boka bumperballs
             </a>
-            <a href="#paket" class="btn btn-secondary">Se paket</a>
+            <a href="/priser.html" class="btn btn-secondary">Se priser</a>
+            <a href="#merinfo" class="btn btn-secondary">Mer info</a>
             <a href="/nyheter.html" class="btn btn-secondary">Nyheter</a>
-            <a href="/bumperball-fotbollsforening-skane.html" class="btn btn-secondary">Fotbollsförening</a>
           </div>
         </div>
 
         <aside aria-label="Bild på bumperballs">
           <img
-            src="/bilder/barn-springer-i-bumperballs.jpg"
+            src="bilder/barn-springer-i-bumperballs.jpg"
             alt="Barn springer i bumperballs på konstgräs"
             class="hero-image"
           />
@@ -1589,23 +1647,23 @@
     <section class="quick-strip" aria-label="Snabb information">
       <div class="container quick-grid">
         <div class="quick-item">
-          <strong>600 kr</strong>
-          2-pack bumperballs
+          <strong>Från 600 kr</strong>
+          Se alla priser på prissidan
         </div>
 
         <div class="quick-item">
-          <strong>2 000 kr</strong>
-          10-pack bumperballs
-        </div>
-
-        <div class="quick-item">
-          <strong>1 dag</strong>
-          Fredag till söndag räknas som en dag
+          <strong>7–12 år</strong>
+          Barnstorlek, max 60 kg
         </div>
 
         <div class="quick-item">
           <strong>Skåne</strong>
-          Hämta i Malmö eller välj leveranszon
+          Hämta i Malmö eller boka leverans
+        </div>
+
+        <div class="quick-item">
+          <strong>Offroad</strong>
+          Batteridriven pump ingår
         </div>
       </div>
     </section>
@@ -1614,13 +1672,13 @@
       <div class="container">
         <div class="photos-grid">
           <img
-            src="/bilder/barn-i-bumperball-utomhus.jpg"
+            src="bilder/barn-i-bumperball-utomhus.jpg"
             alt="Barn i en bumperball utomhus"
             class="photo-img"
           />
 
           <img
-            src="/bilder/barn-spelar-bumperballs.jpg"
+            src="bilder/barn-spelar-bumperballs.jpg"
             alt="Barn spelar bumperball på gräsplan"
             class="photo-img"
           />
@@ -1631,58 +1689,71 @@
     <section class="section" id="paket">
       <div class="container">
         <div class="section-title">
-          <h2>Välj paket</h2>
+          <h2>Välj upplägg</h2>
           <p>
-            Välj ett paket som passar ditt arrangemang. 2-pack passar mindre kalas, medan 10-pack är
-            perfekt för större grupper. Turneringskitet ger finalkänsla och extra struktur.
+            Du väljer antal bollar i bokningen. Här är de vanligaste uppläggen.
+            Full prislista finns på prissidan så startsidan inte blir en kvittorulle.
           </p>
         </div>
 
         <div class="price-grid">
           <article class="price-card">
-            <span class="tag">Mini</span>
-            <h3>2-pack</h3>
-            <p class="price">600 kr</p>
+            <span class="tag">Start</span>
+            <h3>Mindre kalas</h3>
+            <p class="price">Från 600 kr</p>
             <div class="price-note">
-              Perfekt för mindre kalas, kompisdueller och lek hemma.
+              För mindre kalas, kompisdueller eller när barnen ska turas om.
             </div>
 
             <ul class="feature-list">
-              <li><span class="check">✓</span><span>2 bumperballs</span></li>
-              <li><span class="check">✓</span><span>1 batteridriven pump</span></li>
+              <li><span class="check">✓</span><span>Bumperballs i barnstorlek</span></li>
+              <li><span class="check">✓</span><span>Batteridriven pump ingår</span></li>
+              <li><span class="check">✓</span><span>Se full prislista på prissidan</span></li>
             </ul>
+
+            <div class="cta-buttons">
+              <a href="/priser.html" class="btn btn-secondary">Se priser</a>
+            </div>
           </article>
 
           <article class="price-card featured">
-            <span class="tag">Populärast</span>
-            <h3>10-pack</h3>
-            <p class="price">2 000 kr</p>
+            <span class="tag">Populärt</span>
+            <h3>Större grupper</h3>
+            <p class="price">Kalasläge</p>
             <div class="price-note">
-              Bra för barnkalas, skolor, fritids och föreningar när många ska spela.
+              För barnkalas, skolor, fritids och föreningar när många ska spela.
             </div>
 
             <ul class="feature-list">
-              <li><span class="check">✓</span><span>10 bumperballs</span></li>
-              <li><span class="check">✓</span><span>2 batteridrivna pumpar</span></li>
-              <li><span class="check">✓</span><span>Laddare och transportplatta</span></li>
+              <li><span class="check">✓</span><span>Fler bollar ger mer spel och mindre väntan</span></li>
+              <li><span class="check">✓</span><span>Passar lagspel och korta matcher</span></li>
+              <li><span class="check">✓</span><span>Leverans inom Skåne kan bokas</span></li>
             </ul>
+
+            <div class="cta-buttons">
+              <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                Boka direkt
+              </a>
+            </div>
           </article>
 
           <article class="price-card">
             <span class="tag">Tillval</span>
-            <h3>Turneringskit</h3>
-            <p class="price">1 000 kr</p>
+            <h3>Turneringskänsla</h3>
+            <p class="price">Extra kul</p>
             <div class="price-note">
-              För kalas, skolor, fritids och föreningar som vill ha struktur, finalkänsla och något kul med hem.
+              För dig som vill ha lag, matcher, poäng och lite finalkänsla.
             </div>
 
             <ul class="feature-list">
-              <li><span class="check">✓</span><span>Utskrivna diplom</span></li>
-              <li><span class="check">✓</span><span>Enkla poängmallar</span></li>
+              <li><span class="check">✓</span><span>Diplom och enkla poängmallar</span></li>
               <li><span class="check">✓</span><span>Pokal, visselpipa och reflexer</span></li>
-              <li><span class="check">✓</span><span>Lagvästar, knäskydd, koner och markörer</span></li>
-              <li><span class="check">✓</span><span>Skumfotboll</span></li>
+              <li><span class="check">✓</span><span>Lagvästar, koner, markörer och skumfotboll</span></li>
             </ul>
+
+            <div class="cta-buttons">
+              <a href="/priser.html#tillval" class="btn btn-secondary">Se tillval</a>
+            </div>
           </article>
         </div>
       </div>
@@ -1692,16 +1763,51 @@
       <div class="container">
         <div class="photos-grid">
           <img
-            src="/bilder/barn-upp-och-ner-bumperball.png"
+            src="bilder/barn-upp-och-ner-bumperball.png"
             alt="Barn upp och ner i en bumperball"
             class="photo-img"
           />
 
           <img
-            src="/bilder/fotbollslag-spelar-bumperball-veberod.png"
-            alt="Barn och ungdomar spelar bumperball i Veberöd"
+            src="bilder/fotbollslag-spelar-bumperball-veberod.png"
+            alt="Barn och ungdomar spelar bumperball"
             class="photo-img"
           />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="why-title">Barnaktivitet som inte behöver eluttag</h2>
+          <p>
+            Bumperballs funkar bäst på gräs, konstgräs eller i sporthall.
+            Eftersom pumpen är batteridriven kan ni spela på bra ytor även om eluttaget är långt bort.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>För barnkalas</h3>
+            <p>
+              Aktivitet med hög skrattfaktor. Barnen får röra på sig och kalaset får en tydlig huvudaktivitet.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>För skola & fritids</h3>
+            <p>
+              Passar aktivitetsdag, avslutning, lovaktivitet eller föreningsdag där många ska turas om.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>För föreningar</h3>
+            <p>
+              En rolig extraträning, internturnering eller prova-på-aktivitet. Fotboll, fast med mer studs i ledningsgruppen.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -1711,10 +1817,28 @@
         <div class="section-title">
           <h2>Mer information</h2>
           <p>
-            Här hittar du alla detaljer om underlag, transport, zoner, hur det fungerar, spelidéer,
-            vanliga frågor och annat. Klicka på en rubrik för att läsa mer.
+            Klicka på rubrikerna för praktiska detaljer om underlag, betalning, leverans, spelidéer och trygg bokning.
           </p>
         </div>
+
+        <details open>
+          <summary>Priser och betalning</summary>
+          <p>
+            Bumperballs kan hyras från 600 kr. Fler priser, tillval och leveranszoner finns på prissidan.
+          </p>
+
+          <p>
+            Du väljer själv betalningssätt i bokningen: kort eller Klarna via betalningslänk,
+            Swish, faktura eller bankgiro/banköverföring.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="/priser.html" class="btn btn-secondary">Se alla priser</a>
+            <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Boka bumperballs
+            </a>
+          </div>
+        </details>
 
         <details>
           <summary>Underlag som funkar</summary>
@@ -1731,112 +1855,50 @@
             <span class="pill">Mjuk snö</span>
             <span class="pill no">Inte asfalt</span>
             <span class="pill no">Inte grus</span>
-            <span class="pill no">Inte betong eller is</span>
+            <span class="pill no">Inte betong</span>
+            <span class="pill no">Inte is</span>
           </div>
         </details>
 
         <details>
-          <summary>Transport och trygg bokning</summary>
+          <summary>Hämtning och leverans</summary>
           <p>
-            För den som vill hämta själv men saknar rätt transport finns två enkla tillval.
-            10-pack kräver minst kombibil. För mindre upplägg inom Malmö finns även ellådcykel för 2-pack.
+            Du kan hämta själv i Malmö eller boka leverans inom Skåne enligt zon.
+            Leveranspris och återleverans finns på prissidan.
           </p>
 
-          <ul>
-            <li><strong>Kombibil:</strong> 500 kr per dygn vid hyra av 10 bollar.</li>
-            <li><strong>Ellådcykel:</strong> 350 kr per dygn vid hyra av 2 bollar inom Malmö.</li>
-            <li>Transporttillval säljs tillsammans med bokning, inte separat.</li>
-          </ul>
-
           <p>
-            Betalning ska vara klar senast 3 dagar före hyresdatum. Avbokning senast 3 dagar före ger
-            full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.
-            Ingen deposition och ingen självrisk vid normal användning enligt villkor.
+            Har du egen plats klar kan du boka direkt. Behöver du tips på ytor kan du kika på de lokala sidorna
+            för Malmö, Lund, Helsingborg och Skåne.
           </p>
 
-          <ul>
-            <li>Normalt slitage ingår i hyran.</li>
-            <li>Små hål markeras och lagas i efterhand av Offroad Bumpis.</li>
-            <li>Faktura bara vid uppsåtlig skada, vårdslös hantering eller utebliven retur.</li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>Leveranszoner i Skåne</summary>
-          <p>
-            Pris för enkel väg visas zonvis. Upphämtning i Malmö kostar 0 kr.
-            Fler orter i Skåne går bra enligt zon.
-          </p>
-
-          <div class="zone-grid">
-            <article class="zone-card">
-              <strong>Z1</strong>
-              <div class="zone-price">500 kr</div>
-              <p>Malmö</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z2</strong>
-              <div class="zone-price">600 kr</div>
-              <p>Burlöv, Lomma, Staffanstorp</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z3</strong>
-              <div class="zone-price">700 kr</div>
-              <p>Lund, Svedala, Vellinge</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z4</strong>
-              <div class="zone-price">800 kr</div>
-              <p>Eslöv, Kävlinge, Trelleborg</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z5</strong>
-              <div class="zone-price">900 kr</div>
-              <p>Höör, Hörby, Skurup</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z6</strong>
-              <div class="zone-price">1 000 kr</div>
-              <p>Landskrona, Ystad, Sjöbo</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z7</strong>
-              <div class="zone-price">1 100 kr</div>
-              <p>Helsingborg, Ängelholm, Bjuv, Åstorp, Höganäs, Svalöv, Klippan, Perstorp, Båstad</p>
-            </article>
-
-            <article class="zone-card">
-              <strong>Z8</strong>
-              <div class="zone-price">1 200 kr</div>
-              <p>Kristianstad, Hässleholm, Osby, Bromölla, Östra Göinge, Simrishamn, Tomelilla, Örkelljunga</p>
-            </article>
+          <div class="cta-buttons">
+            <a href="/priser.html#leverans" class="btn btn-secondary">Se leveranszoner</a>
+            <a href="/barnkalas-skane.html" class="btn btn-secondary">Barnkalas i Skåne</a>
           </div>
         </details>
 
         <details>
-          <summary>Så funkar det & Turneringskit</summary>
-          <p>Tanken är enkel: välj paket, boka, hämta eller få leverans, spela själva.</p>
+          <summary>Så funkar det</summary>
+          <p>
+            Upplägget är enkelt: välj datum, välj antal bollar, välj eventuell leverans och spela själva.
+            En ansvarig vuxen ska hålla tillsyn under hela aktiviteten.
+          </p>
 
           <div class="steps">
             <div class="step">
               <div class="step-number">1</div>
               <div>
-                <h4>Välj paket</h4>
-                <p>2-pack för mindre upplägg eller 10-pack för större grupper.</p>
+                <h4>Välj datum</h4>
+                <p>Boka datum i bokningssystemet. Tider kan bli uppbokade, så boka hellre tidigt än “sen när livet lugnat sig”.</p>
               </div>
             </div>
 
             <div class="step">
               <div class="step-number">2</div>
               <div>
-                <h4>Boka online</h4>
-                <p>Välj datum och lägg till transport eller turneringskit om du vill.</p>
+                <h4>Välj upplägg</h4>
+                <p>Välj antal bollar och eventuella tillval efter gruppstorlek.</p>
               </div>
             </div>
 
@@ -1844,21 +1906,16 @@
               <div class="step-number">3</div>
               <div>
                 <h4>Spela</h4>
-                <p>En ansvarig vuxen håller tillsyn. Barnen turas om och spelar på godkänt underlag.</p>
+                <p>Pumpa upp bollarna, turas om och använd godkänt underlag.</p>
               </div>
             </div>
           </div>
-
-          <p>
-            Turneringskitet ger extra struktur: lagvästar, knäskydd, koner, markörer, skumfotboll,
-            poängmallar, diplom, pokal, visselpipa och reflexer.
-          </p>
         </details>
 
         <details>
           <summary>Spelidéer</summary>
           <p>
-            Perfekt för barnkalas, skola, fritids och föreningar som vill ha enkel aktivitet med hög energi.
+            Här är några enkla upplägg som fungerar bra för kalas, skolor, fritids och föreningar.
           </p>
 
           <div class="games">
@@ -1875,7 +1932,7 @@
             </article>
 
             <article class="game-card">
-              <h3>Rushmatch 5v5</h3>
+              <h3>Rushmatch</h3>
               <p>Korta matcher med hög energi. Perfekt när många ska hinna spela.</p>
               <div class="game-tags"><span>Lag</span><span>Snabb</span><span>3 min</span></div>
             </article>
@@ -1893,6 +1950,11 @@
 
           <div class="faq">
             <details>
+              <summary>Vad kostar det?</summary>
+              <p>Från 600 kr. Full prislista, tillval och leveranszoner finns på prissidan.</p>
+            </details>
+
+            <details>
               <summary>Vilken ålder passar bumperballs för?</summary>
               <p>Upplägget är gjort för barn ungefär 7–12 år och maxvikt 60 kg. En person per boll gäller.</p>
             </details>
@@ -1903,8 +1965,13 @@
             </details>
 
             <details>
+              <summary>Hur kan jag betala?</summary>
+              <p>Du väljer önskat betalningssätt i bokningen: kort eller Klarna via betalningslänk, Swish, faktura eller bankgiro/banköverföring.</p>
+            </details>
+
+            <details>
               <summary>Hur lång tid tar det att pumpa upp bumperballs?</summary>
-              <p>Det tar cirka 2 minuter per boll att pumpa upp. Vid hyra av 10 bollar ingår 2 batteripumpar.</p>
+              <p>Det tar cirka 2 minuter per boll att pumpa upp. Vid större paket ingår fler pumpar enligt paket.</p>
             </details>
 
             <details>
@@ -1913,55 +1980,27 @@
             </details>
 
             <details>
-              <summary>Vad ingår i turneringskitet?</summary>
-              <p>
-                Som souvenirer att behålla ingår utskrivna diplom, enkla utskrivna poängmallar,
-                pokal, visselpipa och reflexer. Till låns under hyran ingår lagvästar,
-                knäskydd, koner, markörer och skumfotboll.
-              </p>
-            </details>
-
-            <details>
               <summary>Vad gäller vid avbokning?</summary>
               <p>Avbokning senast 3 dagar före hyresdatum ger full återbetalning. Senare avbokning debiteras fullt men kan krediteras i 6 månader.</p>
             </details>
-
-            <details>
-              <summary>Vad händer om något går sönder?</summary>
-              <p>Normalt slitage ingår. Små hål ska markeras och meddelas vid retur. Debitering sker vid saknade delar, tydligt undvikbara skador eller utebliven retur.</p>
-            </details>
           </div>
         </details>
 
         <details>
-          <summary>Tryggare att hyra</summary>
+          <summary>Populära sidor</summary>
           <p>
-            Kontrollera alltid att den du hyr från är en riktig och verifierad person.
-            Offroad Bumpis drivs av Erica Nordlöf, som är verifierad på LinkedIn.
-            På LinkedIn-profilen länkas det också tillbaka till den här sidan.
-          </p>
-
-          <div class="cta-buttons">
-            <a href="https://www.linkedin.com/in/erica-nordl%C3%B6f/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              Se verifierad LinkedIn-profil
-            </a>
-            <a href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              Adress / recensioner
-            </a>
-          </div>
-        </details>
-
-        <details>
-          <summary>Populära områden</summary>
-          <p>
-            Malmö, Lund och Helsingborg har egna sidor. Övriga orter samlas på Barnkalas i Skåne.
-            Offroad Bumpis erbjuder bumperball i Skåne för barnkalas, fritids, skolor och föreningar.
+            Här hittar du lokala sidor och mer riktade upplägg för olika typer av aktiviteter.
           </p>
 
           <div class="local-area-grid">
+            <a class="local-area-card" href="/priser.html">
+              <strong>Priser</strong>
+              <span>Full prislista, betalningssätt, leveranszoner och tillval.</span>
+            </a>
+
             <a class="local-area-card" href="/barnkalas-skane.html">
               <strong>Barnkalas Skåne</strong>
-              <span>Huvudsidan för barnkalas med bumperballs i hela Skåne och mindre orter.</span>
+              <span>Huvudsidan för barnkalas med bumperballs i hela Skåne.</span>
             </a>
 
             <a class="local-area-card" href="/barnkalas-malmo.html">
@@ -1971,22 +2010,17 @@
 
             <a class="local-area-card" href="/barnkalas-lund.html">
               <strong>Barnkalas Lund</strong>
-              <span>Rolig aktivitet för barnkalas i Lund, Staffanstorp, Dalby, Lomma och närliggande områden.</span>
+              <span>Rolig aktivitet för barnkalas i Lund och närliggande områden.</span>
             </a>
 
             <a class="local-area-card" href="/barnkalas-helsingborg.html">
               <strong>Barnkalas Helsingborg</strong>
-              <span>Bumperball i Helsingborg, Höganäs, Ängelholm, Landskrona, Bjuv och Åstorp.</span>
+              <span>Bumperball i Helsingborg, Höganäs, Ängelholm och närliggande orter.</span>
             </a>
 
             <a class="local-area-card" href="/skola-fritids-forening-skane.html">
               <strong>Skola, fritids & förening</strong>
               <span>För aktivitetsdag, avslutning, prova-på, lovaktivitet eller föreningsdag.</span>
-            </a>
-
-            <a class="local-area-card" href="/nyheter.html">
-              <strong>Nyheter</strong>
-              <span>Senaste nytt från Offroad Bumpis, till exempel vuxenstorlek och nya upplägg.</span>
             </a>
 
             <a class="local-area-card" href="/bumperball-fotbollsforening-skane.html">
@@ -1998,35 +2032,33 @@
               <strong>Villkor</strong>
               <span>Tydliga hyresvillkor för bokning, ansvar, underlag, skador och retur.</span>
             </a>
-
-            <a class="local-area-card" href="/integritet.html">
-              <strong>Integritet</strong>
-              <span>Så hanteras uppgifter vid kontakt, bokning och mejl.</span>
-            </a>
-
-            <a class="local-area-card" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">
-              <strong>Boka direkt</strong>
-              <span>Välj datum, paket och tillval via bokningslänken.</span>
-            </a>
           </div>
         </details>
+      </div>
+    </section>
 
-        <details>
-          <summary>Behöver du webb-hjälp?</summary>
+    <section class="section">
+      <div class="container">
+        <div class="trust-card">
+          <h2>Tryggare att boka</h2>
           <p>
-            Jag som driver Offroad Bumpis är även webbutvecklare. Om du behöver hjälp med hemsida,
-            landningssida, formulär, bokningsflöde, webbfix eller annan webblösning kan du läsa mer på webutvecklare.se.
+            Kontrollera alltid att den du hyr från är en riktig och verifierad person.
+            Offroad Bumpis drivs av Erica Nordlöf, som är verifierad på LinkedIn.
+            På LinkedIn-profilen länkas det också tillbaka till Offroad Bumpis.
           </p>
 
-          <div class="cta-buttons">
-            <a href="https://webutvecklare.se/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              Besök webutvecklare.se
+          <div class="trust-actions">
+            <a href="https://www.linkedin.com/in/erica-nordl%C3%B6f/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              Se verifierad LinkedIn-profil
             </a>
-            <a href="mailto:erica@webutvecklare.se?subject=Webbhj%C3%A4lp%20via%20Offroad%20Bumpis" class="btn btn-secondary">
-              Mejla om webbhjälp
+            <a href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              Adress / recensioner
+            </a>
+            <a href="/priser.html" class="btn btn-secondary">
+              Se priser
             </a>
           </div>
-        </details>
+        </div>
       </div>
     </section>
 
@@ -2036,19 +2068,19 @@
           <div class="cta-copy">
             <h2>Klar att boka?</h2>
             <p>
-              Välj paket och datum i bokningssystemet och säkra din plats. Tiderna fylls snabbt så boka i tid.
-              Har du frågor är du välkommen att kontakta Offroad Bumpis.
+              Boka direkt, se prissidan eller skicka mejl om du har frågor.
+              Upplägget är enkelt: välj datum, antal bollar, eventuell leverans och betalningssätt.
             </p>
 
             <div class="cta-buttons">
               <a href="https://tidycal.com/boka-bumperballs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
                 Boka bumperballs
               </a>
+              <a href="/priser.html" class="btn btn-secondary">
+                Se priser
+              </a>
               <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">
                 Skicka mejl
-              </a>
-              <a href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                Adress / recensioner
               </a>
             </div>
           </div>
@@ -2060,6 +2092,7 @@
             <div class="contact-links">
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="https://tidycal.com/boka-bumperballs" target="_blank" rel="noopener noreferrer">Bokningslänk</a>
+              <a class="contact-link" href="/priser.html">Priser</a>
               <a class="contact-link" href="https://www.linkedin.com/in/erica-nordl%C3%B6f/" target="_blank" rel="noopener noreferrer">Verifierad LinkedIn-profil</a>
               <a class="contact-link" href="/nyheter.html">Nyheter</a>
               <a class="contact-link" href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
@@ -2079,6 +2112,7 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/" aria-current="page">Hem</a> ·
+          <a href="/priser.html">Priser</a> ·
           <a href="/nyheter.html">Nyheter</a> ·
           <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
           <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
