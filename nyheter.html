@@ -15,7 +15,6 @@
   <meta name="msvalidate.01" content="92586BA25D845A7D1185B5EE710E8A08" />
 
   <link rel="canonical" href="https://offroadbumpis.se/nyheter.html" />
-
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png?v=2" />
 
@@ -670,6 +669,47 @@
       max-width:680px;
     }
 
+    .hero-trust{
+      margin-top:14px;
+      color:#36553d;
+      font-size:15px;
+      line-height:1.7;
+      font-weight:700;
+      max-width:720px;
+    }
+
+    .hero-points{
+      display:grid;
+      gap:10px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+      color:#2c4632;
+      font-weight:700;
+      max-width:720px;
+    }
+
+    .hero-points li,
+    .side-list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .check{
+      flex:0 0 auto;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green-dark);
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      margin-top:2px;
+    }
+
     .hero-actions{
       display:flex;
       gap:12px;
@@ -729,7 +769,7 @@
 
     .news-layout{
       display:grid;
-      grid-template-columns:minmax(0,1fr) 340px;
+      grid-template-columns:minmax(0,1fr) minmax(280px,340px);
       gap:20px;
       align-items:start;
     }
@@ -881,26 +921,9 @@
     }
 
     .side-list li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
       color:#425646;
       line-height:1.6;
       font-weight:700;
-    }
-
-    .check{
-      flex:0 0 auto;
-      width:22px;
-      height:22px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:var(--green-dark);
-      color:#fff;
-      font-size:12px;
-      font-weight:900;
-      margin-top:2px;
     }
 
     .timeline{
@@ -946,20 +969,7 @@
       cursor:pointer;
       font-weight:900;
       list-style:none;
-      padding-right:28timeline-item h3{
-      font-size:24px;
-      margin-bottom:6px;
-    }
-
-    .timeline-item p{
-      color:var(--muted);
-      line-height:1.7;
-    }
-
-    details{
-      background:#fff;
-      border:1px solid var(--line);
-     px;
+      padding-right:28px;
       position:relative;
       line-height:1.5;
       font-size:18px;
@@ -1032,13 +1042,13 @@
       overflow:hidden;
     }
 
-    .cta h2{
+    .cta-copy h2{
       font-size:clamp(2rem,4vw,3.2rem);
       margin-bottom:10px;
-      max-width:13ch;
+      max-width:14ch;
     }
 
-    .cta p{
+    .cta-copy p{
       margin:0 0 18px;
       max-width:640px;
     }
@@ -1057,7 +1067,7 @@
       padding:22px;
       display:grid;
       gap:12px;
-      min-width:0;
+      overflow:hidden;
     }
 
     .contact-box strong{
@@ -1346,6 +1356,7 @@
       }
 
       .trust-card h2,
+      .cta-copy h2,
       .cta h2{
         max-width:none;
       }
@@ -1485,7 +1496,7 @@
         <div class="section-title">
           <h2>Senaste nytt</h2>
           <p>
-            Här samlar vi nyheter om nya bollar, nya upplägg och sånt som händer hos Offroad Bumpis.
+            Här samlas nyheter om nya bollar, nya upplägg och annat som händer hos Offroad Bumpis.
           </p>
         </div>
 
@@ -1713,7 +1724,7 @@
     <section class="section" id="kontakt">
       <div class="container">
         <div class="cta">
-          <div>
+          <div class="cta-copy">
             <h2>Vill du veta när vuxenstorleken går att boka?</h2>
             <p>
               Mejla Offroad Bumpis så kan du skriva upp intresse.
