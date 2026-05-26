@@ -1,3 +1,6 @@
+Här är hela uppdaterade **`priser.html`** med betalningssätten inlagda.
+
+```html
 <!doctype html>
 <html lang="sv">
 <head>
@@ -151,6 +154,22 @@
           },
           {
             "@type":"Question",
+            "name":"Hur kan jag betala?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Du väljer önskat betalningssätt i bokningen: kort via betalningslänk, Swish, faktura eller bankgiro/banköverföring. Betalning ska vara klar senast 3 dagar före hyresdatum om inget annat avtalats."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Hur fungerar rabattkod?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Rabattkod skrivs i bokningsformuläret och dras av manuellt på fakturan eller betalningsunderlaget."
+            }
+          },
+          {
+            "@type":"Question",
             "name":"Ingår pump?",
             "acceptedAnswer":{
               "@type":"Answer",
@@ -163,14 +182,6 @@
             "acceptedAnswer":{
               "@type":"Answer",
               "text":"Leverans visas zonvis och priset gäller per enkel väg. Hämtning i Malmö kostar 0 kr. Leverans inom Malmö kostar 500 kr enkel väg."
-            }
-          },
-          {
-            "@type":"Question",
-            "name":"Hur fungerar rabattkod?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"Rabattkod skrivs i bokningsformuläret och dras av på fakturan."
             }
           },
           {
@@ -1456,7 +1467,7 @@
 
     <div class="menu-cta">
       <strong>Boka direkt</strong>
-      <p>Välj datum, antal bollar och eventuella tillval. Rabattkod dras av på fakturan.</p>
+      <p>Välj datum, antal bollar, leverans och önskat betalningssätt. Rabattkod dras av manuellt.</p>
       <a href="https://tidycal.com/boka-bumperballs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
         Boka bumperballs
       </a>
@@ -1474,6 +1485,7 @@
           <p>
             Här ser du pris för att hyra bumperballs i barnstorlek. Välj antal bollar i bokningsformuläret.
             Hämtning i Malmö är gratis. Leverans och återleverans kan bokas som tillval och räknas per enkel väg.
+            Du väljer själv önskat betalningssätt i bokningen.
           </p>
 
           <div class="hero-actions">
@@ -1493,7 +1505,7 @@
           <strong>Från 600 kr</strong>
           <p>
             2 bollar kostar 600 kr. 10 bollar kostar 2 000 kr. 12 bollar kostar 2 200 kr.
-            Ju fler bollar, desto bättre pris per boll. Klassisk mängdrabatt — fast med studs.
+            Ju fler bollar, desto bättre pris per boll. Mängdrabatt med studs.
           </p>
         </aside>
       </div>
@@ -1535,7 +1547,8 @@
 
         <div class="notice">
           <strong>Rabattkod?</strong>
-          Skriv rabattkoden i bokningsformuläret. Den dras av på fakturan, så kalendern kan fortfarande visa ordinarie pris.
+          Skriv rabattkoden i bokningsformuläret. Den dras av manuellt på fakturan eller betalningsunderlaget,
+          så bokningsformuläret kan fortfarande visa ordinarie pris.
         </div>
 
         <div class="price-grid">
@@ -1620,7 +1633,7 @@
           <h2>Vad ingår?</h2>
           <p>
             Det ska vara enkelt att boka. Du väljer antal bollar, om du vill hämta själv eller boka leverans,
-            och om du vill lägga till extra utrustning.
+            och vilket betalningssätt du föredrar.
           </p>
         </div>
 
@@ -1654,9 +1667,10 @@
           </article>
 
           <article class="info-card">
-            <h3>Faktura</h3>
+            <h3>Betalning</h3>
             <p>
-              Faktura skickas efter bokning. Betalning ska vara klar senast 3 dagar före hyresdatum om inget annat avtalats.
+              Du väljer önskat betalningssätt i bokningen: kort via betalningslänk, Swish,
+              faktura eller bankgiro/banköverföring.
             </p>
           </article>
 
@@ -1826,8 +1840,17 @@
         <details>
           <summary>Betalning</summary>
           <p>
-            Faktura skickas efter bokning. Betalning ska vara klar senast 3 dagar före hyresdatum,
-            om inget annat står på fakturan eller är överenskommet.
+            Du väljer själv önskat betalningssätt i bokningsformuläret: kort via betalningslänk,
+            Swish, faktura eller bankgiro/banköverföring. Betalning ska vara klar senast
+            3 dagar före hyresdatum, om inget annat står på fakturan eller är överenskommet.
+          </p>
+        </details>
+
+        <details>
+          <summary>Rabattkod</summary>
+          <p>
+            Rabattkod skrivs i bokningsformuläret. Rabatten dras av manuellt på fakturan
+            eller betalningsunderlaget. Därför kan ordinarie pris fortfarande synas i själva bokningen.
           </p>
         </details>
 
@@ -1851,8 +1874,11 @@
           <p><strong>Hur lång tid tar det att pumpa upp?</strong><br />
           Cirka 2 minuter per boll. Vid större paket ingår fler pumpar enligt paket.</p>
 
+          <p><strong>Hur kan jag betala?</strong><br />
+          Du väljer önskat betalningssätt i bokningen: kort via betalningslänk, Swish, faktura eller bankgiro/banköverföring.</p>
+
           <p><strong>Kan man använda rabattkod?</strong><br />
-          Ja. Skriv rabattkoden i bokningsformuläret. Rabatten dras av på fakturan.</p>
+          Ja. Skriv rabattkoden i bokningsformuläret. Rabatten dras av manuellt på fakturan eller betalningsunderlaget.</p>
 
           <p><strong>Är leverans tur och retur?</strong><br />
           Nej. Leveranspriset är per enkel väg. Välj både leverans och återleverans om du vill ha båda.</p>
@@ -1871,8 +1897,8 @@
           <div>
             <h2>Klar att boka?</h2>
             <p>
-              Välj datum, antal bollar och eventuella tillval i bokningssystemet.
-              Rabattkod skrivs i formuläret och dras av på fakturan.
+              Välj datum, antal bollar, leverans, återleverans och önskat betalningssätt i bokningssystemet.
+              Rabattkod skrivs i formuläret och dras av manuellt på fakturan eller betalningsunderlaget.
             </p>
 
             <div class="cta-buttons">
@@ -2018,3 +2044,4 @@
   </script>
 </body>
 </html>
+```
