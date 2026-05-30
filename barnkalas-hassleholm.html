@@ -496,23 +496,6 @@
       color:#2f7f25;
       flex:0 0 auto;
     }
-    .menu-links a[aria-current="page"]{
-      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
-      color:#fff;
-      border-color:rgba(20,54,27,.45);
-      box-shadow:0 12px 26px rgba(20,54,27,.18);
-    }
-    .menu-links a[aria-current="page"]::after{
-      content:"Du är här";
-      color:#14361b;
-      background:#ffd84d;
-      border-radius:999px;
-      padding:4px 8px;
-      font-size:11px;
-      line-height:1;
-      font-weight:900;
-      white-space:nowrap;
-    }
     .menu-cta{
       margin-top:16px;
       padding:18px;
@@ -1266,10 +1249,6 @@
         padding:14px;
         font-size:15px;
       }
-      .menu-links a[aria-current="page"]::after{
-        content:"✓";
-        padding:4px 7px;
-      }
       .hero{
         padding:30px 0 22px;
       }
@@ -1433,11 +1412,7 @@
       <a href="/priser.html">Priser</a>
       <a href="/nyheter.html">Nyheter</a>
       <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
-      <a href="/barnkalas-hassleholm.html" aria-current="page">Barnkalas Hässleholm</a>
       <a href="#boka-plan">Boka hall eller plan</a>
-      <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
-      <a href="/barnkalas-lund.html">Barnkalas Lund</a>
-      <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
       <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
@@ -1696,30 +1671,30 @@
         <div class="section-title">
           <h2 id="areas-title">Barnkalas i Hässleholm med omnejd</h2>
           <p>
-            Den här sidan är för Hässleholm och närliggande områden. Malmö, Lund och Helsingborg har egna lokala sidor.
+            Den här sidan är för Hässleholm och närliggande områden. Stadssidorna ligger bara i footern så huvudmenyn inte blir länk-soppa.
           </p>
         </div>
         <div class="local-area-grid">
-          <a class="local-area-card" href="#kontakt">
+          <article class="local-area-card">
             <strong>Hässleholm</strong>
             <span>Barnkalas med bumperball i Hässleholm. Boka bollarna och välj egen yta, hall eller plan.</span>
-          </a>
-          <a class="local-area-card" href="#kontakt">
+          </article>
+          <article class="local-area-card">
             <strong>Tyringe</strong>
             <span>Passar om ni har tillgång till gräs, konstgräs, sporthall eller annan mjuk yta.</span>
-          </a>
-          <a class="local-area-card" href="#kontakt">
+          </article>
+          <article class="local-area-card">
             <strong>Vinslöv</strong>
             <span>Bumperballs till barnkalas, skola, fritids eller förening i området.</span>
-          </a>
-          <a class="local-area-card" href="#kontakt">
+          </article>
+          <article class="local-area-card">
             <strong>Finja</strong>
             <span>Kolla egen yta eller kommunens bokningssida för plan eller hall.</span>
-          </a>
-          <a class="local-area-card" href="#kontakt">
+          </article>
+          <article class="local-area-card">
             <strong>Sösdala</strong>
             <span>Aktiv kalasidé för barn som vill springa, skratta och göra något mer än standardkalas.</span>
-          </a>
+          </article>
           <a class="local-area-card" href="/barnkalas-skane.html">
             <strong>Skåne</strong>
             <span>Översiktssida för barnkalas med bumperball i hela Skåne.</span>
@@ -1810,9 +1785,6 @@
           <div class="cta-buttons">
             <a href="/priser.html#leverans" class="btn btn-secondary">Se leveranszoner</a>
             <a href="/barnkalas-skane.html" class="btn btn-secondary">Barnkalas Skåne</a>
-            <a href="/barnkalas-malmo.html" class="btn btn-secondary">Barnkalas Malmö</a>
-            <a href="/barnkalas-lund.html" class="btn btn-secondary">Barnkalas Lund</a>
-            <a href="/barnkalas-helsingborg.html" class="btn btn-secondary">Barnkalas Helsingborg</a>
           </div>
         </details>
         <details>
@@ -1928,7 +1900,7 @@
         <details>
           <summary>Populära sidor</summary>
           <p>
-            Här hittar du lokala sidor och mer riktade upplägg för olika typer av aktiviteter.
+            Här hittar du de viktigaste sidorna utan att hela webbplatsen blir ett digitalt julbord.
           </p>
           <div class="local-area-grid">
             <a class="local-area-card" href="/priser.html">
@@ -1939,18 +1911,6 @@
               <strong>Barnkalas Skåne</strong>
               <span>Översikt för barnkalas med bumperball i Skåne.</span>
             </a>
-            <a class="local-area-card" href="/barnkalas-malmo.html">
-              <strong>Barnkalas Malmö</strong>
-              <span>Bumperball i Malmö med enkel hämtning eller leverans enligt zon.</span>
-            </a>
-            <a class="local-area-card" href="/barnkalas-lund.html">
-              <strong>Barnkalas Lund</strong>
-              <span>Rolig aktivitet för barnkalas i Lund och närliggande områden.</span>
-            </a>
-            <a class="local-area-card" href="/barnkalas-helsingborg.html">
-              <strong>Barnkalas Helsingborg</strong>
-              <span>Bumperball i Helsingborg, Höganäs, Ängelholm och närliggande orter.</span>
-            </a>
             <a class="local-area-card" href="/skola-fritids-forening-skane.html">
               <strong>Skola, fritids & förening</strong>
               <span>För aktivitetsdag, avslutning, prova-på, lovaktivitet eller föreningsdag.</span>
@@ -1958,6 +1918,10 @@
             <a class="local-area-card" href="/bumperball-fotbollsforening-skane.html">
               <strong>Fotbollsförening</strong>
               <span>Bumperball för fotbollsföreningar i Skåne, internturnering och Bumpisligan.</span>
+            </a>
+            <a class="local-area-card" href="/nyheter.html">
+              <strong>Nyheter</strong>
+              <span>Senaste nytt från Offroad Bumpis.</span>
             </a>
             <a class="local-area-card" href="/villkor.html">
               <strong>Villkor</strong>
