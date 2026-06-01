@@ -534,7 +534,7 @@
     }
 
     .hero{
-      padding:54px 0 38px;
+      padding:54px 0 28px;
     }
 
     .hero-grid{
@@ -585,6 +585,58 @@
       max-width:720px;
     }
 
+    .booking-box{
+      margin-top:22px;
+      background:#fff;
+      border:1px solid rgba(18,64,29,.14);
+      border-radius:26px;
+      padding:20px;
+      box-shadow:var(--shadow);
+      max-width:760px;
+    }
+
+    .booking-box h2{
+      font-size:32px;
+      margin-bottom:8px;
+    }
+
+    .booking-box p{
+      font-size:15.5px;
+      line-height:1.7;
+      color:#3f5c46;
+    }
+
+    .booking-meta{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .booking-meta span{
+      display:block;
+      border-radius:16px;
+      background:#f5fff1;
+      border:1px solid var(--line);
+      padding:12px;
+      font-weight:900;
+      color:#17351e;
+      line-height:1.35;
+      font-size:14px;
+    }
+
+    .booking-note{
+      margin-top:14px;
+      padding:13px 14px;
+      border-radius:18px;
+      background:#fff7d6;
+      border:1px solid rgba(143,103,0,.16);
+      color:#59471a;
+      font-weight:800;
+      line-height:1.55;
+      font-size:14.5px;
+    }
+
     .hero-points,
     .feature-list{
       display:grid;
@@ -625,7 +677,7 @@
       display:flex;
       gap:12px;
       flex-wrap:wrap;
-      margin-top:26px;
+      margin-top:22px;
     }
 
     .hero-card{
@@ -1235,6 +1287,10 @@
         justify-self:start;
         max-width:none;
       }
+
+      .booking-meta{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
     }
 
     @media (max-width:980px){
@@ -1327,6 +1383,19 @@
       .eyebrow{
         font-size:12px;
         padding:7px 10px;
+      }
+
+      .booking-box{
+        padding:16px;
+        border-radius:22px;
+      }
+
+      .booking-box h2{
+        font-size:27px;
+      }
+
+      .booking-meta{
+        grid-template-columns:1fr;
       }
 
       .hero-points{
@@ -1517,32 +1586,44 @@
 
           <p>
             Offroad Bumpis hyr ut bumperballs till barnkalas, skola, fritids, förening,
-            företag och kompisgäng i Skåne. Barnbollar finns nu. Vuxenbollar kan bokas från
-            1 september 2026.
+            företag och gruppaktivitet i Skåne. Barnbollar finns nu. Vuxenbollar kan bokas
+            från 1 september 2026.
           </p>
 
-          <p class="hero-trust">
-            Du bokar direkt i mitt egna bokningssystem. Välj datum, antal bollar, tillval,
-            leverans och rabattkod. Faktura skickas direkt efter bokning. Mindre mejlpingis,
-            mer studs.
-          </p>
+          <div class="booking-box" aria-label="Boka bumperballs snabbt">
+            <h2>Boka på 30 sekunder</h2>
+            <p>
+              Välj datum, antal bollar, tillval, leverans och rabattkod direkt i Offroad Bumpis bokningssystem.
+              Faktura skickas direkt efter bokning.
+            </p>
+
+            <div class="booking-meta" aria-label="Snabbfakta om bokning">
+              <span>Från 600 kr</span>
+              <span>Barn 7–12 år</span>
+              <span>Hämta i Malmö</span>
+              <span>Leverans i Skåne</span>
+            </div>
+
+            <div class="booking-note">
+              Det kostar inget att boka. Bokningen betalas senast 3 dagar före utlämning.
+              Annars släpps bokningen bara.
+            </div>
+
+            <div class="hero-actions">
+              <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                Boka direkt
+              </a>
+              <a href="/priser.html" class="btn btn-secondary">Se priser</a>
+              <a href="/villkor.html" class="btn btn-secondary">Villkor</a>
+            </div>
+          </div>
 
           <ul class="hero-points">
             <li><span class="check">✓</span><span>Barnbollar från 600 kr.</span></li>
             <li><span class="check">✓</span><span>10 barnbollar kostar 2 000 kr.</span></li>
-            <li><span class="check">✓</span><span>Vuxenbollar kan bokas från 1 september 2026.</span></li>
             <li><span class="check">✓</span><span>Batteridrivna pumpar ingår. Inget eluttag behövs.</span></li>
             <li><span class="check">✓</span><span>Hämta i Malmö eller boka leverans inom Skåne.</span></li>
           </ul>
-
-          <div class="hero-actions">
-            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Boka bumperballs
-            </a>
-            <a href="/priser.html" class="btn btn-secondary">Se priser</a>
-            <a href="#paket" class="btn btn-secondary">Välj paket</a>
-            <a href="/villkor.html" class="btn btn-secondary">Villkor</a>
-          </div>
         </div>
 
         <aside class="hero-card" aria-label="Bumperballs bild och status">
@@ -1575,13 +1656,13 @@
         </div>
 
         <div class="quick-item">
-          <strong>3 000 kr</strong>
-          10 vuxenbollar från 1 sep 2026
+          <strong>0 kr</strong>
+          Hämta själv i Malmö
         </div>
 
         <div class="quick-item">
-          <strong>0 kr</strong>
-          Hämta själv i Malmö
+          <strong>3 dagar</strong>
+          Betala senast före utlämning
         </div>
       </div>
     </section>
@@ -1776,7 +1857,7 @@
           <h2>Underlag som funkar</h2>
           <p>
             Rätt underlag gör aktiviteten roligare och skyddar bollarna.
-            Fel underlag slutar ofta med pys.
+            Fel underlag slutar ofta med pys. Pys är dålig ROI.
           </p>
         </div>
 
@@ -1831,9 +1912,9 @@
           </article>
 
           <article class="card">
-            <h3>3. Betala</h3>
+            <h3>3. Betala senare</h3>
             <p>
-              Faktura skickas direkt. Du kan betala med faktura, banköverföring, Swish, kort eller Klarna.
+              Faktura skickas direkt. Betala senast 3 dagar före utlämning. Om bokningen inte betalas i tid släpps den.
             </p>
           </article>
         </div>
@@ -1850,16 +1931,16 @@
     <section class="section" id="vuxenbollar">
       <div class="container">
         <div class="trust-card">
-          <h2>Vuxenbollar från 1 september 2026</h2>
+          <h2>Snart även för vuxna</h2>
           <p>
-            Offroad Bumpis har även större bumperballs för äldre barn, ungdomar och vuxna.
-            De kan bokas från 1 september 2026 och passar företag, föreningar, kompisgäng,
-            svensexa, möhippa och lagaktivitet.
+            Offroad Bumpis får även större bumperballs för äldre barn, ungdomar och vuxna.
+            Vuxenbollar kan bokas från 1 september 2026 och passar företag, föreningar,
+            kompisgäng, svensexa, möhippa och lagaktivitet.
           </p>
 
           <div class="trust-actions">
             <a href="/priser.html#vuxenbollar" class="btn btn-secondary">Se vuxenbollar</a>
-            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Boka</a>
+            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Boka från 1 sep</a>
           </div>
         </div>
       </div>
@@ -1927,6 +2008,16 @@
             <div class="details-content">
               <p>
                 Nej. Ni hyr utrustningen och kör själva. En ansvarig vuxen ska hålla koll under aktiviteten.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Kostar det något att boka?</summary>
+            <div class="details-content">
+              <p>
+                Nej. Det kostar inget att boka. Bokningen ska betalas senast 3 dagar före utlämning.
+                Om den inte betalas i tid släpps bokningen.
               </p>
             </div>
           </details>
@@ -2008,49 +2099,51 @@
   </main>
 
   <footer>
-  <div class="container">
-    <div class="footer-line">
-      <span>© 2026 Offroad Bumpis</span>
-      <nav class="footer-links" aria-label="Sidfot">
-        <a href="/" aria-current="page">Hem</a>
-        <a href="/villkor.html">Villkor</a>
-        <a href="/integritet.html">Integritet</a>
-        <details class="footer-dropdown">
-          <summary>Stadssidor</summary>
-          <div class="footer-dropdown-panel">
-            <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
-            <a href="/barnkalas-lund.html">Barnkalas Lund</a>
-            <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
-            <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
-            <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
-            <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
-            <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
-            <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
-          </div>
-        </details>
-        <details class="footer-dropdown">
-          <summary>Alla sidor</summary>
-          <div class="footer-dropdown-panel">
-            <a href="/priser.html">Priser</a>
-            <a href="/nyheter.html">Nyheter</a>
-            <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
-            <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
-            <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-            <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
-            <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
-            <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
-            <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
-            <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
-            <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
-            <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
-            <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
-            <a href="/affiliate.html">Affiliate</a>
-          </div>
-        </details>
-      </nav>
+    <div class="container">
+      <div class="footer-line">
+        <span>© 2026 Offroad Bumpis</span>
+        <nav class="footer-links" aria-label="Sidfot">
+          <a href="/" aria-current="page">Hem</a>
+          <a href="/villkor.html">Villkor</a>
+          <a href="/integritet.html">Integritet</a>
+
+          <details class="footer-dropdown">
+            <summary>Stadssidor</summary>
+            <div class="footer-dropdown-panel">
+              <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+              <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+              <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+              <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+              <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+              <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+              <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+              <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+            </div>
+          </details>
+
+          <details class="footer-dropdown">
+            <summary>Alla sidor</summary>
+            <div class="footer-dropdown-panel">
+              <a href="/priser.html">Priser</a>
+              <a href="/nyheter.html">Nyheter</a>
+              <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+              <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+              <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+              <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+              <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+              <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+              <a href="/affiliate.html">Affiliate</a>
+            </div>
+          </details>
+        </nav>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     const menuButton = document.getElementById('menuButton');
