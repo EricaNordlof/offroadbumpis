@@ -6,7 +6,7 @@
   <title>Vuxenbollar i Skåne | Hyr bumperballs för vuxna | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Vuxenbollar i Skåne kommer snart hos Offroad Bumpis. Hyr bumperballs för vuxna till svensexa, möhippa, företag, förening, kompisgäng och gruppaktivitet. Priser från 700 kr."
+    content="Hyr vuxenbollar i Skåne till svensexa, möhippa, företag, förening och kompisgäng. Bumperballs för vuxna kommer snart hos Offroad Bumpis. Från 700 kr."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png?v=2" />
   <meta property="og:title" content="Vuxenbollar i Skåne | Hyr bumperballs för vuxna" />
-  <meta property="og:description" content="Bumperballs för vuxna i Skåne. Passar svensexa, möhippa, företag, förening och kompisgäng. Vuxenbollarna är på väg." />
+  <meta property="og:description" content="Bumperballs för vuxna i Skåne. Passar svensexa, möhippa, företag, förening och kompisgäng. Vuxenbollar kommer snart." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/vuxen-bumperballs-skane.html" />
   <meta property="og:type" content="website" />
@@ -93,7 +93,7 @@
           {
             "@type":"Question",
             "name":"Kan man hyra bumperballs för vuxna i Skåne?",
-            "acceptedAnswer":{"@type":"Answer","text":"Ja, vuxenbollar är på väg till Offroad Bumpis och beräknas kunna bokas från 1 september 2026. De passar vuxna, äldre barn, ungdomar, företag, föreningar, svensexa, möhippa och kompisgäng."}
+            "acceptedAnswer":{"@type":"Answer","text":"Ja. Vuxenbollar är på väg till Offroad Bumpis och beräknas kunna bokas från 1 september 2026. De passar svensexa, möhippa, företag, förening och kompisgäng."}
           },
           {
             "@type":"Question",
@@ -108,7 +108,7 @@
           {
             "@type":"Question",
             "name":"Behöver man eluttag?",
-            "acceptedAnswer":{"@type":"Answer","text":"Nej. Batteridrivna pumpar ingår, så aktiviteten kan köras även på platser utan eluttag."}
+            "acceptedAnswer":{"@type":"Answer","text":"Nej. Batteridrivna pumpar ingår, så ni kan spela även där det inte finns eluttag."}
           },
           {
             "@type":"Question",
@@ -483,12 +483,6 @@
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,.03);
     }
-    .btn-yellow{
-      background:var(--yellow);
-      color:#17200f;
-      border:1px solid rgba(0,0,0,.08);
-      box-shadow:0 12px 30px rgba(102,76,0,.12);
-    }
     .hero{
       padding:54px 0 38px;
     }
@@ -667,7 +661,6 @@
       gap:18px;
     }
     .card,
-    .price-card,
     .photo-card,
     details{
       background:#fff;
@@ -707,29 +700,11 @@
       color:var(--muted);
       line-height:1.7;
     }
-    .price-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      align-items:stretch;
-    }
     .adult-price-grid{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
       gap:16px;
       align-items:stretch;
-    }
-    .price-card{
-      padding:24px;
-      position:relative;
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-    }
-    .price-card.featured{
-      background:linear-gradient(180deg,#14371b 0%,#102817 100%);
-      color:#fff;
-      transform:translateY(-8px);
     }
     .adult-price-card{
       background:#fff;
@@ -800,46 +775,9 @@
       background:rgba(18,49,29,.08);
       line-height:1.2;
     }
-    .featured .tag,
     .adult-price-card.featured .tag{
       background:rgba(255,255,255,.12);
       color:#e9ffe8;
-    }
-    .price-card h3{
-      margin:16px 0 8px;
-      font-size:30px;
-      color:inherit;
-    }
-    .price{
-      font-size:48px;
-      font-weight:900;
-      letter-spacing:-.06em;
-      line-height:1;
-      margin:0 0 10px;
-      font-family:"Baloo 2",sans-serif;
-      font-variant-numeric:tabular-nums;
-    }
-    .price-note{
-      margin-bottom:16px;
-      color:#627066;
-      font-weight:700;
-      line-height:1.65;
-      font-size:15px;
-      min-height:72px;
-    }
-    .featured .price-note{
-      color:#d7e8d7;
-    }
-    .price-card .feature-list{
-      margin-top:0;
-    }
-    .price-card .feature-list li{
-      color:#425646;
-      line-height:1.65;
-      font-weight:600;
-    }
-    .featured .feature-list li{
-      color:#eef6ee;
     }
     .notice{
       background:linear-gradient(135deg,#fff7d6 0%,#ffffff 72%);
@@ -887,28 +825,40 @@
       color:#6d2d20;
       border-color:rgba(109,45,32,.18);
     }
-    .steps{
-      counter-reset:step;
+    .step-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
     }
     .step-card{
-      position:relative;
-      padding-top:58px;
+      display:grid;
+      grid-template-columns:48px minmax(0,1fr);
+      gap:14px;
+      align-items:start;
+      padding:24px;
     }
-    .step-card::before{
-      counter-increment:step;
-      content:counter(step);
-      position:absolute;
-      top:20px;
-      left:24px;
-      width:34px;
-      height:34px;
+    .step-number{
+      width:48px;
+      height:48px;
       border-radius:999px;
       display:grid;
       place-items:center;
       background:#14361b;
       color:#fff;
       font-weight:900;
+      font-size:22px;
       box-shadow:var(--shadow-soft);
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .step-card h3{
+      font-size:28px;
+      margin:3px 0 10px;
+      line-height:1;
+    }
+    .step-card p{
+      color:var(--muted);
+      line-height:1.75;
     }
     details{
       padding:0;
@@ -1152,7 +1102,6 @@
         --line:rgba(0,0,0,.35);
       }
       .card,
-      .price-card,
       .adult-price-card,
       .photo-card,
       .quick-item,
@@ -1165,7 +1114,6 @@
       .menu-button,
       .menu-close,
       .card,
-      .price-card,
       .adult-price-card,
       .photo-card,
       .quick-item,
@@ -1197,13 +1145,10 @@
       }
     }
     @media (max-width:980px){
-      .price-grid,
       .adult-price-grid,
-      .grid-3{
+      .grid-3,
+      .step-grid{
         grid-template-columns:1fr;
-      }
-      .price-card.featured{
-        transform:none;
       }
     }
     @media (max-width:720px){
@@ -1264,6 +1209,7 @@
       .section-title p,
       .card p,
       .adult-price-card p,
+      .step-card p,
       .details-content p,
       .cta p,
       .trust-card p{
@@ -1305,7 +1251,6 @@
         margin-bottom:16px;
       }
       .card,
-      .price-card,
       .adult-price-card,
       .photo-card,
       .hero-card,
@@ -1316,24 +1261,31 @@
         border-radius:20px;
       }
       .card,
-      .price-card,
       .adult-price-card,
       .contact-box,
       .hero-card{
         padding:18px;
       }
+      .step-card{
+        padding:18px;
+        grid-template-columns:42px minmax(0,1fr);
+        gap:12px;
+      }
+      .step-number{
+        width:42px;
+        height:42px;
+        font-size:20px;
+      }
+      .step-card h3{
+        font-size:26px;
+        margin-top:4px;
+      }
       .trust-card,
       .cta{
         padding:22px;
       }
-      .price{
-        font-size:40px;
-      }
       .adult-price{
         font-size:39px;
-      }
-      .price-note{
-        min-height:auto;
       }
       summary{
         padding:16px 46px 16px 16px;
@@ -1373,10 +1325,15 @@
         font-size:1.95rem;
       }
       .card h3,
-      .price-card h3,
       .adult-price-card h3,
       .photo-card h3{
         font-size:26px;
+      }
+      .step-card{
+        grid-template-columns:1fr;
+      }
+      .step-number{
+        margin-bottom:2px;
       }
       .trust-card h2,
       .cta h2{
@@ -1418,13 +1375,14 @@
       <a href="/">Hem</a>
       <a href="/priser.html">Priser</a>
       <a href="/vuxen-bumperballs-skane.html" aria-current="page">Vuxenbollar</a>
+      <a href="/svensexa-bumperballs-skane.html">Svensexa</a>
       <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
       <a href="/nyheter.html">Nyheter</a>
       <a href="/villkor.html">Villkor</a>
     </nav>
     <div class="menu-cta">
-      <strong>Vuxenbollar på väg</strong>
-      <p>Vill du boka svensexa, möhippa, företag, förening eller kompisgäng? Skicka intresse redan nu.</p>
+      <strong>Vuxenbollar kommer snart</strong>
+      <p>Skicka datum, ort och antal personer om du vill boka intresse redan nu.</p>
       <a href="mailto:kontakt@offroadbumpis.se?subject=Intresse%20vuxenbollar%20i%20Sk%C3%A5ne" class="btn btn-secondary">
         Skicka intresse
       </a>
@@ -1437,19 +1395,17 @@
           <span class="eyebrow">Vuxenbollar i Skåne · kommer snart</span>
           <h1 id="hero-title">Bumperballs för vuxna i Skåne</h1>
           <p>
-            Offroad Bumpis tar snart in större bumperballs för äldre barn, ungdomar och vuxna.
-            Perfekt för svensexa, möhippa, företag, förening, kickoff, kompisgäng och andra grupper
-            som vill ha en aktivitet där folk ramlar med stil.
+            Snart kan du hyra större bumperballs för vuxna hos Offroad Bumpis.
+            Det passar svensexa, möhippa, företag, förening och kompisgäng.
           </p>
           <p class="hero-trust">
-            Vuxenbollarna är beställda och beräknas kunna bokas från 1 september 2026.
-            Vill du säkra ett datum eller bara visa intresse? Skicka ett mejl redan nu, så slipper du
-            stå där med plan, folk och noll bollar. Dålig KPI.
+            Vuxenbollarna är på väg och beräknas kunna bokas från 1 september 2026.
+            Vill du planera något redan nu? Skicka datum, ort och ungefär hur många ni blir.
           </p>
           <ul class="hero-points">
             <li><span class="check">✓</span><span>Vuxenbollar från 700 kr per prisdag.</span></li>
-            <li><span class="check">✓</span><span>Passar vuxna, ungdomar och äldre barn.</span></li>
-            <li><span class="check">✓</span><span>För svensexa, möhippa, företag, förening och kompisgäng.</span></li>
+            <li><span class="check">✓</span><span>Passar svensexa, möhippa, företag och kompisgäng.</span></li>
+            <li><span class="check">✓</span><span>Ni hyr utrustningen och kör själva.</span></li>
             <li><span class="check">✓</span><span>Batteridrivna pumpar ingår. Inget eluttag behövs.</span></li>
             <li><span class="check">✓</span><span>Hämta i Malmö eller boka leverans inom Skåne.</span></li>
           </ul>
@@ -1457,8 +1413,8 @@
             <a href="mailto:kontakt@offroadbumpis.se?subject=Intresse%20vuxenbollar%20i%20Sk%C3%A5ne" class="btn btn-primary">
               Skicka intresse
             </a>
-            <a href="#priser" class="btn btn-secondary">Se vuxenpriser</a>
-            <a href="#passar-for" class="btn btn-secondary">Se upplägg</a>
+            <a href="#priser" class="btn btn-secondary">Se priser</a>
+            <a href="#passar-for" class="btn btn-secondary">Vad passar det för?</a>
             <a href="/priser.html" class="btn btn-secondary">Alla priser</a>
           </div>
         </div>
@@ -1472,8 +1428,7 @@
           <div class="hero-card-note">
             <strong>Vuxenbollarna är på väg</strong>
             <span>
-              Bilden visar barnbollarna som redan finns. Vuxenbollarna blir större och passar
-              äldre barn, ungdomar och vuxna.
+              Bilden visar barnbollarna som finns redan nu. Vuxenbollarna blir större.
             </span>
           </div>
         </aside>
@@ -1494,23 +1449,22 @@
           12 vuxenbollar
         </div>
         <div class="quick-item">
-          <strong>0 kr</strong>
-          Hämta själv i Malmö
+          <strong>Skåne</strong>
+          Hämta eller leverans
         </div>
       </div>
     </section>
     <section class="section" id="status">
       <div class="container">
         <div class="trust-card">
-          <h2>Förhandsinfo</h2>
+          <h2>Kommer snart</h2>
           <p>
-            Vuxenbollarna finns inte för uthyrning än, men sidan ligger ute redan nu så Google,
-            kunder och planerare hinner fatta grejen. Smartare pipeline, mindre panik senare.
-            Beräknad start: 1 september 2026.
+            Vuxenbollarna finns inte för uthyrning än. De är på väg och beräknas kunna bokas
+            från 1 september 2026. Du kan ändå skicka intresse redan nu om du planerar en aktivitet.
           </p>
           <div class="trust-actions">
             <a href="mailto:kontakt@offroadbumpis.se?subject=Intresse%20vuxenbollar%20i%20Sk%C3%A5ne" class="btn btn-secondary">
-              Intresseanmälan
+              Skicka intresse
             </a>
             <a href="/barnkalas-skane.html" class="btn btn-secondary">
               Barnbollar finns nu
@@ -1524,8 +1478,7 @@
         <div class="section-title">
           <h2>Priser vuxenbollar</h2>
           <p>
-            Priserna gäller per prisdag. Välj färre bollar för enklare upplägg eller fler bollar
-            när ni vill spela mer samtidigt och ha mindre väntan.
+            Du behöver inte ha en boll per person. Är ni många kan ni köra korta matcher och byta ofta.
           </p>
         </div>
         <div class="adult-price-grid">
@@ -1535,7 +1488,7 @@
               <span class="tag">Mini</span>
             </div>
             <div class="adult-price">700 kr<small>per prisdag</small></div>
-            <p>Test, duell eller mindre aktivitet.</p>
+            <p>För test, duell eller liten aktivitet.</p>
           </article>
           <article class="adult-price-card">
             <div class="adult-price-top">
@@ -1543,15 +1496,15 @@
               <span class="tag">Litet gäng</span>
             </div>
             <div class="adult-price">1 300 kr<small>per prisdag</small></div>
-            <p>Mindre kompisgäng eller enklare match.</p>
+            <p>För mindre grupp eller enkel match.</p>
           </article>
           <article class="adult-price-card">
             <div class="adult-price-top">
               <h3>6 bollar</h3>
-              <span class="tag">Rotation</span>
+              <span class="tag">Lag</span>
             </div>
             <div class="adult-price">1 900 kr<small>per prisdag</small></div>
-            <p>Lagaktivitet med rotation.</p>
+            <p>Bra när ni vill köra lag och byta spelare.</p>
           </article>
           <article class="adult-price-card">
             <div class="adult-price-top">
@@ -1559,7 +1512,7 @@
               <span class="tag">Mer spel</span>
             </div>
             <div class="adult-price">2 500 kr<small>per prisdag</small></div>
-            <p>Större grupp med mer spel samtidigt.</p>
+            <p>För större grupp med mer spel samtidigt.</p>
           </article>
           <article class="adult-price-card featured">
             <div class="adult-price-top">
@@ -1567,21 +1520,20 @@
               <span class="tag">Populärt</span>
             </div>
             <div class="adult-price">3 000 kr<small>per prisdag</small></div>
-            <p>Företag, förening, svensexa, möhippa och större grupper.</p>
+            <p>Passar svensexa, möhippa, företag och större grupper.</p>
           </article>
           <article class="adult-price-card">
             <div class="adult-price-top">
               <h3>12 bollar</h3>
-              <span class="tag">Maxat</span>
+              <span class="tag">Max</span>
             </div>
             <div class="adult-price">3 500 kr<small>per prisdag</small></div>
-            <p>Maxat upplägg för större aktivitet.</p>
+            <p>För större aktivitet och mindre väntan.</p>
           </article>
         </div>
         <div class="notice green">
-          <strong>Helgbonus:</strong>
-          Fredag till söndag räknas som en prisdag. Extra vardagar räknas som extra prisdagar.
-          Leverans inom Skåne kan bokas enligt leveranszon.
+          <strong>Helg:</strong>
+          Fredag till söndag räknas som en prisdag. Leverans inom Skåne kan bokas enligt leveranszon.
         </div>
         <div class="hero-actions">
           <a href="mailto:kontakt@offroadbumpis.se?subject=Intresse%20vuxenbollar%20i%20Sk%C3%A5ne" class="btn btn-primary">
@@ -1596,51 +1548,47 @@
         <div class="section-title">
           <h2>Passar för</h2>
           <p>
-            Vuxenbollar är en enkel aktivitet när gruppen vill göra något aktivt utan att det
-            blir för seriöst. Tänk fotboll, krock, skratt och lite kontrollerat kaos.
+            Bumperballs är enkelt. På med bollen, kör igång och försök hålla balansen.
           </p>
         </div>
         <div class="grid-3">
           <article class="card">
             <h3>Svensexa</h3>
             <p>
-              Bumperballs passar när ni vill ha en rolig aktivitet utan att behöva krångla.
-              Boka en gräsplan, konstgräsplan eller hall och kör matcher, dueller eller turnering.
+              Kul aktivitet för gänget innan middag, fest eller nästa stopp. Kör matcher, dueller eller turnering.
             </p>
+            <div class="link-row">
+              <a href="/svensexa-bumperballs-skane.html" class="btn btn-secondary">Svensexa Skåne</a>
+            </div>
           </article>
           <article class="card">
             <h3>Möhippa</h3>
             <p>
-              Funkar för grupper som vill göra något aktivt, enkelt och minnesvärt.
-              Inget eluttag behövs eftersom batteridrivna pumpar ingår.
+              Passar om ni vill göra något aktivt och roligt utan att det blir för krångligt.
             </p>
           </article>
           <article class="card">
             <h3>Företag</h3>
             <p>
-              Bra för kickoff, teambuilding, sommarfest och personalaktivitet.
-              Lätt att förstå, snabbt att starta och betydligt roligare än ännu en PowerPoint.
+              För kickoff, personaldag, sommarfest eller teambuilding. Mycket roligare än ett möte till.
             </p>
           </article>
           <article class="card">
             <h3>Förening</h3>
             <p>
-              Passar föreningsdag, avslutning, prova-på-aktivitet och lagaktivitet.
-              En rolig twist på vanlig fotboll.
+              Bra för föreningsdag, avslutning eller lagaktivitet. En rolig twist på vanlig fotboll.
             </p>
           </article>
           <article class="card">
             <h3>Kompisgäng</h3>
             <p>
-              För grupper som vill göra något mer än att bara sitta still och fråga “vad ska vi göra?”.
-              Här är svaret. Ni ska studsa in i varandra.
+              För grupper som vill göra något mer än att bara sitta och fundera på vad man ska göra.
             </p>
           </article>
           <article class="card">
             <h3>Ungdomar</h3>
             <p>
-              Passar även äldre barn och ungdomar, beroende på storlek och upplägg.
-              En ansvarig vuxen ska alltid finnas på plats.
+              Kan även passa äldre barn och ungdomar, beroende på storlek och upplägg.
             </p>
           </article>
         </div>
@@ -1651,30 +1599,37 @@
         <div class="section-title">
           <h2>Enkelt upplägg</h2>
           <p>
-            Ni hyr utrustningen och kör själva. Det gör priset rimligare och upplägget flexiblare.
+            Ni hyr bollarna och kör själva. Det gör det enklare och billigare.
           </p>
         </div>
-        <div class="grid-3 steps">
+        <div class="step-grid">
           <article class="card step-card">
-            <h3>Välj plats</h3>
-            <p>
-              Boka eller välj en jämn yta med gräs, konstgräs eller idrottshall.
-              Det ska vara rent från glas, stenar, pinnar och annat vasst.
-            </p>
+            <div class="step-number" aria-hidden="true">1</div>
+            <div>
+              <h3>Välj plats</h3>
+              <p>
+                Välj en jämn yta med gräs, konstgräs eller idrottshall.
+                Det ska vara rent från glas, stenar, pinnar och annat vasst.
+              </p>
+            </div>
           </article>
           <article class="card step-card">
-            <h3>Blås upp</h3>
-            <p>
-              Batteridrivna pumpar ingår. Ni behöver alltså inte stå nära eluttag.
-              Frihet i logistikflödet. CFO:n applåderar.
-            </p>
+            <div class="step-number" aria-hidden="true">2</div>
+            <div>
+              <h3>Blås upp</h3>
+              <p>
+                Batteridrivna pumpar ingår. Ni behöver inte vara nära eluttag.
+              </p>
+            </div>
           </article>
           <article class="card step-card">
-            <h3>Kör matcher</h3>
-            <p>
-              Kör korta matcher, dueller, stafetter eller turnering.
-              Byt ofta så folk orkar. Bumperballs är roligt, men konditionen ljuger aldrig.
-            </p>
+            <div class="step-number" aria-hidden="true">3</div>
+            <div>
+              <h3>Kör igång</h3>
+              <p>
+                Kör korta matcher, dueller eller turnering. Byt ofta så alla orkar.
+              </p>
+            </div>
           </article>
         </div>
       </div>
@@ -1685,14 +1640,12 @@
           <h2>Underlag som funkar</h2>
           <p>
             Rätt underlag gör aktiviteten roligare och skyddar bollarna.
-            Fel underlag slutar ofta med pys och då är festen finansiellt osnygg.
           </p>
         </div>
         <div class="card">
           <h3>Godkända och ej godkända underlag</h3>
           <p>
-            Använd vuxenbollarna på mjuka och jämna ytor. Ytan ska vara fri från stenar,
-            glas, pinnar, vassa kanter och annat som kan skada bollarna.
+            Använd bollarna på mjuka och jämna ytor. Undvik allt vasst, hårt och ojämnt.
           </p>
           <div class="pill-row" aria-label="Tillåtna och otillåtna underlag">
             <span class="pill">Gräs</span>
@@ -1707,7 +1660,7 @@
           </div>
           <div class="link-row">
             <a href="/villkor.html" class="btn btn-secondary">Läs villkor</a>
-            <a href="/priser.html" class="btn btn-secondary">Se priser</a>
+            <a href="/priser.html#leverans" class="btn btn-secondary">Se leveranszoner</a>
           </div>
         </div>
       </div>
@@ -1724,18 +1677,73 @@
           <article class="card">
             <h3>Hämta i Malmö</h3>
             <p>
-              Självhämtning i Malmö kostar 0 kr. Det passar bäst om du själv kan transportera
-              bollarna och vill hålla nere priset.
+              Självhämtning i Malmö kostar 0 kr. Bra om du själv kan lösa transport.
             </p>
           </article>
           <article class="card">
             <h3>Leverans i Skåne</h3>
             <p>
-              Leverans kan bokas inom Skåne enligt leveranszon. Exakt pris beror på ort och om
-              du vill ha enkel väg eller tur och retur.
+              Leverans kan bokas inom Skåne. Priset beror på ort och om du vill ha enkel väg eller tur och retur.
             </p>
             <div class="link-row">
               <a href="/priser.html#leverans" class="btn btn-secondary">Se leveranszoner</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="bilder">
+      <div class="container">
+        <div class="section-title">
+          <h2>Så kan det se ut</h2>
+          <p>
+            Bilderna visar bumperballs i bruk. Vuxenbollarna blir större än barnbollarna på bilderna.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="photo-card">
+            <img
+              src="/bilder/barn-i-bumperball-utomhus.jpg"
+              alt="Bumperball utomhus"
+              loading="lazy"
+              width="900"
+              height="563"
+            />
+            <div class="photo-card-content">
+              <h3>Utomhus</h3>
+              <p>
+                Spela på gräs eller konstgräs. Perfekt för parker, planer och öppna ytor.
+              </p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img
+              src="/bilder/barn-spelar-bumperballs.jpg"
+              alt="Bumperballs på gräsplan"
+              loading="lazy"
+              width="900"
+              height="563"
+            />
+            <div class="photo-card-content">
+              <h3>Matcher</h3>
+              <p>
+                Kör korta matcher med byten. Det blir mer fart och mindre väntan.
+              </p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img
+              src="/bilder/fotbollslag-spelar-bumperball-veberod.png"
+              alt="Grupp spelar bumperball på fotbollsplan"
+              loading="lazy"
+              width="900"
+              height="563"
+            />
+            <div class="photo-card-content">
+              <h3>Gruppaktivitet</h3>
+              <p>
+                Passar lag, kompisgäng och större grupper som vill göra något aktivt.
+              </p>
             </div>
           </article>
         </div>
@@ -1746,8 +1754,8 @@
         <div class="trust-card">
           <h2>Barnbollar finns redan nu</h2>
           <p>
-            Behöver du bumperballs innan vuxenbollarna har kommit? Barnbollarna finns redan
-            för barn cirka 7–12 år och max 60 kg. De passar barnkalas, skola, fritids och förening.
+            Behöver du bumperballs tidigare? Barnbollarna finns redan nu.
+            De passar barn cirka 7–12 år och max 60 kg.
           </p>
           <div class="trust-actions">
             <a href="/barnkalas-skane.html" class="btn btn-secondary">Barnkalas Skåne</a>
@@ -1764,7 +1772,7 @@
         <div class="section-title">
           <h2>Vanliga frågor</h2>
           <p>
-            Kortversionen. Fullständiga villkor finns på villkorssidan.
+            Kort svar på det viktigaste.
           </p>
         </div>
         <div class="faq-grid">
@@ -1772,8 +1780,7 @@
             <summary>Kan man hyra bumperballs för vuxna i Skåne?</summary>
             <div class="details-content">
               <p>
-                Ja, vuxenbollar är på väg till Offroad Bumpis. De beräknas kunna bokas från
-                1 september 2026. Du kan redan nu skicka intresseanmälan via mejl.
+                Ja, vuxenbollar är på väg till Offroad Bumpis. De beräknas kunna bokas från 1 september 2026.
               </p>
             </div>
           </details>
@@ -1782,16 +1789,15 @@
             <div class="details-content">
               <p>
                 Vuxenbollar kostar från 700 kr per prisdag för 2 bollar.
-                10 vuxenbollar kostar 3 000 kr per prisdag och 12 vuxenbollar kostar 3 500 kr per prisdag.
+                10 vuxenbollar kostar 3 000 kr och 12 vuxenbollar kostar 3 500 kr.
               </p>
             </div>
           </details>
           <details>
-            <summary>Vilka grupper passar vuxenbollar för?</summary>
+            <summary>Vilka grupper passar det för?</summary>
             <div class="details-content">
               <p>
-                De passar svensexa, möhippa, företag, förening, kickoff, lagaktivitet,
-                ungdomsgrupper och kompisgäng.
+                Det passar svensexa, möhippa, företag, förening, kickoff, lagaktivitet och kompisgäng.
               </p>
             </div>
           </details>
@@ -1799,7 +1805,7 @@
             <summary>Behöver man eluttag?</summary>
             <div class="details-content">
               <p>
-                Nej. Batteridrivna pumpar ingår, så ni kan spela på platser utan eluttag.
+                Nej. Batteridrivna pumpar ingår.
               </p>
             </div>
           </details>
@@ -1807,26 +1813,15 @@
             <summary>Var kan man spela?</summary>
             <div class="details-content">
               <p>
-                Det fungerar bäst på gräs, konstgräs eller i idrottshall.
-                Asfalt, grus, betong, is och hårda ojämna ytor är inte tillåtna.
+                Gräs, konstgräs och idrottshall fungerar bäst. Asfalt, grus, betong och is är inte tillåtet.
               </p>
             </div>
           </details>
           <details>
-            <summary>Kan Offroad Bumpis hjälpa till med plats?</summary>
+            <summary>Behöver man instruktör?</summary>
             <div class="details-content">
               <p>
-                Du kan boka egen plan eller hall. I många kommuner går det att boka fotbollsplaner
-                och hallar själv via kommunens bokningssystem. Fråga gärna om du vill ha tips.
-              </p>
-            </div>
-          </details>
-          <details>
-            <summary>Kan företag boka?</summary>
-            <div class="details-content">
-              <p>
-                Ja. Vuxenbollar passar bra för företag, kickoff, teambuilding och personalaktivitet.
-                Faktura kan användas som betalningssätt.
+                Nej. Ni hyr utrustningen och kör själva. En ansvarig person ska hålla koll på regler och säkerhet.
               </p>
             </div>
           </details>
@@ -1834,8 +1829,7 @@
             <summary>Kan man boka redan nu?</summary>
             <div class="details-content">
               <p>
-                När vuxenbollarna är redo läggs de in i bokningssystemet. Tills dess kan du skicka
-                intresse via mejl och skriva datum, ort, antal personer och typ av aktivitet.
+                Inte direkt i bokningssystemet än. Men du kan skicka intresse via mejl med datum, ort och antal personer.
               </p>
             </div>
           </details>
@@ -1847,8 +1841,8 @@
         <div class="trust-card">
           <h2>Tryggare att boka</h2>
           <p>
-            Offroad Bumpis drivs av Erica Nordlöf via Nordlöf Nordic. Du kan läsa villkor,
-            se verifierad LinkedIn-profil och kolla adress/recensioner på Google innan du bokar.
+            Offroad Bumpis drivs av Erica Nordlöf via Nordlöf Nordic.
+            Du kan läsa villkor, se LinkedIn och kolla adress/recensioner på Google.
           </p>
           <div class="trust-actions">
             <a href="https://www.linkedin.com/in/erica-nordl%C3%B6f/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
@@ -1871,7 +1865,7 @@
             <h2>Skicka intresse</h2>
             <p>
               Vill du hyra vuxenbollar till svensexa, möhippa, företag, förening eller kompisgäng?
-              Mejla datum, ort, ungefärligt antal personer och vilket upplägg du tänker dig.
+              Mejla datum, ort, antal personer och om du vill hämta själv eller ha leverans.
             </p>
             <div class="cta-buttons">
               <a href="mailto:kontakt@offroadbumpis.se?subject=Intresse%20vuxenbollar%20i%20Sk%C3%A5ne" class="btn btn-secondary">
@@ -1887,13 +1881,13 @@
           </div>
           <div class="contact-box">
             <strong>Kontakt</strong>
-            <small>Offroad Bumpis · Vuxenbollar och bumperballs i Skåne för svensexa, möhippa, företag, förening och gruppaktivitet.</small>
+            <small>Offroad Bumpis · Vuxenbollar och bumperballs i Skåne.</small>
             <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
             <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
+            <a class="contact-link" href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
             <a class="contact-link" href="/priser.html">Priser</a>
             <a class="contact-link" href="/villkor.html">Villkor</a>
             <a class="contact-link" href="/integritet.html">Integritet</a>
-            <a class="contact-link" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Bokningssystem</a>
           </div>
         </div>
       </div>
@@ -1906,6 +1900,7 @@
         <nav class="footer-links" aria-label="Sidfot">
           <a href="/">Hem</a>
           <a href="/vuxen-bumperballs-skane.html" aria-current="page">Vuxenbollar Skåne</a>
+          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
           <a href="/villkor.html">Villkor</a>
           <a href="/integritet.html">Integritet</a>
           <details class="footer-dropdown">
@@ -1927,6 +1922,7 @@
               <a href="/priser.html">Priser</a>
               <a href="/nyheter.html">Nyheter</a>
               <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
               <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
               <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
               <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
