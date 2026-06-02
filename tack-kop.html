@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <title>Tack för bokningen | Offroad Bumpis</title>
+  <title>Bokningen är betald | Offroad Bumpis</title>
   <meta
     name="description"
-    content="Tack för din bokning hos Offroad Bumpis. Din bokning har kommit in. Kolla mejlen för bekräftelse, faktura och betalningsinformation."
+    content="Bokningen är betald och klar. Hör av er när ni vet ungefär vilken tid ni kommer och hämtar bollarna, om ni inte har bokat leverans."
   />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="author" content="Offroad Bumpis" />
@@ -18,16 +18,16 @@
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png?v=2" />
 
-  <meta property="og:title" content="Tack för bokningen | Offroad Bumpis" />
-  <meta property="og:description" content="Din bokning har kommit in. Kolla mejlen för bekräftelse, faktura och betalningsinformation." />
+  <meta property="og:title" content="Bokningen är betald | Offroad Bumpis" />
+  <meta property="og:description" content="Bokningen är betald och klar. Hör av er när ni vet ungefär vilken tid ni kommer och hämtar bollarna." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/tack-kop.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sv_SE" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tack för bokningen | Offroad Bumpis" />
-  <meta name="twitter:description" content="Din bokning har kommit in. Kolla mejlen för bekräftelse, faktura och betalningsinformation." />
+  <meta name="twitter:title" content="Bokningen är betald | Offroad Bumpis" />
+  <meta name="twitter:description" content="Bokningen är betald och klar. Hör av er när ni vet ungefär vilken tid ni kommer och hämtar bollarna." />
   <meta name="twitter:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
 
   <!-- Google tag (gtag.js) -->
@@ -39,7 +39,7 @@
     gtag("config", "AW-18060918108");
   </script>
 
-  <!-- Google Ads conversion event: Boka tid -->
+  <!-- Google Ads conversion event -->
   <script>
     gtag("event", "conversion", {
       "send_to": "AW-18060918108/Fi58CJzYopwcENz6jqRD"
@@ -93,8 +93,8 @@
         "@type":"WebPage",
         "@id":"https://offroadbumpis.se/tack-kop.html#webpage",
         "url":"https://offroadbumpis.se/tack-kop.html",
-        "name":"Tack för bokningen | Offroad Bumpis",
-        "description":"Tacksida efter bokning hos Offroad Bumpis.",
+        "name":"Bokningen är betald | Offroad Bumpis",
+        "description":"Tacksida efter betald bokning hos Offroad Bumpis.",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"},
         "inLanguage":"sv-SE"
@@ -170,15 +170,9 @@
       display:block;
     }
 
-    button,
-    input,
-    select,
-    textarea{
-      font:inherit;
-    }
-
     button{
       border:0;
+      font:inherit;
     }
 
     main{
@@ -203,16 +197,8 @@
       margin:0;
     }
 
-    :target{
-      scroll-margin-top:94px;
-    }
-
     a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    select:focus-visible,
-    textarea:focus-visible,
-    summary:focus-visible{
+    button:focus-visible{
       outline:3px solid var(--focus);
       outline-offset:4px;
       box-shadow:0 0 0 6px rgba(255,255,255,.92);
@@ -509,23 +495,10 @@
       box-shadow:var(--shadow);
     }
 
-    .btn-dark{
-      background:var(--dark);
-      color:#fff;
-      box-shadow:var(--shadow);
-    }
-
     .btn-secondary{
       background:rgba(255,255,255,.10);
       color:#fff;
       border:1px solid rgba(255,255,255,.14);
-      box-shadow:0 8px 22px rgba(0,0,0,.03);
-    }
-
-    .btn-light{
-      background:#fff;
-      color:var(--text);
-      border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,.03);
     }
 
@@ -591,7 +564,7 @@
       color:#fff;
       font-size:clamp(2.75rem,5vw,5.4rem);
       margin:0 0 14px;
-      max-width:10ch;
+      max-width:11ch;
     }
 
     .lead{
@@ -736,71 +709,6 @@
       scroll-margin-top:88px;
     }
 
-    .section-title{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,560px);
-      gap:24px;
-      align-items:end;
-      margin-bottom:22px;
-    }
-
-    .section-title h2{
-      font-size:clamp(2.2rem,4vw,3.25rem);
-      max-width:14ch;
-    }
-
-    .section-title p{
-      margin:0;
-      max-width:620px;
-      justify-self:end;
-      line-height:1.75;
-      color:var(--muted);
-      font-size:16px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-    }
-
-    .card{
-      background:rgba(255,255,255,.94);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:var(--shadow);
-      min-width:0;
-    }
-
-    .card h3{
-      font-size:28px;
-      margin-bottom:10px;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
-    }
-
-    .notice{
-      background:linear-gradient(135deg,#fff7d6 0%,#ffffff 72%);
-      border:1px solid rgba(143,103,0,.18);
-      border-radius:24px;
-      padding:20px;
-      box-shadow:var(--shadow-soft);
-      color:#59471a;
-      line-height:1.7;
-      font-weight:700;
-      margin-top:18px;
-    }
-
-    .notice strong{
-      color:#14361b;
-      font-weight:900;
-    }
-
     .cta{
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
@@ -922,38 +830,6 @@
       }
     }
 
-    @media (prefers-contrast: more){
-      :root{
-        --text:#000;
-        --muted:#222;
-        --line:rgba(0,0,0,.35);
-      }
-
-      .card,
-      .quick-item,
-      .status-card{
-        border-color:rgba(0,0,0,.35);
-      }
-    }
-
-    @media (forced-colors: active){
-      .btn,
-      .menu-button,
-      .menu-close,
-      .card,
-      .quick-item,
-      .cta,
-      .thank-card,
-      .status-card{
-        border:2px solid ButtonText;
-      }
-
-      a,
-      button{
-        text-decoration:underline;
-      }
-    }
-
     @media (max-width:1120px){
       .thank-content,
       .cta{
@@ -962,19 +838,6 @@
 
       .quick-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      .section-title{
-        grid-template-columns:1fr;
-      }
-
-      .section-title p{
-        justify-self:start;
-        max-width:none;
-      }
-
-      .grid-3{
-        grid-template-columns:1fr;
       }
     }
 
@@ -1079,19 +942,12 @@
         padding:30px 0;
       }
 
-      .section-title{
-        gap:10px;
-        margin-bottom:16px;
-      }
-
-      .card,
       .status-card,
       .cta,
       .contact-box{
         border-radius:20px;
       }
 
-      .card,
       .status-card,
       .contact-box{
         padding:18px;
@@ -1114,14 +970,6 @@
 
       .thank-card h1{
         font-size:2.05rem;
-      }
-
-      .section-title h2{
-        font-size:1.95rem;
-      }
-
-      .card h3{
-        font-size:26px;
       }
 
       .cta h2{
@@ -1168,22 +1016,17 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Startsida</a>
-      <a href="/priser.html">Priser</a>
-      <a href="/nyheter.html">Nyheter</a>
-      <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
-      <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet</a>
-      <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet</a>
-      <a href="/skolaktivitet-skane.html">Skolaktivitet</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
       <a href="/villkor.html">Villkor</a>
       <a href="/integritet.html">Integritet</a>
+      <a href="mailto:kontakt@offroadbumpis.se?subject=Hämtningstid%20Offroad%20Bumpis">Mejla hämtningstid</a>
     </nav>
 
     <div class="menu-cta">
-      <strong>Bokning mottagen</strong>
-      <p>Kolla mejlen. Bekräftelse, faktura och betalningsinfo skickas automatiskt.</p>
-      <a href="/" class="btn btn-primary">Till startsidan</a>
+      <strong>Bokningen är betald</strong>
+      <p>Hör av er när ni vet ungefär vilken tid ni kommer och hämtar bollarna.</p>
+      <a href="mailto:kontakt@offroadbumpis.se?subject=Hämtningstid%20Offroad%20Bumpis" class="btn btn-primary">
+        Mejla hämtningstid
+      </a>
     </div>
   </aside>
 
@@ -1193,68 +1036,63 @@
         <article class="thank-card">
           <div class="thank-content">
             <div>
-              <span class="eyebrow">Klart · Bokningen har kommit in</span>
+              <span class="eyebrow">Klart · Bokningen är betald</span>
 
-              <h1 id="hero-title">Tack för bokningen</h1>
+              <h1 id="hero-title">Tack!</h1>
 
               <p class="lead">
-                Din bokning är registrerad hos Offroad Bumpis.
-                Kolla mejlen för bekräftelse, faktura och betalningsinformation.
+                Bokningen är betald och klar.
               </p>
 
               <p class="trust-text">
-                Systemet skickar informationen direkt. Hittar du inget mejl? Kolla skräpposten först.
-                Mejlprogram älskar att gömma viktiga saker, det är deras lilla hobby.
+                Hör av er när ni vet ungefär vilken tid ni kommer och hämtar bollarna.
               </p>
 
               <div class="info-box">
                 <p>
-                  Betalningen ska vara inne senast 3 arbetsdagar före utlämning.
-                  Om betalningen inte kommer in i tid kan bokningen släppas.
+                  Har ni bokat leverans behöver ni inte göra något mer. Då kör vi enligt det som är bokat.
                 </p>
               </div>
 
               <div class="hero-actions">
-                <a href="/" class="btn btn-primary">Till startsidan</a>
-                <a href="/priser.html" class="btn btn-secondary">Se priser</a>
-                <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Kontakta mig</a>
+                <a href="mailto:kontakt@offroadbumpis.se?subject=Hämtningstid%20Offroad%20Bumpis" class="btn btn-primary">
+                  Mejla hämtningstid
+                </a>
+                <a href="tel:+46793442520" class="btn btn-secondary">
+                  Ring
+                </a>
+                <a href="/" class="btn btn-secondary">
+                  Till startsidan
+                </a>
               </div>
             </div>
 
             <aside class="status-card" aria-label="Nästa steg">
               <h2>Nästa steg</h2>
-              <p>Här är vad som händer nu.</p>
+              <p>Kort och enkelt.</p>
 
               <div class="steps">
                 <div class="step">
                   <span class="step-icon">✓</span>
                   <span>
-                    <strong>Bokning mottagen</strong>
-                    Din bokning är inne i systemet.
+                    <strong>Betalt och klart</strong>
+                    Bokningen är klar.
                   </span>
                 </div>
 
                 <div class="step">
                   <span class="step-icon">✓</span>
                   <span>
-                    <strong>Kolla mejlen</strong>
-                    Bekräftelse, faktura och betalningsinfo skickas automatiskt.
+                    <strong>Vid hämtning</strong>
+                    Meddela ungefärlig tid när ni vet.
                   </span>
                 </div>
 
                 <div class="step">
                   <span class="step-icon">✓</span>
                   <span>
-                    <strong>Betala i tid</strong>
-                    Betalning ska vara inne senast 3 arbetsdagar före utlämning.
-                  </span>
-                </div>
-
-                <div class="step">
-                  <span class="step-icon">✓</span>
-                  <span>
-                    <strong>Inför uthyrningen</strong>
-                    Läs villkor och praktisk info innan ni hämtar eller får leverans.
+                    <strong>Vid leverans</strong>
+                    Inget mer behövs.
                   </span>
                 </div>
               </div>
@@ -1267,63 +1105,23 @@
     <section class="quick-strip" aria-label="Snabb information">
       <div class="container quick-grid">
         <div class="quick-item">
-          <strong>Mejl</strong>
-          Kolla inkorg och skräppost
+          <strong>Betalt</strong>
+          Bokningen är klar
         </div>
 
         <div class="quick-item">
-          <strong>Faktura</strong>
-          Skickas automatiskt
+          <strong>Hämtning</strong>
+          Meddela ungefärlig tid
         </div>
 
         <div class="quick-item">
-          <strong>3 arbetsdagar</strong>
-          Senast betald före utlämning
+          <strong>Leverans</strong>
+          Inget extra behövs
         </div>
 
         <div class="quick-item">
-          <strong>Fråga?</strong>
-          Mejla kontakt@offroadbumpis.se
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="viktigt">
-      <div class="container">
-        <div class="section-title">
-          <h2>Viktigt efter bokning</h2>
-          <p>
-            Kort checklista så inget faller mellan stolarna. Eller mellan bumperbollarna.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Kolla datum och antal</h3>
-            <p>
-              Kontrollera att datum, antal bollar, tillval och eventuell leverans stämmer i bekräftelsen.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Läs villkoren</h3>
-            <p>
-              Använd bara godkänt underlag: gräs, konstgräs, sporthall, fin sand eller mjuk snö.
-              Inte asfalt, grus, betong eller is.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Hör av dig vid fel</h3>
-            <p>
-              Om något blev fel i bokningen, mejla direkt så går det att justera innan uthyrningen.
-            </p>
-          </article>
-        </div>
-
-        <div class="notice">
-          <strong>Tips:</strong>
-          Om bokningen gäller skola, förening eller företag: kontrollera gärna fakturareferens och organisationsuppgifter direkt.
+          <strong>Kontakt</strong>
+          kontakt@offroadbumpis.se
         </div>
       </div>
     </section>
@@ -1332,17 +1130,18 @@
       <div class="container">
         <div class="cta">
           <div>
-            <h2>Behöver du ändra något?</h2>
+            <h2>Vet ni tiden?</h2>
             <p>
-              Mejla mig om du behöver lägga till information, ändra något eller om bekräftelsen inte kommit fram.
+              Skicka ett kort mejl när ni vet ungefär när ni kommer och hämtar.
+              Det behöver inte vara exakt på minuten.
             </p>
 
             <div class="cta-buttons">
-              <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-primary">
-                Skicka mejl
+              <a href="mailto:kontakt@offroadbumpis.se?subject=Hämtningstid%20Offroad%20Bumpis" class="btn btn-primary">
+                Mejla hämtningstid
               </a>
-              <a href="/villkor.html" class="btn btn-secondary">
-                Läs villkor
+              <a href="tel:+46793442520" class="btn btn-secondary">
+                Ring
               </a>
               <a href="/" class="btn btn-secondary">
                 Till startsidan
@@ -1352,15 +1151,12 @@
 
           <div class="contact-box">
             <strong>Kontakt</strong>
-            <small>Offroad Bumpis · Bumperballs i Skåne för barnkalas, skolor, fritids, föreningar och gruppaktiviteter.</small>
+            <small>Offroad Bumpis · Bumperballs i Skåne.</small>
 
             <div class="contact-links">
               <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
               <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
-              <a class="contact-link" href="/priser.html">Priser</a>
-              <a class="contact-link" href="/villkor.html">Villkor</a>
-              <a class="contact-link" href="/integritet.html">Integritet</a>
-              <a class="contact-link" href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" target="_blank" rel="noopener noreferrer">Adress / recensioner på Google</a>
+              <a class="contact-link" href="/">offroadbumpis.se</a>
             </div>
           </div>
         </div>
@@ -1374,17 +1170,6 @@
         <span>© 2026 Offroad Bumpis</span>
         <span>
           <a href="/">Hem</a> ·
-          <a href="/priser.html">Priser</a> ·
-          <a href="/nyheter.html">Nyheter</a> ·
-          <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
-          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a> ·
-          <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
-          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
-          <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet</a> ·
-          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet</a> ·
-          <a href="/skolaktivitet-skane.html">Skolaktivitet</a> ·
-          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
-          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
           <a href="/villkor.html">Villkor</a> ·
           <a href="/integritet.html">Integritet</a>
         </span>
