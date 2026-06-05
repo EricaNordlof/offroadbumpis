@@ -52,16 +52,27 @@
         "publisher":{"@id":"https://offroadbumpis.se/#business"}
       },
       {
-        "@type":"LocalBusiness",
+        "@type":["LocalBusiness","SportsActivityLocation"],
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "legalName":"Nordlöf Nordic",
         "url":"https://offroadbumpis.se/",
         "image":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
+        "logo":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids, föreningar, företag och gruppaktiviteter.",
-        "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
+        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar, företag, svensexa, möhippa och gruppaktiviteter.",
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"Skåne"},
+          {"@type":"City","name":"Malmö"},
+          {"@type":"City","name":"Lund"},
+          {"@type":"City","name":"Helsingborg"},
+          {"@type":"City","name":"Trelleborg"},
+          {"@type":"City","name":"Ystad"},
+          {"@type":"City","name":"Kristianstad"},
+          {"@type":"City","name":"Hässleholm"},
+          {"@type":"City","name":"Landskrona"}
+        ],
         "founder":{
           "@type":"Person",
           "name":"Erica Nordlöf",
@@ -79,12 +90,17 @@
         "@type":"WebPage",
         "@id":"https://offroadbumpis.se/villkor.html#webpage",
         "name":"Villkor | Offroad Bumpis",
+        "headline":"Villkor för Offroad Bumpis",
         "url":"https://offroadbumpis.se/villkor.html",
         "description":"Villkor för Offroad Bumpis med information om bokning, betalning, säker användning, ansvar, avbokning och återlämning.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"},
-        "breadcrumb":{"@id":"https://offroadbumpis.se/villkor.html#breadcrumb"}
+        "breadcrumb":{"@id":"https://offroadbumpis.se/villkor.html#breadcrumb"},
+        "primaryImageOfPage":{
+          "@type":"ImageObject",
+          "url":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png"
+        }
       },
       {
         "@type":"BreadcrumbList",
@@ -114,6 +130,14 @@
             "acceptedAnswer":{
               "@type":"Answer",
               "text":"Bumperballs i barnstorlek passar barn ungefär 7–12 år och max 60 kg. En person per boll gäller."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"När kan vuxenbollar bokas?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Vuxenbollar kan bokas för spel från 1 september 2026."
             }
           },
           {
@@ -407,7 +431,7 @@
       right:16px;
       bottom:16px;
       z-index:100;
-      width:min(420px, calc(100vw - 32px));
+      width:min(460px, calc(100vw - 32px));
       max-width:calc(100vw - 32px);
       border-radius:30px;
       background:#fff;
@@ -460,7 +484,8 @@
       gap:10px;
     }
 
-    .menu-links a{
+    .menu-links > a,
+    .menu-group-panel a{
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -474,7 +499,8 @@
       line-height:1.35;
     }
 
-    .menu-links a::after{
+    .menu-links > a::after,
+    .menu-group-panel a::after{
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
@@ -497,6 +523,69 @@
       line-height:1;
       font-weight:900;
       white-space:nowrap;
+    }
+
+    .menu-group{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+      margin:0;
+      padding:0;
+    }
+
+    .menu-group summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      background:#ffffff;
+      color:#14361b;
+      font-weight:900;
+      line-height:1.3;
+      font-size:16px;
+    }
+
+    .menu-group summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .menu-group summary::after{
+      content:"▾";
+      position:static;
+      transform:none;
+      width:30px;
+      height:30px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:14px;
+      flex:0 0 auto;
+    }
+
+    .menu-group[open] summary::after{
+      content:"▴";
+    }
+
+    .menu-group-panel{
+      display:grid;
+      gap:8px;
+      padding:0 10px 10px;
+    }
+
+    .menu-group-panel a{
+      padding:13px 14px;
+      border-radius:15px;
+      background:#f5fff1;
+      box-shadow:none;
+      font-size:14px;
     }
 
     .menu-cta{
@@ -572,6 +661,33 @@
       box-shadow:0 8px 22px rgba(0,0,0,.03);
     }
 
+    .section{
+      padding:46px 0;
+      scroll-margin-top:88px;
+    }
+
+    .section-title{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,560px);
+      gap:24px;
+      align-items:end;
+      margin-bottom:22px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.2rem,4vw,3.25rem);
+      max-width:15ch;
+    }
+
+    .section-title p{
+      margin:0;
+      max-width:620px;
+      justify-self:end;
+      line-height:1.75;
+      color:var(--muted);
+      font-size:16px;
+    }
+
     .hero{
       padding:54px 0 38px;
     }
@@ -602,7 +718,7 @@
 
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(3rem,5vw,5.35rem);
+      font-size:clamp(3rem,5vw,5.2rem);
       color:#14361b;
       max-width:12ch;
     }
@@ -669,54 +785,88 @@
       margin-top:26px;
     }
 
-    .hero-card,
-    .manual-card{
-      background:rgba(255,255,255,.94);
-      border:1px solid var(--line);
+    .hero-card{
+      background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
+      color:#fff;
       border-radius:30px;
-      padding:20px;
-      box-shadow:var(--shadow);
+      padding:18px;
+      box-shadow:0 28px 80px rgba(8,34,16,.18);
       overflow:hidden;
-      display:grid;
-      gap:14px;
+      position:relative;
+      isolation:isolate;
     }
 
-    .hero-card img,
-    .manual-card img{
-      width:100%;
-      aspect-ratio:4 / 3;
-      object-fit:cover;
-      border-radius:24px;
-      background:#dff8d1;
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);
+      pointer-events:none;
+      z-index:-1;
     }
 
-    .manual-card img{
-      aspect-ratio:auto;
-      object-fit:contain;
-      background:#fff;
-      border:1px solid var(--line);
-    }
-
-    .hero-card-note,
-    .manual-card-note{
-      display:grid;
-      gap:8px;
-    }
-
-    .hero-card-note strong,
-    .manual-card-note strong{
-      color:#14361b;
-      font-size:22px;
-      font-weight:900;
-      font-family:"Baloo 2",sans-serif;
-      line-height:1;
-    }
-
-    .hero-card-note span,
-    .manual-card-note span{
-      color:var(--muted);
-      line-height:1.65;
+    .mockup-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+      color:#d7ead8;
+      font-size:14px;
       font-weight:700;
+      line-height:1.45;
+    }
+
+    .dots{
+      display:flex;
+      gap:6px;
+      flex:0 0 auto;
+    }
+
+    .dots span{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#6aa85b;
+    }
+
+    .mockup-image{
+      border-radius:24px;
+      overflow:hidden;
+      margin-bottom:14px;
+      aspect-ratio:4 / 5;
+      background:#1f3826;
+    }
+
+    .mockup-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .mockup-panel{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+    }
+
+    .mini-card{
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:12px;
+      min-height:88px;
+    }
+
+    .mini-card strong{
+      display:block;
+      font-size:13px;
+      line-height:1.45;
+      color:#f2faf2;
     }
 
     .quick-strip{
@@ -749,44 +899,11 @@
       font-weight:900;
     }
 
-    .section{
-      padding:46px 0;
-      scroll-margin-top:88px;
-    }
-
-    .section-title{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,560px);
-      gap:24px;
-      align-items:end;
-      margin-bottom:22px;
-    }
-
-    .section-title h2{
-      font-size:clamp(2.2rem,4vw,3.25rem);
-      max-width:14ch;
-    }
-
-    .section-title p{
-      margin:0;
-      max-width:620px;
-      justify-self:end;
-      line-height:1.75;
-      color:var(--muted);
-      font-size:16px;
-    }
-
     .content-wrap{
       width:min(980px, 100%);
       margin:0 auto;
       display:grid;
       gap:16px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
     }
 
     .grid-2{
@@ -795,9 +912,15 @@
       gap:18px;
     }
 
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
     .card,
     .summary-card,
-    .photo-card,
+    .manual-card,
     details{
       background:#fff;
       border:1px solid var(--line);
@@ -831,16 +954,43 @@
       margin-top:12px;
     }
 
-    .notice-card{
-      background:linear-gradient(135deg,#fff7d6 0%,#ffffff 72%);
-      border:1px solid rgba(143,103,0,.18);
-      color:#59471a;
+    .manual-card{
+      padding:18px;
+      display:grid;
+      gap:14px;
+    }
+
+    .manual-card img{
+      width:100%;
+      border-radius:24px;
+      object-fit:contain;
+      background:#fff;
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    .manual-card-note{
+      display:grid;
+      gap:8px;
+      color:#fff;
+    }
+
+    .manual-card-note strong{
+      color:#fff;
+      font-size:24px;
+      font-weight:900;
+      font-family:"Baloo 2",sans-serif;
+      line-height:1;
+    }
+
+    .manual-card-note span{
+      color:#d7ead8;
+      line-height:1.65;
       font-weight:700;
     }
 
-    .notice-card strong{
-      color:#14361b;
-      font-weight:900;
+    .terms{
+      display:grid;
+      gap:12px;
     }
 
     details{
@@ -900,11 +1050,6 @@
       color:#17351e;
     }
 
-    .terms{
-      display:grid;
-      gap:12px;
-    }
-
     .notice{
       background:linear-gradient(180deg,#fffdf2 0%,#fff 100%);
       border-color:rgba(255,216,77,.55);
@@ -914,6 +1059,18 @@
       background:#fff6c4;
       border-color:rgba(255,216,77,.55);
       color:#7a5a00;
+    }
+
+    .notice-card{
+      background:linear-gradient(135deg,#fff7d6 0%,#ffffff 72%);
+      border:1px solid rgba(143,103,0,.18);
+      color:#59471a;
+      font-weight:700;
+    }
+
+    .notice-card strong{
+      color:#14361b;
+      font-weight:900;
     }
 
     .affiliate-box{
@@ -948,6 +1105,7 @@
       box-shadow:0 8px 22px rgba(0,0,0,.04);
       font-size:14px;
       text-align:center;
+      max-width:100%;
     }
 
     .pill.no{
@@ -995,7 +1153,7 @@
       border-radius:24px;
       padding:22px;
       display:grid;
-      gap:10px;
+      gap:12px;
       min-width:0;
     }
 
@@ -1009,6 +1167,12 @@
       line-height:1.7;
     }
 
+    .contact-links{
+      display:grid;
+      gap:10px;
+      margin-top:8px;
+    }
+
     .contact-link{
       display:flex;
       align-items:center;
@@ -1020,7 +1184,13 @@
       color:#fff;
       font-weight:800;
       line-height:1.45;
+      transition:.2s ease;
       word-break:break-word;
+    }
+
+    .contact-link:hover{
+      background:rgba(255,255,255,.14);
+      transform:translateY(-1px);
     }
 
     footer{
@@ -1160,7 +1330,8 @@
         transition-duration:.01ms !important;
       }
 
-      .btn:hover{
+      .btn:hover,
+      .contact-link:hover{
         transform:none;
       }
     }
@@ -1224,6 +1395,14 @@
       .grid-3{
         grid-template-columns:1fr;
       }
+
+      .mockup-panel{
+        grid-template-columns:1fr;
+      }
+
+      .mini-card{
+        min-height:auto;
+      }
     }
 
     @media (max-width:720px){
@@ -1272,7 +1451,8 @@
         padding:16px;
       }
 
-      .menu-links a{
+      .menu-links > a,
+      .menu-group-panel a{
         padding:14px;
         font-size:15px;
       }
@@ -1335,6 +1515,11 @@
         width:100%;
       }
 
+      .hero-card{
+        border-radius:24px;
+        padding:14px;
+      }
+
       .quick-grid,
       .grid-2{
         grid-template-columns:1fr;
@@ -1363,7 +1548,6 @@
       .card,
       .summary-card,
       .contact-box,
-      .hero-card,
       .manual-card{
         padding:18px;
       }
@@ -1447,13 +1631,7 @@
         <span>Offroad Bumpis</span>
       </a>
 
-      <button
-        class="menu-button"
-        type="button"
-        id="menuButton"
-        aria-controls="siteMenu"
-        aria-expanded="false"
-      >
+      <button class="menu-button" type="button" id="menuButton" aria-controls="siteMenu" aria-expanded="false">
         Meny
         <span aria-hidden="true"></span>
       </button>
@@ -1469,20 +1647,73 @@
     </div>
 
     <nav class="menu-links" aria-label="Huvudmeny">
-      <a href="/">Startsida</a>
-      <a href="/priser.html">Priser</a>
-      <a href="/nyheter.html">Nyheter</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
-      <a href="/villkor.html" aria-current="page">Villkor</a>
-      <a href="/integritet.html">Integritet</a>
+      <a href="/">Hem</a>
+
+      <details class="menu-group">
+        <summary>Boka & info</summary>
+        <div class="menu-group-panel">
+          <a href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+          <a href="/priser.html">Priser</a>
+          <a href="/nyheter.html">Nyheter</a>
+          <a href="/#boka-plats">Boka plats att spela på</a>
+          <a href="/#bubble-football-malmo">Bubble football Malmö</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Barnkalas</summary>
+        <div class="menu-group-panel">
+          <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+          <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+          <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+          <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+          <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+          <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+          <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Skola, fritids & förening</summary>
+        <div class="menu-group-panel">
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+          <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+          <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Vuxna & grupper</summary>
+        <div class="menu-group-panel">
+          <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+          <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+          <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group" open>
+        <summary>Trygghet & övrigt</summary>
+        <div class="menu-group-panel">
+          <a href="/villkor.html" aria-current="page">Villkor</a>
+          <a href="/integritet.html">Integritet</a>
+          <a href="/affiliate.html">Affiliate</a>
+          <a href="/rabattkod.html">Rabattkod</a>
+          <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+        </div>
+      </details>
     </nav>
 
     <div class="menu-cta">
       <strong>Boka tryggt</strong>
       <p>Välj datum, antal bollar, tillval, leverans och rabattkod direkt i bokningssystemet.</p>
       <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-        Boka direkt
+        Boka bumperballs
       </a>
     </div>
   </aside>
@@ -1507,10 +1738,10 @@
 
           <ul class="hero-points">
             <li><span class="check">✓</span><span>Barnbollar passar barn cirka 7–12 år, max 60 kg.</span></li>
+            <li><span class="check">✓</span><span>Vuxenbollar kan bokas för spel från 1 september 2026.</span></li>
             <li><span class="check">✓</span><span>En ansvarig vuxen ska hålla koll hela tiden.</span></li>
             <li><span class="check">✓</span><span>Gräs, konstgräs, sporthall, fin sand och mjuk snö fungerar.</span></li>
             <li><span class="check">✓</span><span>Asfalt, grus, betong, is och hårda ojämna ytor är inte okej.</span></li>
-            <li><span class="check">✓</span><span>Betalning kan ske med kort eller Klarna via betalningslänk, Swish, faktura eller bankgiro/banköverföring.</span></li>
           </ul>
 
           <div class="hero-actions">
@@ -1523,21 +1754,31 @@
           </div>
         </div>
 
-        <aside class="manual-card" id="manual" aria-label="Användarmanual">
-          <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer" aria-label="Öppna användarmanualen i större format">
-            <img src="/bilder/manual.png" alt="Användarmanual för bumperball från Offroad Bumpis" loading="eager" />
-          </a>
-
-          <div class="manual-card-note">
-            <strong>Säkerhet först, studs sen</strong>
-            <span>
-              Manualen visar målgrupp, underlag, spelregler, tillsyn, pumpning och viktig säkerhetsinfo.
-            </span>
+        <aside class="hero-card" aria-label="Bild och snabbinfo">
+          <div class="mockup-header">
+            <span>Villkor som inte kräver juridiskt mörkerseende</span>
+            <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
 
-          <div class="link-row">
-            <a class="btn btn-primary" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Öppna manual</a>
-            <a class="btn btn-secondary" href="/bilder/manual.png" download>Ladda ner</a>
+          <div class="mockup-image">
+            <img
+              src="/bilder/manual.png"
+              alt="Användarmanual för bumperballs från Offroad Bumpis"
+              width="900"
+              height="1125"
+            />
+          </div>
+
+          <div class="mockup-panel">
+            <div class="mini-card">
+              <strong>En person per boll</strong>
+            </div>
+            <div class="mini-card">
+              <strong>Rätt underlag är hela affären</strong>
+            </div>
+            <div class="mini-card">
+              <strong>Säkerhet först, studs sen</strong>
+            </div>
           </div>
         </aside>
       </div>
@@ -1580,14 +1821,14 @@
           <article class="summary-card">
             <h2>Det här gäller i korthet</h2>
             <p>
-              Offroad Bumpis hyr ut bumperballs till barnkalas, skola, fritids, föreningar, företag och gruppaktiviteter.
-              Du som bokar ansvarar för utrustningen under hyrestiden.
+              Offroad Bumpis hyr ut bumperballs till barnkalas, skola, fritids, föreningar, företag, svensexa,
+              möhippa och gruppaktiviteter. Du som bokar ansvarar för utrustningen under hyrestiden.
             </p>
 
             <ul class="bullet-list">
               <li><span class="check">✓</span><span>En person per boll gäller.</span></li>
               <li><span class="check">✓</span><span>Barnbollar är för barn cirka 7–12 år, max 60 kg.</span></li>
-              <li><span class="check">✓</span><span>Vuxenbollar kan bokas från 1 september 2026.</span></li>
+              <li><span class="check">✓</span><span>Vuxenbollar kan bokas för spel från 1 september 2026.</span></li>
               <li><span class="check">✓</span><span>Fel storlek, fel underlag eller vårdslös användning kan leda till debitering.</span></li>
               <li><span class="check">✓</span><span>Full prislista finns på prissidan.</span></li>
             </ul>
@@ -1633,7 +1874,7 @@
                   Du kan boka en dag, en helg eller flera dagar. Priset räknas efter hyresdagar/prisdagar.
                 </p>
                 <p>
-                  Fredag till söndag räknas som en prisdag. Extra vardagar räknas som extra prisdagar.
+                  Fredag 08:00 till söndag 20:00 räknas som en prisdag. Extra vardagar räknas som extra prisdagar.
                   Exempel: fredag till tisdag blir 3 prisdagar.
                 </p>
                 <p>
@@ -1654,7 +1895,8 @@
                   <li><span class="check">✓</span><span>Batteridriven pump.</span></li>
                   <li><span class="check">✓</span><span>Batteri och laddare.</span></li>
                   <li><span class="check">✓</span><span>Transportsäckar enligt paket.</span></li>
-                  <li><span class="check">✓</span><span>Transportplatta vid större paket.</span></li>
+                  <li><span class="check">✓</span><span>Transportplatta vid behov.</span></li>
+                  <li><span class="check">✓</span><span>Manual med instruktioner och säkerhetsinfo.</span></li>
                 </ul>
                 <p>
                   Kontrollera alltid att allt som står i bokningen finns med vid hämtning eller leverans.
@@ -1675,7 +1917,7 @@
                   Det är barnbollar, inte “jag ska bara testa lite”-bollar.
                 </p>
                 <p>
-                  Vuxenbollar är större och kan bokas från 1 september 2026.
+                  Vuxenbollar är större och kan bokas för spel från 1 september 2026.
                   Använd alltid rätt bollstorlek för gruppen.
                 </p>
               </div>
@@ -1729,7 +1971,8 @@
               <div class="details-content">
                 <p>Följ de här reglerna under hela aktiviteten:</p>
                 <ul class="bullet-list">
-                  <li><span class="check">✓</span><span>En vuxen ska hålla koll hela tiden.</span></li>
+                  <li><span class="check">✓</span><span>En ansvarig vuxen ska hålla koll hela tiden.</span></li>
+                  <li><span class="check">✓</span><span>En person per boll.</span></li>
                   <li><span class="check">✓</span><span>Inga tacklingar bakifrån.</span></li>
                   <li><span class="check">✓</span><span>Ingen kontakt med någon som ligger ner.</span></li>
                   <li><span class="check">✓</span><span>Inga dobbar, smycken eller vassa saker nära bollarna.</span></li>
@@ -1764,6 +2007,9 @@
                 </p>
                 <p>
                   Den vuxna ska stoppa leken om reglerna inte följs, om underlaget är fel eller om något känns osäkert.
+                </p>
+                <p>
+                  Kunden ansvarar för att alla som använder utrustningen får enkel säkerhetsinformation innan aktiviteten startar.
                 </p>
               </div>
             </details>
@@ -1908,7 +2154,7 @@
               </div>
             </details>
 
-            <details>
+            <details id="manual">
               <summary>Användarmanual</summary>
               <div class="details-content">
                 <p>
@@ -1943,7 +2189,7 @@
               </p>
 
               <div class="cta-buttons">
-                <a class="btn btn-secondary" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">
+                <a class="btn btn-primary" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">
                   Boka bumperballs
                 </a>
                 <a class="btn btn-secondary" href="/priser.html">
@@ -1957,20 +2203,22 @@
 
             <div class="contact-box">
               <strong>Kontakt</strong>
-              <small>Offroad Bumpis · Bumperballs i Skåne för barnkalas, skola, fritids, förening och gruppaktivitet.</small>
+              <small>Offroad Bumpis · Bumperballs i Skåne för barnkalas, skola, fritids, förening, vuxna grupper och event.</small>
 
-              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
-              <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
-              <a class="contact-link" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Bokningssystem</a>
-              <a class="contact-link" href="/priser.html">Priser</a>
-              <a class="contact-link" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
-              <a class="contact-link" href="/integritet.html">Integritet</a>
+              <div class="contact-links">
+                <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+                <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
+                <a class="contact-link" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Bokningssystem</a>
+                <a class="contact-link" href="/priser.html">Priser</a>
+                <a class="contact-link" href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+                <a class="contact-link" href="/integritet.html">Integritet</a>
+              </div>
             </div>
           </article>
 
           <article class="summary-card">
             <h2>Senast uppdaterad</h2>
-            <p>2026-05-30</p>
+            <p>2026-06-05</p>
           </article>
         </div>
       </div>
@@ -2010,9 +2258,15 @@
               <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
               <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
               <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
-              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet</a>
-              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet</a>
+              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
               <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+              <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+              <a href="/affiliate.html">Affiliate</a>
+              <a href="/rabattkod.html">Rabattkod</a>
               <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
             </div>
           </details>
@@ -2028,7 +2282,7 @@
     const menuBackdrop = document.getElementById('menuBackdrop');
 
     function getFocusableMenuItems() {
-      return siteMenu.querySelectorAll('a[href], button:not([disabled])');
+      return siteMenu.querySelectorAll('a[href], button:not([disabled]), summary');
     }
 
     function openMenu() {
