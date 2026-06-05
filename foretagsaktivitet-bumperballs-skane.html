@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Företagsaktivitet i Skåne med bumperballs | Offroad Bumpis</title>
   <meta
     name="description"
@@ -153,6 +154,9 @@
           "name":"Vuxenbollar till företagsaktivitet",
           "itemListElement":[
             {"@type":"Offer","name":"2 vuxenbollar","price":"700","priceCurrency":"SEK","availability":"https://schema.org/PreOrder","availabilityStarts":"2026-09-01"},
+            {"@type":"Offer","name":"4 vuxenbollar","price":"1300","priceCurrency":"SEK","availability":"https://schema.org/PreOrder","availabilityStarts":"2026-09-01"},
+            {"@type":"Offer","name":"6 vuxenbollar","price":"1900","priceCurrency":"SEK","availability":"https://schema.org/PreOrder","availabilityStarts":"2026-09-01"},
+            {"@type":"Offer","name":"8 vuxenbollar","price":"2500","priceCurrency":"SEK","availability":"https://schema.org/PreOrder","availabilityStarts":"2026-09-01"},
             {"@type":"Offer","name":"10 vuxenbollar","price":"3000","priceCurrency":"SEK","availability":"https://schema.org/PreOrder","availabilityStarts":"2026-09-01"},
             {"@type":"Offer","name":"12 vuxenbollar","price":"3500","priceCurrency":"SEK","availability":"https://schema.org/PreOrder","availabilityStarts":"2026-09-01"}
           ]
@@ -270,10 +274,7 @@
       --header-height:72px;
     }
 
-    *{
-      box-sizing:border-box;
-      min-width:0;
-    }
+    *{box-sizing:border-box;min-width:0}
 
     html{
       width:100%;
@@ -297,57 +298,16 @@
       overflow-x:hidden;
     }
 
-    body.menu-open{
-      overflow:hidden;
-    }
+    body.menu-open{overflow:hidden}
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-      height:auto;
-      display:block;
-    }
-
-    button,
-    input,
-    select,
-    textarea{
-      font:inherit;
-    }
-
-    button{
-      border:0;
-    }
-
-    main{
-      padding-top:var(--header-height);
-    }
-
-    p,
-    li,
-    span,
-    strong,
-    small,
-    summary,
-    a,
-    h1,
-    h2,
-    h3,
-    h4{
-      overflow-wrap:anywhere;
-    }
-
-    p{
-      margin:0;
-    }
-
-    :target{
-      scroll-margin-top:94px;
-    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    button,input,select,textarea{font:inherit}
+    button{border:0}
+    main{padding-top:var(--header-height)}
+    p,li,span,strong,small,summary,a,h1,h2,h3,h4{overflow-wrap:anywhere}
+    p{margin:0}
+    :target{scroll-margin-top:94px}
 
     a:focus-visible,
     button:focus-visible,
@@ -376,9 +336,7 @@
       transition:.15s ease;
     }
 
-    .skip-link:focus{
-      transform:translateY(0);
-    }
+    .skip-link:focus{transform:translateY(0)}
 
     .container{
       width:min(var(--max), calc(100% - 32px));
@@ -472,13 +430,8 @@
       transition:.2s ease;
     }
 
-    .menu-button span::before{
-      top:1px;
-    }
-
-    .menu-button span::after{
-      bottom:1px;
-    }
+    .menu-button span::before{top:1px}
+    .menu-button span::after{bottom:1px}
 
     .menu-button[aria-expanded="true"] span::before{
       top:5px;
@@ -511,7 +464,7 @@
       right:16px;
       bottom:16px;
       z-index:100;
-      width:min(420px, calc(100vw - 32px));
+      width:min(460px, calc(100vw - 32px));
       max-width:calc(100vw - 32px);
       border-radius:30px;
       background:#fff;
@@ -524,9 +477,7 @@
       overflow-x:hidden;
     }
 
-    .site-menu.is-open{
-      transform:translateX(0);
-    }
+    .site-menu.is-open{transform:translateX(0)}
 
     .menu-head{
       display:flex;
@@ -564,7 +515,8 @@
       gap:10px;
     }
 
-    .menu-links a{
+    .menu-links > a,
+    .menu-group-panel a{
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -578,15 +530,85 @@
       line-height:1.35;
     }
 
-    .menu-links a[aria-current="page"]{
+    .menu-links > a[aria-current="page"],
+    .menu-group-panel a[aria-current="page"]{
       background:#dff8d1;
       color:#14361b;
     }
 
-    .menu-links a::after{
+    .menu-links > a::after,
+    .menu-group-panel a::after{
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-group{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+      padding:0;
+    }
+
+    .menu-group summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      background:#ffffff;
+      color:#14361b;
+      font-weight:900;
+      line-height:1.3;
+    }
+
+    .menu-group summary::-webkit-details-marker{display:none}
+
+    .menu-group summary::after{
+      content:"▾";
+      width:30px;
+      height:30px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:14px;
+      flex:0 0 auto;
+      position:static;
+      transform:none;
+    }
+
+    .menu-group[open] summary::after{
+      content:"▴";
+    }
+
+    .menu-group-panel{
+      display:grid;
+      gap:8px;
+      padding:0 10px 10px;
+    }
+
+    .menu-group-panel a{
+      padding:13px 14px;
+      border-radius:15px;
+      background:#f5fff1;
+      box-shadow:none;
+      font-size:14px;
+    }
+
+    .menu-small{
+      display:block;
+      color:#5b6e60;
+      font-size:12px;
+      font-weight:800;
+      line-height:1.4;
+      margin-top:3px;
     }
 
     .menu-cta{
@@ -612,14 +634,9 @@
       font-size:14px;
     }
 
-    .menu-cta .btn{
-      width:100%;
-    }
+    .menu-cta .btn{width:100%}
 
-    h1,
-    h2,
-    h3,
-    h4{
+    h1,h2,h3,h4{
       font-family:"Baloo 2",sans-serif;
       letter-spacing:-.03em;
       margin:0;
@@ -645,26 +662,11 @@
       white-space:normal;
     }
 
-    .btn:hover{
-      transform:translateY(-1px);
-    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--dark);color:#fff;box-shadow:var(--shadow)}
+    .btn-secondary{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.03)}
 
-    .btn-primary{
-      background:var(--dark);
-      color:#fff;
-      box-shadow:var(--shadow);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--text);
-      border:1px solid var(--line);
-      box-shadow:0 8px 22px rgba(0,0,0,.03);
-    }
-
-    .hero{
-      padding:54px 0 38px;
-    }
+    .hero{padding:54px 0 38px}
 
     .hero-grid{
       display:grid;
@@ -714,8 +716,7 @@
       max-width:720px;
     }
 
-    .hero-points,
-    .feature-list{
+    .hero-points,.feature-list{
       display:grid;
       gap:10px;
       margin:22px 0 0;
@@ -726,8 +727,7 @@
       max-width:760px;
     }
 
-    .hero-points li,
-    .feature-list li{
+    .hero-points li,.feature-list li{
       display:flex;
       gap:10px;
       align-items:flex-start;
@@ -747,10 +747,7 @@
       margin-top:2px;
     }
 
-    .hero-actions,
-    .cta-buttons,
-    .link-row,
-    .trust-actions{
+    .hero-actions,.cta-buttons,.link-row,.trust-actions{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
@@ -795,9 +792,7 @@
       font-weight:700;
     }
 
-    .quick-strip{
-      padding:8px 0 0;
-    }
+    .quick-strip{padding:8px 0 0}
 
     .quick-grid{
       display:grid;
@@ -864,9 +859,7 @@
       gap:18px;
     }
 
-    .card,
-    .photo-card,
-    details{
+    .card,.price-card,.photo-card,details{
       background:#fff;
       border:1px solid var(--line);
       border-radius:var(--radius);
@@ -874,23 +867,11 @@
       min-width:0;
     }
 
-    .card{
-      padding:24px;
-    }
+    .card{padding:24px}
+    .card h3{font-size:28px;margin-bottom:10px}
+    .card p{color:var(--muted);line-height:1.75}
 
-    .card h3{
-      font-size:28px;
-      margin-bottom:10px;
-    }
-
-    .card p{
-      color:var(--muted);
-      line-height:1.75;
-    }
-
-    .photo-card{
-      overflow:hidden;
-    }
+    .photo-card{overflow:hidden}
 
     .photo-card img{
       width:100%;
@@ -899,92 +880,29 @@
       background:#dff8d1;
     }
 
-    .photo-card-content{
-      padding:22px;
-    }
+    .photo-card-content{padding:22px}
+    .photo-card h3{font-size:28px;margin-bottom:8px}
+    .photo-card p{color:var(--muted);line-height:1.7}
 
-    .photo-card h3{
-      font-size:28px;
-      margin-bottom:8px;
-    }
-
-    .photo-card p{
-      color:var(--muted);
-      line-height:1.7;
-    }
-
-    .adult-price-grid{
+    .price-grid{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:16px;
+      gap:18px;
       align-items:stretch;
     }
 
-    .adult-price-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      padding:22px;
-      display:grid;
-      gap:10px;
+    .price-card{
+      padding:24px;
+      position:relative;
       overflow:hidden;
+      display:flex;
+      flex-direction:column;
     }
 
-    .adult-price-card.featured{
+    .price-card.featured{
       background:linear-gradient(180deg,#14371b 0%,#102817 100%);
       color:#fff;
-    }
-
-    .adult-price-top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-    }
-
-    .adult-price-card h3{
-      font-size:30px;
-      color:inherit;
-      line-height:1;
-    }
-
-    .adult-price-card p{
-      color:var(--muted);
-      line-height:1.7;
-      font-weight:700;
-    }
-
-    .adult-price-card.featured p{
-      color:#d7e8d7;
-    }
-
-    .adult-price{
-      font-family:"Baloo 2",sans-serif;
-      font-size:44px;
-      line-height:1;
-      font-weight:900;
-      letter-spacing:-.06em;
-      color:#14361b;
-      font-variant-numeric:tabular-nums;
-    }
-
-    .adult-price-card.featured .adult-price{
-      color:#fff;
-    }
-
-    .adult-price small{
-      display:block;
-      margin-top:4px;
-      font-family:"Inter",sans-serif;
-      font-size:13px;
-      letter-spacing:0;
-      color:#607066;
-      font-weight:900;
-    }
-
-    .adult-price-card.featured .adult-price small{
-      color:#d7e8d7;
+      transform:translateY(-8px);
     }
 
     .tag{
@@ -1000,10 +918,54 @@
       line-height:1.2;
     }
 
-    .adult-price-card.featured .tag{
+    .featured .tag{
       background:rgba(255,255,255,.12);
       color:#e9ffe8;
     }
+
+    .price-card h3{
+      margin:16px 0 8px;
+      font-size:30px;
+      color:inherit;
+    }
+
+    .price{
+      font-size:48px;
+      font-weight:900;
+      letter-spacing:-.06em;
+      line-height:1;
+      margin:0 0 10px;
+      font-family:"Baloo 2",sans-serif;
+      font-variant-numeric:tabular-nums;
+    }
+
+    .price small{
+      display:block;
+      margin-top:4px;
+      font-family:"Inter",sans-serif;
+      font-size:13px;
+      letter-spacing:0;
+      color:#607066;
+      font-weight:900;
+    }
+
+    .featured .price small{
+      color:#d7e8d7;
+    }
+
+    .price-note{
+      margin-bottom:16px;
+      color:#627066;
+      font-weight:700;
+      line-height:1.65;
+      font-size:15px;
+      min-height:72px;
+    }
+
+    .featured .price-note{color:#d7e8d7}
+    .price-card .feature-list{margin-top:0}
+    .price-card .feature-list li{color:#425646;line-height:1.65;font-weight:600}
+    .featured .feature-list li{color:#eef6ee}
 
     .notice{
       background:linear-gradient(135deg,#fff7d6 0%,#ffffff 72%);
@@ -1063,9 +1025,7 @@
       gap:18px;
     }
 
-    .step-card{
-      padding:24px;
-    }
+    .step-card{padding:24px}
 
     .step-head{
       display:flex;
@@ -1095,11 +1055,6 @@
       font-size:clamp(1.55rem, 4vw, 1.9rem);
       line-height:1;
       color:#14361b;
-    }
-
-    .step-card p{
-      color:var(--muted);
-      line-height:1.75;
     }
 
     details{
@@ -1136,13 +1091,8 @@
       font-weight:900;
     }
 
-    details[open] summary::after{
-      content:"–";
-    }
-
-    summary::-webkit-details-marker{
-      display:none;
-    }
+    details[open] summary::after{content:"–"}
+    summary::-webkit-details-marker{display:none}
 
     .details-content{
       padding:0 18px 18px;
@@ -1160,8 +1110,7 @@
       gap:12px;
     }
 
-    .trust-card,
-    .cta{
+    .trust-card,.cta{
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
       border-radius:34px;
@@ -1170,16 +1119,14 @@
       overflow:hidden;
     }
 
-    .trust-card h2,
-    .cta h2{
+    .trust-card h2,.cta h2{
       color:#fff;
       font-size:clamp(2rem,4vw,3.2rem);
       margin-bottom:10px;
       max-width:15ch;
     }
 
-    .trust-card p,
-    .cta p{
+    .trust-card p,.cta p{
       margin:0;
       color:#d7e8d8;
       line-height:1.8;
@@ -1203,15 +1150,8 @@
       min-width:0;
     }
 
-    .contact-box strong{
-      color:#fff;
-      font-size:20px;
-    }
-
-    .contact-box small{
-      color:rgba(255,255,255,.78);
-      line-height:1.7;
-    }
+    .contact-box strong{color:#fff;font-size:20px}
+    .contact-box small{color:rgba(255,255,255,.78);line-height:1.7}
 
     .contact-link{
       display:flex;
@@ -1307,13 +1247,8 @@
       font-weight:900;
     }
 
-    .footer-dropdown[open] summary::after{
-      content:"▴";
-    }
-
-    .footer-dropdown summary::-webkit-details-marker{
-      display:none;
-    }
+    .footer-dropdown[open] summary::after{content:"▴"}
+    .footer-dropdown summary::-webkit-details-marker{display:none}
 
     .footer-dropdown-panel{
       position:absolute;
@@ -1352,323 +1287,86 @@
     }
 
     @media (prefers-reduced-motion: reduce){
-      html{
-        scroll-behavior:auto;
-      }
-
-      *,
-      *::before,
-      *::after{
+      html{scroll-behavior:auto}
+      *,*::before,*::after{
         animation-duration:.01ms !important;
         animation-iteration-count:1 !important;
         transition-duration:.01ms !important;
       }
-
-      .btn:hover{
-        transform:none;
-      }
+      .btn:hover{transform:none}
     }
 
     @media (prefers-contrast: more){
-      :root{
-        --text:#000;
-        --muted:#222;
-        --line:rgba(0,0,0,.35);
-      }
-
-      .card,
-      .adult-price-card,
-      .photo-card,
-      .quick-item,
-      details{
-        border-color:rgba(0,0,0,.35);
-      }
+      :root{--text:#000;--muted:#222;--line:rgba(0,0,0,.35)}
+      .card,.price-card,.photo-card,.quick-item,details{border-color:rgba(0,0,0,.35)}
     }
 
     @media (forced-colors: active){
-      .btn,
-      .menu-button,
-      .menu-close,
-      .card,
-      .adult-price-card,
-      .photo-card,
-      .quick-item,
-      .cta,
-      .trust-card,
-      details{
+      .btn,.menu-button,.menu-close,.card,.price-card,.photo-card,.quick-item,.cta,.trust-card,details{
         border:2px solid ButtonText;
       }
-
-      a,
-      button{
-        text-decoration:underline;
-      }
+      a,button{text-decoration:underline}
     }
 
     @media (max-width:1120px){
-      .hero-grid,
-      .cta{
-        grid-template-columns:1fr;
-      }
-
-      .quick-grid,
-      .grid-2{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      .section-title{
-        grid-template-columns:1fr;
-      }
-
-      .section-title p{
-        justify-self:start;
-        max-width:none;
-      }
+      .hero-grid,.cta{grid-template-columns:1fr}
+      .quick-grid,.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .section-title{grid-template-columns:1fr}
+      .section-title p{justify-self:start;max-width:none}
     }
 
     @media (max-width:980px){
-      .adult-price-grid,
-      .grid-3,
-      .step-grid{
-        grid-template-columns:1fr;
-      }
+      .price-grid,.grid-3,.step-grid{grid-template-columns:1fr}
+      .price-card.featured{transform:none}
     }
 
     @media (max-width:720px){
-      :root{
-        --header-height:64px;
-      }
-
-      .container{
-        width:min(var(--max), calc(100% - 24px));
-      }
-
-      .nav{
-        gap:10px;
-        min-height:64px;
-        padding:10px 0;
-      }
-
-      .brand{
-        gap:10px;
-      }
-
-      .brand-logo{
-        width:38px;
-        height:38px;
-      }
-
-      .brand span{
-        font-size:14px;
-        max-width:132px;
-        white-space:normal;
-      }
-
-      .menu-button{
-        min-height:42px;
-        padding:10px 14px;
-        font-size:14px;
-      }
-
-      .site-menu{
-        top:10px;
-        right:10px;
-        bottom:10px;
-        width:calc(100vw - 20px);
-        max-width:calc(100vw - 20px);
-        border-radius:24px;
-        padding:16px;
-      }
-
-      .menu-links a{
-        padding:14px;
-        font-size:15px;
-      }
-
-      .hero{
-        padding:30px 0 22px;
-      }
-
-      .hero-grid{
-        grid-template-columns:1fr;
-        gap:22px;
-      }
-
-      .hero h1{
-        font-size:clamp(2.25rem,11vw,3.6rem);
-        line-height:.98;
-        max-width:none;
-      }
-
-      .hero p,
-      .section-title p,
-      .card p,
-      .adult-price-card p,
-      .step-card p,
-      .details-content p,
-      .cta p,
-      .trust-card p{
-        font-size:15.5px;
-        line-height:1.72;
-      }
-
-      .eyebrow{
-        font-size:12px;
-        padding:7px 10px;
-      }
-
-      .hero-points{
-        gap:9px;
-        margin-top:18px;
-      }
-
-      .hero-actions,
-      .cta-buttons,
-      .link-row,
-      .trust-actions{
-        gap:10px;
-        margin-top:22px;
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .hero-actions .btn,
-      .cta-buttons .btn,
-      .link-row .btn,
-      .trust-actions .btn{
-        width:100%;
-      }
-
-      .quick-grid,
-      .grid-2{
-        grid-template-columns:1fr;
-      }
-
-      .section{
-        padding:30px 0;
-      }
-
-      .section-title{
-        gap:10px;
-        margin-bottom:16px;
-      }
-
-      .card,
-      .adult-price-card,
-      .photo-card,
-      .hero-card,
-      .trust-card,
-      .cta,
-      .contact-box,
-      details{
-        border-radius:20px;
-      }
-
-      .card,
-      .adult-price-card,
-      .contact-box,
-      .hero-card,
-      .step-card{
-        padding:18px;
-      }
-
-      .step-head{
-        gap:10px;
-      }
-
-      .step-number{
-        width:40px;
-        height:40px;
-        font-size:19px;
-      }
-
-      .step-head h3{
-        font-size:1.65rem;
-      }
-
-      .trust-card,
-      .cta{
-        padding:22px;
-      }
-
-      .adult-price{
-        font-size:39px;
-      }
-
-      summary{
-        padding:16px 46px 16px 16px;
-      }
-
-      .details-content{
-        padding:0 16px 16px;
-      }
-
-      .footer-line{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .footer-links{
-        display:grid;
-        gap:8px;
-      }
-
-      .footer-dropdown{
-        width:100%;
-      }
-
-      .footer-dropdown summary{
-        font-size:14px;
-      }
-
-      .footer-dropdown-panel{
-        position:static;
-        width:min(340px, calc(100vw - 32px));
-        margin-top:8px;
-        box-shadow:var(--shadow-soft);
-      }
+      :root{--header-height:64px}
+      .container{width:min(var(--max), calc(100% - 24px))}
+      .nav{gap:10px;min-height:64px;padding:10px 0}
+      .brand{gap:10px}
+      .brand-logo{width:38px;height:38px}
+      .brand span{font-size:14px;max-width:132px;white-space:normal}
+      .menu-button{min-height:42px;padding:10px 14px;font-size:14px}
+      .site-menu{top:10px;right:10px;bottom:10px;width:calc(100vw - 20px);max-width:calc(100vw - 20px);border-radius:24px;padding:16px}
+      .menu-links > a,
+      .menu-group-panel a{padding:14px;font-size:15px}
+      .hero{padding:30px 0 22px}
+      .hero-grid{grid-template-columns:1fr;gap:22px}
+      .hero h1{font-size:clamp(2.25rem,11vw,3.6rem);line-height:.98;max-width:none}
+      .hero p,.section-title p,.card p,.details-content p,.cta p,.trust-card p{font-size:15.5px;line-height:1.72}
+      .eyebrow{font-size:12px;padding:7px 10px}
+      .hero-points{gap:9px;margin-top:18px}
+      .hero-actions,.cta-buttons,.link-row,.trust-actions{gap:10px;margin-top:22px;flex-direction:column;align-items:stretch}
+      .hero-actions .btn,.cta-buttons .btn,.link-row .btn,.trust-actions .btn{width:100%}
+      .quick-grid,.grid-2{grid-template-columns:1fr}
+      .section{padding:30px 0}
+      .section-title{gap:10px;margin-bottom:16px}
+      .card,.price-card,.photo-card,.hero-card,.trust-card,.cta,.contact-box,details{border-radius:20px}
+      .card,.price-card,.contact-box,.hero-card,.step-card{padding:18px}
+      .site-menu .menu-group{padding:0}
+      .trust-card,.cta{padding:22px}
+      .price{font-size:40px}
+      .price-note{min-height:auto}
+      summary{padding:16px 46px 16px 16px}
+      .details-content{padding:0 16px 16px}
+      .footer-line{flex-direction:column;align-items:flex-start}
+      .footer-links{display:grid;gap:8px}
+      .footer-dropdown{width:100%}
+      .footer-dropdown summary{font-size:14px}
+      .footer-dropdown-panel{position:static;width:min(340px, calc(100vw - 32px));margin-top:8px;box-shadow:var(--shadow-soft)}
     }
 
     @media (max-width:420px){
-      .container{
-        width:min(var(--max), calc(100% - 20px));
-      }
-
-      .hero h1{
-        font-size:2.05rem;
-      }
-
-      .section-title h2{
-        font-size:1.95rem;
-      }
-
-      .card h3,
-      .adult-price-card h3,
-      .photo-card h3{
-        font-size:26px;
-      }
-
-      .step-head{
-        align-items:flex-start;
-      }
-
-      .step-number{
-        margin-top:0;
-      }
-
-      .step-head h3{
-        font-size:1.5rem;
-        line-height:1.05;
-      }
-
-      .trust-card h2,
-      .cta h2{
-        font-size:2rem;
-      }
-
-      .btn{
-        padding:13px 16px;
-      }
+      .container{width:min(var(--max), calc(100% - 20px))}
+      .hero h1{font-size:2.05rem}
+      .section-title h2{font-size:1.95rem}
+      .card h3,.price-card h3,.photo-card h3{font-size:26px}
+      .step-head{align-items:flex-start}
+      .step-number{margin-top:0}
+      .step-head h3{font-size:1.5rem;line-height:1.05}
+      .trust-card h2,.cta h2{font-size:2rem}
+      .btn{padding:13px 16px}
     }
   </style>
 </head>
@@ -1683,13 +1381,7 @@
         <span>Offroad Bumpis</span>
       </a>
 
-      <button
-        class="menu-button"
-        type="button"
-        id="menuButton"
-        aria-controls="siteMenu"
-        aria-expanded="false"
-      >
+      <button class="menu-button" type="button" id="menuButton" aria-controls="siteMenu" aria-expanded="false">
         Meny
         <span aria-hidden="true"></span>
       </button>
@@ -1706,19 +1398,69 @@
 
     <nav class="menu-links" aria-label="Huvudmeny">
       <a href="/">Hem</a>
-      <a href="/priser.html">Priser</a>
-      <a href="/vuxen-bumperballs-skane.html">Vuxenbollar</a>
-      <a href="/svensexa-bumperballs-skane.html">Svensexa</a>
-      <a href="/mohippa-bumperballs-skane.html">Möhippa</a>
-      <a href="/foretagsaktivitet-bumperballs-skane.html" aria-current="page">Företagsaktivitet</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/nyheter.html">Nyheter</a>
-      <a href="/villkor.html">Villkor</a>
+
+      <details class="menu-group">
+        <summary>Boka & info</summary>
+        <div class="menu-group-panel">
+          <a href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+          <a href="/priser.html">Priser</a>
+          <a href="/nyheter.html">Nyheter</a>
+          <a href="/#boka-plats">Boka plats att spela på</a>
+          <a href="/#bubble-football-malmo">Bubble football Malmö</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Barnkalas</summary>
+        <div class="menu-group-panel">
+          <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+          <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+          <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+          <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+          <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+          <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+          <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Skola, fritids & förening</summary>
+        <div class="menu-group-panel">
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+          <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+          <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group" open>
+        <summary>Vuxna & grupper</summary>
+        <div class="menu-group-panel">
+          <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+          <a href="/foretagsaktivitet-bumperballs-skane.html" aria-current="page">Företagsaktivitet Skåne</a>
+          <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Trygghet & övrigt</summary>
+        <div class="menu-group-panel">
+          <a href="/villkor.html">Villkor</a>
+          <a href="/integritet.html">Integritet</a>
+          <a href="/affiliate.html">Affiliate</a>
+          <a href="/rabattkod.html">Rabattkod</a>
+        </div>
+      </details>
     </nav>
 
     <div class="menu-cta">
-      <strong>Företagsaktivitet</strong>
-      <p>Du kan boka redan nu. Första speldag är från 1 september 2026.</p>
+      <strong>Boka bumperballs</strong>
+      <p>Välj datum, antal bollar, tillval och leverans direkt i bokningssystemet.</p>
       <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
         Boka direkt
       </a>
@@ -1832,59 +1574,94 @@
           </p>
         </div>
 
-        <div class="adult-price-grid">
-          <article class="adult-price-card">
-            <div class="adult-price-top">
-              <h3>2 bollar</h3>
-              <span class="tag">Test</span>
+        <div class="price-grid">
+          <article class="price-card">
+            <span class="tag">Test</span>
+            <h3>2 bollar</h3>
+            <p class="price">700 kr<small>per prisdag</small></p>
+            <div class="price-note">
+              För liten aktivitet, test eller dueller.
             </div>
-            <div class="adult-price">700 kr<small>per prisdag</small></div>
-            <p>För liten aktivitet eller test.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>2 vuxenbollar</span></li>
+              <li><span class="check">✓</span><span>Batteridriven pump ingår</span></li>
+              <li><span class="check">✓</span><span>Hämta i Malmö eller boka leverans</span></li>
+            </ul>
           </article>
 
-          <article class="adult-price-card">
-            <div class="adult-price-top">
-              <h3>4 bollar</h3>
-              <span class="tag">Litet team</span>
+          <article class="price-card">
+            <span class="tag">Litet team</span>
+            <h3>4 bollar</h3>
+            <p class="price">1 300 kr<small>per prisdag</small></p>
+            <div class="price-note">
+              För mindre grupp eller enkel match.
             </div>
-            <div class="adult-price">1 300 kr<small>per prisdag</small></div>
-            <p>För mindre grupp eller enkel match.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>4 vuxenbollar</span></li>
+              <li><span class="check">✓</span><span>Bra för korta rundor</span></li>
+              <li><span class="check">✓</span><span>Passar avdelningsaktivitet</span></li>
+            </ul>
           </article>
 
-          <article class="adult-price-card">
-            <div class="adult-price-top">
-              <h3>6 bollar</h3>
-              <span class="tag">Lag</span>
+          <article class="price-card">
+            <span class="tag">Lag</span>
+            <h3>6 bollar</h3>
+            <p class="price">1 900 kr<small>per prisdag</small></p>
+            <div class="price-note">
+              Bra om ni vill köra lag och byta spelare.
             </div>
-            <div class="adult-price">1 900 kr<small>per prisdag</small></div>
-            <p>Bra om ni vill köra lag och byta spelare.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>6 vuxenbollar</span></li>
+              <li><span class="check">✓</span><span>Korta matcher</span></li>
+              <li><span class="check">✓</span><span>Passar mindre kickoff</span></li>
+            </ul>
           </article>
 
-          <article class="adult-price-card">
-            <div class="adult-price-top">
-              <h3>8 bollar</h3>
-              <span class="tag">Mer spel</span>
+          <article class="price-card">
+            <span class="tag">Mer spel</span>
+            <h3>8 bollar</h3>
+            <p class="price">2 500 kr<small>per prisdag</small></p>
+            <div class="price-note">
+              För större grupp med mer spel samtidigt.
             </div>
-            <div class="adult-price">2 500 kr<small>per prisdag</small></div>
-            <p>För större grupp med mer spel samtidigt.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>8 vuxenbollar</span></li>
+              <li><span class="check">✓</span><span>Mindre väntan</span></li>
+              <li><span class="check">✓</span><span>Passar personaldag</span></li>
+            </ul>
           </article>
 
-          <article class="adult-price-card featured">
-            <div class="adult-price-top">
-              <h3>10 bollar</h3>
-              <span class="tag">Populärt</span>
+          <article class="price-card featured">
+            <span class="tag">Populärt</span>
+            <h3>10 bollar</h3>
+            <p class="price">3 000 kr<small>per prisdag</small></p>
+            <div class="price-note">
+              Passar kickoff, personaldag och teambuilding.
             </div>
-            <div class="adult-price">3 000 kr<small>per prisdag</small></div>
-            <p>Passar kickoff, personaldag och teambuilding.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>10 vuxenbollar</span></li>
+              <li><span class="check">✓</span><span>Bra för lagspel</span></li>
+              <li><span class="check">✓</span><span>Lagom för större företagsaktivitet</span></li>
+            </ul>
+            <div class="cta-buttons">
+              <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                Boka 10-pack
+              </a>
+            </div>
           </article>
 
-          <article class="adult-price-card">
-            <div class="adult-price-top">
-              <h3>12 bollar</h3>
-              <span class="tag">Max</span>
+          <article class="price-card">
+            <span class="tag">Max</span>
+            <h3>12 bollar</h3>
+            <p class="price">3 500 kr<small>per prisdag</small></p>
+            <div class="price-note">
+              För större aktivitet och mindre väntan.
             </div>
-            <div class="adult-price">3 500 kr<small>per prisdag</small></div>
-            <p>För större aktivitet och mindre väntan.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>12 vuxenbollar</span></li>
+              <li><span class="check">✓</span><span>Maxat spel</span></li>
+              <li><span class="check">✓</span><span>Bra för större grupp</span></li>
+            </ul>
           </article>
         </div>
 
@@ -2046,7 +1823,8 @@
 
         <div class="notice">
           <strong>Tips:</strong>
-          Sök på kommunens namn + “boka idrottshall” eller “boka fotbollsplan”.
+          Sök på kommunens namn + “boka idrottshall”, “boka fotbollsplan” eller “rbok”.
+          Många kommuner låter både privatpersoner, föreningar och företag boka planer och hallar.
         </div>
       </div>
     </section>
@@ -2369,10 +2147,6 @@
 
         <nav class="footer-links" aria-label="Sidfot">
           <a href="/">Hem</a>
-          <a href="/foretagsaktivitet-bumperballs-skane.html" aria-current="page">Företagsaktivitet Skåne</a>
-          <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
-          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
-          <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
           <a href="/villkor.html">Villkor</a>
           <a href="/integritet.html">Integritet</a>
 
@@ -2395,10 +2169,6 @@
             <div class="footer-dropdown-panel">
               <a href="/priser.html">Priser</a>
               <a href="/nyheter.html">Nyheter</a>
-              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
-              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
-              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
-              <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
               <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
               <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
               <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
@@ -2406,6 +2176,10 @@
               <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
               <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
               <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+              <a href="/foretagsaktivitet-bumperballs-skane.html" aria-current="page">Företagsaktivitet Skåne</a>
               <a href="/affiliate.html">Affiliate</a>
               <a href="/rabattkod.html">Rabattkod</a>
             </div>
@@ -2422,7 +2196,7 @@
     const menuBackdrop = document.getElementById('menuBackdrop');
 
     function getFocusableMenuItems() {
-      return siteMenu.querySelectorAll('a[href], button:not([disabled])');
+      return siteMenu.querySelectorAll('a[href], button:not([disabled]), summary');
     }
 
     function openMenu() {
@@ -2476,7 +2250,6 @@
 
       document.addEventListener('keydown', (event) => {
         const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-
         if (!isOpen) return;
 
         if (event.key === 'Escape') {
@@ -2486,7 +2259,6 @@
 
         if (event.key === 'Tab') {
           const focusableItems = Array.from(getFocusableMenuItems());
-
           if (!focusableItems.length) return;
 
           const firstItem = focusableItems[0];
