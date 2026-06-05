@@ -1880,6 +1880,252 @@
         padding:13px 16px;
       }
     }
+    /* Meny och footer: samma rullgardinsstruktur som startsidan */
+    .menu-links > a,
+    .menu-group-panel a{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:15px 16px;
+      border-radius:18px;
+      background:#f5fff1;
+      border:1px solid var(--line);
+      font-weight:900;
+      color:#17351e;
+      line-height:1.35;
+    }
+
+    .menu-links > a::after,
+    .menu-group-panel a::after{
+      content:"→";
+      color:#2f7f25;
+      flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .site-menu .menu-group{
+      display:block;
+      margin:0;
+      padding:0;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+
+    .site-menu .menu-group summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      background:#ffffff;
+      color:#14361b;
+      font-weight:900;
+      line-height:1.3;
+      font-size:16px;
+    }
+
+    .site-menu .menu-group summary::-webkit-details-marker{display:none}
+
+    .site-menu .menu-group summary::after{
+      content:"▾";
+      position:static;
+      transform:none;
+      width:30px;
+      height:30px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:14px;
+      flex:0 0 auto;
+    }
+
+    .site-menu .menu-group[open] summary::after{content:"▴"}
+
+    .menu-group-panel{
+      display:grid;
+      gap:8px;
+      padding:0 10px 10px;
+    }
+
+    .menu-group-panel a{
+      padding:13px 14px;
+      border-radius:15px;
+      background:#f5fff1;
+      box-shadow:none;
+      font-size:14px;
+    }
+
+    .footer-line{
+      align-items:flex-start;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      gap:8px;
+    }
+
+    .footer-links a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .footer-links a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
+    }
+
+    .footer-dropdown{
+      position:relative;
+      display:inline-block;
+      padding:0;
+      margin:0;
+      background:transparent;
+      border:0;
+      border-radius:0;
+      box-shadow:none;
+      overflow:visible;
+      line-height:1.6;
+    }
+
+    .footer-dropdown summary{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:0;
+      color:#5b6e60;
+      font-size:14px;
+      line-height:1.6;
+      text-decoration:underline;
+      text-underline-offset:3px;
+      cursor:pointer;
+      list-style:none;
+      font-weight:900;
+    }
+
+    .footer-dropdown summary::after{
+      content:"▾";
+      position:static;
+      transform:none;
+      width:auto;
+      height:auto;
+      border:0;
+      background:transparent;
+      color:#2f7f25;
+      font-size:12px;
+      display:inline;
+      font-weight:900;
+    }
+
+    .footer-dropdown[open] summary::after{content:"▴"}
+    .footer-dropdown summary::-webkit-details-marker{display:none}
+
+    .footer-dropdown-panel{
+      position:absolute;
+      right:0;
+      bottom:calc(100% + 8px);
+      z-index:30;
+      width:min(320px, calc(100vw - 32px));
+      display:grid;
+      gap:8px;
+      padding:12px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:0 18px 55px rgba(14,53,22,.16);
+    }
+
+    .footer-dropdown-panel a{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:11px 12px;
+      border-radius:14px;
+      background:#f5fff1;
+      border:1px solid var(--line);
+      color:#17351e;
+      font-weight:900;
+      text-decoration:none;
+      line-height:1.25;
+    }
+
+    .footer-dropdown-panel a::after{
+      content:"→";
+      color:#2f7f25;
+      flex:0 0 auto;
+    }
+
+    @media (max-width:720px){
+      .menu-links > a,
+      .menu-group-panel a{
+        padding:14px;
+        font-size:15px;
+      }
+
+      .menu-links a[aria-current="page"]::after{
+        content:"✓";
+        padding:4px 7px;
+      }
+
+      .site-menu .menu-group{
+        padding:0;
+        margin:0;
+      }
+
+      .footer-links{
+        display:grid;
+        gap:8px;
+      }
+
+      .footer-dropdown{
+        width:100%;
+      }
+
+      .footer-dropdown summary{
+        font-size:14px;
+      }
+
+      .footer-dropdown-panel{
+        position:static;
+        width:min(340px, calc(100vw - 32px));
+        margin-top:8px;
+        box-shadow:var(--shadow-soft);
+      }
+    }
+
   </style>
 </head>
 
@@ -1889,7 +2135,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span>Offroad Bumpis</span>
       </a>
 
@@ -1915,28 +2161,72 @@
     </div>
 
     <nav class="menu-links" aria-label="Huvudmeny">
-      <a href="/">Startsida</a>
-      <a href="/priser.html">Priser</a>
-      <a href="/nyheter.html">Nyheter</a>
-      <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
-      <a href="#kort-svar">Kort svar</a>
-      <a href="#varfor">Varför bumperballs?</a>
-      <a href="#paket">Paket</a>
-      <a href="#platser">Platser i Malmö</a>
-      <a href="#boka-plan">Boka hall eller plan</a>
-      <a href="#spel">Spelidéer</a>
-      <a href="#faq">Frågor</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
-      <a href="/villkor.html">Villkor</a>
-      <a href="/integritet.html">Integritet</a>
+      <a href="/">Hem</a>
+
+      <details class="menu-group">
+        <summary>Boka & info</summary>
+        <div class="menu-group-panel">
+          <a href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+          <a href="/priser.html">Priser</a>
+          <a href="/nyheter.html">Nyheter</a>
+          <a href="/#boka-plats">Boka plats att spela på</a>
+          <a href="/#bubble-football-malmo">Bubble football Malmö</a>
+        </div>
+      </details>
+
+      <details class="menu-group" open>
+        <summary>Barnkalas</summary>
+        <div class="menu-group-panel">
+          <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+          <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+          <a href="/barnkalas-malmo.html" aria-current="page">Barnkalas Malmö</a>
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+          <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+          <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+          <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+          <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+          <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Skola, fritids & förening</summary>
+        <div class="menu-group-panel">
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+          <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+          <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Vuxna & grupper</summary>
+        <div class="menu-group-panel">
+          <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+          <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+          <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Trygghet & övrigt</summary>
+        <div class="menu-group-panel">
+          <a href="/villkor.html">Villkor</a>
+          <a href="/integritet.html">Integritet</a>
+          <a href="/affiliate.html">Affiliate</a>
+          <a href="/rabattkod.html">Rabattkod</a>
+        </div>
+      </details>
     </nav>
 
     <div class="menu-cta">
       <strong>Boka barnkalas</strong>
       <p>Från 600 kr. Hyr bumperballs till barnkalas i Malmö och kör själva.</p>
       <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-        Boka bumperballs
+        Boka direkt
       </a>
     </div>
   </aside>
@@ -1981,7 +2271,7 @@
 
         <aside class="hero-card" aria-label="Bild och snabb info om bumperballs">
           <img
-            src="bilder/barn-springer-i-bumperballs.jpg"
+            src="/bilder/barn-springer-i-bumperballs.jpg"
             alt="Barn springer i bumperballs på konstgräs under ett aktivt barnkalas i Malmö"
             class="hero-image"
             width="900"
@@ -2060,7 +2350,7 @@
       <div class="container">
         <div class="photos-grid">
           <img
-            src="bilder/barn-i-bumperball-utomhus.jpg"
+            src="/bilder/barn-i-bumperball-utomhus.jpg"
             alt="Barn i bumperball utomhus på barnkalas"
             class="photo-img"
             width="900"
@@ -2068,7 +2358,7 @@
             loading="lazy"
           />
           <img
-            src="bilder/barn-spelar-bumperballs.jpg"
+            src="/bilder/barn-spelar-bumperballs.jpg"
             alt="Barn spelar bumperball på gräsplan"
             class="photo-img"
             width="900"
@@ -2196,7 +2486,7 @@
       <div class="container">
         <div class="photos-grid">
           <img
-            src="bilder/barn-upp-och-ner-bumperball.png"
+            src="/bilder/barn-upp-och-ner-bumperball.png"
             alt="Barn upp och ner i bumperball under lek"
             class="photo-img"
             width="900"
@@ -2204,7 +2494,7 @@
             loading="lazy"
           />
           <img
-            src="bilder/fotbollslag-spelar-bumperball-veberod.png"
+            src="/bilder/fotbollslag-spelar-bumperball-veberod.png"
             alt="Barn och ungdomar spelar bumperball som aktivitet"
             class="photo-img"
             width="900"
@@ -2824,22 +3114,47 @@
     <div class="container">
       <div class="footer-line">
         <span>© 2026 Offroad Bumpis</span>
-        <span>
-          <a href="/">Hem</a> ·
-          <a href="/priser.html">Priser</a> ·
-          <a href="/nyheter.html">Nyheter</a> ·
-          <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
-          <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a> ·
-          <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a> ·
-          <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a> ·
-          <a href="/barnkalas-malmo.html" aria-current="page">Barnkalas Malmö</a> ·
-          <a href="/barnkalas-lund.html">Barnkalas Lund</a> ·
-          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a> ·
-          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
-          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a> ·
-          <a href="/villkor.html">Villkor</a> ·
+
+        <nav class="footer-links" aria-label="Sidfot">
+          <a href="/">Hem</a>
+          <a href="/villkor.html">Villkor</a>
           <a href="/integritet.html">Integritet</a>
-        </span>
+
+          <details class="footer-dropdown">
+            <summary>Stadssidor</summary>
+            <div class="footer-dropdown-panel">
+              <a href="/barnkalas-malmo.html" aria-current="page">Barnkalas Malmö</a>
+              <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+              <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+              <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+              <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+              <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+              <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+              <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+            </div>
+          </details>
+
+          <details class="footer-dropdown">
+            <summary>Alla sidor</summary>
+            <div class="footer-dropdown-panel">
+              <a href="/priser.html">Priser</a>
+              <a href="/nyheter.html">Nyheter</a>
+              <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+              <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+              <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+              <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+              <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+              <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+              <a href="/affiliate.html">Affiliate</a>
+              <a href="/rabattkod.html">Rabattkod</a>
+            </div>
+          </details>
+        </nav>
       </div>
     </div>
   </footer>
@@ -2851,7 +3166,7 @@
     const menuBackdrop = document.getElementById('menuBackdrop');
 
     function getFocusableMenuItems() {
-      return siteMenu.querySelectorAll('a[href], button:not([disabled])');
+      return siteMenu.querySelectorAll('a[href], button:not([disabled]), summary');
     }
 
     function openMenu() {
