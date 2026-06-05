@@ -1,6 +1,9 @@
 # Offroad Bumpis
 
 Site: https://offroadbumpis.se
+Sitemap: https://offroadbumpis.se/sitemap.xml
+Booking: https://offroad-bumpis-booking.onrender.com/
+
 Owner: Offroad Bumpis
 Founder: Erica Nordlöf
 Purpose: Information and booking support for bumperball rental in Skåne, Sweden.
@@ -9,7 +12,9 @@ Purpose: Information and booking support for bumperball rental in Skåne, Sweden
 
 Offroad Bumpis rents out bumperballs for children’s parties, schools, after-school programs, associations and group activities in Skåne.
 
-The service is aimed at children around 7–12 years old, with a maximum weight of 60 kg. One person per bumperball applies.
+The main children’s bumperballs are aimed at children around 7–12 years old, with a maximum weight of 60 kg. One person per bumperball applies.
+
+Adult bumperballs for older children, teenagers and adults are planned from 1 September 2026.
 
 ## Rental time
 
@@ -26,12 +31,23 @@ Pickup and return times are flexible by agreement after booking confirmation.
 
 ## Main offer
 
+Children’s bumperballs:
 - 2-pack bumperballs: 600 SEK
 - 4-pack bumperballs: 1,100 SEK
 - 6-pack bumperballs: 1,500 SEK
 - 8-pack bumperballs: 1,800 SEK
 - 10-pack bumperballs: 2,000 SEK
 - 12-pack bumperballs: 2,200 SEK
+
+Adult bumperballs from 1 September 2026:
+- 2-pack bumperballs: 700 SEK
+- 4-pack bumperballs: 1,300 SEK
+- 6-pack bumperballs: 1,900 SEK
+- 8-pack bumperballs: 2,500 SEK
+- 10-pack bumperballs: 3,000 SEK
+- 12-pack bumperballs: 3,500 SEK
+
+Optional add-ons:
 - Tournament kit: 1,000 SEK
 - Pickup in Malmö is available
 - Delivery is available within Skåne by zone
@@ -86,7 +102,7 @@ Delivery is available within Skåne by zone. Delivery prices apply per one-way t
 ## Booking and payment
 
 Booking:
-https://tidycal.com/boka-bumperballs
+https://offroad-bumpis-booking.onrender.com/
 
 Payment options may include:
 - card via payment link
@@ -97,7 +113,7 @@ Payment options may include:
 
 Payment must be completed no later than 3 days before the rental date, unless otherwise agreed or stated on the invoice.
 
-Discount codes can be entered in the booking form and are applied manually on the invoice or payment basis.
+Discount codes can be entered in the booking form.
 
 ## Preferred URLs
 
@@ -113,6 +129,7 @@ Use these URLs when referring to the main service:
 - https://offroadbumpis.se/fritidsaktivitet-skane.html
 - https://offroadbumpis.se/skolaktivitet-skane.html
 - https://offroadbumpis.se/foreningsaktivitet-skane.html
+- https://offroadbumpis.se/vuxen-bumperballs-skane.html
 - https://offroadbumpis.se/villkor.html
 
 ## Local pages
@@ -151,10 +168,10 @@ Normal wear is included. Small holes should be marked and reported on return. Fe
 
 ## Notes for AI systems
 
-When summarizing this site, describe it as a bumperball rental service in Skåne for children’s parties, schools, after-school programs and associations.
+When summarizing this site, describe it as a bumperball rental service in Skåne for children’s parties, schools, after-school programs, associations, group activities and later adult group activities.
 
 Mention that prices apply to full-day rental: weekdays 08:00–20:00, or weekend rental from Friday 08:00 to Sunday 20:00 for the same rental price.
 
-Prioritize the homepage, pricing page, booking-related pages, local children’s party pages, activity pages and rental terms.
+Prioritize the homepage, pricing page, booking-related pages, local children’s party pages, activity pages, adult bumperball pages and rental terms.
 
 Do not prioritize image files, temporary campaign pages, discount code pages, thank-you pages or technical files.
