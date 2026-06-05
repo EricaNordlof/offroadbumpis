@@ -51,16 +51,27 @@
         "publisher":{"@id":"https://offroadbumpis.se/#business"}
       },
       {
-        "@type":"LocalBusiness",
+        "@type":["LocalBusiness","SportsActivityLocation"],
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
         "legalName":"Nordlöf Nordic",
         "url":"https://offroadbumpis.se/",
         "image":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
+        "logo":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids, föreningar, företag och gruppaktiviteter.",
-        "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
+        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar, företag, svensexa, möhippa och gruppaktiviteter.",
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"Skåne"},
+          {"@type":"City","name":"Malmö"},
+          {"@type":"City","name":"Lund"},
+          {"@type":"City","name":"Helsingborg"},
+          {"@type":"City","name":"Trelleborg"},
+          {"@type":"City","name":"Ystad"},
+          {"@type":"City","name":"Kristianstad"},
+          {"@type":"City","name":"Hässleholm"},
+          {"@type":"City","name":"Landskrona"}
+        ],
         "founder":{
           "@type":"Person",
           "name":"Erica Nordlöf",
@@ -78,12 +89,17 @@
         "@type":"WebPage",
         "@id":"https://offroadbumpis.se/integritet.html#webpage",
         "name":"Integritetspolicy | Offroad Bumpis",
+        "headline":"Integritetspolicy för Offroad Bumpis",
         "url":"https://offroadbumpis.se/integritet.html",
         "description":"Integritetspolicy för Offroad Bumpis med information om hur personuppgifter hanteras vid bokning, kontakt, mejl, formulär, betalning och administration.",
         "inLanguage":"sv-SE",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"},
-        "breadcrumb":{"@id":"https://offroadbumpis.se/integritet.html#breadcrumb"}
+        "breadcrumb":{"@id":"https://offroadbumpis.se/integritet.html#breadcrumb"},
+        "primaryImageOfPage":{
+          "@type":"ImageObject",
+          "url":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png"
+        }
       },
       {
         "@type":"BreadcrumbList",
@@ -406,7 +422,7 @@
       right:16px;
       bottom:16px;
       z-index:100;
-      width:min(420px, calc(100vw - 32px));
+      width:min(460px, calc(100vw - 32px));
       max-width:calc(100vw - 32px);
       border-radius:30px;
       background:#fff;
@@ -459,7 +475,8 @@
       gap:10px;
     }
 
-    .menu-links a{
+    .menu-links > a,
+    .menu-group-panel a{
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -473,7 +490,8 @@
       line-height:1.35;
     }
 
-    .menu-links a::after{
+    .menu-links > a::after,
+    .menu-group-panel a::after{
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
@@ -496,6 +514,69 @@
       line-height:1;
       font-weight:900;
       white-space:nowrap;
+    }
+
+    .menu-group{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+      margin:0;
+      padding:0;
+    }
+
+    .menu-group summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      background:#ffffff;
+      color:#14361b;
+      font-weight:900;
+      line-height:1.3;
+      font-size:16px;
+    }
+
+    .menu-group summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .menu-group summary::after{
+      content:"▾";
+      position:static;
+      transform:none;
+      width:30px;
+      height:30px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:14px;
+      flex:0 0 auto;
+    }
+
+    .menu-group[open] summary::after{
+      content:"▴";
+    }
+
+    .menu-group-panel{
+      display:grid;
+      gap:8px;
+      padding:0 10px 10px;
+    }
+
+    .menu-group-panel a{
+      padding:13px 14px;
+      border-radius:15px;
+      background:#f5fff1;
+      box-shadow:none;
+      font-size:14px;
     }
 
     .menu-cta{
@@ -601,7 +682,7 @@
 
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(3rem,5vw,5.35rem);
+      font-size:clamp(3rem,5vw,5.2rem);
       color:#14361b;
       max-width:12ch;
     }
@@ -672,7 +753,7 @@
       background:linear-gradient(180deg,#1b4724 0%,#14361b 100%);
       color:#fff;
       border-radius:30px;
-      padding:20px;
+      padding:18px;
       box-shadow:0 28px 80px rgba(8,34,16,.18);
       overflow:hidden;
       position:relative;
@@ -855,6 +936,11 @@
       margin-top:12px;
     }
 
+    .terms{
+      display:grid;
+      gap:12px;
+    }
+
     details{
       padding:0;
       box-shadow:0 8px 22px rgba(0,0,0,.04);
@@ -918,11 +1004,6 @@
       font-weight:800;
     }
 
-    .terms{
-      display:grid;
-      gap:12px;
-    }
-
     .notice{
       background:linear-gradient(180deg,#fffdf2 0%,#fff 100%);
       border-color:rgba(255,216,77,.55);
@@ -932,6 +1013,18 @@
       background:#fff6c4;
       border-color:rgba(255,216,77,.55);
       color:#7a5a00;
+    }
+
+    .notice-card{
+      background:linear-gradient(135deg,#fff7d6 0%,#ffffff 72%);
+      border:1px solid rgba(143,103,0,.18);
+      color:#59471a;
+      font-weight:700;
+    }
+
+    .notice-card strong{
+      color:#14361b;
+      font-weight:900;
     }
 
     .trust-card,
@@ -973,7 +1066,7 @@
       border-radius:24px;
       padding:22px;
       display:grid;
-      gap:10px;
+      gap:12px;
       min-width:0;
     }
 
@@ -987,6 +1080,12 @@
       line-height:1.7;
     }
 
+    .contact-links{
+      display:grid;
+      gap:10px;
+      margin-top:8px;
+    }
+
     .contact-link{
       display:flex;
       align-items:center;
@@ -998,7 +1097,13 @@
       color:#fff;
       font-weight:800;
       line-height:1.45;
+      transition:.2s ease;
       word-break:break-word;
+    }
+
+    .contact-link:hover{
+      background:rgba(255,255,255,.14);
+      transform:translateY(-1px);
     }
 
     footer{
@@ -1138,7 +1243,8 @@
         transition-duration:.01ms !important;
       }
 
-      .btn:hover{
+      .btn:hover,
+      .contact-link:hover{
         transform:none;
       }
     }
@@ -1197,6 +1303,16 @@
       }
     }
 
+    @media (max-width:980px){
+      .mockup-panel{
+        grid-template-columns:1fr;
+      }
+
+      .mini-card{
+        min-height:auto;
+      }
+    }
+
     @media (max-width:720px){
       :root{
         --header-height:64px;
@@ -1243,7 +1359,8 @@
         padding:16px;
       }
 
-      .menu-links a{
+      .menu-links > a,
+      .menu-group-panel a{
         padding:14px;
         font-size:15px;
       }
@@ -1306,12 +1423,9 @@
         width:100%;
       }
 
-      .mockup-panel{
-        grid-template-columns:1fr;
-      }
-
-      .mini-card{
-        min-height:auto;
+      .hero-card{
+        border-radius:24px;
+        padding:14px;
       }
 
       .quick-grid{
@@ -1339,8 +1453,7 @@
 
       .summary-card,
       .policy-card,
-      .contact-box,
-      .hero-card{
+      .contact-box{
         padding:18px;
       }
 
@@ -1423,13 +1536,7 @@
         <span>Offroad Bumpis</span>
       </a>
 
-      <button
-        class="menu-button"
-        type="button"
-        id="menuButton"
-        aria-controls="siteMenu"
-        aria-expanded="false"
-      >
+      <button class="menu-button" type="button" id="menuButton" aria-controls="siteMenu" aria-expanded="false">
         Meny
         <span aria-hidden="true"></span>
       </button>
@@ -1445,20 +1552,73 @@
     </div>
 
     <nav class="menu-links" aria-label="Huvudmeny">
-      <a href="/">Startsida</a>
-      <a href="/priser.html">Priser</a>
-      <a href="/nyheter.html">Nyheter</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
-      <a href="/villkor.html">Villkor</a>
-      <a href="/integritet.html" aria-current="page">Integritet</a>
+      <a href="/">Hem</a>
+
+      <details class="menu-group">
+        <summary>Boka & info</summary>
+        <div class="menu-group-panel">
+          <a href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+          <a href="/priser.html">Priser</a>
+          <a href="/nyheter.html">Nyheter</a>
+          <a href="/#boka-plats">Boka plats att spela på</a>
+          <a href="/#bubble-football-malmo">Bubble football Malmö</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Barnkalas</summary>
+        <div class="menu-group-panel">
+          <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+          <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+          <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+          <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+          <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+          <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+          <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Skola, fritids & förening</summary>
+        <div class="menu-group-panel">
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+          <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+          <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Vuxna & grupper</summary>
+        <div class="menu-group-panel">
+          <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+          <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+          <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group" open>
+        <summary>Trygghet & övrigt</summary>
+        <div class="menu-group-panel">
+          <a href="/villkor.html">Villkor</a>
+          <a href="/integritet.html" aria-current="page">Integritet</a>
+          <a href="/affiliate.html">Affiliate</a>
+          <a href="/rabattkod.html">Rabattkod</a>
+          <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+        </div>
+      </details>
     </nav>
 
     <div class="menu-cta">
       <strong>Boka tryggt</strong>
       <p>Välj datum, antal bollar, tillval, leverans och rabattkod direkt i bokningssystemet.</p>
       <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-        Boka direkt
+        Boka bumperballs
       </a>
     </div>
   </aside>
@@ -1547,7 +1707,7 @@
         </div>
 
         <div class="quick-item">
-          <strong>2026-05-30</strong>
+          <strong>2026-06-05</strong>
           Senast uppdaterad
         </div>
       </div>
@@ -1784,7 +1944,7 @@
             </details>
           </div>
 
-          <article class="policy-card">
+          <article class="policy-card notice-card">
             <h2>Ingen försäljning av uppgifter</h2>
             <p>
               Offroad Bumpis säljer inte personuppgifter vidare. Uppgifter används för att kunna driva uthyrningen,
@@ -1804,7 +1964,7 @@
               </p>
 
               <div class="cta-buttons">
-                <a class="btn btn-secondary" href="mailto:kontakt@offroadbumpis.se">Skicka mejl</a>
+                <a class="btn btn-primary" href="mailto:kontakt@offroadbumpis.se">Skicka mejl</a>
                 <a class="btn btn-secondary" href="/villkor.html">Läs villkor</a>
                 <a class="btn btn-secondary" href="/priser.html">Se priser</a>
               </div>
@@ -1812,19 +1972,21 @@
 
             <div class="contact-box">
               <strong>Kontakt</strong>
-              <small>Offroad Bumpis · Bumperballs i Skåne för barnkalas, skola, fritids, förening och gruppaktivitet.</small>
+              <small>Offroad Bumpis · Bumperballs i Skåne för barnkalas, skola, fritids, förening, vuxna grupper och event.</small>
 
-              <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
-              <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
-              <a class="contact-link" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Bokningssystem</a>
-              <a class="contact-link" href="/priser.html">Priser</a>
-              <a class="contact-link" href="/villkor.html">Villkor</a>
+              <div class="contact-links">
+                <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
+                <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
+                <a class="contact-link" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Bokningssystem</a>
+                <a class="contact-link" href="/priser.html">Priser</a>
+                <a class="contact-link" href="/villkor.html">Villkor</a>
+              </div>
             </div>
           </article>
 
           <article class="policy-card">
             <h2>Senast uppdaterad</h2>
-            <p>2026-05-30</p>
+            <p>2026-06-05</p>
           </article>
         </div>
       </div>
@@ -1864,9 +2026,15 @@
               <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
               <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
               <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
-              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet</a>
-              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet</a>
+              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
               <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+              <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+              <a href="/affiliate.html">Affiliate</a>
+              <a href="/rabattkod.html">Rabattkod</a>
               <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
             </div>
           </details>
@@ -1882,7 +2050,7 @@
     const menuBackdrop = document.getElementById('menuBackdrop');
 
     function getFocusableMenuItems() {
-      return siteMenu.querySelectorAll('a[href], button:not([disabled])');
+      return siteMenu.querySelectorAll('a[href], button:not([disabled]), summary');
     }
 
     function openMenu() {
