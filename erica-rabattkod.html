@@ -31,6 +31,7 @@
   <meta name="twitter:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
 
   <link rel="preload" as="image" href="/bilder/barn-springer-i-bumperballs.jpg" />
+  <link rel="preload" as="image" href="/bilder/offroad-bumpis-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -51,24 +52,33 @@
         "publisher":{"@id":"https://offroadbumpis.se/#business"}
       },
       {
-        "@type":"LocalBusiness",
+        "@type":["LocalBusiness","SportsActivityLocation"],
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
+        "legalName":"Nordlöf Nordic",
         "url":"https://offroadbumpis.se/",
         "image":"https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg",
+        "logo":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "description":"Uthyrning av bumperballs i Skåne för barnkalas, skolor, fritids och föreningar.",
-        "areaServed":{
-          "@type":"AdministrativeArea",
-          "name":"Skåne"
-        },
+        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar, företag, svensexa, möhippa och gruppaktiviteter.",
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"Skåne"},
+          {"@type":"City","name":"Malmö"},
+          {"@type":"City","name":"Lund"},
+          {"@type":"City","name":"Helsingborg"},
+          {"@type":"City","name":"Trelleborg"},
+          {"@type":"City","name":"Ystad"},
+          {"@type":"City","name":"Kristianstad"},
+          {"@type":"City","name":"Hässleholm"},
+          {"@type":"City","name":"Landskrona"}
+        ],
         "founder":{
           "@type":"Person",
           "name":"Erica Nordlöf",
           "sameAs":"https://www.linkedin.com/in/erica-nordl%C3%B6f/"
         },
-        "priceRange":"Från 600 SEK",
+        "priceRange":"600 SEK - 3500 SEK",
         "paymentAccepted":"Kort via betalningslänk, Klarna via betalningslänk, Swish, faktura, bankgiro och banköverföring",
         "sameAs":[
           "https://www.linkedin.com/in/erica-nordl%C3%B6f/",
@@ -81,10 +91,34 @@
         "@id":"https://offroadbumpis.se/erica-rabattkod.html#webpage",
         "url":"https://offroadbumpis.se/erica-rabattkod.html",
         "name":"10 % rabatt på Offroad Bumpis via Erica",
+        "headline":"10 % rabatt på Offroad Bumpis via Erica",
         "description":"Rabattkodssida för Offroad Bumpis med 10 % rabatt på bumperball i Skåne.",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"},
+        "breadcrumb":{"@id":"https://offroadbumpis.se/erica-rabattkod.html#breadcrumb"},
+        "primaryImageOfPage":{
+          "@type":"ImageObject",
+          "url":"https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg"
+        },
         "inLanguage":"sv-SE"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://offroadbumpis.se/erica-rabattkod.html#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Hem",
+            "item":"https://offroadbumpis.se/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Erica rabattkod",
+            "item":"https://offroadbumpis.se/erica-rabattkod.html"
+          }
+        ]
       },
       {
         "@type":"Offer",
@@ -95,6 +129,36 @@
         "url":"https://offroadbumpis.se/erica-rabattkod.html",
         "seller":{"@id":"https://offroadbumpis.se/#business"},
         "availability":"https://schema.org/InStock"
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://offroadbumpis.se/erica-rabattkod.html#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Vad är rabattkoden?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Rabattkoden är ERICA-1026."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Hur mycket rabatt ger koden?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Koden ger 10 % rabatt på bokningen."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Var bokar jag?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Du bokar via Offroad Bumpis bokningssystem. Länken på sidan skickar med rabattkoden automatiskt."
+            }
+          }
+        ]
       }
     ]
   }
@@ -120,6 +184,7 @@
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
       --radius:24px;
       --max:1180px;
+      --header-height:72px;
     }
 
     *{
@@ -175,6 +240,10 @@
       border:0;
     }
 
+    main{
+      padding-top:var(--header-height);
+    }
+
     p,
     li,
     span,
@@ -184,7 +253,8 @@
     a,
     h1,
     h2,
-    h3{
+    h3,
+    h4{
       overflow-wrap:anywhere;
     }
 
@@ -199,7 +269,11 @@
     }
 
     a:focus-visible,
-    button:focus-visible{
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible{
       outline:3px solid var(--focus);
       outline-offset:4px;
       box-shadow:0 0 0 6px rgba(255,255,255,.92);
@@ -231,12 +305,15 @@
     }
 
     .topbar{
-      position:sticky;
+      position:fixed;
       top:0;
+      left:0;
+      right:0;
+      width:100%;
       z-index:80;
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
-      background:rgba(245,255,241,.92);
+      background:rgba(245,255,241,.9);
       border-bottom:1px solid var(--line);
       padding-top:env(safe-area-inset-top);
     }
@@ -275,7 +352,7 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
-      max-width:170px;
+      max-width:160px;
     }
 
     .menu-button{
@@ -354,7 +431,7 @@
       right:16px;
       bottom:16px;
       z-index:100;
-      width:min(420px, calc(100vw - 32px));
+      width:min(460px, calc(100vw - 32px));
       max-width:calc(100vw - 32px);
       border-radius:30px;
       background:#fff;
@@ -407,7 +484,8 @@
       gap:10px;
     }
 
-    .menu-links a{
+    .menu-links > a,
+    .menu-group-panel a{
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -421,10 +499,93 @@
       line-height:1.35;
     }
 
-    .menu-links a::after{
+    .menu-links > a::after,
+    .menu-group-panel a::after{
       content:"→";
       color:#2f7f25;
       flex:0 0 auto;
+    }
+
+    .menu-links a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
+    }
+
+    .menu-links a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .menu-group{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+      margin:0;
+      padding:0;
+    }
+
+    .menu-group summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      background:#ffffff;
+      color:#14361b;
+      font-weight:900;
+      line-height:1.3;
+      font-size:16px;
+    }
+
+    .menu-group summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .menu-group summary::after{
+      content:"▾";
+      position:static;
+      transform:none;
+      width:30px;
+      height:30px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:#f1ffe9;
+      border:1px solid var(--line);
+      color:#2f7f25;
+      font-size:14px;
+      flex:0 0 auto;
+    }
+
+    .menu-group[open] summary::after{
+      content:"▴";
+    }
+
+    .menu-group-panel{
+      display:grid;
+      gap:8px;
+      padding:0 10px 10px;
+    }
+
+    .menu-group-panel a{
+      padding:13px 14px;
+      border-radius:15px;
+      background:#f5fff1;
+      box-shadow:none;
+      font-size:14px;
     }
 
     .menu-cta{
@@ -450,9 +611,14 @@
       font-size:14px;
     }
 
+    .menu-cta .btn{
+      width:100%;
+    }
+
     h1,
     h2,
-    h3{
+    h3,
+    h4{
       font-family:"Baloo 2",sans-serif;
       letter-spacing:-.03em;
       margin:0;
@@ -550,6 +716,7 @@
       color:#42634a;
       box-shadow:0 8px 22px rgba(0,0,0,.04);
       margin-bottom:16px;
+      line-height:1.35;
     }
 
     .hero h1{
@@ -705,6 +872,7 @@
 
     .section{
       padding:42px 0;
+      scroll-margin-top:88px;
     }
 
     .section-title{
@@ -1000,11 +1168,114 @@
       gap:16px;
       flex-wrap:wrap;
       line-height:1.6;
+      align-items:flex-start;
     }
 
-    .footer-line a{
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      gap:8px;
+    }
+
+    .footer-links a{
       text-decoration:underline;
       text-underline-offset:3px;
+    }
+
+    .footer-links a[aria-current="page"]{
+      font-weight:900;
+      color:#14361b;
+      background:#dff8d1;
+      border-radius:999px;
+      padding:3px 8px;
+      text-decoration:none;
+    }
+
+    .footer-dropdown{
+      position:relative;
+      display:inline-block;
+      padding:0;
+      margin:0;
+      background:transparent;
+      border:0;
+      border-radius:0;
+      box-shadow:none;
+      overflow:visible;
+      line-height:1.6;
+    }
+
+    .footer-dropdown summary{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:0;
+      color:#5b6e60;
+      font-size:14px;
+      line-height:1.6;
+      text-decoration:underline;
+      text-underline-offset:3px;
+      cursor:pointer;
+      list-style:none;
+      font-weight:900;
+    }
+
+    .footer-dropdown summary::after{
+      content:"▾";
+      position:static;
+      transform:none;
+      width:auto;
+      height:auto;
+      border:0;
+      background:transparent;
+      color:#2f7f25;
+      font-size:12px;
+      display:inline;
+      font-weight:900;
+    }
+
+    .footer-dropdown[open] summary::after{
+      content:"▴";
+    }
+
+    .footer-dropdown summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .footer-dropdown-panel{
+      position:absolute;
+      right:0;
+      bottom:calc(100% + 8px);
+      z-index:30;
+      width:min(320px, calc(100vw - 32px));
+      display:grid;
+      gap:8px;
+      padding:12px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:0 18px 55px rgba(14,53,22,.16);
+    }
+
+    .footer-dropdown-panel a{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:11px 12px;
+      border-radius:14px;
+      background:#f5fff1;
+      border:1px solid var(--line);
+      color:#17351e;
+      font-weight:900;
+      text-decoration:none;
+      line-height:1.25;
+    }
+
+    .footer-dropdown-panel a::after{
+      content:"→";
+      color:#2f7f25;
+      flex:0 0 auto;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -1023,6 +1294,41 @@
       .btn:hover,
       .contact-link:hover{
         transform:none;
+      }
+    }
+
+    @media (prefers-contrast: more){
+      :root{
+        --text:#000;
+        --muted:#222;
+        --line:rgba(0,0,0,.35);
+      }
+
+      .step-card,
+      .offer-card,
+      .quick-item,
+      .hero-card{
+        border-color:rgba(0,0,0,.35);
+      }
+    }
+
+    @media (forced-colors: active){
+      .btn,
+      .menu-button,
+      .menu-close,
+      .hero-card,
+      .code-card,
+      .step-card,
+      .offer-card,
+      .quick-item,
+      .info-card,
+      .cta{
+        border:2px solid ButtonText;
+      }
+
+      a,
+      button{
+        text-decoration:underline;
       }
     }
 
@@ -1059,6 +1365,10 @@
     }
 
     @media (max-width:720px){
+      :root{
+        --header-height:64px;
+      }
+
       .container{
         width:min(var(--max), calc(100% - 24px));
       }
@@ -1100,9 +1410,15 @@
         padding:16px;
       }
 
-      .menu-links a{
+      .menu-links > a,
+      .menu-group-panel a{
         padding:14px;
         font-size:15px;
+      }
+
+      .menu-links a[aria-current="page"]::after{
+        content:"✓";
+        padding:4px 7px;
       }
 
       .hero{
@@ -1124,7 +1440,12 @@
         max-width:none;
       }
 
-      .hero-lead{
+      .hero-lead,
+      .section-title p,
+      .step-card p,
+      .offer-card p,
+      .info-card p,
+      .cta p{
         font-size:15.5px;
         line-height:1.72;
       }
@@ -1184,9 +1505,33 @@
         flex-direction:column;
         align-items:flex-start;
       }
+
+      .footer-links{
+        display:grid;
+        gap:8px;
+      }
+
+      .footer-dropdown{
+        width:100%;
+      }
+
+      .footer-dropdown summary{
+        font-size:14px;
+      }
+
+      .footer-dropdown-panel{
+        position:static;
+        width:min(340px, calc(100vw - 32px));
+        margin-top:8px;
+        box-shadow:var(--shadow-soft);
+      }
     }
 
     @media (max-width:420px){
+      .container{
+        width:min(var(--max), calc(100% - 20px));
+      }
+
       .hero h1{
         font-size:2.15rem;
       }
@@ -1214,17 +1559,11 @@
   <header class="topbar">
     <div class="container nav">
       <a href="/" class="brand" aria-label="Offroad Bumpis startsida">
-        <img src="bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
+        <img src="/bilder/offroad-bumpis-logo.png" alt="Offroad Bumpis logga" class="brand-logo" />
         <span>Offroad Bumpis</span>
       </a>
 
-      <button
-        class="menu-button"
-        type="button"
-        id="menuButton"
-        aria-controls="siteMenu"
-        aria-expanded="false"
-      >
+      <button class="menu-button" type="button" id="menuButton" aria-controls="siteMenu" aria-expanded="false">
         Meny
         <span aria-hidden="true"></span>
       </button>
@@ -1240,23 +1579,76 @@
     </div>
 
     <nav class="menu-links" aria-label="Huvudmeny">
-      <a href="/">Startsida</a>
-      <a href="/priser.html">Priser</a>
-      <a href="/barnkalas-skane.html">Barnkalas i Skåne</a>
-      <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus</a>
-      <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
-      <a href="/barnkalas-lund.html">Barnkalas Lund</a>
-      <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
-      <a href="/bumperball-fotbollsforening-skane.html">Fotbollsföreningar</a>
-      <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
-      <a href="/villkor.html">Villkor</a>
-      <a href="/integritet.html">Integritet</a>
+      <a href="/">Hem</a>
+
+      <details class="menu-group">
+        <summary>Boka & info</summary>
+        <div class="menu-group-panel">
+          <a href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Boka direkt</a>
+          <a href="/priser.html">Priser</a>
+          <a href="/nyheter.html">Nyheter</a>
+          <a href="/#boka-plats">Boka plats att spela på</a>
+          <a href="/#bubble-football-malmo">Bubble football Malmö</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Barnkalas</summary>
+        <div class="menu-group-panel">
+          <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+          <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+          <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+          <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+          <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+          <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+          <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+          <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+          <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+          <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Skola, fritids & förening</summary>
+        <div class="menu-group-panel">
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+          <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+          <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group">
+        <summary>Vuxna & grupper</summary>
+        <div class="menu-group-panel">
+          <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+          <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+          <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+          <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+        </div>
+      </details>
+
+      <details class="menu-group" open>
+        <summary>Trygghet & övrigt</summary>
+        <div class="menu-group-panel">
+          <a href="/villkor.html">Villkor</a>
+          <a href="/integritet.html">Integritet</a>
+          <a href="/affiliate.html">Affiliate</a>
+          <a href="/rabattkod.html">Rabattkod</a>
+          <a href="/rabatt-vardagar-2026.html">20 % vardagsrabatt</a>
+          <a href="/erica-rabattkod.html" aria-current="page">Erica rabattkod</a>
+          <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+        </div>
+      </details>
     </nav>
 
     <div class="menu-cta">
       <strong>10 % rabatt</strong>
       <p>Koden är ERICA-1026. Den skickas med till bokningen automatiskt.</p>
-      <button class="btn btn-secondary" type="button" id="copyBtnMenu">Kopiera rabattkod</button>
+      <button class="btn btn-secondary" type="button" id="copyBtnMenu">
+        Kopiera rabattkod
+      </button>
     </div>
   </aside>
 
@@ -1312,7 +1704,7 @@
 
             <aside class="hero-media" aria-label="Bilder på bumperballs">
               <img
-                src="bilder/barn-springer-i-bumperballs.jpg"
+                src="/bilder/barn-springer-i-bumperballs.jpg"
                 alt="Barn springer i bumperballs på konstgräs"
                 class="main-photo"
                 width="900"
@@ -1321,7 +1713,7 @@
 
               <div class="media-row">
                 <img
-                  src="bilder/barn-i-bumperball-utomhus.jpg"
+                  src="/bilder/barn-i-bumperball-utomhus.jpg"
                   alt="Barn i en bumperball utomhus"
                   class="small-photo"
                   width="600"
@@ -1329,7 +1721,7 @@
                 />
 
                 <img
-                  src="bilder/barn-spelar-bumperballs.jpg"
+                  src="/bilder/barn-spelar-bumperballs.jpg"
                   alt="Barn spelar bumperball på gräsplan"
                   class="small-photo"
                   width="600"
@@ -1485,7 +1877,7 @@
           </div>
 
           <img
-            src="bilder/fotbollslag-spelar-bumperball-veberod.png"
+            src="/bilder/fotbollslag-spelar-bumperball-veberod.png"
             alt="Fotbollslag spelar bumperball på konstgräs"
             class="info-photo"
             width="900"
@@ -1545,6 +1937,7 @@
               </a>
               <a class="contact-link" href="/priser.html">Se priser</a>
               <a class="contact-link" href="/villkor.html">Läs villkor</a>
+              <a class="contact-link" href="/integritet.html">Integritet</a>
               <a class="contact-link" href="https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic" target="_blank" rel="noopener noreferrer">Adress / recensioner på Google</a>
             </div>
           </div>
@@ -1557,15 +1950,50 @@
     <div class="container">
       <div class="footer-line">
         <span>© 2026 Offroad Bumpis</span>
-        <span>
-          <a href="/">Hem</a> ·
-          <a href="/priser.html">Priser</a> ·
-          <a href="/bumperball-fotbollsforening-skane.html">Fotbollsföreningar</a> ·
-          <a href="/barnkalas-skane.html">Barnkalas Skåne</a> ·
-          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a> ·
-          <a href="/villkor.html">Villkor</a> ·
+
+        <nav class="footer-links" aria-label="Sidfot">
+          <a href="/">Hem</a>
+          <a href="/villkor.html">Villkor</a>
           <a href="/integritet.html">Integritet</a>
-        </span>
+
+          <details class="footer-dropdown">
+            <summary>Stadssidor</summary>
+            <div class="footer-dropdown-panel">
+              <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
+              <a href="/barnkalas-lund.html">Barnkalas Lund</a>
+              <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
+              <a href="/barnkalas-trelleborg.html">Barnkalas Trelleborg</a>
+              <a href="/barnkalas-ystad.html">Barnkalas Ystad</a>
+              <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
+              <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
+              <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+            </div>
+          </details>
+
+          <details class="footer-dropdown">
+            <summary>Alla sidor</summary>
+            <div class="footer-dropdown-panel">
+              <a href="/priser.html">Priser</a>
+              <a href="/nyheter.html">Nyheter</a>
+              <a href="/barnkalas-skane.html">Barnkalas Skåne</a>
+              <a href="/barnkalas-utomhus-skane.html">Barnkalas utomhus Skåne</a>
+              <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
+              <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
+              <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
+              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+              <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
+              <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
+              <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
+              <a href="/mohippa-bumperballs-skane.html">Möhippa Skåne</a>
+              <a href="/foretagsaktivitet-bumperballs-skane.html">Företagsaktivitet Skåne</a>
+              <a href="/affiliate.html">Affiliate</a>
+              <a href="/rabattkod.html">Rabattkod</a>
+              <a href="/rabatt-vardagar-2026.html">20 % vardagsrabatt</a>
+              <a href="/erica-rabattkod.html" aria-current="page">Erica rabattkod</a>
+              <a href="/bilder/manual.png" target="_blank" rel="noopener noreferrer">Användarmanual</a>
+            </div>
+          </details>
+        </nav>
       </div>
     </div>
   </footer>
@@ -1642,7 +2070,7 @@
       const menuBackdrop = document.getElementById("menuBackdrop");
 
       function getFocusableMenuItems() {
-        return siteMenu.querySelectorAll("a[href], button:not([disabled])");
+        return siteMenu.querySelectorAll("a[href], button:not([disabled]), summary");
       }
 
       function openMenu() {
