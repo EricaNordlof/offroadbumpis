@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <title>Svensexa Skåne med bumperballs | Rolig aktivitet från 700 kr</title>
+  <title>Svensexa Skåne med bumperballs | Hyr vuxenbollar från 700 kr</title>
   <meta
     name="description"
-    content="Svensexa i Skåne med bumperballs. Hyr vuxenbollar till svensexa i Malmö, Lund, Helsingborg, Trelleborg och resten av Skåne. Från 700 kr. Boka nu, spela från 1 september 2026."
+    content="Svensexa i Skåne med bumperballs. Hyr vuxenbollar till svensexa, välj plats och kör själva. Korta matcher, tydliga regler och rolig aktivitet från 700 kr. Spela från 1 september 2026."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png?v=2" />
 
   <meta property="og:title" content="Svensexa i Skåne med bumperballs | Offroad Bumpis" />
-  <meta property="og:description" content="Hyr bumperballs till svensexa i Skåne. Aktivitet för vuxna grupper. Från 700 kr. Boka nu, spela från 1 september 2026." />
+  <meta property="og:description" content="Hyr bumperballs till svensexa i Skåne. Rolig aktivitet för vuxna grupper. Från 700 kr. Boka nu, spela från 1 september 2026." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/svensexa-bumperballs-skane.html" />
   <meta property="og:type" content="website" />
@@ -60,7 +60,7 @@
         "logo":"https://offroadbumpis.se/bilder/offroad-bumpis-logo.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar, företag, svensexa, möhippa och gruppaktiviteter.",
+        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till barnkalas, skolor, fritids, föreningar, företag, möhippa, svensexa och gruppaktiviteter.",
         "areaServed":[
           {"@type":"AdministrativeArea","name":"Skåne"},
           {"@type":"City","name":"Malmö"},
@@ -91,7 +91,7 @@
         "url":"https://offroadbumpis.se/svensexa-bumperballs-skane.html",
         "name":"Svensexa i Skåne med bumperballs",
         "headline":"Svensexa i Skåne med bumperballs",
-        "description":"Svensexa i Skåne med bumperballs. Hyr vuxenbollar från 700 kr. Hämta i Malmö eller boka leverans inom Skåne. Spela från 1 september 2026.",
+        "description":"Hyr vuxenbollar till svensexa i Skåne. Från 700 kr. Hämta i Malmö eller boka leverans inom Skåne. Spela från 1 september 2026.",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/svensexa-bumperballs-skane.html#service"},
         "breadcrumb":{"@id":"https://offroadbumpis.se/svensexa-bumperballs-skane.html#breadcrumb"},
@@ -205,10 +205,26 @@
           },
           {
             "@type":"Question",
-            "name":"Är detta ett färdigt event med instruktör?",
+            "name":"Behöver man instruktör?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Nej. Offroad Bumpis hyr ut utrustningen. Gruppen väljer plats och kör själva."
+              "text":"Nej. Offroad Bumpis hyr ut utrustningen. Gruppen väljer plats och kör själva. En ansvarig person ska läsa reglerna och hålla koll på säkerheten."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Kan man spela bumperballs efter alkohol?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nej. Spela nyktert. Kör aktiviteten tidigt på dagen, innan alkohol, middag och fest."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Hur länge orkar man spela bumperballs?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Bumperballs är jobbigt. Kör korta matcher på ungefär 3 till 5 minuter, ta pauser och byt spelare ofta."
             }
           },
           {
@@ -217,22 +233,6 @@
             "acceptedAnswer":{
               "@type":"Answer",
               "text":"Bumperballs fungerar bäst på gräs, konstgräs eller i idrottshall. Ytan ska vara mjuk, jämn och fri från glas, stenar, pinnar och annat vasst."
-            }
-          },
-          {
-            "@type":"Question",
-            "name":"Behöver man eluttag?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"Nej. Batteridrivna pumpar ingår."
-            }
-          },
-          {
-            "@type":"Question",
-            "name":"Levererar Offroad Bumpis till svensexor i Skåne?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"Ja. Offroad Bumpis utgår från Malmö. Du kan hämta själv i Malmö eller boka leverans inom Skåne enligt leveranszon."
             }
           }
         ]
@@ -253,6 +253,8 @@
       --green-soft:#dff8d1;
       --yellow:#ffd84d;
       --dark:#102217;
+      --danger:#7b271f;
+      --danger-bg:#fff1ed;
       --focus:#111111;
       --shadow:0 18px 55px rgba(14,53,22,.10);
       --shadow-soft:0 10px 28px rgba(14,53,22,.06);
@@ -627,8 +629,6 @@
 
     .menu-group summary::after{
       content:"▾";
-      position:static;
-      transform:none;
       width:30px;
       height:30px;
       border-radius:999px;
@@ -730,6 +730,12 @@
       color:var(--text);
       border:1px solid var(--line);
       box-shadow:0 8px 22px rgba(0,0,0,.03);
+    }
+
+    .btn-warning{
+      background:var(--yellow);
+      color:#102217;
+      box-shadow:var(--shadow-soft);
     }
 
     .section{
@@ -837,6 +843,20 @@
       display:grid;
       place-items:center;
       background:var(--green-dark);
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      margin-top:2px;
+    }
+
+    .cross{
+      flex:0 0 auto;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--danger);
       color:#fff;
       font-size:12px;
       font-weight:900;
@@ -996,6 +1016,15 @@
       line-height:1.75;
     }
 
+    .card.danger{
+      background:var(--danger-bg);
+      border-color:rgba(123,39,31,.18);
+    }
+
+    .card.danger h3{
+      color:var(--danger);
+    }
+
     .photos-grid{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
@@ -1121,9 +1150,19 @@
       color:#31543a;
     }
 
+    .notice.red{
+      background:var(--danger-bg);
+      border-color:rgba(123,39,31,.18);
+      color:#5b211b;
+    }
+
     .notice strong{
       color:#14361b;
       font-weight:900;
+    }
+
+    .notice.red strong{
+      color:var(--danger);
     }
 
     .pill-row{
@@ -1514,7 +1553,6 @@
     .footer-dropdown summary::after{
       content:"▾";
       position:static;
-      transform:none;
       width:auto;
       height:auto;
       border:0;
@@ -1585,42 +1623,6 @@
       .btn:hover,
       .contact-link:hover{
         transform:none;
-      }
-    }
-
-    @media (prefers-contrast: more){
-      :root{
-        --text:#000;
-        --muted:#222;
-        --line:rgba(0,0,0,.35);
-      }
-
-      .card,
-      .price-card,
-      .quick-item,
-      .game-card,
-      details{
-        border-color:rgba(0,0,0,.35);
-      }
-    }
-
-    @media (forced-colors: active){
-      .btn,
-      .menu-button,
-      .menu-close,
-      .card,
-      .price-card,
-      .quick-item,
-      .cta,
-      .trust-card,
-      .game-card,
-      details{
-        border:2px solid ButtonText;
-      }
-
-      a,
-      button{
-        text-decoration:underline;
       }
     }
 
@@ -2021,49 +2023,49 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Svensexa Skåne · bumperballs · bubble football-känsla</span>
+          <span class="eyebrow">Svensexa Skåne · bumperballs · vuxenbollar från 1 september 2026</span>
 
-          <h1 id="hero-title">Svensexa i Skåne med bumperballs</h1>
+          <h1 id="hero-title">Svensexa med bumperballs i Skåne</h1>
 
           <p>
-            Planerar du svensexa i Skåne och vill ha en rolig aktivitet utan att boka ett dyrt helhets-event?
+            Vill ni göra något roligt på svensexan utan att boka ett dyrt färdigt event?
             Hyr bumperballs, välj en bra plats och kör själva.
           </p>
 
           <p class="hero-trust">
-            Vuxenbollar kan bokas redan nu. Första speldag är från 1 september 2026.
-            Passar svensexa i Malmö, Lund, Helsingborg, Trelleborg, Ystad, Kristianstad och resten av Skåne.
-            Social aktivitet, låg tröskel och hög skrattavkastning.
+            Bumperballs är kul, men det är också fysiskt. Det blir varmt, svettigt och jobbigt snabbt.
+            Därför är upplägget enkelt: korta matcher, pauser, tydliga regler och snällt spel.
           </p>
 
           <ul class="hero-points">
             <li><span class="check">✓</span><span>Från 700 kr per prisdag.</span></li>
-            <li><span class="check">✓</span><span>Hyr och kör själva. Ingen instruktör krävs.</span></li>
-            <li><span class="check">✓</span><span>Hel helg fredag till söndag räknas som en prisdag.</span></li>
-            <li><span class="check">✓</span><span>Batteridrivna pumpar ingår. Inget eluttag behövs.</span></li>
+            <li><span class="check">✓</span><span>Boka nu, spela från 1 september 2026.</span></li>
             <li><span class="check">✓</span><span>Hämta i Malmö eller boka leverans inom Skåne.</span></li>
+            <li><span class="check">✓</span><span>Kör korta matcher på ungefär 3–5 minuter.</span></li>
+            <li><span class="check">✓</span><span>Spela nyktert. Lägg aktiviteten tidigt på dagen.</span></li>
+            <li><span class="check">✓</span><span>Vänskaplig match. Inget blodigt allvar.</span></li>
           </ul>
 
           <div class="hero-actions">
             <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Boka svensexa
             </a>
+            <a href="#sakerhet" class="btn btn-warning">Läs regler först</a>
             <a href="#priser" class="btn btn-secondary">Se priser</a>
             <a href="#sa-funkar-det" class="btn btn-secondary">Så funkar det</a>
-            <a href="/vuxen-bumperballs-skane.html" class="btn btn-secondary">Vuxenbollar</a>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Bild och snabbinfo">
           <div class="mockup-header">
-            <span>Svensexa som inte kräver projektledare med visselpipa och Excel-kaos</span>
+            <span>Roligt när man kör smart. Dumt om folk går full rugby.</span>
             <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
 
           <div class="mockup-image">
             <img
               src="/bilder/barn-springer-i-bumperballs.jpg"
-              alt="Bumperballs på konstgräs"
+              alt="Bumperballs på gräs"
               width="900"
               height="1125"
             />
@@ -2071,13 +2073,13 @@
 
           <div class="mockup-panel">
             <div class="mini-card">
-              <strong>Boka nu, spela från 1 september</strong>
+              <strong>Korta rundor</strong>
             </div>
             <div class="mini-card">
-              <strong>Hämta i Malmö eller boka leverans</strong>
+              <strong>Inga hårda tacklingar</strong>
             </div>
             <div class="mini-card">
-              <strong>Bubble football-känsla utan eventpris</strong>
+              <strong>Inget spel efter alkohol</strong>
             </div>
           </div>
         </aside>
@@ -2092,18 +2094,68 @@
         </div>
 
         <div class="quick-item">
-          <strong>3 000 kr</strong>
-          10 vuxenbollar
+          <strong>3–5 min</strong>
+          Lagom matchtid
         </div>
 
         <div class="quick-item">
-          <strong>1 sep 2026</strong>
-          Första speldag
+          <strong>Nyktert</strong>
+          Kör före fest
         </div>
 
         <div class="quick-item">
           <strong>Hela Skåne</strong>
           Malmö + leveranszoner
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="passar-det">
+      <div class="container">
+        <div class="section-title">
+          <h2>Passar det er svensexa?</h2>
+          <p>
+            Bumperballs passar bäst när gruppen vill ha en aktiv, kort och rolig grej.
+            Det ska inte vara två timmar kaos i plastboll.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Ja, om gruppen vill röra på sig</h3>
+            <p>
+              Det passar bra för en svensexa där folk vill skratta, tävla lite och göra något annorlunda.
+              Det behöver inte vara seriös sport. Det ska vara kul.
+            </p>
+
+            <div class="pill-row">
+              <span class="pill">Aktiva grupper</span>
+              <span class="pill">Kompisgäng</span>
+              <span class="pill">Korta matcher</span>
+              <span class="pill">Snällt spel</span>
+            </div>
+          </article>
+
+          <article class="card danger">
+            <h3>Nej, om folk är fulla eller skadade</h3>
+            <p>
+              Välj något annat om flera har ont i knän, rygg eller nacke.
+              Välj också något annat om folk är påverkade, väldigt otränade eller lätt får panik i trånga utrymmen.
+            </p>
+
+            <div class="pill-row">
+              <span class="pill no">Inte efter alkohol</span>
+              <span class="pill no">Inte vid knäproblem</span>
+              <span class="pill no">Inte vid ryggproblem</span>
+              <span class="pill no">Inte vid klaustrofobi</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="notice red">
+          <strong>Ärlig info:</strong>
+          Bumperballs kan vara jätteroligt, men det finns skaderisk.
+          Kör lugnt, ha tydliga regler och avbryt direkt om någon får ont.
         </div>
       </div>
     </section>
@@ -2129,37 +2181,55 @@
       </div>
     </section>
 
-    <section class="section" id="varfor">
+    <section class="section" id="sakerhet">
       <div class="container">
         <div class="section-title">
-          <h2>Varför bumperballs på svensexa?</h2>
+          <h2>Regler före spel</h2>
           <p>
-            För att det är lätt att boka, lätt att förstå och svårt att göra stelt.
-            Det är strategin. Resten är bara studs.
+            Läs detta innan ni bokar. Det gör aktiviteten roligare och tryggare.
           </p>
         </div>
 
-        <div class="grid-3">
+        <div class="grid-2">
           <article class="card">
-            <h3>Alla fattar direkt</h3>
-            <p>
-              Inga långa regler. Ta på bollen, håll koll på varandra och kör korta rundor.
-            </p>
+            <h3>Så spelar ni bättre</h3>
+
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Kör korta matcher, cirka 3–5 minuter.</span></li>
+              <li><span class="check">✓</span><span>Ta paus ofta och drick vatten.</span></li>
+              <li><span class="check">✓</span><span>Dela lag så det blir ungefär jämnt.</span></li>
+              <li><span class="check">✓</span><span>Matcha gärna efter storlek, vikt och tempo.</span></li>
+              <li><span class="check">✓</span><span>Ha en ansvarig person som stoppar spelet vid behov.</span></li>
+              <li><span class="check">✓</span><span>Avbryt direkt om någon får ont, blir yr eller blir rädd.</span></li>
+            </ul>
           </article>
 
-          <article class="card">
-            <h3>Funkar för olika nivåer</h3>
-            <p>
-              Alla behöver inte vara sportiga. Kör dueller, stafett, bumperball-fotboll eller enklare lekar.
-            </p>
-          </article>
+          <article class="card danger">
+            <h3>Det här ska ni inte göra</h3>
 
-          <article class="card">
-            <h3>Ni styr dagen</h3>
-            <p>
-              Ni bokar plats, tid och tempo själva. Bra om svensexan redan har lunch, bastu, middag eller annat schema.
-            </p>
+            <ul class="feature-list">
+              <li><span class="cross">×</span><span>Inga hårda tacklingar.</span></li>
+              <li><span class="cross">×</span><span>Ingen tackling bakifrån.</span></li>
+              <li><span class="cross">×</span><span>Bumpa aldrig någon som ligger ner.</span></li>
+              <li><span class="cross">×</span><span>Spela inte efter alkohol.</span></li>
+              <li><span class="cross">×</span><span>Spela inte i gassande varm sol.</span></li>
+              <li><span class="cross">×</span><span>Spela inte på asfalt, grus, betong eller hård ojämn yta.</span></li>
+            </ul>
           </article>
+        </div>
+
+        <div class="notice">
+          <strong>Klädtips:</strong>
+          Använd träningskläder, bra skor och gärna långbyxor.
+          Knäskydd kan vara smart om ni vill vara extra försiktiga.
+          Knäskydd tar inte bort skaderisken, men kan skydda mot småsmällar och skrap.
+        </div>
+
+        <div class="notice red">
+          <strong>Viktigast:</strong>
+          Det ska vara en vänskaplig och rolig match.
+          Inte blodigt allvar. Inte “nu ska jag visa vem som är starkast”.
+          Den typen av spel leder mest till skador och dålig stämning.
         </div>
       </div>
     </section>
@@ -2281,42 +2351,44 @@
       </div>
     </section>
 
-    <section class="section" id="jamforelse">
+    <section class="section" id="upplagg">
       <div class="container">
         <div class="section-title">
-          <h2>Hyr själv istället för färdigt event</h2>
+          <h2>Bästa upplägget för svensexa</h2>
           <p>
-            För grupper som vill ha en rolig svensexa utan att betala för mer upplägg än de behöver.
+            Kör bumperballs tidigt på dagen. Spara alkohol, middag och fest till efteråt.
           </p>
         </div>
 
-        <div class="card compare">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th>Val</th>
-                <th>Passar när</th>
-                <th>Så blir upplägget</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Hyr bumperballs</strong></td>
-                <td>Ni vill hålla nere priset och styra tiden själva.</td>
-                <td>Ni hämtar eller bokar leverans, väljer plats och kör aktiviteten själva.</td>
-              </tr>
-              <tr>
-                <td><strong>Färdigt event</strong></td>
-                <td>Ni vill att någon annan håller i allt.</td>
-                <td>Ofta fast tid, fast plats och mer styrt upplägg.</td>
-              </tr>
-              <tr>
-                <td><strong>Offroad Bumpis</strong></td>
-                <td>Ni vill ha bubble football-känsla på egen plats i Skåne.</td>
-                <td>Flexibel uthyrning från Malmö med leveranszoner i Skåne.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="grid-3">
+          <article class="card">
+            <h3>1. Spela först</h3>
+            <p>
+              Lägg aktiviteten före alkohol. Då blir det roligare och tryggare.
+              Bumperballs efter flera öl är ingen bra idé.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>2. Kör kort</h3>
+            <p>
+              Planera korta matcher. 3–5 minuter kan räcka.
+              Byt lag ofta och låt folk vila.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>3. Vila efteråt</h3>
+            <p>
+              Många blir varma och trötta. Det passar bra med bad, bastu, lunch eller paus efteråt.
+            </p>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Vädertips:</strong>
+          Undvik gassande sol och riktigt varma dagar.
+          Välj hellre morgon, kväll, skugga, idrottshall eller en plats nära bad.
         </div>
       </div>
     </section>
@@ -2362,8 +2434,8 @@
               <div class="step">
                 <div class="step-number">4</div>
                 <div>
-                  <h4>Kör korta rundor</h4>
-                  <p>Kör matcher, dueller, stafett eller turnering. Byt ofta så alla får spela.</p>
+                  <h4>Kör lugnt</h4>
+                  <p>Läs reglerna, kör korta rundor och stoppa direkt om någon får ont.</p>
                 </div>
               </div>
             </div>
@@ -2427,22 +2499,28 @@
           </article>
 
           <article class="game-card">
-            <h3>Brudgum mot alla</h3>
-            <p>Låt brudgummen möta resten i korta rundor. Inte helt rättvist. Väldigt användbart.</p>
-            <div class="game-tags"><span>Roligt</span><span>Film</span><span>Final</span></div>
-          </article>
-
-          <article class="game-card">
             <h3>Dueller</h3>
-            <p>Två personer möts åt gången. Bra om ni hyr färre bollar.</p>
-            <div class="game-tags"><span>Snabbt</span><span>2 pers</span><span>Puls</span></div>
+            <p>Två personer möts åt gången. Kör lugnt och byt ofta.</p>
+            <div class="game-tags"><span>Snabbt</span><span>2 pers</span><span>Pausvänligt</span></div>
           </article>
 
           <article class="game-card">
             <h3>Stafett</h3>
-            <p>Kör bana med koner. Funkar även om alla inte vill spela fotboll.</p>
+            <p>Kör bana med koner. Bra om alla inte vill spela fotboll.</p>
             <div class="game-tags"><span>Bana</span><span>Lag</span><span>Poäng</span></div>
           </article>
+
+          <article class="game-card">
+            <h3>Finalen</h3>
+            <p>Kör en kort final mellan vinnarna. Avsluta innan folk blir för trötta.</p>
+            <div class="game-tags"><span>Final</span><span>Kort</span><span>Roligt</span></div>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Tips:</strong>
+          Om gruppen har olika storlek och styrka, dela lagen smart.
+          Kom också ihåg att fart spelar stor roll. Lugnt tempo är bäst.
         </div>
       </div>
     </section>
@@ -2479,7 +2557,7 @@
           <article class="card">
             <h3>Inomhus</h3>
             <p>
-              Idrottshall fungerar bra om ni vill slippa väder.
+              Idrottshall fungerar bra om ni vill slippa regn, blåst eller stark sol.
               Kolla med hallen att bumperballs är okej.
             </p>
 
@@ -2506,7 +2584,7 @@
           <h2>Underlag som funkar</h2>
           <p>
             Rätt underlag skyddar bollarna och gör aktiviteten bättre.
-            Mjukt och jämnt är affärsplanen. Asfalt är konkurs.
+            Välj mjukt och jämnt underlag.
           </p>
         </div>
 
@@ -2601,9 +2679,9 @@
     <section class="section" id="faq">
       <div class="container">
         <div class="section-title">
-          <h2>Vanliga frågor om svensexa med bumperballs</h2>
+          <h2>Vanliga frågor</h2>
           <p>
-            Korta svar. Perfekt för människor och sökmotorer. Två målgrupper, samma affärsnytta.
+            Här är det viktigaste innan ni bokar svensexa med bumperballs.
           </p>
         </div>
 
@@ -2621,6 +2699,38 @@
             <p>
               Vuxenbollar kostar från 700 kr per prisdag för 2 bollar.
               10 vuxenbollar kostar 3 000 kr och 12 vuxenbollar kostar 3 500 kr per prisdag.
+            </p>
+          </details>
+
+          <details>
+            <summary>Hur länge orkar man spela?</summary>
+            <p>
+              Det är olika, men bumperballs är jobbigt.
+              Kör korta matcher på ungefär 3–5 minuter, ta pauser och byt spelare ofta.
+            </p>
+          </details>
+
+          <details>
+            <summary>Kan man spela efter alkohol?</summary>
+            <p>
+              Nej. Spela nyktert.
+              Lägg aktiviteten tidigt på dagen, innan alkohol, middag och fest.
+            </p>
+          </details>
+
+          <details>
+            <summary>Är det säkert?</summary>
+            <p>
+              Det finns skaderisk, särskilt om man kör hårt.
+              Därför gäller tydliga regler: inga hårda tacklingar, inga tacklingar bakifrån och aldrig bumpa någon som ligger ner.
+            </p>
+          </details>
+
+          <details>
+            <summary>Vem bör inte spela?</summary>
+            <p>
+              Den som har problem med knän, rygg eller nacke bör låta bli.
+              Den som är väldigt otränad, påverkad eller har klaustrofobi bör också välja en annan aktivitet.
             </p>
           </details>
 
