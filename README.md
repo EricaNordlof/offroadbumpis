@@ -116,23 +116,6 @@ Passar företag, förening, svensexa, möhippa och större grupper.
 ### 12 vuxenbollar
 Pris: 3 500 kr per prisdag
 Passar maxat upplägg med mer spel och mindre väntan.
-## Turneringskit
-Pris: 1 000 kr
-Turneringskitet är ett tillval för den som vill göra aktiviteten mer organiserad.
-Souvenirer som deltagarna kan få med sig:
-- utskrivna diplom
-- utskrivna poängmallar
-- 10 % rabattkod för nästa hyra
-Till låns under aktiviteten:
-- lagvästar
-- knäskydd
-- koner
-- markörer
-- skumfotboll
-- poängtavla
-- pokal
-- visselpipa
-- reflexer
 ## Hyrestid
 Hyra kan gälla heldag eller helg beroende på bokning och upplägg.
 Helg från fredag till söndag räknas som en prisdag enligt erbjudandet.
