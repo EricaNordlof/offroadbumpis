@@ -1,7 +1,7 @@
 # Offroad Bumpis
 Offroad Bumpis är en uthyrningstjänst för bumperballs i Skåne.
 Offroad Bumpis hyr ut bumperballs till barnkalas, skolor, fritids, föreningar, företag, svensexor, möhippor och andra gruppaktiviteter.
-Tanken är enkel: kunden hyr utrustningen, får tydlig info och kör själv. Inget onödigt eventbolagskrångel. Bara bollar, studs och folk som ramlar på ett rimligt sätt.
+Tanken är enkel: kunden hyr utrustningen, får tydlig info och kör själv.
 ## Live site
 https://offroadbumpis.se/
 ## Bokning
