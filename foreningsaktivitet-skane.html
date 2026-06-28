@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Föreningsaktivitet & Bumpisklubben | Offroad Bumpis</title>
+  <title>Föreningsaktivitet med bumperballs | Hyr bollar eller boka Bumpisklubben</title>
   <meta
     name="description"
-    content="Boka bumperballs till förening, skola, fritids och lag i Skåne. Boka bollar och leverans online eller boka Bumpisklubben höst på Limhamnsfältet."
+    content="Föreningsaktivitet med bumperballs i Skåne. Hyr bollar till förening, lag, skola, fritids eller egen bumperballklubb. Boka Bumpisklubben höst via mejl."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -15,15 +15,15 @@
   <link rel="canonical" href="https://offroadbumpis.se/foreningsaktivitet.html" />
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png?v=2" />
-  <meta property="og:title" content="Föreningsaktivitet & Bumpisklubben | Offroad Bumpis" />
-  <meta property="og:description" content="Boka bumperballs eller Bumpisklubben höst. Speciallösningar löser vi tillsammans via mejl eller telefon." />
+  <meta property="og:title" content="Föreningsaktivitet med bumperballs | Offroad Bumpis" />
+  <meta property="og:description" content="Hyr bumperballs till förening, lag, skola, fritids eller egen bumperballklubb. Boka Bumpisklubben höst via mejl." />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/fotbollslag-spelar-bumperball-veberod.png" />
   <meta property="og:url" content="https://offroadbumpis.se/foreningsaktivitet.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sv_SE" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Föreningsaktivitet & Bumpisklubben | Offroad Bumpis" />
-  <meta name="twitter:description" content="Boka bumperballs till förening, skola, fritids och lag i Skåne." />
+  <meta name="twitter:title" content="Föreningsaktivitet med bumperballs | Offroad Bumpis" />
+  <meta name="twitter:description" content="Boka bollar till förening eller anmäl intresse till Bumpisklubben höst." />
   <meta name="twitter:image" content="https://offroadbumpis.se/bilder/fotbollslag-spelar-bumperball-veberod.png" />
   <link rel="preload" as="image" href="/bilder/fotbollslag-spelar-bumperball-veberod.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,6 +37,14 @@
     "@context":"https://schema.org",
     "@graph":[
       {
+        "@type":"WebSite",
+        "@id":"https://offroadbumpis.se/#website",
+        "name":"Offroad Bumpis",
+        "url":"https://offroadbumpis.se/",
+        "inLanguage":"sv-SE",
+        "publisher":{"@id":"https://offroadbumpis.se/#business"}
+      },
+      {
         "@type":"LocalBusiness",
         "@id":"https://offroadbumpis.se/#business",
         "name":"Offroad Bumpis",
@@ -45,18 +53,78 @@
         "image":"https://offroadbumpis.se/bilder/fotbollslag-spelar-bumperball-veberod.png",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till barnkalas, föreningar, skolor, fritids och gruppaktiviteter.",
+        "description":"Offroad Bumpis hyr ut bumperballs i Skåne till föreningar, skolor, fritids, barnkalas, lag och gruppaktiviteter.",
         "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
-        "priceRange":"600 SEK - 3500 SEK"
+        "founder":{"@type":"Person","name":"Erica Nordlöf"},
+        "priceRange":"600 SEK - 3500 SEK",
+        "paymentAccepted":"Kort via betalningslänk, Klarna via betalningslänk, Swish, faktura och banköverföring",
+        "makesOffer":[
+          {
+            "@type":"Offer",
+            "name":"Föreningsaktivitet med bumperballs",
+            "price":"600",
+            "priceCurrency":"SEK",
+            "url":"https://offroad-bumpis-booking.onrender.com/"
+          },
+          {
+            "@type":"Offer",
+            "name":"Bumpisklubben höst",
+            "url":"https://offroadbumpis.se/foreningsaktivitet.html#bumpisklubben"
+          }
+        ]
       },
       {
         "@type":"WebPage",
         "@id":"https://offroadbumpis.se/foreningsaktivitet.html#webpage",
         "url":"https://offroadbumpis.se/foreningsaktivitet.html",
-        "name":"Föreningsaktivitet och Bumpisklubben",
-        "description":"Boka bumperballs till förening, skola, fritids och lag. Boka även Bumpisklubben höst.",
+        "name":"Föreningsaktivitet med bumperballs",
+        "description":"Föreningsaktivitet med bumperballs i Skåne. Hyr bollar till förening, lag, skola, fritids eller egen bumperballklubb. Boka Bumpisklubben höst via mejl.",
+        "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"},
+        "breadcrumb":{"@id":"https://offroadbumpis.se/foreningsaktivitet.html#breadcrumb"},
         "inLanguage":"sv-SE"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://offroadbumpis.se/foreningsaktivitet.html#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Hem",
+            "item":"https://offroadbumpis.se/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Föreningsaktivitet",
+            "item":"https://offroadbumpis.se/foreningsaktivitet.html"
+          }
+        ]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://offroadbumpis.se/foreningsaktivitet.html#service",
+        "name":"Föreningsaktivitet med bumperballs",
+        "serviceType":"Uthyrning av bumperballs till föreningsaktivitet, skola, fritids, lagaktivitet och bumperballklubb",
+        "provider":{"@id":"https://offroadbumpis.se/#business"},
+        "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
+        "audience":[
+          {"@type":"Audience","audienceType":"Föreningar"},
+          {"@type":"Audience","audienceType":"Fotbollsföreningar"},
+          {"@type":"Audience","audienceType":"Idrottslag"},
+          {"@type":"Audience","audienceType":"Skolor"},
+          {"@type":"Audience","audienceType":"Fritids"},
+          {"@type":"Audience","audienceType":"Barn och ungdomar"}
+        ],
+        "offers":{
+          "@type":"Offer",
+          "name":"Bumperballs till föreningsaktivitet från 600 kr",
+          "price":"600",
+          "priceCurrency":"SEK",
+          "url":"https://offroad-bumpis-booking.onrender.com/",
+          "availability":"https://schema.org/InStock"
+        }
       },
       {
         "@type":"FAQPage",
@@ -64,10 +132,18 @@
         "mainEntity":[
           {
             "@type":"Question",
-            "name":"Hur bokar man bumperballs till förening?",
+            "name":"Vad är en bra föreningsaktivitet för barn och ungdomar?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Boka bollar och eventuell leverans direkt via bokningssidan. Vid speciallösningar går det bra att mejla eller ringa."
+              "text":"Bumperballs är en aktiv föreningsaktivitet där barn och ungdomar får springa, spela, krocka mjukt och turas om. Det passar föreningsdag, lagaktivitet, prova-på, avslutning, skola och fritids."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Kan en förening hyra bumperballs och hålla egen bumperballklubb?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Ja. Föreningar kan hyra bumperballs och hålla egen bumperballklubb, prova-på-träning eller återkommande aktivitet. Föreningen bokar bollarna, väljer plats och håller aktiviteten själv."
             }
           },
           {
@@ -75,15 +151,15 @@
             "name":"Hur bokar man Bumpisklubben höst?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Bumpisklubben höst bokas via bokningssidan. Höstperioden planeras på Limhamnsfältet onsdagar 17:00–18:00."
+              "text":"Bumpisklubben höst bokas via mejl. Offroad Bumpis svarar inom en arbetsdag med faktura. Fakturan ska betalas direkt för att platsen ska gälla."
             }
           },
           {
             "@type":"Question",
-            "name":"Hur många bollar passar till 18 barn?",
+            "name":"Hur många bumperballs behövs till 18 barn?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Till 18 barn passar oftast 12 barnbollar bäst. Då kan 12 spela och 6 vila eller byta in."
+              "text":"Till 18 barn passar oftast 12 barnbollar bäst. Då kan 12 barn spela och 6 barn vila eller byta in. 10 barnbollar fungerar också om man vill hålla nere priset."
             }
           },
           {
@@ -115,9 +191,18 @@
       --max:1180px;
       --header-height:72px;
     }
-    *{box-sizing:border-box;min-width:0}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+    *{
+      box-sizing:border-box;
+      min-width:0;
+    }
+    html{
+      width:100%;
+      scroll-behavior:smooth;
+      -webkit-text-size-adjust:100%;
+      overflow-x:hidden;
+    }
     body{
+      width:100%;
       margin:0;
       min-width:320px;
       font-family:"Inter",sans-serif;
@@ -127,25 +212,52 @@
         radial-gradient(circle at top right,#e9ffd8 0,transparent 24%),
         linear-gradient(180deg,var(--bg) 0%,#effbea 100%);
       -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
       overflow-x:hidden;
     }
-    body.menu-open{overflow:hidden}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-    button{font:inherit;border:0}
-    main{padding-top:var(--header-height)}
-    p{margin:0}
-    :target{scroll-margin-top:92px}
+    body.menu-open{
+      overflow:hidden;
+    }
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+    button{
+      font:inherit;
+      border:0;
+    }
+    main{
+      padding-top:var(--header-height);
+    }
+    p{
+      margin:0;
+    }
+    p,
+    li,
+    span,
+    strong,
+    small,
+    summary,
+    a,
+    h1,
+    h2,
+    h3{
+      overflow-wrap:anywhere;
+    }
+    :target{
+      scroll-margin-top:92px;
+    }
     a:focus-visible,
     button:focus-visible,
     summary:focus-visible{
       outline:3px solid #111;
       outline-offset:4px;
       box-shadow:0 0 0 6px rgba(255,255,255,.92);
-    }
-    .container{
-      width:min(var(--max), calc(100% - 32px));
-      margin:0 auto;
     }
     .skip-link{
       position:fixed;
@@ -159,12 +271,22 @@
       border-radius:999px;
       font-weight:900;
       border:2px solid #000;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
       transition:.15s ease;
     }
-    .skip-link:focus{transform:translateY(0)}
+    .skip-link:focus{
+      transform:translateY(0);
+    }
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+    }
     .topbar{
       position:fixed;
-      inset:0 0 auto 0;
+      top:0;
+      left:0;
+      right:0;
+      width:100%;
       z-index:80;
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
@@ -186,6 +308,7 @@
       gap:12px;
       font-weight:900;
       letter-spacing:-.02em;
+      min-width:0;
     }
     .brand-logo{
       width:42px;
@@ -199,6 +322,9 @@
       font-size:15px;
       line-height:1.1;
       white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:170px;
     }
     .menu-button{
       display:inline-flex;
@@ -213,12 +339,14 @@
       font-weight:900;
       cursor:pointer;
       box-shadow:var(--shadow-soft);
+      flex:0 0 auto;
     }
     .menu-button span{
       width:18px;
       height:13px;
       position:relative;
       display:inline-block;
+      flex:0 0 auto;
     }
     .menu-button span::before,
     .menu-button span::after{
@@ -231,8 +359,12 @@
       background:#fff;
       transition:.2s ease;
     }
-    .menu-button span::before{top:0}
-    .menu-button span::after{bottom:0}
+    .menu-button span::before{
+      top:0;
+    }
+    .menu-button span::after{
+      bottom:0;
+    }
     .menu-button[aria-expanded="true"] span::before{
       top:5px;
       transform:rotate(45deg);
@@ -269,8 +401,11 @@
       transform:translateX(calc(100% + 32px));
       transition:.24s ease;
       overflow:auto;
+      overflow-x:hidden;
     }
-    .site-menu.is-open{transform:translateX(0)}
+    .site-menu.is-open{
+      transform:translateX(0);
+    }
     .menu-head{
       display:flex;
       align-items:center;
@@ -284,6 +419,7 @@
       font-family:"Baloo 2",sans-serif;
       font-size:28px;
       line-height:1;
+      letter-spacing:-.03em;
     }
     .menu-close{
       width:46px;
@@ -296,6 +432,7 @@
       font-weight:900;
       font-size:22px;
       cursor:pointer;
+      flex:0 0 auto;
     }
     .menu-links{
       display:grid;
@@ -322,6 +459,8 @@
     .menu-links a[aria-current="page"]{
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
+      border-color:rgba(20,54,27,.45);
+      box-shadow:0 12px 26px rgba(20,54,27,.18);
     }
     .menu-links a[aria-current="page"]::after{
       content:"Du är här";
@@ -330,8 +469,13 @@
       border-radius:999px;
       padding:4px 8px;
       font-size:11px;
+      line-height:1;
+      font-weight:900;
+      white-space:nowrap;
     }
-    h1,h2,h3{
+    h1,
+    h2,
+    h3{
       font-family:"Baloo 2",sans-serif;
       letter-spacing:-.03em;
       margin:0;
@@ -353,12 +497,29 @@
       text-align:center;
       line-height:1.15;
       max-width:100%;
+      white-space:normal;
     }
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--dark);color:#fff;box-shadow:var(--shadow)}
-    .btn-secondary{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.03)}
-    .section{padding:42px 0}
-    .hero{padding:54px 0 32px}
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+    .btn-primary{
+      background:var(--dark);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+    .btn-secondary{
+      background:#fff;
+      color:var(--text);
+      border:1px solid var(--line);
+      box-shadow:0 8px 22px rgba(0,0,0,.03);
+    }
+    .section{
+      padding:42px 0;
+      scroll-margin-top:88px;
+    }
+    .hero{
+      padding:54px 0 32px;
+    }
     .hero-grid{
       display:grid;
       grid-template-columns:minmax(0,1.02fr) minmax(0,.92fr);
@@ -382,9 +543,9 @@
       margin-bottom:14px;
     }
     .hero h1{
-      margin-bottom:16px;
+      margin:0 0 16px;
       font-size:clamp(3rem,5vw,5.1rem);
-      max-width:12ch;
+      max-width:13ch;
     }
     .hero p{
       font-size:17px;
@@ -412,6 +573,20 @@
       padding:18px;
       box-shadow:0 28px 80px rgba(8,34,16,.18);
       overflow:hidden;
+      position:relative;
+      isolation:isolate;
+    }
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);
+      pointer-events:none;
+      z-index:-1;
     }
     .mockup-header{
       display:flex;
@@ -469,6 +644,11 @@
       grid-template-columns:repeat(3,minmax(0,1fr));
       gap:18px;
     }
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
     .choice-card,
     .card{
       background:#fff;
@@ -476,10 +656,12 @@
       border-radius:28px;
       padding:24px;
       box-shadow:var(--shadow);
+      min-width:0;
     }
     .choice-card.featured{
       background:linear-gradient(180deg,#14371b 0%,#102817 100%);
       color:#fff;
+      transform:translateY(-6px);
     }
     .choice-card h3,
     .card h3{
@@ -510,15 +692,11 @@
       border-radius:999px;
       background:rgba(18,49,29,.08);
       margin-bottom:14px;
+      line-height:1.2;
     }
     .featured .tag{
       background:rgba(255,255,255,.12);
       color:#e9ffe8;
-    }
-    .info-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:18px;
     }
     .list{
       list-style:none;
@@ -567,6 +745,7 @@
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
       gap:18px;
+      align-items:stretch;
     }
     .photo-img{
       width:100%;
@@ -604,9 +783,17 @@
       font-weight:900;
       color:#2f7f25;
     }
-    details[open] summary::after{content:"–"}
-    summary::-webkit-details-marker{display:none}
-    details p{margin:12px 0 0;color:var(--muted);line-height:1.75}
+    details[open] summary::after{
+      content:"–";
+    }
+    summary::-webkit-details-marker{
+      display:none;
+    }
+    details p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.75;
+    }
     .cta{
       background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
       color:#fff;
@@ -617,6 +804,7 @@
       gap:20px;
       align-items:start;
       box-shadow:var(--shadow);
+      overflow:hidden;
     }
     .cta h2{
       font-size:clamp(2rem,4vw,3.2rem);
@@ -642,6 +830,7 @@
       padding:22px;
       display:grid;
       gap:10px;
+      overflow:hidden;
     }
     .contact-box strong{
       color:#fff;
@@ -659,6 +848,11 @@
       font-weight:800;
       line-height:1.45;
       word-break:break-word;
+      transition:.2s ease;
+    }
+    .contact-link:hover{
+      background:rgba(255,255,255,.14);
+      transform:translateY(-1px);
     }
     footer{
       padding:30px 0 56px;
@@ -673,6 +867,7 @@
       gap:16px;
       flex-wrap:wrap;
       line-height:1.6;
+      align-items:flex-start;
     }
     .footer-links{
       display:flex;
@@ -691,6 +886,22 @@
       padding:3px 8px;
       text-decoration:none;
     }
+    @media (prefers-reduced-motion: reduce){
+      html{
+        scroll-behavior:auto;
+      }
+      *,
+      *::before,
+      *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+      }
+      .btn:hover,
+      .contact-link:hover{
+        transform:none;
+      }
+    }
     @media (max-width:980px){
       .hero-grid,
       .choice-grid,
@@ -698,20 +909,27 @@
       .cta{
         grid-template-columns:1fr;
       }
+      .choice-card.featured{
+        transform:none;
+      }
       .section-title{
         grid-template-columns:1fr;
       }
       .section-title p{
         justify-self:start;
+        max-width:none;
       }
     }
     @media (max-width:720px){
-      :root{--header-height:64px}
+      :root{
+        --header-height:64px;
+      }
       .container{
         width:min(var(--max), calc(100% - 24px));
       }
       .nav{
         min-height:64px;
+        gap:10px;
       }
       .brand-logo{
         width:38px;
@@ -737,6 +955,10 @@
       }
       .menu-links a{
         padding:14px;
+      }
+      .menu-links a[aria-current="page"]::after{
+        content:"✓";
+        padding:4px 7px;
       }
       .hero{
         padding:30px 0 22px;
@@ -779,10 +1001,25 @@
       }
     }
     @media (max-width:420px){
-      .hero h1{font-size:2.05rem}
-      .section-title h2{font-size:1.95rem}
-      .choice-card h3,.card h3{font-size:26px}
-      .cta h2{font-size:2rem}
+      .container{
+        width:min(var(--max), calc(100% - 20px));
+      }
+      .hero h1{
+        font-size:2.05rem;
+      }
+      .section-title h2{
+        font-size:1.95rem;
+      }
+      .choice-card h3,
+      .card h3{
+        font-size:26px;
+      }
+      .cta h2{
+        font-size:2rem;
+      }
+      .btn{
+        padding:13px 16px;
+      }
     }
   </style>
 </head>
@@ -820,22 +1057,23 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Förening · skola · fritids · lag · Bumpisklubben</span>
-          <h1 id="hero-title">Boka bumperballs eller Bumpisklubben</h1>
+          <span class="eyebrow">Föreningsaktivitet · bumperballklubb · skola · fritids · lag</span>
+          <h1 id="hero-title">Föreningsaktivitet med bumperballs</h1>
           <p>
-            Vill ni hyra bumperballs till förening, skola, fritids eller lag?
-            Boka bollar och eventuell leverans direkt via bokningssidan.
+            Letar ni efter en rolig föreningsaktivitet för barn och ungdomar?
+            Hyr bumperballs till föreningen och kör er egen aktivitet, träningsdag, avslutning eller bumperballklubb.
           </p>
           <p class="hero-trust">
-            Vill ni ha ett annat upplägg, större grupp, återkommande aktivitet eller något som inte passar i bokningen?
-            Mejla eller ring, så löser vi det tillsammans.
+            Bollar och eventuell leverans bokas direkt via bokningssidan.
+            Bumpisklubben höst bokas via mejl. Jag svarar inom en arbetsdag med faktura.
+            Fakturan betalas direkt för att platsen ska gälla.
           </p>
           <div class="hero-actions">
             <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Boka bollar
+              Boka bollar till förening
             </a>
-            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              Boka Bumpisklubben höst
+            <a href="mailto:kontakt@offroadbumpis.se?subject=Bumpisklubben%20h%C3%B6st&body=Hej!%0A%0AJag%20vill%20anm%C3%A4la%20intresse%20f%C3%B6r%20Bumpisklubben%20h%C3%B6st.%0A%0ABarnets%20namn:%0ABarnets%20%C3%A5lder:%0ATelefon:%0A%0A" class="btn btn-secondary">
+              Mejla om Bumpisklubben
             </a>
             <a href="#special" class="btn btn-secondary">
               Speciallösning
@@ -844,13 +1082,13 @@
         </div>
         <aside class="hero-card" aria-label="Bild och snabbinfo">
           <div class="mockup-header">
-            <span>Bumperballs i Skåne</span>
+            <span>Bumperballs till föreningsaktivitet</span>
             <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
           <div class="mockup-image">
             <img
               src="/bilder/fotbollslag-spelar-bumperball-veberod.png"
-              alt="Barn och ungdomar spelar bumperball i Skåne"
+              alt="Barn och ungdomar spelar bumperball som föreningsaktivitet i Skåne"
               width="900"
               height="1125"
             />
@@ -861,43 +1099,79 @@
     <section class="section" id="val">
       <div class="container">
         <div class="section-title">
-          <h2>Välj rätt väg</h2>
+          <h2>Föreningsaktivitet på ert sätt</h2>
           <p>
-            Enkelt upplägg: boka online. Specialgrejer: hör av dig.
+            Boka bollar online, boka Bumpisklubben via mejl eller kontakta oss för speciallösning.
           </p>
         </div>
         <div class="choice-grid">
           <article class="choice-card featured">
-            <span class="tag">Vanlig bokning</span>
-            <h3>Boka bollar</h3>
+            <span class="tag">Hyr bollar</span>
+            <h3>Håll egen föreningsaktivitet</h3>
             <p>
-              Välj datum, antal bollar och eventuell leverans i bokningssystemet.
-              Passar förening, skola, fritids, lagaktivitet och barngrupper.
+              Boka bumperballs till er förening och kör själva.
+              Passar lagaktivitet, föreningsdag, avslutning, prova-på, fritids, skola eller egen bumperballklubb.
             </p>
             <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
               Boka bollar
             </a>
           </article>
           <article class="choice-card">
-            <span class="tag">Barnaktivitet</span>
+            <span class="tag">Offroad Bumpis</span>
             <h3>Bumpisklubben höst</h3>
             <p>
-              Återkommande bumperball för barn på Limhamnsfältet.
-              Onsdagar 17:00–18:00. Start 19 augusti 2026. 10 tillfällen.
+              Bumpisklubben är Offroad Bumpis egen återkommande bumperballaktivitet för barn.
+              Bokning sker via mejl. Svar inom en arbetsdag med faktura.
             </p>
-            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Boka Bumpisklubben
+            <a href="mailto:kontakt@offroadbumpis.se?subject=Bumpisklubben%20h%C3%B6st&body=Hej!%0A%0AJag%20vill%20anm%C3%A4la%20intresse%20f%C3%B6r%20Bumpisklubben%20h%C3%B6st.%0A%0ABarnets%20namn:%0ABarnets%20%C3%A5lder:%0ATelefon:%0A%0A" class="btn btn-primary">
+              Mejla om Bumpisklubben
             </a>
           </article>
           <article class="choice-card" id="special">
             <span class="tag">Annat upplägg</span>
             <h3>Speciallösning</h3>
             <p>
-              Större grupp, återkommande aktivitet, höstlovscamp, skola, föreningsdag eller något annat?
-              Mejla eller ring så tar vi det praktiskt.
+              Vill ni boka till större grupp, flera tillfällen, föreningsdag, skola, camp eller något annat?
+              Mejla eller ring så löser vi det tillsammans.
             </p>
-            <a href="mailto:kontakt@offroadbumpis.se?subject=Speciall%C3%B6sning%20Offroad%20Bumpis" class="btn btn-primary">
+            <a href="mailto:kontakt@offroadbumpis.se?subject=Speciall%C3%B6sning%20f%C3%B6reningsaktivitet" class="btn btn-primary">
               Mejla
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="foreningsaktivitet">
+      <div class="container">
+        <div class="section-title">
+          <h2>Föreningsaktivitet för barn och ungdomar</h2>
+          <p>
+            Bumperballs passar när föreningen vill göra något aktivt, enkelt och kul utan att planera ett helt event från noll.
+          </p>
+        </div>
+        <div class="info-grid">
+          <article class="card">
+            <h3>Passar till</h3>
+            <ul class="list">
+              <li><span class="check">✓</span><span>Föreningsdag och prova-på-dag.</span></li>
+              <li><span class="check">✓</span><span>Lagaktivitet och säsongsavslutning.</span></li>
+              <li><span class="check">✓</span><span>Skola, fritids och lovaktivitet.</span></li>
+              <li><span class="check">✓</span><span>Egen bumperballklubb i föreningen.</span></li>
+              <li><span class="check">✓</span><span>Träning med fokus på rörelse och skratt.</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Ni väljer upplägg</h3>
+            <p>
+              Hyr bollarna för en dag, en helg eller prata med oss om flera tillfällen.
+              Ni kan hämta i Malmö eller boka leverans inom Skåne.
+            </p>
+            <div class="notice">
+              <strong>Till 18 barn:</strong>
+              12 barnbollar är oftast bäst. Då spelar 12 och 6 vilar eller byter in.
+            </div>
+            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Boka bollar och leverans
             </a>
           </article>
         </div>
@@ -908,7 +1182,7 @@
         <div class="section-title">
           <h2>Bumpisklubben höst</h2>
           <p>
-            För barn som vill spela bumperball återkommande, inte bara en gång.
+            Offroad Bumpis egen bumperballklubb för barn som vill spela återkommande.
           </p>
         </div>
         <div class="info-grid">
@@ -921,22 +1195,28 @@
               <li><span class="check">✓</span><span>Period: 10 tillfällen.</span></li>
               <li><span class="check">✓</span><span>För barn cirka 7–12 år.</span></li>
             </ul>
-            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Boka Bumpisklubben höst
+            <div class="notice">
+              <strong>Bokning:</strong>
+              Mejla för att boka plats. Jag svarar inom en arbetsdag med faktura.
+              Fakturan betalas direkt för att platsen ska gälla.
+            </div>
+            <a href="mailto:kontakt@offroadbumpis.se?subject=Bumpisklubben%20h%C3%B6st&body=Hej!%0A%0AJag%20vill%20anm%C3%A4la%20intresse%20f%C3%B6r%20Bumpisklubben%20h%C3%B6st.%0A%0ABarnets%20namn:%0ABarnets%20%C3%A5lder:%0ATelefon:%0A%0A" class="btn btn-primary">
+              Mejla om Bumpisklubben höst
             </a>
           </article>
           <article class="card">
-            <h3>Höstlov & vinter</h3>
+            <h3>Vill ni starta egen bumperballklubb?</h3>
             <p>
-              Höstlovscamp är inte färdigplanerat ännu.
-              Vinterperiod inomhus planeras från november.
+              Föreningar kan också hyra bumperballs och hålla sin egen bumperballklubb,
+              prova-på-träning eller återkommande aktivitet.
+              Ni bokar bollarna, väljer plats och kör själva.
             </p>
             <div class="notice">
-              <strong>Mer info kommer:</strong>
-              Vid höstlovscamp, vinterperiod eller särskilt upplägg: mejla eller ring.
+              <strong>Smidigt för förening:</strong>
+              Boka bollar och eventuell leverans online. Vid återkommande upplägg kan ni mejla eller ringa.
             </div>
-            <a href="mailto:kontakt@offroadbumpis.se?subject=Fr%C3%A5ga%20om%20Bumpisklubben" class="btn btn-secondary">
-              Fråga om Bumpisklubben
+            <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              Hyr bollar till egen klubb
             </a>
           </article>
         </div>
@@ -945,9 +1225,9 @@
     <section class="section" id="bollar">
       <div class="container">
         <div class="section-title">
-          <h2>Boka bollar till grupp</h2>
+          <h2>Boka bumperballs till förening</h2>
           <p>
-            Boka antal bollar och eventuell leverans online.
+            Välj datum, antal bollar och eventuell leverans direkt i bokningssidan.
           </p>
         </div>
         <div class="info-grid">
@@ -957,7 +1237,8 @@
               <li><span class="check">✓</span><span>2 barnbollar från 600 kr.</span></li>
               <li><span class="check">✓</span><span>10 barnbollar 2 000 kr.</span></li>
               <li><span class="check">✓</span><span>12 barnbollar 2 200 kr.</span></li>
-              <li><span class="check">✓</span><span>Till 18 barn passar oftast 12 bollar bäst.</span></li>
+              <li><span class="check">✓</span><span>Hämta i Malmö eller boka leverans.</span></li>
+              <li><span class="check">✓</span><span>Förening, skola och företag kan få faktura.</span></li>
             </ul>
             <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Boka i bokningssidan
@@ -995,7 +1276,7 @@
         />
         <img
           src="/bilder/barn-i-bumperball-utomhus.jpg"
-          alt="Barn i bumperballs utomhus"
+          alt="Barn i bumperballs utomhus som föreningsaktivitet"
           class="photo-img"
           width="900"
           height="675"
@@ -1007,16 +1288,24 @@
         <div class="section-title">
           <h2>Vanliga frågor</h2>
           <p>
-            Snabba svar. Inget klydd.
+            Snabba svar om föreningsaktivitet, Bumpisklubben och egen bumperballklubb.
           </p>
         </div>
         <details open>
-          <summary>Ska jag boka direkt eller kontakta er?</summary>
-          <p>Boka direkt om du vet datum, antal bollar och om du vill ha leverans. Kontakta oss om det gäller speciallösning, återkommande aktivitet eller något som inte passar i bokningssidan.</p>
+          <summary>Vad är en bra föreningsaktivitet för barn?</summary>
+          <p>Bumperballs är en aktiv föreningsaktivitet där barn får springa, spela, krocka mjukt och turas om. Det passar föreningsdag, avslutning, lagaktivitet, skola och fritids.</p>
+        </details>
+        <details>
+          <summary>Kan vi hyra bumperballs och hålla egen bumperballklubb?</summary>
+          <p>Ja. Föreningar kan hyra bumperballs och hålla egen bumperballklubb, prova-på-träning eller återkommande aktivitet. Ni bokar bollarna, väljer plats och kör själva.</p>
         </details>
         <details>
           <summary>Hur bokar jag Bumpisklubben höst?</summary>
-          <p>Boka Bumpisklubben höst via bokningssidan. Höstperioden planeras på Limhamnsfältet onsdagar 17:00–18:00 med start 19 augusti 2026.</p>
+          <p>Bumpisklubben höst bokas via mejl. Jag svarar inom en arbetsdag med faktura. Fakturan ska betalas direkt för att platsen ska gälla.</p>
+        </details>
+        <details>
+          <summary>Ska jag boka direkt eller kontakta er?</summary>
+          <p>Boka bollar direkt om du vet datum, antal bollar och eventuell leverans. Kontakta oss om det gäller Bumpisklubben, speciallösning, återkommande aktivitet eller något som inte passar i bokningssidan.</p>
         </details>
         <details>
           <summary>Hur många bollar behövs till 18 barn?</summary>
@@ -1024,7 +1313,7 @@
         </details>
         <details>
           <summary>Kan föreningar och skolor få faktura?</summary>
-          <p>Ja. Föreningar, skolor och företag kan få faktura med moms specificerad.</p>
+          <p>Ja. Föreningar, skolor och företag kan få faktura med moms specificerad. Bumpisklubben faktureras också och ska betalas direkt när fakturan skickats.</p>
         </details>
         <details>
           <summary>Kan ni lösa specialupplägg?</summary>
@@ -1038,15 +1327,18 @@
           <div>
             <h2>Behöver du något särskilt?</h2>
             <p>
-              Större grupp, återkommande aktivitet, höstlovscamp, skola, föreningsdag eller speciallösning?
-              Hör av dig så löser vi det tillsammans.
+              Större grupp, återkommande aktivitet, egen bumperballklubb, Bumpisklubben höst, höstlovscamp,
+              skola, föreningsdag eller speciallösning? Hör av dig så löser vi det tillsammans.
             </p>
             <div class="cta-buttons">
               <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 Boka bollar
               </a>
-              <a href="mailto:kontakt@offroadbumpis.se?subject=Speciall%C3%B6sning%20Offroad%20Bumpis" class="btn btn-secondary">
-                Mejla
+              <a href="mailto:kontakt@offroadbumpis.se?subject=Bumpisklubben%20h%C3%B6st&body=Hej!%0A%0AJag%20vill%20anm%C3%A4la%20intresse%20f%C3%B6r%20Bumpisklubben%20h%C3%B6st.%0A%0ABarnets%20namn:%0ABarnets%20%C3%A5lder:%0ATelefon:%0A%0A" class="btn btn-secondary">
+                Mejla om Bumpisklubben
+              </a>
+              <a href="mailto:kontakt@offroadbumpis.se?subject=Speciall%C3%B6sning%20f%C3%B6reningsaktivitet" class="btn btn-secondary">
+                Mejla speciallösning
               </a>
               <a href="tel:+46793442520" class="btn btn-secondary">
                 Ring
@@ -1072,6 +1364,7 @@
           <a href="/">Hem</a>
           <a href="/priser.html">Priser</a>
           <a href="/foreningsaktivitet.html" aria-current="page">Föreningsaktivitet</a>
+          <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
           <a href="/villkor.html">Villkor</a>
           <a href="/integritet.html">Integritet</a>
         </nav>
