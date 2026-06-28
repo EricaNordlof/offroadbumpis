@@ -6,7 +6,7 @@
   <title>Sommaraktivitet i Skåne | Hyr bumperballs från 600 kr</title>
   <meta
     name="description"
-    content="Hyr bumperballs i Skåne till sommarevent, barnkalas, fritids, skola och förening. Hämta i Malmö eller boka leverans. Från 600 kr."
+    content="Hyr bumperballs i Skåne till sommarevent, barnkalas, fritids, skola och förening. Hämta i Malmö eller boka leverans. Från 600 kr. Bumpisklubben höst planeras på Limhamnsfältet."
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Offroad Bumpis" />
@@ -18,7 +18,7 @@
   <meta property="og:title" content="Sommaraktivitet i Skåne | Hyr bumperballs" />
   <meta
     property="og:description"
-    content="Bumperballs till barnkalas, sommarfest, fritids, skola och förening. Hämta i Malmö eller boka leverans i Skåne. Från 600 kr."
+    content="Bumperballs till barnkalas, sommarfest, fritids, skola och förening. Hämta i Malmö eller boka leverans i Skåne. Från 600 kr. Bumpisklubben höst planeras på Limhamnsfältet."
   />
   <meta property="og:image" content="https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg" />
   <meta property="og:url" content="https://offroadbumpis.se/" />
@@ -56,7 +56,7 @@
         "image":"https://offroadbumpis.se/bilder/barn-springer-i-bumperballs.jpg",
         "email":"kontakt@offroadbumpis.se",
         "telephone":"+46793442520",
-        "description":"Uthyrning av bumperballs i Skåne för sommarevent, barnkalas, skolor, fritids, föreningar, företag och gruppaktiviteter.",
+        "description":"Uthyrning av bumperballs i Skåne för sommarevent, barnkalas, skolor, fritids, föreningar, företag och gruppaktiviteter. Offroad Bumpis erbjuder även Bumpisklubben höst för barn.",
         "areaServed":{"@type":"AdministrativeArea","name":"Skåne"},
         "founder":{
           "@type":"Person",
@@ -74,7 +74,8 @@
           {"@type":"Offer","name":"Barnbollar 2 st","price":"600","priceCurrency":"SEK","url":"https://offroadbumpis.se/priser.html"},
           {"@type":"Offer","name":"Barnbollar 6 st","price":"1500","priceCurrency":"SEK","url":"https://offroadbumpis.se/priser.html"},
           {"@type":"Offer","name":"Barnbollar 10 st","price":"2000","priceCurrency":"SEK","url":"https://offroadbumpis.se/priser.html"},
-          {"@type":"Offer","name":"Vuxenbollar 10 st","price":"3000","priceCurrency":"SEK","url":"https://offroadbumpis.se/priser.html"}
+          {"@type":"Offer","name":"Vuxenbollar 10 st","price":"3000","priceCurrency":"SEK","url":"https://offroadbumpis.se/priser.html"},
+          {"@type":"Offer","name":"Bumpisklubben höst","url":"https://offroadbumpis.se/foreningsaktivitet.html#bumpisklubben"}
         ]
       },
       {
@@ -82,7 +83,7 @@
         "@id":"https://offroadbumpis.se/#webpage",
         "url":"https://offroadbumpis.se/",
         "name":"Sommaraktivitet i Skåne | Hyr bumperballs från 600 kr",
-        "description":"Hyr bumperballs i Skåne till sommarevent, barnkalas, fritids, skola, förening och gruppaktivitet.",
+        "description":"Hyr bumperballs i Skåne till sommarevent, barnkalas, fritids, skola, förening och gruppaktivitet. Kort info om Bumpisklubben höst.",
         "isPartOf":{"@id":"https://offroadbumpis.se/#website"},
         "about":{"@id":"https://offroadbumpis.se/#business"},
         "inLanguage":"sv-SE"
@@ -100,6 +101,11 @@
             "@type":"Question",
             "name":"Passar bumperballs som sommaraktivitet?",
             "acceptedAnswer":{"@type":"Answer","text":"Ja. Bumperballs passar sommarfest, barnkalas, fritidsaktivitet, skolavslutning, lagavslutning och föreningsdag. Batteridriven pump ingår, så aktiviteten kan köras på många platser."}
+          },
+          {
+            "@type":"Question",
+            "name":"Finns Bumpisklubben i höst?",
+            "acceptedAnswer":{"@type":"Answer","text":"Ja. Bumpisklubben höst planeras på Limhamnsfältet i Malmö, onsdagar 17:00–18:00 med start 19 augusti 2026. Mer info finns på sidan om föreningsaktivitet."}
           },
           {
             "@type":"Question",
@@ -796,6 +802,44 @@
       border-color:rgba(47,127,37,.18);
       color:#2c4632;
     }
+    .club-card{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+      border-radius:34px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,360px);
+      gap:20px;
+      align-items:center;
+      overflow:hidden;
+    }
+    .club-card h2{
+      color:#fff;
+      font-size:clamp(2rem,4vw,3.1rem);
+      margin-bottom:10px;
+      max-width:15ch;
+    }
+    .club-card p{
+      color:#d7e8d8;
+      line-height:1.8;
+      max-width:780px;
+    }
+    .club-info{
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:24px;
+      padding:20px;
+      display:grid;
+      gap:10px;
+      color:#fff;
+      font-weight:800;
+      line-height:1.45;
+    }
+    .club-info span{
+      display:block;
+      color:#e9ffe8;
+    }
     .pill-row{
       display:flex;
       flex-wrap:wrap;
@@ -1059,7 +1103,7 @@
       .btn:hover{transform:none}
     }
     @media (max-width:1120px){
-      .hero-grid,.cta{grid-template-columns:1fr}
+      .hero-grid,.cta,.club-card{grid-template-columns:1fr}
       .quick-grid,.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
       .section-title{grid-template-columns:1fr}
       .section-title p{justify-self:start;max-width:none}
@@ -1083,7 +1127,7 @@
       .hero{padding:30px 0 22px}
       .hero-grid{grid-template-columns:1fr;gap:22px}
       .hero h1{font-size:clamp(2.25rem,11vw,3.6rem);line-height:.98;max-width:none}
-      .hero p,.section-title p,.card p,.details-content p,.cta p,.trust-card p{font-size:15.5px;line-height:1.72}
+      .hero p,.section-title p,.card p,.details-content p,.cta p,.trust-card p,.club-card p{font-size:15.5px;line-height:1.72}
       .eyebrow{font-size:12px;padding:7px 10px}
       .booking-box{padding:16px;border-radius:22px}
       .booking-box h2{font-size:27px}
@@ -1096,6 +1140,7 @@
       .section-title{gap:10px;margin-bottom:16px}
       .card,.price-card,.photo-card,.hero-card,.trust-card,.cta,.contact-box,details{border-radius:20px}
       .card,.price-card,.contact-box,.hero-card{padding:18px}
+      .club-card{padding:22px;border-radius:22px}
       .site-menu .menu-group{padding:0}
       .trust-card,.cta{padding:22px}
       .price{font-size:40px}
@@ -1113,7 +1158,7 @@
       .hero h1{font-size:2.05rem}
       .section-title h2{font-size:1.95rem}
       .card h3,.price-card h3,.photo-card h3{font-size:26px}
-      .trust-card h2,.cta h2{font-size:2rem}
+      .trust-card h2,.cta h2,.club-card h2{font-size:2rem}
       .btn{padding:13px 16px}
     }
   </style>
@@ -1147,6 +1192,7 @@
           <a href="/priser.html">Priser</a>
           <a href="/nyheter.html">Nyheter</a>
           <a href="#sommar">Sommaraktivitet</a>
+          <a href="#bumpisklubben-host">Bumpisklubben höst</a>
           <a href="#paket">Populära paket</a>
           <a href="#bubble-football-malmo">Bubble football Malmö</a>
         </div>
@@ -1172,7 +1218,7 @@
           <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
           <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
           <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
-          <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+          <a href="/foreningsaktivitet.html">Föreningsaktivitet & Bumpisklubben</a>
           <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening Skåne</a>
         </div>
       </details>
@@ -1232,8 +1278,8 @@
               <span>Leverans i Skåne</span>
             </div>
             <div class="booking-note">
-              Tips för varma dagar: kör korta rundor, pausa med saft, glass eller bad och låt nästa gäng hoppa in.
-              Mer skratt per minut. Redig utdelning.
+              Nytt i höst: Bumpisklubben planeras på Limhamnsfältet i Malmö för barn cirka 7–12 år.
+              <a href="/foreningsaktivitet.html#bumpisklubben" style="text-decoration:underline;text-underline-offset:3px;font-weight:900;">Läs mer här.</a>
             </div>
             <div class="hero-actions">
               <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-yellow" target="_blank" rel="noopener noreferrer">
@@ -1274,8 +1320,31 @@
           10 barnbollar
         </div>
         <div class="quick-item">
-          <strong>Helgpris</strong>
-          Fre–sön som en prisdag
+          <strong>Höst 2026</strong>
+          Bumpisklubben
+        </div>
+      </div>
+    </section>
+    <section class="section" id="bumpisklubben-host">
+      <div class="container">
+        <div class="club-card">
+          <div>
+            <h2>Höstens Bumpisklubb</h2>
+            <p>
+              Bumpisklubben är Offroad Bumpis egen återkommande bumperballaktivitet för barn.
+              Höstens period planeras på Limhamnsfältet i Malmö, onsdagar 17:00–18:00 med start 19 augusti 2026.
+            </p>
+            <div class="trust-actions">
+              <a href="/foreningsaktivitet.html#bumpisklubben" class="btn btn-secondary">Läs mer om Bumpisklubben</a>
+              <a href="mailto:kontakt@offroadbumpis.se?subject=Bumpisklubben%20h%C3%B6st&body=Hej!%0A%0AJag%20vill%20veta%20mer%20om%20Bumpisklubben%20h%C3%B6st.%0A%0ABarnets%20namn:%0ABarnets%20%C3%A5lder:%0ATelefon:%0A%0A" class="btn btn-secondary">Mejla intresse</a>
+            </div>
+          </div>
+          <div class="club-info" aria-label="Kort info om Bumpisklubben">
+            <span>Plats: Limhamnsfältet</span>
+            <span>Tid: onsdagar 17:00–18:00</span>
+            <span>Start: 19 augusti 2026</span>
+            <span>För barn cirka 7–12 år</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1467,10 +1536,10 @@
           <article class="card">
             <h3>Förening & lag</h3>
             <p>
-              Bra till fotbollslag, föreningsdag, säsongsavslutning eller som kul extraaktivitet efter träningen.
+              Bra till fotbollslag, föreningsdag, säsongsavslutning, egen bumperballklubb eller kul extraaktivitet efter träningen.
             </p>
             <div class="link-row">
-              <a href="/bumperball-fotbollsforening-skane.html" class="btn btn-secondary">Fotbollsförening</a>
+              <a href="/foreningsaktivitet.html" class="btn btn-secondary">Föreningsaktivitet</a>
             </div>
           </article>
         </div>
@@ -1666,6 +1735,15 @@
             </div>
           </details>
           <details>
+            <summary>Finns Bumpisklubben i höst?</summary>
+            <div class="details-content">
+              <p>
+                Ja. Bumpisklubben höst planeras på Limhamnsfältet i Malmö, onsdagar 17:00–18:00 med start 19 augusti 2026.
+                Läs mer på sidan om föreningsaktivitet.
+              </p>
+            </div>
+          </details>
+          <details>
             <summary>Passar bumperballs som sommaraktivitet?</summary>
             <div class="details-content">
               <p>
@@ -1763,6 +1841,7 @@
               <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-yellow" target="_blank" rel="noopener noreferrer">
                 Boka direkt
               </a>
+              <a href="/foreningsaktivitet.html#bumpisklubben" class="btn btn-secondary">Bumpisklubben höst</a>
               <a href="/priser.html" class="btn btn-secondary">Se priser</a>
               <a href="mailto:kontakt@offroadbumpis.se" class="btn btn-secondary">Skicka mejl</a>
             </div>
@@ -1773,6 +1852,7 @@
             <a class="contact-link" href="mailto:kontakt@offroadbumpis.se">kontakt@offroadbumpis.se</a>
             <a class="contact-link" href="tel:+46793442520">079 344 25 20</a>
             <a class="contact-link" href="https://offroad-bumpis-booking.onrender.com/" target="_blank" rel="noopener noreferrer">Bokningssystem</a>
+            <a class="contact-link" href="/foreningsaktivitet.html">Föreningsaktivitet & Bumpisklubben</a>
             <a class="contact-link" href="/priser.html">Priser</a>
             <a class="contact-link" href="/villkor.html">Villkor</a>
             <a class="contact-link" href="/integritet.html">Integritet</a>
@@ -1837,7 +1917,7 @@
               <a href="/skola-fritids-forening-skane.html">Skola, fritids & förening</a>
               <a href="/skolaktivitet-skane.html">Skolaktivitet Skåne</a>
               <a href="/fritidsaktivitet-skane.html">Fritidsaktivitet Skåne</a>
-              <a href="/foreningsaktivitet-skane.html">Föreningsaktivitet Skåne</a>
+              <a href="/foreningsaktivitet.html">Föreningsaktivitet & Bumpisklubben</a>
               <a href="/bumperball-fotbollsforening-skane.html">Fotbollsförening</a>
               <a href="/vuxen-bumperballs-skane.html">Vuxenbollar Skåne</a>
               <a href="/svensexa-bumperballs-skane.html">Svensexa Skåne</a>
