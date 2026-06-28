@@ -384,6 +384,19 @@
       color:#2f7f25;
       flex:0 0 auto;
     }
+    .menu-links > a[aria-current="page"]{
+      background:linear-gradient(135deg,#14361b 0%,#0d2113 100%);
+      color:#fff;
+    }
+    .menu-links > a[aria-current="page"]::after{
+      content:"Du är här";
+      color:#14361b;
+      background:#ffd84d;
+      border-radius:999px;
+      padding:4px 8px;
+      font-size:11px;
+      white-space:nowrap;
+    }
     .menu-group{
       background:#fff;
       border:1px solid var(--line);
@@ -569,6 +582,11 @@
       font-weight:800;
       line-height:1.55;
       font-size:14.5px;
+    }
+    .booking-note a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+      font-weight:900;
     }
     .hero-points,.feature-list{
       display:grid;
@@ -1184,7 +1202,7 @@
       <button class="menu-close" type="button" id="menuClose" aria-label="Stäng meny">×</button>
     </div>
     <nav class="menu-links" aria-label="Huvudmeny">
-      <a href="/">Hem</a>
+      <a href="/" aria-current="page">Hem</a>
       <details class="menu-group">
         <summary>Boka & info</summary>
         <div class="menu-group-panel">
@@ -1279,7 +1297,7 @@
             </div>
             <div class="booking-note">
               Nytt i höst: Bumpisklubben planeras på Limhamnsfältet i Malmö för barn cirka 7–12 år.
-              <a href="/foreningsaktivitet.html#bumpisklubben" style="text-decoration:underline;text-underline-offset:3px;font-weight:900;">Läs mer här.</a>
+              <a href="/foreningsaktivitet.html#bumpisklubben">Läs mer här.</a>
             </div>
             <div class="hero-actions">
               <a href="https://offroad-bumpis-booking.onrender.com/" class="btn btn-yellow" target="_blank" rel="noopener noreferrer">
