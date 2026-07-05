@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://offroadbumpis.se/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://offroadbumpis.se/priser.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.98</priority>
   </url>
   <url>
     <loc>https://offroadbumpis.se/barnkalas-skane.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.96</priority>
   </url>
   <url>
     <loc>https://offroadbumpis.se/barnkalas-utomhus-skane.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://offroadbumpis.se/foreningsaktivitet-skane.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.93</priority>
   </url>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://offroadbumpis.se/barnkalas-malmo.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -236,7 +236,7 @@
   </url>
   <url>
     <loc>https://offroadbumpis.se/barnkalas-bastad.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
@@ -278,9 +278,21 @@
   </url>
   <url>
     <loc>https://offroadbumpis.se/nyheter.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://offroadbumpis.se/rabatt-vardagar-2026.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.66</priority>
+  </url>
+  <url>
+    <loc>https://offroadbumpis.se/rabattkod.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
   </url>
   <url>
     <loc>https://offroadbumpis.se/affiliate.html</loc>
@@ -289,10 +301,22 @@
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://offroadbumpis.se/rabattkod.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <loc>https://offroadbumpis.se/annika-rabattkod.html</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.55</priority>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://offroadbumpis.se/erica-rabattkod.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://offroadbumpis.se/hittajippo-rabattkod.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
   </url>
   <url>
     <loc>https://offroadbumpis.se/villkor.html</loc>
