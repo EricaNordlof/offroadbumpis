@@ -550,6 +550,11 @@
       gap:40px;
       align-items:center;
     }
+
+    .hero-grid-single{
+      grid-template-columns:1fr;
+      max-width:980px;
+    }
     .eyebrow{
       display:inline-flex;
       align-items:center;
@@ -1209,71 +1214,16 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
+      <div class="container hero-grid hero-grid-single">
         <div>
-          <span class="eyebrow">Nyheter · cirkus · Bumpisklubben · bokning</span>
-          <h1 id="hero-title">Nyheter från Offroad Bumpis</h1>
+          <span class="eyebrow">Nyheter från Offroad Bumpis</span>
+          <h1 id="hero-title">Nyheter</h1>
           <p>
-            Här samlar jag nyheter om Offroad Bumpis: aktiviteter, bokning och nya bumperballs.
+            Här finns de senaste nyheterna om aktiviteter, bokning och nya bumperballs.
           </p>
-          <p class="hero-trust">
-            Senaste nytt är att våra bumperballs fick vara med i Cirkustanzias föreställning
-            på Grand Circus Hotel i Kirseberg, Malmö.
-          </p>
-
-          <ul class="hero-points">
-            <li><span class="check">✓</span><span>Föreställningen hölls den 5 juli 2026.</span></li>
-            <li><span class="check">✓</span><span>Cirkustanzia använde bumperballs i numret.</span></li>
-            <li><span class="check">✓</span><span>Publiken uppskattade föreställningen mycket.</span></li>
-            <li><span class="check">✓</span><span>Videon går att se direkt här på sidan.</span></li>
-          </ul>
-
           <div class="hero-actions">
-            <a href="#cirkus" class="btn btn-primary">Se videon</a>
-            <a href="https://www.instagram.com/circustancia_art/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              Cirkustanzia
-            </a>
-            <a href="https://www.instagram.com/grandcircushotel?igsh=cW13a3lhMzAyeXY4" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-              Grand Circus Hotel
-            </a>
+            <a href="#cirkus" class="btn btn-primary">Läs senaste nyheten</a>
           </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Video från cirkusföreställningen">
-          <a class="video-preview" href="#cirkus" aria-label="Gå till videon från cirkusföreställningen">
-            <img
-              src="https://img.youtube.com/vi/VtKiEGqXZKg/hqdefault.jpg"
-              alt="Bumperballs i Cirkustanzias föreställning på Grand Circus Hotel"
-              width="480"
-              height="360"
-            />
-            <span class="play-badge" aria-hidden="true">▶</span>
-          </a>
-          <div class="hero-card-note">
-            <strong>Bumperballs på cirkus i Malmö</strong>
-            <span>Cirkustanzia på Grand Circus Hotel den 5 juli 2026. Tryck på bilden för att se videon.</span>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="quick-strip" aria-label="Snabb information">
-      <div class="container quick-grid">
-        <div class="quick-item">
-          <strong>5 juli</strong>
-          Cirkusföreställning i Kirseberg
-        </div>
-        <div class="quick-item">
-          <strong>Cirkustanzia</strong>
-          Bumperballs i föreställningen
-        </div>
-        <div class="quick-item">
-          <strong>Grand Circus Hotel</strong>
-          Mysigt cirkusområde i Malmö
-        </div>
-        <div class="quick-item">
-          <strong>19 aug</strong>
-          Bumpisklubben startar
         </div>
       </div>
     </section>
@@ -1290,8 +1240,7 @@
             <time class="date-pill" datetime="2026-07-05">5 juli 2026</time>
             <h2>Bumperballs på cirkus i Malmö</h2>
             <p class="lead">
-              Den 5 juli 2026 fick våra bumperballs vara med när cirkusgruppen Cirkustanzia
-              uppträdde på Grand Circus Hotel i Kirseberg, Malmö.
+              Cirkusgruppen Cirkustanzia använde våra bumperballs i sin föreställning på Grand Circus Hotel i Kirseberg.
             </p>
 
             <div class="video-wrap news-video">
@@ -1306,8 +1255,7 @@
             </div>
 
             <p>
-              Föreställningen var väldigt uppskattad. Det var roligt att se bumperballs användas
-              i ett helt nytt sammanhang, och vi ser fram emot att få se Cirkustanzia igen.
+              Föreställningen var väldigt uppskattad och vi ser fram emot att få se Cirkustanzia igen.
             </p>
 
             <div class="simple-box">
@@ -1319,9 +1267,6 @@
             </div>
 
             <div class="cta-buttons">
-              <a href="https://youtu.be/VtKiEGqXZKg" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                Öppna videon på YouTube
-              </a>
               <a href="https://www.instagram.com/circustancia_art/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 Cirkustanzia på Instagram
               </a>
