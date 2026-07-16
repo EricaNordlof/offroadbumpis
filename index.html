@@ -350,7 +350,7 @@
     .footer-dropdown summary{display:inline-flex;align-items:center;gap:5px;padding:0;color:#5b6e60;font-size:14px;line-height:1.6;text-decoration:underline;text-underline-offset:3px;cursor:pointer;list-style:none;font-weight:900}
     .footer-dropdown summary::after{content:"▾";position:static;transform:none;width:auto;height:auto;border:0;background:transparent;color:#2f7f25;font-size:12px;display:inline}
     .footer-dropdown[open] summary::after{content:"▴"}
-    .footer-dropdown-panel{position:absolute;right:0;bottom:calc(100% + 8px);z-index:30;width:min(320px,calc(100vw - 32px));display:grid;gap:8px;padding:12px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 55px rgba(14,53,22,.16)}
+    .footer-dropdown-panel{position:absolute;right:0;bottom:calc(100% + 8px);z-index:30;width:min(340px,calc(100vw - 32px));max-height:min(70vh,640px);overflow-y:auto;overscroll-behavior:contain;display:grid;gap:8px;padding:12px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 55px rgba(14,53,22,.16)}
     .footer-dropdown-panel a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 12px;border-radius:14px;background:#f5fff1;border:1px solid var(--line);color:#17351e;font-weight:900;text-decoration:none;line-height:1.25}
     .footer-dropdown-panel a::after{content:"→";color:#2f7f25}
 
@@ -371,7 +371,7 @@
       .quick-grid{grid-template-columns:1fr}.section{padding:30px 0}.section-title{gap:10px;margin-bottom:16px}
       .card,.price-card,.hero-card,.news-feature,.cta,.contact-box,details{border-radius:20px}
       .card,.price-card,.contact-box,.hero-card,.news-feature{padding:18px}.cta{padding:22px}.price{font-size:40px}.price-note{min-height:auto}
-      .footer-line{flex-direction:column;align-items:flex-start}.footer-main{align-items:flex-start}.footer-links{display:grid;gap:8px}.footer-dropdown{width:100%}.footer-dropdown-panel{position:static;width:min(340px,calc(100vw - 32px));margin-top:8px;box-shadow:var(--shadow-soft)}
+      .footer-line{flex-direction:column;align-items:flex-start}.footer-main{align-items:flex-start}.footer-links{display:grid;gap:8px}.footer-dropdown{width:100%}.footer-dropdown-panel{position:static;width:min(340px,calc(100vw - 32px));max-height:none;overflow:visible;margin-top:8px;box-shadow:var(--shadow-soft)}
     }
     @media (max-width:420px){.container{width:min(var(--max),calc(100% - 20px))}.hero h1{font-size:2.05rem}.section-title h2{font-size:1.95rem}.card h3,.price-card h3{font-size:26px}.cta h2{font-size:2rem}.btn{padding:13px 16px}}
   </style>
@@ -704,7 +704,7 @@
 
           <details class="footer-dropdown">
             <summary>Stadssidor</summary>
-            <div class="footer-dropdown-panel">
+                        <div class="footer-dropdown-panel">
               <a href="/barnkalas-malmo.html">Barnkalas Malmö</a>
               <a href="/barnkalas-lund.html">Barnkalas Lund</a>
               <a href="/barnkalas-helsingborg.html">Barnkalas Helsingborg</a>
@@ -713,6 +713,31 @@
               <a href="/barnkalas-kristianstad.html">Barnkalas Kristianstad</a>
               <a href="/barnkalas-hassleholm.html">Barnkalas Hässleholm</a>
               <a href="/barnkalas-landskrona.html">Barnkalas Landskrona</a>
+              <a href="/barnkalas-burlov.html">Barnkalas Burlöv</a>
+              <a href="/barnkalas-lomma.html">Barnkalas Lomma</a>
+              <a href="/barnkalas-staffanstorp.html">Barnkalas Staffanstorp</a>
+              <a href="/barnkalas-svedala.html">Barnkalas Svedala</a>
+              <a href="/barnkalas-vellinge.html">Barnkalas Vellinge</a>
+              <a href="/barnkalas-eslov.html">Barnkalas Eslöv</a>
+              <a href="/barnkalas-kavlinge.html">Barnkalas Kävlinge</a>
+              <a href="/barnkalas-hoor.html">Barnkalas Höör</a>
+              <a href="/barnkalas-horby.html">Barnkalas Hörby</a>
+              <a href="/barnkalas-skurup.html">Barnkalas Skurup</a>
+              <a href="/barnkalas-sjobo.html">Barnkalas Sjöbo</a>
+              <a href="/barnkalas-angelholm.html">Barnkalas Ängelholm</a>
+              <a href="/barnkalas-bjuv.html">Barnkalas Bjuv</a>
+              <a href="/barnkalas-astorp.html">Barnkalas Åstorp</a>
+              <a href="/barnkalas-hoganas.html">Barnkalas Höganäs</a>
+              <a href="/barnkalas-svalov.html">Barnkalas Svalöv</a>
+              <a href="/barnkalas-klippan.html">Barnkalas Klippan</a>
+              <a href="/barnkalas-perstorp.html">Barnkalas Perstorp</a>
+              <a href="/barnkalas-bastad.html">Barnkalas Båstad</a>
+              <a href="/barnkalas-osby.html">Barnkalas Osby</a>
+              <a href="/barnkalas-bromolla.html">Barnkalas Bromölla</a>
+              <a href="/barnkalas-ostra-goinge.html">Barnkalas Östra Göinge</a>
+              <a href="/barnkalas-simrishamn.html">Barnkalas Simrishamn</a>
+              <a href="/barnkalas-tomelilla.html">Barnkalas Tomelilla</a>
+              <a href="/barnkalas-orkelljunga.html">Barnkalas Örkelljunga</a>
             </div>
           </details>
 
