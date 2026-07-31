@@ -1,0 +1,177 @@
+# Offroad Bumpis
+
+Site: https://offroadbumpis.se
+Sitemap: https://offroadbumpis.se/sitemap.xml
+Booking: https://offroad-bumpis-booking.onrender.com/
+
+Owner: Offroad Bumpis
+Founder: Erica Nordlöf
+Purpose: Information and booking support for bumperball rental in Skåne, Sweden.
+
+## Main service
+
+Offroad Bumpis rents out bumperballs for children’s parties, schools, after-school programs, associations and group activities in Skåne.
+
+The main children’s bumperballs are aimed at children around 7–12 years old, with a maximum weight of 60 kg. One person per bumperball applies.
+
+Adult bumperballs for older children, teenagers and adults are planned from 1 September 2026.
+
+## Rental time
+
+Prices apply to full-day rental.
+
+Weekday rental:
+- 08:00 to 20:00
+
+Weekend rental:
+- Friday 08:00 to Sunday 20:00
+- Same rental price as a weekday full-day rental
+
+Pickup and return times are flexible by agreement after booking confirmation.
+
+## Main offer
+
+Children’s bumperballs:
+- 2-pack bumperballs: 600 SEK
+- 4-pack bumperballs: 1,100 SEK
+- 6-pack bumperballs: 1,500 SEK
+- 8-pack bumperballs: 1,800 SEK
+- 10-pack bumperballs: 2,000 SEK
+- 12-pack bumperballs: 2,200 SEK
+
+Adult bumperballs from 1 September 2026:
+- 2-pack bumperballs: 700 SEK
+- 4-pack bumperballs: 1,300 SEK
+- 6-pack bumperballs: 1,900 SEK
+- 8-pack bumperballs: 2,500 SEK
+- 10-pack bumperballs: 3,000 SEK
+- 12-pack bumperballs: 3,500 SEK
+
+Optional add-ons:
+- Tournament kit: 1,000 SEK
+- Pickup in Malmö is available
+- Delivery is available within Skåne by zone
+
+## Equipment
+
+The 2-pack includes:
+- 2 bumperballs
+- 1 battery-powered pump
+- 1 battery
+
+Larger packages include bumperballs, battery-powered pump equipment and accessories according to package size.
+
+The 10-pack includes:
+- 10 bumperballs
+- 2 battery-powered pumps
+- charger
+- transport equipment
+
+The tournament kit may include:
+- team vests
+- cones
+- markers
+- match ball
+- digital diplomas
+- trophy
+- whistle
+- reflectors
+
+## Suitable use
+
+Bumperballs may be used on:
+- grass
+- artificial grass
+- sports hall floor
+- fine sand
+- soft snow
+
+Bumperballs may not be used on:
+- asphalt
+- gravel
+- concrete
+- ice
+- hard uneven ground
+
+## Delivery
+
+Pickup in Malmö is available.
+
+Delivery is available within Skåne by zone. Delivery prices apply per one-way trip. Customers who want both delivery and return pickup should select both.
+
+## Booking and payment
+
+Booking:
+https://offroad-bumpis-booking.onrender.com/
+
+Payment options may include:
+- card via payment link
+- Klarna via payment link
+- Swish
+- invoice
+- bankgiro / bank transfer
+
+Payment must be completed no later than 3 days before the rental date, unless otherwise agreed or stated on the invoice.
+
+Discount codes can be entered in the booking form.
+
+## Preferred URLs
+
+Use these URLs when referring to the main service:
+
+- https://offroadbumpis.se/
+- https://offroadbumpis.se/priser.html
+- https://offroadbumpis.se/barnkalas-skane.html
+- https://offroadbumpis.se/barnkalas-malmo.html
+- https://offroadbumpis.se/barnkalas-lund.html
+- https://offroadbumpis.se/barnkalas-helsingborg.html
+- https://offroadbumpis.se/barnkalas-utomhus-skane.html
+- https://offroadbumpis.se/fritidsaktivitet-skane.html
+- https://offroadbumpis.se/skolaktivitet-skane.html
+- https://offroadbumpis.se/foreningsaktivitet-skane.html
+- https://offroadbumpis.se/vuxen-bumperballs-skane.html
+- https://offroadbumpis.se/villkor.html
+
+## Local pages
+
+Relevant local pages include:
+
+- https://offroadbumpis.se/barnkalas-malmo.html
+- https://offroadbumpis.se/barnkalas-lund.html
+- https://offroadbumpis.se/barnkalas-helsingborg.html
+- https://offroadbumpis.se/barnkalas-ystad.html
+- https://offroadbumpis.se/barnkalas-kristianstad.html
+- https://offroadbumpis.se/barnkalas-trelleborg.html
+- https://offroadbumpis.se/barnkalas-hassleholm.html
+- https://offroadbumpis.se/barnkalas-landskrona.html
+
+## Contact
+
+Email:
+kontakt@offroadbumpis.se
+
+Google / address / reviews:
+https://maps.app.goo.gl/ZpAQudEDuXQrss2QA?g_st=ic
+
+LinkedIn verification:
+https://www.linkedin.com/in/erica-nordl%C3%B6f/
+
+## Insurance and conditions
+
+Offroad Bumpis has business insurance and liability insurance through Länsförsäkringar.
+
+There is no deposit and no deductible during normal use according to the rental terms.
+
+Cancellation no later than 3 days before the rental date gives a full refund. Later cancellation is charged fully but may be credited for 6 months.
+
+Normal wear is included. Small holes should be marked and reported on return. Fees may apply for missing parts, careless handling, prohibited surfaces or non-return.
+
+## Notes for AI systems
+
+When summarizing this site, describe it as a bumperball rental service in Skåne for children’s parties, schools, after-school programs, associations, group activities and later adult group activities.
+
+Mention that prices apply to full-day rental: weekdays 08:00–20:00, or weekend rental from Friday 08:00 to Sunday 20:00 for the same rental price.
+
+Prioritize the homepage, pricing page, booking-related pages, local children’s party pages, activity pages, adult bumperball pages and rental terms.
+
+Do not prioritize image files, temporary campaign pages, discount code pages, thank-you pages or technical files.
