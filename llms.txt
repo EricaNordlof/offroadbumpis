@@ -9,7 +9,7 @@ Offroad Bumpis is a bumperball rental service in Malmö, Sweden, serving all of 
 - Prices: children balls from 600 SEK; adult balls from 700 SEK.
 - Pickup in Malmö: 0 SEK. Delivery in Skåne can be booked by zone.
 - Included: battery pump, battery, charger, transport bags and instructions. Two pumps for 6 or more balls.
-- Allowed surfaces: even grass, artificial grass, sports hall, fine sand and soft snow.
+- Allowed surfaces: an ordinary even lawn, artificial grass, sports hall, fine sand and soft snow. Renting a venue is not required. As an optional tip, search for "<city> Rbok" to find local booking for a sports hall or a proper football pitch; the venue is booked separately.
 - Not allowed: asphalt, gravel, concrete, ice or hard uneven surfaces.
 - Contact: kontakt@offroadbumpis.se, +46 79 344 25 20.
 - Booking: https://offroad-bumpis-booking.onrender.com/
