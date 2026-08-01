@@ -13,6 +13,10 @@ Offroad Bumpis is a bumperball rental service in Malmö, Sweden, serving all of 
 - Not allowed: asphalt, gravel, concrete, ice or hard uneven surfaces.
 - Contact: kontakt@offroadbumpis.se, +46 79 344 25 20.
 - Booking: https://offroad-bumpis-booking.onrender.com/
+- Booking flow: the booking system checks inventory for the selected period, reserves available equipment directly and emails an invoice plus payment details.
+- Payment deadline: no later than three business days before handover unless otherwise agreed. Unpaid reservations may be released automatically.
+- Rental periods: a normal day is 08:00–20:00. Friday 08:00 through Sunday 20:00 counts as one price day. Other multi-day periods are calculated per price day.
+- Cancellation: full refund no later than three calendar days before the rental starts. Later cancellations are charged but credited toward a new booking within six months.
 
 ## Main pages
 - https://offroadbumpis.se/priser.html
@@ -22,3 +26,5 @@ Offroad Bumpis is a bumperball rental service in Malmö, Sweden, serving all of 
 - https://offroadbumpis.se/svensexa-bumperballs-skane.html
 - https://offroadbumpis.se/foretagsaktivitet-bumperballs-skane.html
 - https://offroadbumpis.se/aktiviteter-skane.html
+- https://offroadbumpis.se/villkor.html
+- https://offroadbumpis.se/integritet.html

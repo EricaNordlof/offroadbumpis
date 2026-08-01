@@ -19,8 +19,11 @@ Ingen installation eller byggprocess behövs.
 - Komplett `sitemap.xml`, `robots.txt`, `llms.txt`, strukturerad data och canonical-taggar.
 - Optimerade WebP-bilder och mobilanpassad navigation.
 - Befintliga rabatt-, affiliate- och bekräftelsesidor är bevarade.
+- Villkors- och integritetssidor anpassade till Offroad Bumpis eget bokningssystem.
+- Direktbokning med lagerkontroll, automatisk faktura och bokningsspecifika dokument.
 
 ## Viktiga länkar
 
 - Bokningssystem: `https://offroad-bumpis-booking.onrender.com/`
+- Villkor: `https://offroadbumpis.se/villkor.html`
 - Kontakt: `kontakt@offroadbumpis.se`
